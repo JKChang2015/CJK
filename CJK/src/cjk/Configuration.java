@@ -73,15 +73,50 @@ public class Configuration {
 
                 } else if (upDownInstruct == 'D') { //DOWN
                     scope = Instruction.Scope.DOWN;
+                    startURI = 3;
+                    int indexCloseSuper = instruction.indexOf(')');
+                    if (instruction.charAt(2) == '(' && indexCloseSuper != -1) {
+                        newSuperClass = instruction.substring(3, indexCloseSuper);
+                        startURI = indexCloseSuper + 2;
+                    } else if (instruction.charAt(2) != ':') {
+                        reader.close();
+                        throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
+                    }
 
                 } else {
                     reader.close();
-                    throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
+                    throw new Exception("Invalid configuration input at line " + lineNumber + ": second instruction should be 'U', 'D', or empty.");
                 }
             } else {  //SINGLE
+                int indexCloseSuper = instruction.indexOf(')');
+                if (instruction.charAt(1) == '(' && indexCloseSuper != -1) {
+                    newSuperClass = instruction.substring(2, indexCloseSuper);
+                    startURI = indexCloseSuper + 2;
+                }
 
+                String iri = instruction.substring(startURI);
+                int index = iri.indexOf(' ');
+                String comment = " ";
+                if (index != -1) {
+                    comment = iri.substring(index).trim();
+                    iri = iri.substring(0, index);
+                }
+                Instruction ins = new Instruction(iri, scope, comment);
+                if (newSuperClass != null) {
+                    ins.setNewSuperClass(newSuperClass);
+                    Instruction superIns = new Instruction(newSuperClass, Instruction.Scope.SINGLE, "Used as Superclass");
+                    irisToSave.add(superIns);
+                }
+                if (addRemoveInstruct == '+') {
+                    irisToSave.add(ins);
+                } else {
+                    irisToRemove.add(ins);
+                }
+
+                line = reader.readLine();
+                lineNumber++;
             }
-
+            reader.close();
         }
     }
 

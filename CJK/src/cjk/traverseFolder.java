@@ -32,6 +32,7 @@ public class traverseFolder {
                 }
             }
             File temp_file;
+            
             while (!list.isEmpty()) {
                 temp_file = list.removeFirst();
                 files = temp_file.listFiles();
@@ -44,9 +45,7 @@ public class traverseFolder {
                         System.out.println("File" + file2.getAbsolutePath());
                         folderNum++;
                     }
-
                 }
-
             }
 
         } else {
