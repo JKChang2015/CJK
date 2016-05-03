@@ -25,9 +25,7 @@ public class CJK {
                     System.out.println("can't load the file");
                 }
             }
-
         }
 
     }
-
 }
