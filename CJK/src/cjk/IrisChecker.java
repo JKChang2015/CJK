@@ -13,18 +13,14 @@ import java.io.Reader;
 public class IrisChecker {
 
     public void IrisChecker(File file) throws Exception {
-        IrisChecker(new FileReader(file));
-    }
-
-    public void IrisChecker(Reader file) throws Exception {
-        BufferedReader reader = new BufferedReader(file);
+        BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = reader.readLine();
         int lineNum = 1;
 
-        while (line != null) { 
+        while (line != null) {
             String instruction = line.trim();
             if (instruction.length() == 0) {
-                System.out.println("skip the empty line at " + lineNum);
+                System.out.println(file.getName() + ",  skip the empty line at " + lineNum);
                 line = reader.readLine();
                 lineNum++;
                 continue;
@@ -37,7 +33,7 @@ public class IrisChecker {
             if (first == '+') {
                 if (!containBracket(instruction)) {
                     //  reader.close();
-                    System.out.println("Invalid configuration input at line " + lineNum + " should have a SuperClass");
+                    System.out.println(file.getName() + ",  Invalid configuration input at line " + lineNum + " should have a SuperClass");
                     line = reader.readLine();
                     lineNum++;
                     continue;
@@ -47,7 +43,7 @@ public class IrisChecker {
                 int indexColon = instruction.indexOf(')') + 1;
                 if (instruction.charAt(indexColon) != ':') {
                     //    reader.close();
-                    System.out.println("Invalid configuration input at line " + lineNum + " should have a SubClass");
+                    System.out.println(file.getName() + ",  Invalid configuration input at line " + lineNum + " should have a SubClass");
                     line = reader.readLine();
                     lineNum++;
                     continue;
@@ -57,7 +53,7 @@ public class IrisChecker {
             } else if (first == '-') {
                 if (containBracket(instruction)) {
                     //    reader.close();
-                    System.out.println("Invalid configuration input at line " + lineNum + " should not have a SuperClass");
+                    System.out.println(file.getName() + ",  Invalid configuration input at line " + lineNum + " should not have a SuperClass");
                     line = reader.readLine();
                     lineNum++;
                     continue;
@@ -65,7 +61,7 @@ public class IrisChecker {
                 }
             } else {  // first char should be +/-
                 //    reader.close();
-                System.out.println("Invalid configuration input at line " + lineNum + " first character should be '+'  or '-'");
+                System.out.println(file.getName() + ",  Invalid configuration input at line " + lineNum + " first character should be '+'  or '-'");
                 line = reader.readLine();
                 lineNum++;
                 continue;

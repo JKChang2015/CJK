@@ -12,27 +12,22 @@ public class CJK {
 
     public static void main(String[] args) {
 
-        /*
         String path = "C:\\Github\\ontologies\\config";
         File folder = new File(path);
-        File[] files = folder.listFiles();      
-       
-        try {
-             CombinFile dd = new CombinFile(path);
-        } catch (Exception e) {
-            System.out.println("Error");
-        } */
-        String path = "C:\\Github\\CJK\\CJK\\output.txt";
+        File[] files = folder.listFiles();
 
-        try {
-            Reader reader = new FileReader(path);
-            IrisChecker checker = new IrisChecker();
-            checker.IrisChecker(reader);
-           } catch (Exception e) {
-            System.out.println("can't load the file");
+        for (File file : files) {
+            if (file.toString().endsWith("iris")) {
+                try {
+                    IrisChecker checker = new IrisChecker();
+                    checker.IrisChecker(file);
+                } catch (Exception e) {
+                    System.out.println("can't load the file");
+                }
+            }
+
         }
-        
-        
+
     }
 
 }
