@@ -1,0 +1,179 @@
++D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 detection instrument
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://www.bioassayontology.org/bao#BAO_0000179 endpoint
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://www.bioassayontology.org/bao#BAO_0000015 bioassay
++:http://www.bioassayontology.org/bao#BAO_0000338 has concentration
++:http://www.bioassayontology.org/bao#BAO_0000208 has endpoint
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://www.bioassayontology.org/bao#BAO_0000520 assay description
++D(http://www.bioassayontology.org/bao#BAO_0003009):http://purl.enanomapper.org/onto/ENM_9000015	Metabolic Activity Assay
++D(http://www.bioassayontology.org/bao#BAO_0002167):http://purl.enanomapper.org/onto/ENM_9000017	DNA Damage Assay
++D(http://www.bioassayontology.org/bao#BAO_0003009):http://purl.enanomapper.org/onto/ENM_9000018	Cell Membrane Integrity Assay
+-D:http://www.bioassayontology.org/bao#BAO_0002135 solubility
+
++:http://purl.obolibrary.org/obo/BFO_0000001 entity
++(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.obolibrary.org/obo/BFO_0000040 material entity
++(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.obolibrary.org/obo/BFO_0000015 process
++(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.obolibrary.org/obo/BFO_0000019 quality
++D(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.obolibrary.org/obo/BFO_0000016 disposition
++(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.bioontology.org/ontology/npo#NPO_1356	Physicochemical Characterization
++D(http://purl.obolibrary.org/obo/ENVO_01000155):http://livercancer.imbi.uni-heidelberg.de/ccont#CCONT_0000047 mixture
+-D:http://purl.org/obo/owl/IEV#IEV_0000293
++D(http://purl.bioontology.org/ontology/npo#NPO_707):http://purl.obolibrary.org/obo/CHEBI_52855 inorganic nanoparticle
++D(http://purl.bioontology.org/ontology/npo#NPO_707):http://purl.obolibrary.org/obo/CHEBI_33416 fullerene
++(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.obolibrary.org/obo/CHEBI_23367 molecular entity
++(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.obolibrary.org/obo/CHEBI_59999 chemical substance
+-:http://purl.obolibrary.org/obo/CHEBI_50825 gold nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_50836 zinc oxide nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_50822 iron oxide nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_50826 silver nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_52522 bimetallic nanoparticle
++D(http://purl.bioontology.org/ontology/npo#NPO_1892):http://purl.obolibrary.org/obo/CHEBI_82776 coated Ag nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1893):http://purl.obolibrary.org/obo/CHEBI_52523 palladium-gold nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1541):http://purl.obolibrary.org/obo/CHEBI_52733 dieuropium trioxide nanoparticle subclass of metal oxide nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1541):http://purl.obolibrary.org/obo/CHEBI_51050 adds titanium dioxide nanoparticleto metal oxide nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1541):http://purl.obolibrary.org/obo/CHEBI_83159 adds copper (II) nanoparticle to metal oxide nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_52853 palladium nanoparticle
+-:http://purl.obolibrary.org/obo/CHEBI_50831 platinum nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1384):http://purl.obolibrary.org/obo/CHEBI_52853	relocate palladium nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1384):http://purl.obolibrary.org/obo/CHEBI_50831	relocate platinum nanoparticle
++D(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.obolibrary.org/obo/CHEBI_33232 application
++D(http://purl.obolibrary.org/obo/CHEBI_59999):http://purl.obolibrary.org/obo/CHEBI_46661 asbestos
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_35223 catalyst
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_78298 environmental contaminant
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_76648 fluorescence quencher
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_52215 photochemical role
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_70982 reactive oxygen species generator
++(http://purl.obolibrary.org/obo/CHEBI_33232):http://purl.obolibrary.org/obo/CHEBI_33281  antimicrobial role 
++(http://purl.bioontology.org/ontology/npo#NPO_729):http://purl.obolibrary.org/obo/CHEBI_50824 hematite nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_729):http://purl.obolibrary.org/obo/CHEBI_50823 magnetite nanoparticle
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://semanticscience.org/resource/CHEMINF_000123 chemical descriptor
++(http://purl.obolibrary.org/obo/BFO_0000019):http://semanticscience.org/resource/CHEMINF_000247 surface area
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://semanticscience.org/resource/CHEMINF_000101 chemical substance quality
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://semanticscience.org/resource/CHEMINF_000031 molecular entity quality
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://semanticscience.org/resource/CHEMINF_000014 chemical entity information format description
+-:http://purl.obolibrary.org/obo/PATO_0000125 mass
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0002119 granulometry
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0002249 porosimetry
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0001082 osmometry
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000339 Auger electron spectroscopy
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000097 ion microscopy
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000404 x-ray photoelectron spectroscopy
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000645 DRIFTS
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000538 ICPMS
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/CHMO_0000690 thermogravimetric analysis
++(http://www.bioassayontology.org/bao#BAO_0000179):http://purl.obolibrary.org/obo/CHMO_0002855 percentage yield
++(http://purl.bioontology.org/ontology/npo#NPO_1680):http://www.ebi.ac.uk/efo/EFO_0000001 experimental factor
++D(http://purl.obolibrary.org/obo/BFO_0000040):http://www.ebi.ac.uk/efo/EFO_0000322 cell line
++D(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.obolibrary.org/obo/ENVO_00010483 environmental material
+-D:http://purl.obolibrary.org/obo/ENVO_00002002 food product
++D(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.obolibrary.org/obo/ENVO_00000428 biome
++(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.obolibrary.org/obo/GO_0009293 transduction
++(http://purl.obolibrary.org/obo/IAO_0000030):http://scai.fraunhofer.de/hupson:SCAIVPH_00000886 dynamic quality
++(http://purl.obolibrary.org/obo/BFO_0000001):http://purl.obolibrary.org/obo/IAO_0000030 information content entity
++(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.obolibrary.org/obo/IAO_0000027 data item
++(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.obolibrary.org/obo/IAO_0000301 citation
++(http://purl.obolibrary.org/obo/OBI_0000272):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25572 modification
++(http://purl.obolibrary.org/obo/UO_0000000):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C50400 age unit
++(http://purl.obolibrary.org/obo/IAO_0000027):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104504 batch number
++(http://purl.obolibrary.org/obo/OBI_0000070):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C119826 exposure method
++(http://www.bioassayontology.org/bao#BAO_0000523):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83121 Exposure Route of Administration
++(http://www.bioassayontology.org/bao#BAO_0000523):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25284 type
++(http://www.bioassayontology.org/bao#BAO_0000523):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25365 description
++(http://semanticscience.org/resource/CHEMINF_000025):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20610 partition coefficient
++(http://purl.bioontology.org/ontology/npo#NPO_707):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62381 engineered nanoparticle
++(http://purl.obolibrary.org/obo/OBI_0100026):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C38389 sex
++(http://purl.obolibrary.org/obo/OBI_0100026):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43531 developmental stage
++(http://purl.obolibrary.org/obo/BFO_0000019):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54072 stability
++(http://purl.bioontology.org/ontology/npo#NPO_1495):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61412 contribution
++(http://purl.obolibrary.org/obo/BFO_0000040):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C12801 tissue
++(http://purl.bioontology.org/ontology/npo#NPO_1794):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C41130 significant
++(http://purl.obolibrary.org/obo/IAO_0000030):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42614 name
++(http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83121):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C42709 parent
++(http://purl.obolibrary.org/obo/IAO_0000030):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43530 supplier
++(http://purl.bioontology.org/ontology/npo#NPO_1853):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C53414 composition
++(http://purl.bioontology.org/ontology/npo#NPO_1817):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C93591 manufacturing date
++(http://www.bioassayontology.org/bao#BAO_0000520):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C104504 batch number
++(http://purl.obolibrary.org/obo/IAO_0000030):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C79889 authority
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25714 version
++D(http://www.bioassayontology.org/bao#BAO_0000520):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C93400	material identifier
++D(http://www.bioassayontology.org/bao#BAO_0000520):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83078	investigator identifier	
++D(http://www.bioassayontology.org/bao#BAO_0000520):http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74565	employee job class
+
++(http://purl.obolibrary.org/obo/BFO_0000034):http://purl.bioontology.org/ontology/npo#NPO_1628 alkylating function
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_732 amphiphilic   .
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_938 biocompatible
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_191 biodegradable
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.bioontology.org/ontology/npo#NPO_821 polydispersity
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.bioontology.org/ontology/npo#NPO_1779 datum value
++(http://purl.obolibrary.org/obo/PATO_0001464):http://purl.bioontology.org/ontology/npo#NPO_1302 zeta potential
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_421 electronegativity
++D(http://purl.obolibrary.org/obo/BFO_0000015):http://purl.bioontology.org/ontology/npo#NPO_1616 functionalization of nanoparticle
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.bioontology.org/ontology/npo#NPO_1914 hydrodynamic size
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.bioontology.org/ontology/npo#NPO_888 physical state
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.bioontology.org/ontology/npo#NPO_274 shape
++(http://purl.obolibrary.org/obo/PATO_0000033):http://purl.bioontology.org/ontology/npo#NPO_1193 cell concentration
++(http://purl.obolibrary.org/obo/PATO_0000033):http://purl.bioontology.org/ontology/npo#NPO_1830 particle concentration
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.bioontology.org/ontology/npo#NPO_1694 particle size
++D(http://purl.obolibrary.org/obo/CHEBI_59999):http://purl.bioontology.org/ontology/npo#NPO_199 nanomaterial
++D(http://purl.obolibrary.org/obo/CHEBI_23367):http://purl.bioontology.org/ontology/npo#NPO_1895 particle
++D(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.bioontology.org/ontology/npo#NPO_1597 fiat material part
+-D:http://purl.org/obo/owl/CHEBI#CHEBI_24433 group
++D(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.bioontology.org/ontology/npo#NPO_1436 instrument
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.bioontology.org/ontology/npo#NPO_1680 parameter
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_1529 bioavailability
++D(http://purl.obolibrary.org/obo/BFO_0000015):http://purl.bioontology.org/ontology/npo#NPO_1944 synthesis part
++D(http://purl.enanomapper.org/onto/ENM_0000018):http://purl.bioontology.org/ontology/npo#NPO_1338 toxicity
++D(http://purl.bioontology.org/ontology/npo#NPO_199):http://purl.bioontology.org/ontology/npo#NPO_735 dendrimer
+-D:http://purl.bioontology.org/ontology/npo#NPO_1196 LC-50 
+-D:http://purl.bioontology.org/ontology/npo#NPO_1195 IC50 
++D(http://purl.obolibrary.org/obo/OBI_0000070):http://purl.bioontology.org/ontology/npo#NPO_1405 technique
+-:http://purl.bioontology.org/ontology/npo#NPO_1536 inorganic nanoparticle 
+-:http://purl.bioontology.org/ontology/npo#NPO_1424 western blot analysis
+-:http://purl.bioontology.org/ontology/npo#NPO_1953 centrifugation
++D(http://purl.obolibrary.org/obo/PATO_0001536):http://purl.bioontology.org/ontology/npo#NPO_500 solubility in water
++(http://purl.obolibrary.org/obo/UO_0000186):http://purl.bioontology.org/ontology/npo#NPO_1365 aspect ratio
++(http://semanticscience.org/resource/CHEMINF_000442):http://purl.bioontology.org/ontology/npo#NPO_1204 isoelectric point
++(http://www.bioassayontology.org/bao#BAO_0003009):http://purl.bioontology.org/ontology/npo#NPO_1709 LDH assay
++(http://www.bioassayontology.org/bao#BAO_0003009):http://purl.bioontology.org/ontology/npo#NPO_1911 MTT assay 
++(http://purl.bioontology.org/ontology/npo#NPO_1552):http://purl.bioontology.org/ontology/npo#NPO_719 liposome to lipid nanoparticle
++(http://purl.bioontology.org/ontology/npo#NPO_1364):http://purl.bioontology.org/ontology/npo#NPO_1235 surface area
++D(http://purl.obolibrary.org/obo/CHEBI_59999):http://purl.bioontology.org/ontology/npo#NPO_1853 medium
++(http://purl.bioontology.org/ontology/npo#NPO_1853):http://purl.bioontology.org/ontology/npo#NPO_1414 emulsifier
++D(http://purl.bioontology.org/ontology/npo#NPO_1375):http://purl.bioontology.org/ontology/npo#NPO_2001	biopolymer nanoparticle
++D(http://purl.bioontology.org/ontology/npo#NPO_707):http://purl.bioontology.org/ontology/npo#NPO_2002	carbon black nanoparticle
++D(http://purl.bioontology.org/ontology/npo#NPO_1384):http://purl.bioontology.org/ontology/npo#NPO_2003	alloy nanoparticle
++D(http://purl.bioontology.org/ontology/npo#NPO_905):http://purl.bioontology.org/ontology/npo#NPO_2004	nanobin
++D(http://purl.bioontology.org/ontology/npo#NPO_707):http://purl.bioontology.org/ontology/npo#NPO_2005	nanolipogel
++D(http://purl.obolibrary.org/obo/PATO_0001536):http://purl.bioontology.org/ontology/npo#NPO_2006 solubility in organic solvents
++D(http://purl.bioontology.org/ontology/npo#NPO_1694):http://purl.bioontology.org/ontology/npo#NPO_2007	equivalent circle diameter
++D(http://purl.bioontology.org/ontology/npo#NPO_1694):http://purl.bioontology.org/ontology/npo#NPO_2008	Feret diameter
++D(http://purl.bioontology.org/ontology/npo#NPO_274):http://purl.bioontology.org/ontology/npo#NPO_2010	circularity 
++D(http://purl.obolibrary.org/obo/CHEBI_59999):http://purl.bioontology.org/ontology/npo#NPO_2009 dispersion agent
++(http://purl.obolibrary.org/obo/CHEBI_52855):http://purl.bioontology.org/ontology/npo#NPO_1541 metal oxide nanoparticle
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.bioontology.org/ontology/npo#NPO_1364 surface property
+
++D(http://purl.obolibrary.org/obo/BFO_0000015):http://purl.obolibrary.org/obo/OAE_0000001 adverse event
+-:http://purl.obolibrary.org/obo/OAE_0000507 thrombocythemia AE
+-:http://purl.obolibrary.org/obo/OAE_0002010 hypokalemia AE
+-:http://purl.obolibrary.org/obo/OAE_0001103 intussusception AE
+-:http://purl.obolibrary.org/obo/OAE_0000408 insomnia AE
+-:http://purl.obolibrary.org/obo/OAE_0000971 gastroenteritis AE
+-:http://purl.obolibrary.org/obo/OAE_0000213 extravasation AE
++D(http://purl.obolibrary.org/obo/IAO_0000027):http://purl.obolibrary.org/obo/OBCS_0000011 measurement scale
++D(http://purl.obolibrary.org/obo/IAO_0000027):http://purl.obolibrary.org/obo/OBCS_0000010 probability distribution
++D(http://purl.obolibrary.org/obo/BFO_0000015):http://purl.obolibrary.org/obo/OBI_0000070 assay
++(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.obolibrary.org/obo/OBI_0000272 protocol
++(http://purl.obolibrary.org/obo/BFO_0000040):http://purl.obolibrary.org/obo/OBI_0100026 organism
++(http://purl.obolibrary.org/obo/BFO_0000016):http://purl.obolibrary.org/obo/PATO_0001464 electric potential
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000033 concentration
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0001019 mass density
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000973 porosity
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000049 intensity
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000125 mass
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000161 rate
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0001536 solubility
++D(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000117 size
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000011 age
++(http://purl.obolibrary.org/obo/BFO_0000019):http://purl.obolibrary.org/obo/PATO_0000068 qualitative
++(http://purl.bioontology.org/ontology/npo#NPO_1793):	http://purl.org/obo/owl/PATO#PATO_0000371 distance value
+
++D(http://purl.obolibrary.org/obo/IAO_0000030):http://purl.obolibrary.org/obo/UO_0000000 unit
