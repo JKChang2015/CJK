@@ -1,5 +1,6 @@
 package cjk;
 
+import eNM.IrisChecker;
 import cjk.hanoi;
 import cjk.CombinFile;
 import java.io.BufferedReader;
@@ -11,7 +12,7 @@ import java.io.File;
 public class CJK {
 
     public static void main(String[] args) {
-
+        
         String path = "C:\\Github\\ontologies\\config";
         File folder = new File(path);
         File[] files = folder.listFiles();

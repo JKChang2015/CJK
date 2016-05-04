@@ -1,4 +1,4 @@
-package cjk;
+package eNM;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,20 +13,26 @@ import java.util.Set;
  * line-based instruction format. Each line specifies part of the ontology to be
  * kept or removed. An example is:
  * <add>
- * +D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add branch
- * +D:http://www.bioassayontology.org/bao#BAO_0000697 add branch
- * +U(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add branch
- * +U(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add branch
- * +(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add single class
- * +(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add single class
+ * +D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add branch +D:http://www.bioassayontology.org/bao#BAO_0000697 add branch
+ * +U(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add branch
+ * +U(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add branch
+ * +(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add single class
+ * +(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add single class
  * </add>
- * 
+ *
  * *<remove>
- * -D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add branch
- * -:(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 add single class
+ * -D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add branch
+ * -:(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697
+ * add single class
  * </remove>
- * 
- *  
+ *
+ *
  * @author jkchang
  */
 public class Configuration {
@@ -80,7 +86,8 @@ public class Configuration {
             String newSuperClass = null;
             int startURI = 2;
 
-            if (upDownInstruct != ':' && upDownInstruct != '(') {  //.charAt(1)
+            if (upDownInstruct == ':' || upDownInstruct == '(' || upDownInstruct == 'U' || upDownInstruct == 'D') {
+
                 if (upDownInstruct == 'U') {  //UP
                     scope = Instruction.Scope.UP;
                     if (instruction.charAt(2) != ':') {
@@ -101,39 +108,40 @@ public class Configuration {
                         throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
                     }
 
-                } else {
-                    reader.close();
-                    throw new Exception("Invalid configuration input at line " + lineNumber + ": second instruction should be 'U', 'D', or empty.");
-                }
-            } else {  //SINGLE
-                int indexCloseSuper = instruction.indexOf(')');
-                if (instruction.charAt(1) == '(' && indexCloseSuper != -1) {
-                    newSuperClass = instruction.substring(2, indexCloseSuper);
-                    startURI = indexCloseSuper + 2;
-                }
+                } else {  //SINGLE
+                    int indexCloseSuper = instruction.indexOf(')');
+                    if (instruction.charAt(1) == '(' && indexCloseSuper != -1) {
+                        newSuperClass = instruction.substring(2, indexCloseSuper);
+                        startURI = indexCloseSuper + 2;
+                    }
 
-                String iri = instruction.substring(startURI);
-                int index = iri.indexOf(' ');
-                String comment = " ";
-                if (index != -1) {
-                    comment = iri.substring(index).trim();
-                    iri = iri.substring(0, index);
-                }
-                Instruction ins = new Instruction(iri, scope, comment);
-                if (newSuperClass != null) {
-                    ins.setNewSuperClass(newSuperClass);
-                    Instruction superIns = new Instruction(newSuperClass, Instruction.Scope.SINGLE, "Used as Superclass");
-                    irisToSave.add(superIns);
-                }
-                if (addRemoveInstruct == '+') {
-                    irisToSave.add(ins);
-                } else {
-                    irisToRemove.add(ins);
-                }
+                    String iri = instruction.substring(startURI);
+                    int index = iri.indexOf(' ');
+                    String comment = " ";
+                    if (index != -1) {
+                        comment = iri.substring(index).trim();
+                        iri = iri.substring(0, index);
+                    }
+                    Instruction ins = new Instruction(iri, scope, comment);
+                    if (newSuperClass != null) {
+                        ins.setNewSuperClass(newSuperClass);
+                        Instruction superIns = new Instruction(newSuperClass, Instruction.Scope.SINGLE, "Used as Superclass");
+                        irisToSave.add(superIns);
+                    }
+                    if (addRemoveInstruct == '+') {
+                        irisToSave.add(ins);
+                    } else {
+                        irisToRemove.add(ins);
+                    }
 
-                line = reader.readLine();
-                lineNumber++;
+                    line = reader.readLine();
+                    lineNumber++;
+                }
+            } else {
+                reader.close();
+                throw new Exception("Invalid configuration input at line " + lineNumber + ": third instruction should be 'U', 'D', ':' or '('.");
             }
+
             reader.close();
         }
     }
