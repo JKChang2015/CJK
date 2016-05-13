@@ -101,17 +101,17 @@ public class Configuration {
                     startURI = 3;
                     int indexCloseSuper = instruction.indexOf(')');
                     if (instruction.charAt(2) == '(' && indexCloseSuper != -1) {
-                        newSuperClass = instruction.substring(3, indexCloseSuper);
+                        newSuperClass = instruction.substring(startURI, indexCloseSuper); 
                         startURI = indexCloseSuper + 2;
                     } else if (instruction.charAt(2) != ':') {
                         reader.close();
                         throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
                     }
 
-                } else {  //SINGLE
+                } else {  //SINGLE, upDownInstruct = : or (
                     int indexCloseSuper = instruction.indexOf(')');
                     if (instruction.charAt(1) == '(' && indexCloseSuper != -1) {
-                        newSuperClass = instruction.substring(2, indexCloseSuper);
+                        newSuperClass = instruction.substring(startURI, indexCloseSuper);
                         startURI = indexCloseSuper + 2;
                     }
 

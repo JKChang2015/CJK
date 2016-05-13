@@ -8,11 +8,17 @@ import java.io.FileReader;
 import java.io.Reader;
 import java.io.StringReader;
 import java.io.File;
+import org.semanticweb.owlapi.*;
 
 public class CJK {
 
     public static void main(String[] args) {
-        
+
+        String kPath = "";
+        String ontoPath = "";
+
+
+        /*        
         String path = "C:\\Github\\ontologies\\config";
         File folder = new File(path);
         File[] files = folder.listFiles();
@@ -27,6 +33,6 @@ public class CJK {
                 }
             }
         }
-
+         */
     }
 }
