@@ -1,5 +1,7 @@
-/CJK/nbproject/
+/CJK/nbproject/private/
 /CJK/build/
+/CJK/nbbuild/
 /CJK/dist/
-/CJK/build.xml
-/CJK/manifest.mf
+/CJK/nbdist/
+/CJK/nbactions.xml
+/CJK/.nb-gradle/
