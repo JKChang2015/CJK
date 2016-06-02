@@ -4,5 +4,7 @@
 
 :link: [Linkedin](https://uk.linkedin.com/in/jiakang-chang-6459849a) 
 
-
+- [x] Extract target Term
+- [ ] Extract entity rdf:label
+- [ ] Comparison
 
