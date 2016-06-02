@@ -1,2 +1,0 @@
- Axiom Annotations vs. AnnotationAssertionAxioms
-http://stackoverflow.com/questions/20780425/using-owl-api-given-an-owlclass-how-can-i-get-rdfslabel-of-it
