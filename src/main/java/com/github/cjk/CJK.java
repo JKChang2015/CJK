@@ -1,8 +1,13 @@
 package com.github.cjk;
 
+import com.github.eNM.Label;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+
 import java.util.HashSet;
 import java.util.Set;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -41,15 +46,30 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
  */
 public class CJK {
 
-    public static void main(String[] args) throws Exception{
-        BufferedReader reader = new BufferedReader (new FileReader("src\\main\\resources\\keyword.txt"));
-        String line = reader.readLine();
-        while(line!= null){
+    public static void main(String[] args) throws Exception {
+
+        String kPath = "src\\main\\resources\\keyword.txt";
+        String ontoPath = "src\\main\\resources\\enanomapper.owl";
+        String ontoTest = "src\\main\\resources\\fruit.owl";
+        
+        Set<String> ontoLabel = new HashSet<String>();
+        File owlFile = new File(ontoPath);
+        
+        Label label = new Label(owlFile);
+        ontoLabel = label.getlabel();
+        
+       
+        
+       
+        BufferedReader keywordReader = new BufferedReader(new FileReader(kPath));
+        String line = keywordReader.readLine();
+        while (line != null) {
             System.out.println(line);
-            line = reader.readLine();
+            line = keywordReader.readLine();
         }
-        System.out.println("finished");
-        System.out.println("quite");
+        System.out.println("\n");
+
+
         
         
        
@@ -66,11 +86,11 @@ public class CJK {
         File file = new File(kPath);
 
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = reader.readLine();
+            BufferedReader keywordReader = new BufferedReader(new FileReader(file));
+            String line = keywordReader.readLine();
             while (line != null) {
                 keySet.add(line.trim());
-                line = reader.readLine();
+                line = keywordReader.readLine();
             }
 
         } catch (Exception e) {
