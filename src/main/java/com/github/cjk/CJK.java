@@ -41,7 +41,21 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
  */
 public class CJK {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
+        BufferedReader reader = new BufferedReader (new FileReader("src\\main\\resources\\keyword.txt"));
+        String line = reader.readLine();
+        while(line!= null){
+            System.out.println(line);
+            line = reader.readLine();
+        }
+        System.out.println("finished");
+        System.out.println("quite");
+        
+        
+       
+        
+         /*  
+        
         String kPath = "C:\\Users\\jkchang\\Desktop\\keyword.txt";
         String ontoPath = "C:\\Users\\jkchang\\Desktop\\enanomapper.owl";
         String ontoTest = "C:\\Users\\jkchang\\Desktop\\fruit.owl";
@@ -84,7 +98,7 @@ public class CJK {
 
         System.out.println("lll");
 
-        /*        
+             
         String path = "C:\\Github\\ontologies\\config";
         File folder = new File(path);
         File[] files = folder.listFiles();

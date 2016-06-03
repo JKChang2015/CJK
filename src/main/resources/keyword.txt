@@ -1,0 +1,120 @@
+Ablative
+Abrasive
+Absorbent
+Adhesion promotor
+Adsorbent
+Aerating and dearating agents
+Antiadhesive
+Alloying element
+Anticaking agent
+Anticondensation agent
+Antifreeze agent
+Antioxidant
+Antiredeposition agent
+Antiscaling agent
+Antistain agent
+Antistatic agent
+Antistreaking agent
+Barrier (Sealant)
+Binder
+Biocide
+Bleaching agent
+Brightener
+Catalyst
+Chain transfer agent
+Chelating agent
+Cleaning agent
+Cloud-point depressant
+Coalescing agent
+Compatibilizer
+Conductive agent
+Corrosion inhibitor
+Crystal growth modifiers (nucleating agents)
+Deflocculant
+Defoamer
+Demulsifier
+Density modifier
+Deodorizer
+Diluent
+Dispersing agent
+Drier
+Durability agent
+Dust suppressant
+Dusting agent
+Dye
+Elasticizer
+Embalming agent
+Energy releasers (explosives, motive propellant)
+Etching agent
+Explosion inhibitor
+Fertilizers (soil amendments)
+Filler
+Film former
+Finishing agents
+Fire extinguishing agent
+Fixing agent (mordant)
+Flame retardant
+Flocculating agent
+Flotation agent
+Flow promoter
+Flux agent
+Foamant
+Food flavouring and nutrient
+Fragrance
+Freeze-thaw additive
+Friction agent
+Fuel
+Fuel additive
+Gelling modifier
+Hardener
+Heat stabilizer
+Heat transferring agent
+Humectant
+Hydraulic (functional) fluids
+Impregnation agent
+Incandescent agent
+Insulators
+Intermediate (precursor)
+Ion exchange agent
+Leaching agent
+Lubricating agent
+Luminescent agent
+Magnetic element
+Monomers
+No technical function
+Opacifier
+Oxidizing agent
+pH regulating agent
+Photochemical
+Pigment
+Plasticizer
+Plating agent
+Pressure transfer agent
+Process regulator
+Processing aid
+Propellants, non-motive (blowing agents)
+Reactive cleaning/removal agent
+Reducing agent
+Refrigerants
+Resins (prepolymers)
+Semiconductor and photovoltaic agent
+Sizing agent
+Softener
+Solids separation (precipitating) agent
+Solubility enhancer
+Solvent
+Stabilizing agent
+Surface modifier
+Surfactant
+Swelling agent
+Tackifier
+Tanning agent
+Terminator/Blocker
+Thickener/Thickening agent
+Tracer
+UV stabilizer
+Vapour pressure modifiers
+Vehicle (carrier)
+Viscosity modifier
+Waterproofing agent
+X-Ray Absorber
