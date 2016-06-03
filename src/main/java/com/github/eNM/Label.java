@@ -26,7 +26,7 @@ public class Label {
 
         for (OWLClass clas : entities) {
             for (OWLAnnotation annot : EntitySearcher.getAnnotations(clas, onto)) {
-
+                String lab = annot.getValue().toString();
             }
         }
 
