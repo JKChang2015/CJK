@@ -204,16 +204,10 @@ public class Slimmer {
                         if (annot.getProperty().getIRI().toString().equals("http://purl.org/dc/elements/1.1/description")) {
                             System.out.println("  description: " + annot.getValue());
                             OWLDataFactory factory = slimmer.man.getOWLDataFactory();
-                            OWLAnnotationProperty newDescription
-                                    = factory.getOWLAnnotationProperty(IRI.create("http://purl.obolibrary.org/obo/IAO_0000115"));
-                            OWLAnnotation commentAnno = factory.getOWLAnnotation(
-                                    newDescription,
-                                    annot.getValue()
-                            );
+                            OWLAnnotationProperty newDescription = factory.getOWLAnnotationProperty(IRI.create("http://purl.obolibrary.org/obo/IAO_0000115"));
+                            OWLAnnotation commentAnno = factory.getOWLAnnotation(newDescription, annot.getValue());
                             System.out.println("  new description: " + commentAnno);
-                            OWLAxiom ax = factory.getOWLAnnotationAssertionAxiom(
-                                    clazz.getIRI(), commentAnno
-                            );
+                            OWLAxiom ax = factory.getOWLAnnotationAssertionAxiom(clazz.getIRI(), commentAnno);
                             slimmer.man.applyChange(new AddAxiom(onto, ax));
                         }
                     }
