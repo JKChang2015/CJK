@@ -5,9 +5,9 @@
 :link: [Linkedin](https://uk.linkedin.com/in/jiakang-chang-6459849a) 
 
 cjk
-- [x] Combine iris file
 - [x] Traverse folder
 - [x] File layout filter
+- [x] Combine iris file
 - [x] Extract new terms
  
 eNM
