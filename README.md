@@ -10,7 +10,7 @@
 - [x] File layout filter
 - [x] Combine iris file
 - [x] Extract new terms
- 
+
 #####:arrow_right:[eNM](https://github.com/JKChang2015/CJK/tree/master/src/main/java/com/github/eNM)
 - [x] Check formulation of iris file
 - [ ] Extract entity rdf:label from ontology
