@@ -8,5 +8,8 @@ com\github\cjk\traverseFolder.class
 com\github\eNM\Instruction.class
 com\github\eNM\Slimmer.class
 com\github\cjk\CJK.class
+com\github\eNM\Label.class
 com\github\eNM\Instruction$Scope.class
 com\github\cjk\hanoi.class
+com\github\eNM\LabelExample.class
+.netbeans_automatic_build

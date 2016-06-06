@@ -12,6 +12,7 @@ import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.search.EntitySearcher;
+import org.semanticweb.owlapi.model.OWLDataFactory;
 
 public class Label {
 
@@ -19,10 +20,17 @@ public class Label {
     private OWLOntology onto;
     private Set<String> labels = new HashSet<String>();
 
-    public Label(File owlFile) throws OWLOntologyCreationException {
+    public Label(String owlPath) throws OWLOntologyCreationException {
+
+        InputStream stream = this.getClass().getClassLoader().getResourceAsStream(owlPath);
         man = OWLManager.createOWLOntologyManager();
-        onto = man.loadOntologyFromOntologyDocument(owlFile);
+        OWLDataFactory fatory = man.getOWLDataFactory();
+        onto = man.loadOntologyFromOntologyDocument(stream);
+        
         Set<OWLClass> entities = onto.getClassesInSignature();
+        
+        System.out.println("");
+        System.out.println("");
 
         for (OWLClass clas : entities) {
             for (OWLAnnotation annot : EntitySearcher.getAnnotations(clas, onto)) {
