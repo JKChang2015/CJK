@@ -12,7 +12,9 @@ import java.io.InputStreamReader;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
 import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
 import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
@@ -61,7 +63,7 @@ public class CJK {
             BufferedReader keywordReader = new BufferedReader(new FileReader(kPath));
             String line = keywordReader.readLine();
             while (line != null) {
-                System.out.println(line);
+               // System.out.println(line);
                 line = keywordReader.readLine();
             }
             System.out.println("\n");
