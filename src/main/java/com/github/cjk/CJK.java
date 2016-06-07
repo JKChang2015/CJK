@@ -9,43 +9,40 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-
 import java.util.HashSet;
 import java.util.Set;
 
-import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
-import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
-import org.semanticweb.owlapi.model.AddAxiom;
-import org.semanticweb.owlapi.model.AddOntologyAnnotation;
 import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLAnnotation;
-import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
-import org.semanticweb.owlapi.model.OWLAnnotationProperty;
+import org.semanticweb.owlapi.model.AddAxiom;
 import org.semanticweb.owlapi.model.OWLAxiom;
 import org.semanticweb.owlapi.model.OWLClass;
-import org.semanticweb.owlapi.model.OWLClassExpression;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLDataProperty;
 import org.semanticweb.owlapi.model.OWLEntity;
-import org.semanticweb.owlapi.model.OWLImportsDeclaration;
-import org.semanticweb.owlapi.model.OWLLiteral;
-import org.semanticweb.owlapi.model.OWLObjectProperty;
-import org.semanticweb.owlapi.model.OWLOntology;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.model.OWLOntologyStorageException;
-import org.semanticweb.owlapi.model.RemoveImport;
-import org.semanticweb.owlapi.model.SetOntologyID;
-import org.semanticweb.owlapi.search.EntitySearcher;
 import org.semanticweb.owlapi.search.Searcher;
+import org.semanticweb.owlapi.model.OWLLiteral;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.RemoveImport;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.SetOntologyID;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.util.SimpleIRIMapper;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLDataProperty;
+import org.semanticweb.owlapi.search.EntitySearcher;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.OWLOntologyMerger;
-import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLObjectProperty;
+import org.semanticweb.owlapi.model.OWLAnnotationValue;
+import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.AddOntologyAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationProperty;
+import org.semanticweb.owlapi.model.OWLImportsDeclaration;
+import org.semanticweb.owlapi.formats.OWLXMLDocumentFormat;
+import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
+import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
  *
@@ -59,28 +56,42 @@ public class CJK {
         String ontoPath = "src\\main\\resources\\enanomapper.owl";
         String ontoTest = "src\\main\\resources\\fruit.owl";
 
+        Set<String> keywords = new HashSet<String>();
+        Set<String> ontoLabel = new HashSet<String>();
+
+        // 1. Load keywords
         try {
             BufferedReader keywordReader = new BufferedReader(new FileReader(kPath));
-            String line = keywordReader.readLine();
+            String line = keywordReader.readLine().trim();
             while (line != null) {
-               // System.out.println(line);
-                line = keywordReader.readLine();
+                line = keywordReader.readLine().trim();
+                keywords.add(line);
             }
             System.out.println("\n");
         } catch (Exception e) {
-            System.out.println(" cant load the file form kPath");
+            System.out.println("Fail to load the keyword file form " + kPath);
         }
 
-        Set<String> ontoLabel = new HashSet<String>();
-
+        //2. Load ontology labels
         try {
-            File file = new File(ontoTest);
+            File file = new File(ontoPath);
             OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+            OWLDataFactory factory = man.getOWLDataFactory();
             OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
-            System.out.println("finish loading the ontology");
-            System.out.println("");
+            Set<OWLClass> classes = onto.getClassesInSignature();
+            for (OWLClass en : classes) {
+                Set<OWLAnnotationAssertionAxiom> ann = onto.getAnnotationAssertionAxioms(en.getIRI());
+                for (OWLAnnotationAssertionAxiom axiom : ann) {
+                    if (axiom.getProperty().equals(factory.getRDFSLabel())) {
+                        OWLAnnotationValue va = axiom.getValue();
+                        //OWLAnnotationValue va = axiom.getValue().accept(new OWLAnnotationValueVisitor (new OWLLiteral));
+                        System.out.println(va);
+
+                    }
+                }
+            }
         } catch (Exception e) {
-            System.out.println(" cant load the OWLfile form ontoPath");
+            System.out.println("Fail to load the OWLfile form " + ontoPath);
         }
 
 
