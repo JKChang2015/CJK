@@ -1,0 +1,1903 @@
+1.  <http://purl.obolibrary.org/obo/CHEBI_67126>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ca365128
+
+
+2.  <http://purl.obolibrary.org/obo/CHEBI_60606>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b722023f
+
+
+3.  <http://purl.obolibrary.org/obo/CHEBI_49159>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f92ba9cd
+
+
+4.  <http://purl.obolibrary.org/obo/CHEBI_60603>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b2850cc9
+
+
+5.  <http://purl.obolibrary.org/obo/CHEBI_39217>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c5a0e75f
+
+
+6.  <http://purl.obolibrary.org/obo/CHEBI_39216>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f5e749a5
+
+
+7.  <http://purl.obolibrary.org/obo/CHEBI_39215>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@31460042
+
+
+8.  <http://purl.obolibrary.org/obo/CHEBI_60598>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@774d5387
+
+
+9.  <http://purl.obolibrary.org/obo/CHEBI_26220>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1a87210b
+
+
+10.  <http://purl.obolibrary.org/obo/CHEBI_73352>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a68f1dad
+
+
+11.  <http://purl.obolibrary.org/obo/CHEBI_37337>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@78260944
+
+
+12.  <http://purl.obolibrary.org/obo/CHEBI_37336>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dc54891e
+
+
+13.  <http://purl.obolibrary.org/obo/CHEBI_37335>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e3194cc3
+
+
+14.  <http://purl.obolibrary.org/obo/CHEBI_74529>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@602e03d2
+
+
+15.  <http://purl.bioontology.org/ontology/npo#NPO_707>				 
+16.  <http://purl.obolibrary.org/obo/CHEBI_35226>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2e321a52
+
+
+17.  <http://purl.obolibrary.org/obo/CHEBI_35617>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@70f56276
+
+
+18.  <http://purl.obolibrary.org/obo/CHEBI_26413>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ff88f0d0
+
+
+19.  <http://purl.obolibrary.org/obo/CHEBI_35457>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@54bfd538
+
+
+20.  <http://purl.obolibrary.org/obo/CHEBI_21241>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@96f0dd95
+
+
+21.  <http://purl.obolibrary.org/obo/CHEBI_49110>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4c71965f
+
+
+22.  <http://purl.obolibrary.org/obo/CHEBI_51121>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8586b2b8
+
+
+23.  <http://purl.obolibrary.org/obo/CHEBI_46676>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@22ed71c3
+
+
+24.  <http://purl.obolibrary.org/obo/CHEBI_64345>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@98a63c43
+
+
+25.  <http://purl.obolibrary.org/obo/CHEBI_39412>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@62ab67b
+
+
+26.  <http://purl.obolibrary.org/obo/CHEBI_35684>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9f2f70dd
+
+
+27.  <http://purl.obolibrary.org/obo/CHEBI_48675>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5b70b54
+
+
+28.  <http://purl.obolibrary.org/obo/CHEBI_77567>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@de97b6a5
+
+
+29.  <http://purl.obolibrary.org/obo/CHEBI_35210>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2df1d196
+
+
+30.  <http://purl.obolibrary.org/obo/CHEBI_35211>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@89db28d5
+
+
+31.  <http://purl.obolibrary.org/obo/CHEBI_52526>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bc1a1f6b
+
+
+32.  <http://purl.obolibrary.org/obo/CHEBI_39208>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@458613b0
+
+
+33.  <http://purl.obolibrary.org/obo/CHEBI_48358>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3c0781a5
+
+
+34.  <http://purl.obolibrary.org/obo/CHEBI_48407>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4de45cdf
+
+
+35.  <http://purl.obolibrary.org/obo/CHEBI_35522>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c0a42a1e
+
+
+36.  <http://purl.obolibrary.org/obo/CHEBI_50406>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@65fc7b0
+
+
+37.  <http://purl.obolibrary.org/obo/CHEBI_50412>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f58761c
+
+
+38.  <http://purl.obolibrary.org/obo/CHEBI_50411>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a07f0142
+
+
+39.  <http://purl.obolibrary.org/obo/CHEBI_50410>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@16b2d0bb
+
+
+40.  <http://purl.obolibrary.org/obo/CHEBI_37890>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ea272433
+
+
+41.  <http://purl.obolibrary.org/obo/CHEBI_50408>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6647592f
+
+
+42.  <http://purl.obolibrary.org/obo/CHEBI_88336>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5cad062e
+
+
+43.  <http://purl.obolibrary.org/obo/CHEBI_48878>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@817bea52
+
+
+44.  <http://purl.obolibrary.org/obo/CHEBI_49323>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@96c012f
+
+
+45.  <http://purl.obolibrary.org/obo/CHEBI_35679>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@88da6c6d
+
+
+46.  <http://purl.obolibrary.org/obo/CHEBI_71692>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8578f3cb
+
+
+47.  <http://purl.obolibrary.org/obo/CHEBI_35443>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a7131fa8
+
+
+48.  <http://purl.obolibrary.org/obo/CHEBI_35442>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c1fe3db
+
+
+49.  <http://purl.obolibrary.org/obo/CHEBI_35441>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@822d29a6
+
+
+50.  <http://purl.obolibrary.org/obo/CHEBI_35674>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6dbbe7d
+
+
+51.  <http://purl.obolibrary.org/obo/CHEBI_51050>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c39c4b29
+
+
+52.  <http://purl.obolibrary.org/obo/CHEBI_67079>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@27b2ffdd
+
+
+53.  <http://purl.obolibrary.org/obo/CHEBI_50409>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@49f580
+
+
+54.  <http://purl.obolibrary.org/obo/CHEBI_77960>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e83a7087
+
+
+55.  <http://purl.obolibrary.org/obo/CHEBI_50427>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dc5e9831
+
+
+56.  <http://purl.obolibrary.org/obo/CHEBI_39379>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fb69d149
+
+
+57.  <http://purl.obolibrary.org/obo/CHEBI_46787>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@86ffa245
+
+
+58.  <http://purl.obolibrary.org/obo/CHEBI_85384>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2418d2a6
+
+
+59.  <http://purl.obolibrary.org/obo/CHEBI_50407>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@58843a90
+
+
+60.  <http://purl.obolibrary.org/obo/CHEBI_39456>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ace8ece5
+
+
+61.  <http://purl.obolibrary.org/obo/CHEBI_50646>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dd80e396
+
+
+62.  <http://purl.obolibrary.org/obo/CHEBI_86327>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@93d64e0b
+
+
+63.  <http://purl.obolibrary.org/obo/CHEBI_73334>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@90ee2766
+
+
+64.  <http://purl.obolibrary.org/obo/CHEBI_73333>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7f3fd37f
+
+
+65.  <http://purl.obolibrary.org/obo/CHEBI_50847>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2a6ce423
+
+
+66.  <http://purl.obolibrary.org/obo/CHEBI_52271>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fd2da2f7
+
+
+67.  <http://purl.obolibrary.org/obo/CHEBI_47958>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6ca259b
+
+
+68.  <http://purl.obolibrary.org/obo/CHEBI_35209>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@61f7ef4
+
+
+69.  <http://purl.obolibrary.org/obo/CHEBI_35208>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@37226f36
+
+
+70.  <http://purl.obolibrary.org/obo/CHEBI_50864>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a21a9e54
+
+
+71.  <http://purl.obolibrary.org/obo/CHEBI_22917>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a77f3c76
+
+
+72.  <http://purl.obolibrary.org/obo/CHEBI_35205>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d697a79b
+
+
+73.  <http://purl.obolibrary.org/obo/CHEBI_35204>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cc6637cd
+
+
+74.  <http://purl.obolibrary.org/obo/CHEBI_50177>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9cea6dc2
+
+
+75.  <http://purl.obolibrary.org/obo/CHEBI_48676>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f92d04c2
+
+
+76.  <http://purl.obolibrary.org/obo/CHEBI_48218>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e5aab1ae
+
+
+77.  <http://purl.obolibrary.org/obo/CHEBI_48425>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@413c74f9
+
+
+78.  <http://purl.bioontology.org/ontology/npo#NPO_1541>				 
+79.  <http://purl.obolibrary.org/obo/CHEBI_90710>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bfe43d0b
+
+
+80.  <http://purl.obolibrary.org/obo/CHEBI_48422>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b8140d92
+
+
+81.  <http://purl.obolibrary.org/obo/CHEBI_51060>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b076cf69
+
+
+82.  <http://purl.obolibrary.org/obo/CHEBI_90713>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bcff731e
+
+
+83.  <http://purl.obolibrary.org/obo/CHEBI_77970>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fbb56283
+
+
+84.  <http://purl.obolibrary.org/obo/CHEBI_60809>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c1cab35f
+
+
+85.  <http://purl.obolibrary.org/obo/CHEBI_48560>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4717b503
+
+
+86.  <http://purl.obolibrary.org/obo/CHEBI_60807>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ba58d443
+
+
+87.  <http://purl.obolibrary.org/obo/CHEBI_65259>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6c36f605
+
+
+88.  <http://purl.obolibrary.org/obo/CHEBI_78016>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@46513fe7
+
+
+89.  <http://purl.obolibrary.org/obo/CHEBI_88188>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e26d4f02
+
+
+90.  <http://purl.obolibrary.org/obo/CHEBI_52733>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ac4455a7
+
+
+91.  <http://purl.obolibrary.org/obo/CHEBI_65255>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f3a1eaae
+
+
+92.  <http://purl.obolibrary.org/obo/CHEBI_50857>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2fdc9963
+
+
+93.  <http://purl.obolibrary.org/obo/CHEBI_76414>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c8754045
+
+
+94.  <http://purl.obolibrary.org/obo/CHEBI_50855>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@59ee0be0
+
+
+95.  <http://purl.obolibrary.org/obo/CHEBI_72571>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bf43826f
+
+
+96.  <http://purl.obolibrary.org/obo/CHEBI_35223>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2ccca79
+
+
+97.  <http://purl.obolibrary.org/obo/CHEBI_49023>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6f229bfa
+
+
+98.  <http://purl.obolibrary.org/obo/CHEBI_76595>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fe24d03a
+
+
+99.  <http://purl.obolibrary.org/obo/CHEBI_77307>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b37b2804
+
+
+100.  <http://purl.obolibrary.org/obo/CHEBI_51087>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fccf12d2
+
+
+101.  <http://purl.obolibrary.org/obo/CHEBI_50176>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4e4710c3
+
+
+102.  <http://purl.obolibrary.org/obo/CHEBI_38706>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7043a490
+
+
+103.  <http://purl.obolibrary.org/obo/CHEBI_82786>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@553e44e9
+
+
+104.  <http://purl.obolibrary.org/obo/CHEBI_82785>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c35ed22a
+
+
+105.  <http://purl.obolibrary.org/obo/CHEBI_49326>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@91286e9a
+
+
+106.  <http://purl.obolibrary.org/obo/CHEBI_82783>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7f38ffbd
+
+
+107.  <http://purl.obolibrary.org/obo/CHEBI_25943>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6cb89b12
+
+
+108.  <http://purl.obolibrary.org/obo/CHEBI_48873>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4d37571
+
+
+109.  <http://purl.obolibrary.org/obo/CHEBI_82780>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1b8b4924
+
+
+110.  <http://purl.obolibrary.org/obo/CHEBI_60605>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c0941784
+
+
+111.  <http://purl.obolibrary.org/obo/CHEBI_52726>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d8326f61
+
+
+112.  <http://purl.obolibrary.org/obo/CHEBI_23582>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bddab880
+
+
+113.  <http://purl.obolibrary.org/obo/CHEBI_35470>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e84847d8
+
+
+114.  <http://purl.obolibrary.org/obo/CHEBI_78004>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@24930433
+
+
+115.  <http://purl.obolibrary.org/obo/CHEBI_59283>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@86c3bab9
+
+
+116.  <http://purl.obolibrary.org/obo/CHEBI_86328>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3b1eb960
+
+
+117.  <http://purl.obolibrary.org/obo/CHEBI_23100>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1b8e21d3
+
+
+118.  <http://purl.obolibrary.org/obo/CHEBI_50846>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a2004402
+
+
+119.  <http://purl.obolibrary.org/obo/CHEBI_51061>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@76ca7907
+
+
+120.  <http://purl.obolibrary.org/obo/CHEBI_50844>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f7c586dc
+
+
+121.  <http://purl.obolibrary.org/obo/CHEBI_50843>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4cfd2b3b
+
+
+122.  <http://purl.obolibrary.org/obo/CHEBI_59727>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b67c89c0
+
+
+123.  <http://purl.obolibrary.org/obo/CHEBI_51266>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fb1b11a4
+
+
+124.  <http://purl.obolibrary.org/obo/CHEBI_77974>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cfa13c7a
+
+
+125.  <http://purl.obolibrary.org/obo/CHEBI_35610>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d62a8a4f
+
+
+126.  <http://purl.obolibrary.org/obo/CHEBI_35499>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cf0eda6d
+
+
+127.  <http://purl.obolibrary.org/obo/CHEBI_51374>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d86382be
+
+
+128.  <http://purl.obolibrary.org/obo/CHEBI_51076>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1a19cd6f
+
+
+129.  <http://purl.obolibrary.org/obo/CHEBI_82776>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@761bad32
+
+
+130.  <http://purl.obolibrary.org/obo/CHEBI_22180>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@badafa51
+
+
+131.  <http://purl.obolibrary.org/obo/CHEBI_35640>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@392587d0
+
+
+132.  <http://purl.obolibrary.org/obo/CHEBI_38456>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ecf1a90b
+
+
+133.  <http://purl.obolibrary.org/obo/CHEBI_33295>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@99bf994c
+
+
+134.  <http://purl.obolibrary.org/obo/CHEBI_33292>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3021b6
+
+
+135.  <http://purl.obolibrary.org/obo/CHEBI_23367>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@394edfd3
+
+
+136.  <http://purl.obolibrary.org/obo/CHEBI_35481>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e38db1a
+
+
+137.  <http://purl.obolibrary.org/obo/CHEBI_50137>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7a60b2c9
+
+
+138.  <http://purl.obolibrary.org/obo/CHEBI_59740>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@faeaa2a1
+
+
+139.  <http://purl.obolibrary.org/obo/CHEBI_52943>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f0eaa19
+
+
+140.  <http://purl.obolibrary.org/obo/CHEBI_24527>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@735b5783
+
+
+141.  <http://purl.obolibrary.org/obo/CHEBI_50835>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@52315cd
+
+
+142.  <http://purl.obolibrary.org/obo/CHEBI_73296>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e076dd5e
+
+
+143.  <http://purl.obolibrary.org/obo/CHEBI_61016>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@23f406fd
+
+
+144.  <http://purl.obolibrary.org/obo/CHEBI_50832>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e3aae4b2
+
+
+145.  <http://purl.obolibrary.org/obo/CHEBI_39442>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3f4b01f8
+
+
+146.  <http://purl.obolibrary.org/obo/CHEBI_51068>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bffc155b
+
+
+147.  <http://purl.obolibrary.org/obo/CHEBI_59229>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3e3f54a1
+
+
+148.  <http://purl.obolibrary.org/obo/CHEBI_51065>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d03f8cd4
+
+
+149.  <http://purl.obolibrary.org/obo/CHEBI_59282>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7fd94bbd
+
+
+150.  <http://purl.obolibrary.org/obo/CHEBI_50671>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2108b425
+
+
+151.  <http://purl.obolibrary.org/obo/CHEBI_64054>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@440f332a
+
+
+152.  <http://purl.bioontology.org/ontology/npo#NPO_1893>				 
+153.  <http://purl.obolibrary.org/obo/CHEBI_33287>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c82c07c2
+
+
+154.  <http://purl.obolibrary.org/obo/CHEBI_33286>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@40db35f5
+
+
+155.  <http://purl.obolibrary.org/obo/CHEBI_90749>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2778f97e
+
+
+156.  <http://purl.obolibrary.org/obo/CHEBI_36335>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@28b69f64
+
+
+157.  <http://purl.obolibrary.org/obo/CHEBI_33281>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d3239239
+
+
+158.  <http://purl.obolibrary.org/obo/CHEBI_49325>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8c41b5df
+
+
+159.  <http://purl.obolibrary.org/obo/CHEBI_49324>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@19bf6283
+
+
+160.  <http://purl.obolibrary.org/obo/CHEBI_77972>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@725d46e7
+
+
+161.  <http://purl.obolibrary.org/obo/CHEBI_59745>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@864a77e9
+
+
+162.  <http://purl.obolibrary.org/obo/CHEBI_33195>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@23e3a31c
+
+
+163.  <http://purl.obolibrary.org/obo/CHEBI_33231>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7e3e9ec4
+
+
+164.  <http://purl.obolibrary.org/obo/CHEBI_39378>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cc477c1d
+
+
+165.  <http://purl.obolibrary.org/obo/CHEBI_33289>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@da8e883b
+
+
+166.  <http://purl.obolibrary.org/obo/CHEBI_59999>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4e999ae2
+
+
+167.  <http://purl.obolibrary.org/obo/CHEBI_50268>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2a4f5d28
+
+
+168.  <http://purl.obolibrary.org/obo/CHEBI_59739>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4310ea13
+
+
+169.  <http://purl.obolibrary.org/obo/CHEBI_71173>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@83cfe465
+
+
+170.  <http://purl.obolibrary.org/obo/CHEBI_78017>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8dd6c547
+
+
+171.  <http://purl.obolibrary.org/obo/CHEBI_64049>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9b347030
+
+
+172.  <http://purl.obolibrary.org/obo/CHEBI_64047>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9986994e
+
+
+173.  <http://purl.obolibrary.org/obo/CHEBI_37962>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9c33341
+
+
+174.  <http://purl.obolibrary.org/obo/CHEBI_37961>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8c2d311f
+
+
+175.  <http://purl.obolibrary.org/obo/CHEBI_70709>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e102ed94
+
+
+176.  <http://purl.obolibrary.org/obo/CHEBI_77035>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5bbb606b
+
+
+177.  <http://purl.obolibrary.org/obo/CHEBI_77034>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d3aa484d
+
+
+178.  <http://purl.obolibrary.org/obo/CHEBI_77969>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5f796a4f
+
+
+179.  <http://purl.obolibrary.org/obo/CHEBI_77968>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@edc09791
+
+
+180.  <http://purl.obolibrary.org/obo/CHEBI_27780>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@91b53324
+
+
+181.  <http://purl.obolibrary.org/obo/CHEBI_62868>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c07d8877
+
+
+182.  <http://purl.obolibrary.org/obo/CHEBI_77965>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@36a3effe
+
+
+183.  <http://purl.obolibrary.org/obo/CHEBI_77964>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b76db47c
+
+
+184.  <http://purl.obolibrary.org/obo/CHEBI_24127>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fdd49588
+
+
+185.  <http://purl.obolibrary.org/obo/CHEBI_77962>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d5f2f43f
+
+
+186.  <http://purl.obolibrary.org/obo/CHEBI_36333>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@db8ad94a
+
+
+187.  <http://purl.obolibrary.org/obo/CHEBI_23092>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ec6c43d4
+
+
+188.  <http://purl.obolibrary.org/obo/CHEBI_39369>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@416aa92b
+
+
+189.  <http://purl.obolibrary.org/obo/CHEBI_78433>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6c51789d
+
+
+190.  <http://purl.obolibrary.org/obo/CHEBI_48278>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@21c1c630
+
+
+191.  <http://purl.obolibrary.org/obo/CHEBI_37958>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@18670
+
+
+192.  <http://purl.obolibrary.org/obo/CHEBI_37957>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d233d8ff
+
+
+193.  <http://purl.obolibrary.org/obo/CHEBI_37956>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e85808ac
+
+
+194.  <http://purl.obolibrary.org/obo/CHEBI_37955>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7f943b9e
+
+
+195.  <http://purl.obolibrary.org/obo/CHEBI_22153>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2dbd8f5d
+
+
+196.  <http://purl.obolibrary.org/obo/CHEBI_74914>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2b1b8e19
+
+
+197.  <http://purl.obolibrary.org/obo/CHEBI_35846>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4dce446b
+
+
+198.  <http://purl.obolibrary.org/obo/CHEBI_24851>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@265e6320
+
+
+199.  <http://purl.obolibrary.org/obo/CHEBI_60599>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e11edb8c
+
+
+200.  <http://purl.obolibrary.org/obo/CHEBI_35842>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@65814f4e
+
+
+201.  <http://purl.obolibrary.org/obo/CHEBI_35841>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2280336e
+
+
+202.  <http://purl.obolibrary.org/obo/CHEBI_60601>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7655877c
+
+
+203.  <http://purl.obolibrary.org/obo/CHEBI_52217>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f8c1f343
+
+
+204.  <http://purl.obolibrary.org/obo/CHEBI_48360>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@490288eb
+
+
+205.  <http://purl.obolibrary.org/obo/CHEBI_52215>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@19a76ed2
+
+
+206.  <http://purl.obolibrary.org/obo/CHEBI_59010>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@58a6a8d8
+
+
+207.  <http://purl.obolibrary.org/obo/CHEBI_55323>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@97237591
+
+
+208.  <http://purl.obolibrary.org/obo/CHEBI_55324>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d6762d21
+
+
+209.  <http://purl.obolibrary.org/obo/CHEBI_61026>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@eda03917
+
+
+210.  <http://purl.obolibrary.org/obo/CHEBI_50103>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4a2615bc
+
+
+211.  <http://purl.obolibrary.org/obo/CHEBI_33288>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a717900c
+
+
+212.  <http://purl.obolibrary.org/obo/CHEBI_50247>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e328669e
+
+
+213.  <http://purl.obolibrary.org/obo/CHEBI_50780>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f1d7296b
+
+
+214.  <http://purl.obolibrary.org/obo/CHEBI_65191>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ce26c5fc
+
+
+215.  <http://purl.obolibrary.org/obo/CHEBI_65190>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@70be7340
+
+
+216.  <http://purl.obolibrary.org/obo/CHEBI_50792>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8e74fc0f
+
+
+217.  <http://purl.obolibrary.org/obo/CHEBI_48359>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@63bafc82
+
+
+218.  <http://purl.obolibrary.org/obo/CHEBI_51267>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@35adf6a6
+
+
+219.  <http://purl.obolibrary.org/obo/CHEBI_48357>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ece7a287
+
+
+220.  <http://purl.obolibrary.org/obo/CHEBI_48356>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e0c45fe6
+
+
+221.  <http://purl.obolibrary.org/obo/CHEBI_48355>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@60c83063
+
+
+222.  <http://purl.obolibrary.org/obo/CHEBI_48354>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@99477f63
+
+
+223.  <http://purl.obolibrary.org/obo/CHEBI_77715>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a1a16dfc
+
+
+224.  <http://purl.obolibrary.org/obo/CHEBI_78003>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e4a2549a
+
+
+225.  <http://purl.obolibrary.org/obo/CHEBI_38877>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c681d78b
+
+
+226.  <http://purl.obolibrary.org/obo/CHEBI_78006>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bb005b31
+
+
+227.  <http://purl.obolibrary.org/obo/CHEBI_78007>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c3bf2e32
+
+
+228.  <http://purl.obolibrary.org/obo/CHEBI_75835>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d09d6ed0
+
+
+229.  <http://purl.obolibrary.org/obo/CHEBI_50748>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@982447ee
+
+
+230.  <http://purl.obolibrary.org/obo/CHEBI_39116>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1266c6e3
+
+
+231.  <http://purl.obolibrary.org/obo/CHEBI_38870>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a9cfc446
+
+
+232.  <http://purl.obolibrary.org/obo/CHEBI_85046>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5405e42b
+
+
+233.  <http://purl.obolibrary.org/obo/CHEBI_35820>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6ef55c9a
+
+
+234.  <http://purl.obolibrary.org/obo/CHEBI_24942>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@57b529bd
+
+
+235.  <http://purl.obolibrary.org/obo/CHEBI_24941>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1a3b0b27
+
+
+236.  <http://purl.obolibrary.org/obo/CHEBI_35473>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a226b2c1
+
+
+237.  <http://purl.obolibrary.org/obo/CHEBI_37930>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@540d8e68
+
+
+238.  <http://purl.obolibrary.org/obo/CHEBI_35821>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8ed37e4f
+
+
+239.  <http://purl.obolibrary.org/obo/CHEBI_74886>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4803ddf6
+
+
+240.  <http://purl.obolibrary.org/obo/CHEBI_38869>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3e22af47
+
+
+241.  <http://purl.obolibrary.org/obo/CHEBI_82778>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4d481079
+
+
+242.  <http://purl.obolibrary.org/obo/CHEBI_38867>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1b43167f
+
+
+243.  <http://purl.obolibrary.org/obo/CHEBI_75358>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c6840307
+
+
+244.  <http://purl.obolibrary.org/obo/CHEBI_52425>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@14d5ade1
+
+
+245.  <http://purl.obolibrary.org/obo/CHEBI_36053>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8608a283
+
+
+246.  <http://purl.obolibrary.org/obo/CHEBI_25491>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@889358a7
+
+
+247.  <http://purl.obolibrary.org/obo/CHEBI_36051>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6f20f458
+
+
+248.  <http://purl.obolibrary.org/obo/CHEBI_36050>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3fb69ee3
+
+
+249.  <http://purl.obolibrary.org/obo/CHEBI_59683>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b380e9fa
+
+
+250.  <http://purl.obolibrary.org/obo/CHEBI_50779>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b6d812da
+
+
+251.  <http://purl.obolibrary.org/obo/CHEBI_59680>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@68bc58a1
+
+
+252.  <http://purl.obolibrary.org/obo/CHEBI_47868>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e6abfb02
+
+
+253.  <http://purl.obolibrary.org/obo/CHEBI_47867>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d58fbe0f
+
+
+254.  <http://purl.obolibrary.org/obo/CHEBI_63533>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b56739d7
+
+
+255.  <http://purl.obolibrary.org/obo/CHEBI_51373>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4e1a9b5e
+
+
+256.  <http://purl.obolibrary.org/obo/CHEBI_35818>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5683bf21
+
+
+257.  <http://purl.obolibrary.org/obo/CHEBI_35816>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2bcc7afe
+
+
+258.  <http://purl.obolibrary.org/obo/CHEBI_53353>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b6c216c0
+
+
+259.  <http://purl.obolibrary.org/obo/CHEBI_38941>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@df1374a4
+
+
+260.  <http://purl.obolibrary.org/obo/CHEBI_22583>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f26751e7
+
+
+261.  <http://purl.obolibrary.org/obo/CHEBI_23529>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@75dd682a
+
+
+262.  <http://purl.obolibrary.org/obo/CHEBI_65256>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@18dd0be2
+
+
+263.  <http://purl.obolibrary.org/obo/CHEBI_33232>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5ca40550
+
+
+264.  <http://purl.obolibrary.org/obo/CHEBI_64933>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fa500fc4
+
+
+265.  <http://purl.obolibrary.org/obo/CHEBI_91016>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4e4b7059
+
+
+266.  <http://purl.obolibrary.org/obo/CHEBI_36047>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4584366b
+
+
+267.  <http://purl.obolibrary.org/obo/CHEBI_72294>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@367f7f20
+
+
+268.  <http://purl.obolibrary.org/obo/CHEBI_51577>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c322f6db
+
+
+269.  <http://purl.obolibrary.org/obo/CHEBI_36044>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@114e0e58
+
+
+270.  <http://purl.obolibrary.org/obo/CHEBI_36043>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8af229ec
+
+
+271.  <http://purl.obolibrary.org/obo/CHEBI_46684>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@84431594
+
+
+272.  <http://purl.obolibrary.org/obo/CHEBI_67105>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f229e
+
+
+273.  <http://purl.obolibrary.org/obo/CHEBI_46682>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c5179013
+
+
+274.  <http://purl.obolibrary.org/obo/CHEBI_46680>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f9328c15
+
+
+275.  <http://purl.obolibrary.org/obo/CHEBI_50739>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d0936dde
+
+
+276.  <http://purl.obolibrary.org/obo/CHEBI_50533>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b292a9e7
+
+
+277.  <http://purl.obolibrary.org/obo/CHEBI_78152>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d935604b
+
+
+278.  <http://purl.obolibrary.org/obo/CHEBI_82781>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4fca9ada
+
+
+279.  <http://purl.obolibrary.org/obo/CHEBI_50827>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dbeb4705
+
+
+280.  <http://purl.obolibrary.org/obo/CHEBI_50684>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@901ad6ad
+
+
+281.  <http://purl.obolibrary.org/obo/CHEBI_35337>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b33d5693
+
+
+282.  <http://purl.obolibrary.org/obo/CHEBI_76977>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c52ec02f
+
+
+283.  <http://purl.obolibrary.org/obo/CHEBI_35569>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@53becbf0
+
+
+284.  <http://purl.obolibrary.org/obo/CHEBI_39301>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e810fbce
+
+
+285.  <http://purl.obolibrary.org/obo/CHEBI_65265>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cd81c724
+
+
+286.  <http://purl.obolibrary.org/obo/CHEBI_38147>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b98996e9
+
+
+287.  <http://purl.obolibrary.org/obo/CHEBI_38849>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e319680
+
+
+288.  <http://purl.obolibrary.org/obo/CHEBI_60646>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cf3748b
+
+
+289.  <http://purl.obolibrary.org/obo/CHEBI_46678>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@247bd550
+
+
+290.  <http://purl.obolibrary.org/obo/CHEBI_46677>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d377182f
+
+
+291.  <http://purl.obolibrary.org/obo/CHEBI_35444>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@620768b9
+
+
+292.  <http://purl.obolibrary.org/obo/CHEBI_35554>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@72c76b67
+
+
+293.  <http://purl.obolibrary.org/obo/CHEBI_39318>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5be32f5
+
+
+294.  <http://purl.obolibrary.org/obo/CHEBI_26089>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@16452f6
+
+
+295.  <http://purl.obolibrary.org/obo/CHEBI_26088>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@da5bde87
+
+
+296.  <http://purl.obolibrary.org/obo/CHEBI_26087>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@946baeb6
+
+
+297.  <http://purl.obolibrary.org/obo/CHEBI_63047>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dcbdd307
+
+
+298.  <http://purl.obolibrary.org/obo/CHEBI_35678>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ebffe217
+
+
+299.  <http://purl.obolibrary.org/obo/CHEBI_35472>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8dac77c8
+
+
+300.  <http://purl.obolibrary.org/obo/CHEBI_35845>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@15ef75f9
+
+
+301.  <http://purl.obolibrary.org/obo/CHEBI_50751>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f3726438
+
+
+302.  <http://purl.obolibrary.org/obo/CHEBI_48318>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@16fe0a0f
+
+
+303.  <http://purl.obolibrary.org/obo/CHEBI_79314>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ab4d65e8
+
+
+304.  <http://purl.obolibrary.org/obo/CHEBI_48561>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d61066e0
+
+
+305.  <http://purl.obolibrary.org/obo/CHEBI_90757>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e73ca014
+
+
+306.  <http://purl.obolibrary.org/obo/CHEBI_74152>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@49e68e13
+
+
+307.  <http://purl.obolibrary.org/obo/CHEBI_64915>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@80d5fb5e
+
+
+308.  <http://purl.obolibrary.org/obo/CHEBI_51452>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@89e4c577
+
+
+309.  <http://purl.obolibrary.org/obo/CHEBI_51451>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@47efe8d6
+
+
+310.  <http://purl.bioontology.org/ontology/npo#NPO_1892>				 
+311.  <http://purl.obolibrary.org/obo/CHEBI_48540>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2a1e7e07
+
+
+312.  <http://purl.obolibrary.org/obo/CHEBI_83159>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d7eaea3f
+
+
+313.  <http://purl.obolibrary.org/obo/CHEBI_46666>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@19262efb
+
+
+314.  <http://purl.obolibrary.org/obo/CHEBI_75324>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5f1e2399
+
+
+315.  <http://purl.obolibrary.org/obo/CHEBI_46664>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c1dba776
+
+
+316.  <http://purl.obolibrary.org/obo/CHEBI_46661>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ccbed97a
+
+
+317.  <http://purl.obolibrary.org/obo/CHEBI_59886>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a7b4f2b9
+
+
+318.  <http://purl.obolibrary.org/obo/CHEBI_52855>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@749344f4
+
+
+319.  <http://purl.obolibrary.org/obo/CHEBI_50514>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5373c2ec
+
+
+320.  <http://purl.obolibrary.org/obo/CHEBI_50513>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b9b4db61
+
+
+321.  <http://purl.obolibrary.org/obo/CHEBI_33893>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@40671cb2
+
+
+322.  <http://purl.obolibrary.org/obo/CHEBI_48876>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@10434096
+
+
+323.  <http://purl.obolibrary.org/obo/CHEBI_77966>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7268cbe
+
+
+324.  <http://purl.obolibrary.org/obo/CHEBI_37334>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bea96f84
+
+
+325.  <http://purl.obolibrary.org/obo/CHEBI_82784>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@824cd37e
+
+
+326.  <http://purl.obolibrary.org/obo/CHEBI_39316>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@61462d9b
+
+
+327.  <http://purl.obolibrary.org/obo/CHEBI_51217>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b178a0d7
+
+
+328.  <http://purl.obolibrary.org/obo/CHEBI_48539>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9be17d75
+
+
+329.  <http://purl.obolibrary.org/obo/CHEBI_37886>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a6503721
+
+
+330.  <http://purl.obolibrary.org/obo/CHEBI_55322>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3703b51a
+
+
+331.  <http://purl.obolibrary.org/obo/CHEBI_53784>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@10929615
+
+
+332.  <http://purl.obolibrary.org/obo/CHEBI_90744>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2cf2d935
+
+
+333.  <http://purl.obolibrary.org/obo/CHEBI_33904>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5de3998d
+
+
+334.  <http://purl.obolibrary.org/obo/CHEBI_90742>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@87fbbfb3
+
+
+335.  <http://purl.obolibrary.org/obo/CHEBI_73336>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e40f52ba
+
+
+336.  <http://purl.obolibrary.org/obo/CHEBI_52523>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2304785a
+
+
+337.  <http://purl.obolibrary.org/obo/CHEBI_77182>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e8034954
+
+
+338.  <http://purl.obolibrary.org/obo/CHEBI_50507>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ea4cc81b
+
+
+339.  <http://purl.obolibrary.org/obo/CHEBI_50505>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@799639ce
+
+
+340.  <http://purl.obolibrary.org/obo/CHEBI_50504>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@65d06fc3
+
+
+341.  <http://purl.obolibrary.org/obo/CHEBI_50503>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b08e2802
+
+
+342.  <http://purl.obolibrary.org/obo/CHEBI_50267>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d1b24fce
+
+
+343.  <http://purl.obolibrary.org/obo/CHEBI_50266>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ed8dc3cd
+
+
+344.  <http://purl.obolibrary.org/obo/CHEBI_63726>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1fc20229
+
+
+345.  <http://purl.obolibrary.org/obo/CHEBI_73668>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@268defe
+
+
+346.  <http://purl.obolibrary.org/obo/CHEBI_36063>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ab9f3ab2
+
+
+347.  <http://purl.obolibrary.org/obo/BFO_0000016>				 
+348.  <http://purl.obolibrary.org/obo/CHEBI_64176>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@98c626a0
+
+
+349.  <http://purl.obolibrary.org/obo/CHEBI_79056>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bc4365f7
+
+
+350.  <http://purl.obolibrary.org/obo/CHEBI_48525>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a48c7ca6
+
+
+351.  <http://purl.obolibrary.org/obo/CHEBI_35530>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@41f1ef45
+
+
+352.  <http://purl.obolibrary.org/obo/CHEBI_77178>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7e10722c
+
+
+353.  <http://purl.obolibrary.org/obo/CHEBI_66993>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fc039f7f
+
+
+354.  <http://purl.obolibrary.org/obo/CHEBI_64571>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ffec8125
+
+
+355.  <http://purl.obolibrary.org/obo/CHEBI_66991>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b7412fa3
+
+
+356.  <http://purl.obolibrary.org/obo/CHEBI_64577>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fff32a03
+
+
+357.  <http://purl.obolibrary.org/obo/CHEBI_75769>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@51a6c814
+
+
+358.  <http://purl.obolibrary.org/obo/CHEBI_36710>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f7a36b50
+
+
+359.  <http://purl.obolibrary.org/obo/CHEBI_59163>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cee2b42
+
+
+360.  <http://purl.obolibrary.org/obo/CHEBI_59864>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ed4c3476
+
+
+361.  <http://purl.obolibrary.org/obo/CHEBI_64857>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e65506cf
+
+
+362.  <http://purl.obolibrary.org/obo/BFO_0000040>				 
+363.  <http://purl.obolibrary.org/obo/CHEBI_39276>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@50e9214b
+
+
+364.  <http://purl.obolibrary.org/obo/CHEBI_64912>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c6b88a83
+
+
+365.  <http://purl.obolibrary.org/obo/CHEBI_73182>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5487ffa0
+
+
+366.  <http://purl.obolibrary.org/obo/CHEBI_38461>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6a147fe0
+
+
+367.  <http://purl.obolibrary.org/obo/CHEBI_35526>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2710a3e6
+
+
+368.  <http://purl.obolibrary.org/obo/CHEBI_35524>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e3dfb19c
+
+
+369.  <http://purl.obolibrary.org/obo/CHEBI_35523>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@89708b47
+
+
+370.  <http://purl.obolibrary.org/obo/CHEBI_48279>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ecdeb4ae
+
+
+371.  <http://purl.obolibrary.org/obo/CHEBI_82655>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8ba7010d
+
+
+372.  <http://purl.obolibrary.org/obo/CHEBI_66987>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1e1598d
+
+
+373.  <http://purl.obolibrary.org/obo/CHEBI_77971>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e70aadce
+
+
+374.  <http://purl.obolibrary.org/obo/CHEBI_35498>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1480f6eb
+
+
+375.  <http://purl.obolibrary.org/obo/CHEBI_52941>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a96d6174
+
+
+376.  <http://purl.obolibrary.org/obo/CHEBI_66981>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@42b96343
+
+
+377.  <http://purl.obolibrary.org/obo/CHEBI_66980>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d6e7b42c
+
+
+378.  <http://purl.obolibrary.org/obo/CHEBI_49020>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b403421a
+
+
+379.  <http://purl.obolibrary.org/obo/CHEBI_50249>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@7a77387c
+
+
+380.  <http://purl.obolibrary.org/obo/CHEBI_50248>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b4cccab7
+
+
+381.  <http://purl.obolibrary.org/obo/CHEBI_75050>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dbf59425
+
+
+382.  <http://purl.obolibrary.org/obo/CHEBI_50949>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@80b8a1c3
+
+
+383.  <http://purl.obolibrary.org/obo/CHEBI_38956>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@69362b2b
+
+
+384.  <http://purl.obolibrary.org/obo/CHEBI_39351>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bdafa9b6
+
+
+385.  <http://purl.obolibrary.org/obo/CHEBI_33416>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9c5ebfe0
+
+
+386.  <http://purl.obolibrary.org/obo/CHEBI_90714>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@338ac99c
+
+
+387.  <http://purl.obolibrary.org/obo/CHEBI_51177>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f31852f5
+
+
+388.  <http://purl.obolibrary.org/obo/CHEBI_35207>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c01fca0c
+
+
+389.  <http://purl.obolibrary.org/obo/CHEBI_38325>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d7afc26d
+
+
+390.  <http://purl.obolibrary.org/obo/CHEBI_38324>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@24803372
+
+
+391.  <http://purl.obolibrary.org/obo/CHEBI_38323>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fd7b1533
+
+
+392.  <http://purl.obolibrary.org/obo/CHEBI_50370>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e9bca75e
+
+
+393.  <http://purl.obolibrary.org/obo/CHEBI_60649>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9b07df9a
+
+
+394.  <http://purl.obolibrary.org/obo/CHEBI_59844>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@24212c30
+
+
+395.  <http://purl.obolibrary.org/obo/CHEBI_49201>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@82b2f052
+
+
+396.  <http://purl.obolibrary.org/obo/CHEBI_39277>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d6b90013
+
+
+397.  <http://purl.obolibrary.org/obo/CHEBI_39259>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8db12d98
+
+
+398.  <http://purl.obolibrary.org/obo/CHEBI_50141>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@be486b98
+
+
+399.  <http://purl.obolibrary.org/obo/CHEBI_25944>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@691c45fa
+
+
+400.  <http://purl.obolibrary.org/obo/CHEBI_51268>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1f9f9f8e
+
+
+401.  <http://purl.obolibrary.org/obo/CHEBI_65023>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@18fea38e
+
+
+402.  <http://purl.obolibrary.org/obo/CHEBI_50837>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@653dfdf1
+
+
+403.  <http://purl.obolibrary.org/obo/CHEBI_76916>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@484d4682
+
+
+404.  <http://purl.obolibrary.org/obo/CHEBI_37338>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@23b5b839
+
+
+405.  <http://purl.obolibrary.org/obo/CHEBI_90709>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@6af56285
+
+
+406.  <http://purl.obolibrary.org/obo/CHEBI_90708>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@17f73ab1
+
+
+407.  <http://purl.obolibrary.org/obo/CHEBI_51039>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@fdffeb7d
+
+
+408.  <http://purl.obolibrary.org/obo/CHEBI_24852>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e0e1cb68
+
+
+409.  <http://purl.obolibrary.org/obo/CHEBI_50691>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@32c86591
+
+
+410.  <http://purl.obolibrary.org/obo/CHEBI_24850>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@dcbfb77e
+
+
+411.  <http://purl.obolibrary.org/obo/CHEBI_51166>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a071e622
+
+
+412.  <http://purl.obolibrary.org/obo/CHEBI_35623>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@346494c1
+
+
+413.  <http://purl.obolibrary.org/obo/CHEBI_35497>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@4d1d2c42
+
+
+414.  <http://purl.obolibrary.org/obo/CHEBI_64155>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d1858ac2
+
+
+415.  <http://purl.obolibrary.org/obo/CHEBI_64154>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cf3a8a3
+
+
+416.  <http://purl.obolibrary.org/obo/CHEBI_35493>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@263e7b70
+
+
+417.  <http://purl.obolibrary.org/obo/CHEBI_37887>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@72b01f62
+
+
+418.  <http://purl.obolibrary.org/obo/CHEBI_70982>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@377121b6
+
+
+419.  <http://purl.obolibrary.org/obo/CHEBI_67198>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a5fe4727
+
+
+420.  <http://purl.obolibrary.org/obo/CHEBI_38070>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@cb515356
+
+
+421.  <http://purl.obolibrary.org/obo/CHEBI_50927>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8febd332
+
+
+422.  <http://purl.obolibrary.org/obo/CHEBI_50926>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f5eb3b3
+
+
+423.  <http://purl.obolibrary.org/obo/CHEBI_50689>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a1c89a27
+
+
+424.  <http://purl.obolibrary.org/obo/CHEBI_35620>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@aaf4ac9b
+
+
+425.  <http://purl.obolibrary.org/obo/CHEBI_50685>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ca4109aa
+
+
+426.  <http://purl.obolibrary.org/obo/CHEBI_51237>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d6d268a0
+
+
+427.  <http://purl.obolibrary.org/obo/CHEBI_90753>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@57291717
+
+
+428.  <http://purl.obolibrary.org/obo/CHEBI_77608>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1a748e7
+
+
+429.  <http://purl.obolibrary.org/obo/CHEBI_90755>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5a4139df
+
+
+430.  <http://purl.obolibrary.org/obo/CHEBI_38068>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@69e1838d
+
+
+431.  <http://purl.obolibrary.org/obo/CHEBI_74783>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@848bbff9
+
+
+432.  <http://purl.obolibrary.org/obo/CHEBI_35206>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d8d68e3
+
+
+433.  <http://purl.obolibrary.org/obo/CHEBI_35480>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9a124917
+
+
+434.  <http://purl.obolibrary.org/obo/CHEBI_25540>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@96b980f2
+
+
+435.  <http://purl.obolibrary.org/obo/CHEBI_64371>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@ce10777b
+
+
+436.  <http://purl.obolibrary.org/obo/CHEBI_64370>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@47957a8d
+
+
+437.  <http://purl.obolibrary.org/obo/CHEBI_73618>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@97bafd1e
+
+
+438.  <http://purl.obolibrary.org/obo/CHEBI_50919>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@bc3b5493
+
+
+439.  <http://purl.obolibrary.org/obo/CHEBI_50823>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@22f5026a
+
+
+440.  <http://purl.obolibrary.org/obo/CHEBI_50824>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@84fdac43
+
+
+441.  <http://purl.obolibrary.org/obo/CHEBI_35482>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a1784899
+
+
+442.  <http://purl.obolibrary.org/obo/CHEBI_23891>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@36b63a3b
+
+
+443.  <http://purl.obolibrary.org/obo/CHEBI_78298>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a0a066e2
+
+
+444.  <http://purl.obolibrary.org/obo/CHEBI_50828>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@5dcf2d4f
+
+
+445.  <http://purl.obolibrary.org/obo/CHEBI_71031>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@322c5438
+
+
+446.  <http://purl.bioontology.org/ontology/npo#NPO_729>				 
+447.  <http://purl.obolibrary.org/obo/CHEBI_35717>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@392e62b3
+
+
+448.  <http://purl.obolibrary.org/obo/CHEBI_39415>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@db1d1af7
+
+
+449.  <http://purl.obolibrary.org/obo/CHEBI_35488>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@78e1d47d
+
+
+450.  <http://purl.obolibrary.org/obo/CHEBI_35477>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d0e7252e
+
+
+451.  <http://purl.obolibrary.org/obo/CHEBI_35476>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d69581bd
+
+
+452.  <http://purl.obolibrary.org/obo/CHEBI_35475>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1f2e31a1
+
+
+453.  <http://purl.obolibrary.org/obo/CHEBI_35474>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@308dff90
+
+
+454.  <http://purl.obolibrary.org/obo/CHEBI_35942>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b159869b
+
+
+455.  <http://purl.obolibrary.org/obo/CHEBI_35941>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a2ee8555
+
+
+456.  <http://purl.obolibrary.org/obo/CHEBI_51372>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@c3780b00
+
+
+457.  <http://purl.obolibrary.org/obo/CHEBI_51371>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3450db26
+
+
+458.  <http://purl.obolibrary.org/obo/CHEBI_50733>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@47e56b42
+
+
+459.  <http://purl.obolibrary.org/obo/CHEBI_35471>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@568aa93
+
+
+460.  <http://purl.obolibrary.org/obo/CHEBI_38060>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@13fe8384
+
+
+461.  <http://purl.obolibrary.org/obo/CHEBI_67137>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@88492027
+
+
+462.  <http://purl.obolibrary.org/obo/CHEBI_23888>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2f2fa0
+
+
+463.  <http://purl.obolibrary.org/obo/CHEBI_49167>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@957519f7
+
+
+464.  <http://purl.obolibrary.org/obo/CHEBI_78059>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@e3e7e626
+
+
+465.  <http://purl.obolibrary.org/obo/CHEBI_78058>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3beaece
+
+
+466.  <http://purl.obolibrary.org/obo/CHEBI_71027>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@a46bf9de
+
+
+467.  <http://purl.obolibrary.org/obo/CHEBI_67170>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@b5de525a
+
+
+468.  <http://purl.obolibrary.org/obo/CHEBI_50741>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@80997244
+
+
+469.  <http://purl.obolibrary.org/obo/CHEBI_50433>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f2999d76
+
+
+470.  <http://purl.obolibrary.org/obo/CHEBI_70868>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@be1ac7e2
+
+
+471.  <http://purl.obolibrary.org/obo/CHEBI_76648>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@38125c11
+
+
+472.  <http://purl.obolibrary.org/obo/CHEBI_77963>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@d97f1205
+
+
+473.  <http://purl.obolibrary.org/obo/CHEBI_35705>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@aad3e1bb
+
+
+474.  <http://purl.obolibrary.org/obo/CHEBI_35469>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@3f403727
+
+
+475.  <http://purl.obolibrary.org/obo/CHEBI_33128>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@1c31fdbd
+
+
+476.  <http://purl.obolibrary.org/obo/CHEBI_35232>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@739f3fe
+
+
+477.  <http://purl.obolibrary.org/obo/CHEBI_35231>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@2baf04b0
+
+
+478.  <http://purl.obolibrary.org/obo/CHEBI_35230>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@f0890d8a
+
+
+479.  <http://purl.obolibrary.org/obo/CHEBI_74530>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@48792551
+
+
+480.  <http://purl.obolibrary.org/obo/CHEBI_77973>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@9c2d7a10
+
+
+481.  <http://purl.obolibrary.org/obo/CHEBI_66956>				 
+uk.ac.manchester.cs.owl.owlapi.OWLLiteralImplString@8f7411f
+
+

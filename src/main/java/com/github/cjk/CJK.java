@@ -6,9 +6,11 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,16 +46,18 @@ import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
+import uk.ac.manchester.cs.owl.owlapi.*;
+
 /**
  *
  * @author jkchang
  */
 public class CJK {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         String kPath = "src\\main\\resources\\keyword.txt";
-        String ontoPath = "src\\main\\resources\\enanomapper.owl";
+        String ontoPath = "src\\main\\resources\\chebi-slim.owl";
         String ontoTest = "src\\main\\resources\\fruit.owl";
 
         Set<String> keywords = new HashSet<String>();
@@ -72,6 +76,10 @@ public class CJK {
             System.out.println("Fail to load the keyword file form " + kPath);
         }
 
+        // record the results
+        PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
+        int count = 1;
+
         //2. Load ontology labels
         try {
             File file = new File(ontoPath);
@@ -79,21 +87,26 @@ public class CJK {
             OWLDataFactory factory = man.getOWLDataFactory();
             OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
             Set<OWLClass> classes = onto.getClassesInSignature();
+                        
             for (OWLClass en : classes) {
+                System.out.println(count + ".  " + en.toString()+"\t\t\t\t ");
+                out.println(count + ".  " +en.toString() + "\t\t\t\t ");
+                count ++;
                 Set<OWLAnnotationAssertionAxiom> ann = onto.getAnnotationAssertionAxioms(en.getIRI());
                 for (OWLAnnotationAssertionAxiom axiom : ann) {
                     if (axiom.getProperty().equals(factory.getRDFSLabel())) {
                         OWLAnnotationValue va = axiom.getValue();
                         //OWLAnnotationValue va = axiom.getValue().accept(new OWLAnnotationValueVisitor (new OWLLiteral));
-                        System.out.println(va);
-
+                        System.out.print(va + "\n");
+                        out.println(va+ "\n");
+                        out.println("");
                     }
                 }
             }
         } catch (Exception e) {
             System.out.println("Fail to load the OWLfile form " + ontoPath);
         }
-
+        out.close();
 
         /*  
         
