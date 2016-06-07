@@ -80,6 +80,8 @@ public class CJK {
         PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
         int count = 1;
 
+        
+       
         //2. Load ontology labels
         try {
             File file = new File(ontoPath);
