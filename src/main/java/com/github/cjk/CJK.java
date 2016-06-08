@@ -90,7 +90,7 @@ public class CJK {
 
             for (OWLClass en : classes) {
                 System.out.println(count + ".  " + en.toString() + "\t\t\t\t ");
-                out.println(count + ".  " + en.toString() + "\t\t\t\t ");
+                //out.println(count + ".  " + en.toString() + "\t\t\t\t ");
                 count++;
                 Set<OWLAnnotationAssertionAxiom> ann = onto.getAnnotationAssertionAxioms(en.getIRI());
                 for (OWLAnnotationAssertionAxiom axiom : ann) {
