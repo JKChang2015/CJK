@@ -45,7 +45,7 @@ import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLOntologyStorageException;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-
+import org.semanticweb.owlapi.model.OWLLiteral;
 import uk.ac.manchester.cs.owl.owlapi.*;
 
 /**
@@ -57,7 +57,7 @@ public class CJK {
     public static void main(String[] args) throws Exception {
 
         String kPath = "src\\main\\resources\\keyword.txt";
-        String ontoPath = "src\\main\\resources\\chebi-slim.owl";
+        String ontoPath = "src\\main\\resources\\enm.owl";
         String ontoTest = "src\\main\\resources\\fruit.owl";
 
         Set<String> keywords = new HashSet<String>();
@@ -80,8 +80,6 @@ public class CJK {
         PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
         int count = 1;
 
-        
-       
         //2. Load ontology labels
         try {
             File file = new File(ontoPath);
@@ -89,19 +87,18 @@ public class CJK {
             OWLDataFactory factory = man.getOWLDataFactory();
             OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
             Set<OWLClass> classes = onto.getClassesInSignature();
-                        
+
             for (OWLClass en : classes) {
-                System.out.println(count + ".  " + en.toString()+"\t\t\t\t ");
-                out.println(count + ".  " +en.toString() + "\t\t\t\t ");
-                count ++;
+                System.out.println(count + ".  " + en.toString() + "\t\t\t\t ");
+                out.println(count + ".  " + en.toString() + "\t\t\t\t ");
+                count++;
                 Set<OWLAnnotationAssertionAxiom> ann = onto.getAnnotationAssertionAxioms(en.getIRI());
                 for (OWLAnnotationAssertionAxiom axiom : ann) {
-                    if (axiom.getProperty().equals(factory.getRDFSLabel())) {
-                        OWLAnnotationValue va = axiom.getValue();
-                        //OWLAnnotationValue va = axiom.getValue().accept(new OWLAnnotationValueVisitor (new OWLLiteral));
-                        System.out.print(va + "\n");
-                        out.println(va+ "\n");
-                        out.println("");
+                    if (axiom.getProperty().equals(factory.getRDFSLabel()) && axiom.getValue() instanceof OWLLiteral) {
+                        OWLLiteral lr = (OWLLiteral) axiom.getValue();
+                        String result = (String) lr.getLiteral();
+                        System.out.println(result + "\n");
+                        out.println(result);
                     }
                 }
             }
