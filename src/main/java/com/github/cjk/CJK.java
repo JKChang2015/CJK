@@ -2,6 +2,7 @@ package com.github.cjk;
 
 import com.github.eNM.Label;
 import com.github.eNM.KeywordFile;
+import org.semanticweb.owlapi.*;
 
 import java.util.Set;
 import java.util.HashSet;
@@ -22,10 +23,6 @@ public class CJK {
         File ontoFile = new File(ontoPath);
         File keywordFile = new File(kPath);
         
-        int data = 3;
-       
-        
-
         Set<String> keywords = new HashSet<String>();
         Set<String> ontoLabels = new HashSet<String>();
 
