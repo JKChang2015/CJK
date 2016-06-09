@@ -8,7 +8,7 @@ import java.util.HashSet;
 import java.io.File;
 
 /**
- *
+ * .,;:([+-=
  * @author jkchang
  */
 public class CJK {
@@ -21,6 +21,10 @@ public class CJK {
 
         File ontoFile = new File(ontoPath);
         File keywordFile = new File(kPath);
+        
+        int data = 3;
+       
+        
 
         Set<String> keywords = new HashSet<String>();
         Set<String> ontoLabels = new HashSet<String>();
