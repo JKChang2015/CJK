@@ -15,17 +15,20 @@
     <build>
         <pluginManagement>
             <plugins>
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.5</version>
                 </plugin>
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
                     <version>3.0.0</version>
                     <inherited>true</inherited>
                 </plugin>
+                
                 <plugin>
                     <artifactId>maven-assembly-plugin</artifactId>
                     <version>2.6</version>
@@ -35,21 +38,31 @@
                         </descriptorRefs>
                     </configuration>
                 </plugin>
+            
             </plugins>
         </pluginManagement>
     </build>
   
     <dependencies>
+        
         <dependency>
             <groupId>net.sourceforge.owlapi</groupId>
             <artifactId>owlapi-distribution</artifactId>
             <version>4.2.5</version>
         </dependency>
+        
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
             <version>4.11</version>
         </dependency>
+
+        <dependency>
+            <groupId>net.sourceforge.jexcelapi</groupId>
+            <artifactId>jxl</artifactId>
+            <version>2.6.12</version>
+        </dependency>
+
     </dependencies>
 </project>
