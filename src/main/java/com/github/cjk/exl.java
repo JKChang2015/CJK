@@ -10,7 +10,7 @@ import jxl.write.Label;
 public class exl {
 
     public static void main(String[] args) throws Exception {
-        File file = new File("C:\\Users\\jkchang\\Desktop\\result.xls");
+        File file = new File("result.xls");
         WritableWorkbook myexcel = Workbook.createWorkbook(file);
         WritableSheet sheet1 = myexcel.createSheet("new sheet", 0);
         Label l1 = new Label(0, 0, "first");
