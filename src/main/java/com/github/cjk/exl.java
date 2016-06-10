@@ -10,6 +10,22 @@ import jxl.write.Label;
 public class exl {
 
     public static void main(String[] args) throws Exception {
+        
+        String a = "information retrieval";
+        String b = "Information";
+        String c = "information";
+        String d = "informat";
+        String e = "informationretrievl";
+        
+        System.out.println(a.contains(b));
+        System.out.println(a.toLowerCase().contains(b.toLowerCase()));
+        System.out.println(a.contains(c));
+        System.out.println(a.contains(d));
+        System.out.println(a.contains(e));
+
+        System.out.println("finish");
+        
+        
         File file = new File("result.xls");
         WritableWorkbook myexcel = Workbook.createWorkbook(file);
         WritableSheet sheet1 = myexcel.createSheet("new sheet", 0);

@@ -17,15 +17,15 @@ public class KeywordFile {
 
     Set<String> keywords = new HashSet<String>();
 
-    public KeywordFile(File file) throws FileNotFoundException, IOException {
+    public KeywordFile(File file) throws Exception {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = reader.readLine().trim();
         int count = 0;
         while (line != null) {
             count++;
-            keywords.add(line);
+            keywords.add(line.trim());
             System.out.println(count + ".  " + line);
-            line = reader.readLine().trim();
+            line = reader.readLine();
         }
         System.out.println("finished the loading progress");
     }

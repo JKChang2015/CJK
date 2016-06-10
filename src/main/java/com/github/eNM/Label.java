@@ -40,6 +40,7 @@ public class Label {
                 if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
+                    labels.add(result.trim());
                     System.out.println(count + ".  "+result);
 //                    out.println(result);
                 }
