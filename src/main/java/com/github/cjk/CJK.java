@@ -1,6 +1,6 @@
 package com.github.cjk;
 
-import com.github.eNM.Label;
+import com.github.eNM.OntoLabel;
 import com.github.eNM.KeywordFile;
 import org.semanticweb.owlapi.*;
 

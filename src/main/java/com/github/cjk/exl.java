@@ -7,6 +7,18 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WritableSheet;
 import jxl.write.Label;
 
+
+import com.github.eNM.KeywordFile;
+import org.semanticweb.owlapi.*;
+import com.github.eNM.OntoLabel;
+
+import java.util.Set;
+import java.util.HashSet;
+import java.io.File;
+import jxl.Workbook;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+
 public class exl {
 
     public static void main(String[] args) throws Exception {
@@ -21,7 +33,7 @@ public class exl {
 
         KeywordFile kf = new KeywordFile(keywordFile);
         keywords = kf.getkeywords();
-        Label lb = new Label(ontoFile);
+        OntoLabel lb = new OntoLabel(ontoFile);
         ontoLabels = lb.getlabel();
 
         File file = new File("src\\main\\resources\\result.xls");

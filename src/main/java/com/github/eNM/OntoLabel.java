@@ -18,13 +18,13 @@ import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLLiteral;
 
-public class Label {
+public class OntoLabel {
 
     private OWLOntologyManager man;
     private OWLOntology onto;
     private Set<String> labels = new HashSet<String>();
 
-    public Label(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
+    public OntoLabel(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
 //        PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
         int count = 0;
 
