@@ -14,6 +14,7 @@ public class hanoi {
             step++;
             System.out.println("Step " + step + ": " + from + "→" + to);
             hanoi(temp, from, to, n - 1);
+                        
         }
     }
 }

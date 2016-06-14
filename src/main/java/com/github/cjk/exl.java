@@ -42,6 +42,7 @@ public class exl {
         jxl.write.Label title1 = new jxl.write.Label(0, 0, "New term");
         jxl.write.Label title2 = new jxl.write.Label(1, 0, "Contain?");
         jxl.write.Label title3 = new jxl.write.Label(2, 0, "Label");
+        
 
         sheet.addCell(title1);
         sheet.addCell(title2);
