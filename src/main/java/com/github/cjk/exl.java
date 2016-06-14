@@ -11,31 +11,62 @@ public class exl {
 
     public static void main(String[] args) throws Exception {
         
-        String a = "information retrieval";
-        String b = "Information";
-        String c = "information";
-        String d = "informat";
-        String e = "informationretrievl";
-        
-        System.out.println(a.contains(b));
-        System.out.println(a.toLowerCase().contains(b.toLowerCase()));
-        System.out.println(a.contains(c));
-        System.out.println(a.contains(d));
-        System.out.println(a.contains(e));
+       String kPath = "src\\main\\resources\\keyword.txt";
+        String ontoPath = "src\\main\\resources\\enm.owl";
+        Set<String> keywords = new HashSet<String>();
+        Set<String> ontoLabels = new HashSet<String>();
 
-        System.out.println("finish");
-        
-        
-        File file = new File("result.xls");
+        File ontoFile = new File(ontoPath);
+        File keywordFile = new File(kPath);
+
+        KeywordFile kf = new KeywordFile(keywordFile);
+        keywords = kf.getkeywords();
+        Label lb = new Label(ontoFile);
+        ontoLabels = lb.getlabel();
+
+        File file = new File("src\\main\\resources\\result.xls");
         WritableWorkbook myexcel = Workbook.createWorkbook(file);
-        WritableSheet sheet1 = myexcel.createSheet("new sheet", 0);
-        Label l1 = new Label(0, 0, "first");
-        Label l2 = new Label(0, 1, "second");
-        
-        sheet1.addCell(l1);
-        sheet1.addCell(l2);
+        WritableSheet sheet = myexcel.createSheet("new sheet", 0);
+        jxl.write.Label title1 = new jxl.write.Label(0, 0, "New term");
+        jxl.write.Label title2 = new jxl.write.Label(1, 0, "Contain?");
+        jxl.write.Label title3 = new jxl.write.Label(2, 0, "Label");
+
+        sheet.addCell(title1);
+        sheet.addCell(title2);
+        sheet.addCell(title3);
+
+        int row = 1;
+        int count = 0;
+
+        for (String keyword : keywords) {
+            System.out.println(++count + ".  " + keyword);
+            jxl.write.Label addK = new jxl.write.Label(0, row, keyword);
+            jxl.write.Label addFlag = new jxl.write.Label(1, row, "");
+            jxl.write.Label addLab = new jxl.write.Label(2, row, "");
+
+            for (String label : ontoLabels) {
+                if (label.toLowerCase().equals(keyword.toLowerCase())) {
+                    addFlag = new jxl.write.Label(1, row, "Yes");
+                    addLab = new jxl.write.Label(2, row, label);
+                    continue;
+                }
+                if (label.toLowerCase().contains(keyword.toLowerCase())) {
+                    addFlag = new jxl.write.Label(1, row, "Similar");
+                    addLab = new jxl.write.Label(2, row, label);
+                    continue;
+                }
+                
+            }
+            sheet.addCell(addK);
+            sheet.addCell(addFlag);
+            sheet.addCell(addLab);
+            row++;
+        }
+
         myexcel.write();
         myexcel.close();
+
+        System.out.println("finished");
         
 
     }
