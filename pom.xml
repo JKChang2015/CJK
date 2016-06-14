@@ -48,7 +48,7 @@
         <dependency>
             <groupId>net.sourceforge.owlapi</groupId>
             <artifactId>owlapi-distribution</artifactId>
-            <version>4.2.5</version>
+            <version>4.1.1</version>
         </dependency>
         
         <dependency>
