@@ -18,6 +18,7 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLLiteral;
+import org.semanticweb.owlapi.model.OWLAnnotationValue;
 
 /**
  * .,;:([+-=
@@ -38,21 +39,27 @@ public class CJK {
         OWLDataFactory factory = man.getOWLDataFactory();
         OWLOntology onto = man.loadOntologyFromOntologyDocument(ontoFile);
         Set<OWLClass> classes = onto.getClassesInSignature();
-        
-        
+
         // count the Classes
         int clsCount = 0;
-        for(OWLClass clazz : classes){
-            clsCount ++;
+        for (OWLClass clazz : classes) {
+            clsCount++;
             System.out.println(clsCount);
         }
-        
+
         System.out.println("total number of classes is " + clsCount);
-        
+
         // list the label of the classes
-        
-        
-        
+        for (OWLClass clazz : classes) {
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
+            for (OWLAnnotationAssertionAxiom ano : annotations) {
+                OWLAnnotationValue va = ano.getValue();
+                OWLLiteral st = va.accept(new OWLAnnotationValueVisitor);
+                
+            }
+
+        }
+
         //count the def
         // count the isDefBy
     }
