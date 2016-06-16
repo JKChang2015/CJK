@@ -51,6 +51,7 @@ public class CJK {
 
         // list the label of the classes
         for (OWLClass clazz : classes) {
+            
             Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
             for (OWLAnnotationAssertionAxiom ano : annotations) {
                 OWLAnnotationValue va = ano.getValue();
