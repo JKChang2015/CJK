@@ -6,8 +6,10 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:untitled-ontology-13="http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13/"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fr="http://www.semanticweb.org/jkchang/ontologies/2016/5/fr/"
+     xmlns:ontologies="http://www.semanticweb.org/jkchang/ontologies/2016#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jkchang/ontologies/2016/5/fr"/>
     
 
 
@@ -22,9 +24,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13/ENM_9000001 -->
+    <!-- http://www.semanticweb.org/jkchang/ontologies/2016#definition -->
 
-    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13/ENM_9000001">
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/jkchang/ontologies/2016#definition">
         <rdfs:label xml:lang="en">definition</rdfs:label>
     </owl:AnnotationProperty>
     
@@ -44,9 +46,9 @@
     <!-- http://purl.enanomapper.org/onto/ENM_9000001 -->
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000001">
-        <untitled-ontology-13:ENM_9000001>fruit def</untitled-ontology-13:ENM_9000001>
-        <rdfs:isDefinedBy>yam</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">fruit</rdfs:label>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit def</ontologies:definition>
+        <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Fruit</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fruit</rdfs:label>
     </owl:Class>
     
 
@@ -55,9 +57,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000002">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>apple def</untitled-ontology-13:ENM_9000001>
-        <rdfs:isDefinedBy>a kind of fruit</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">apple</rdfs:label>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple def</ontologies:definition>
+        <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/apple</rdfs:isDefinedBy>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple</rdfs:label>
     </owl:Class>
     
 
@@ -66,9 +68,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000003">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>banana def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banana def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/banana</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">banana</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banana</rdfs:label>
     </owl:Class>
     
 
@@ -77,9 +79,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000004">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>kiwi fruit def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kiwi fruit def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Kiwifruit</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">kiwi fruit</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kiwi fruit</rdfs:label>
     </owl:Class>
     
 
@@ -88,9 +90,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000005">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>strawberry def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strawberry def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Strawberry</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">strawberry</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">strawberry</rdfs:label>
     </owl:Class>
     
 
@@ -99,9 +101,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000006">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>coconut def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coconut def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Coconut</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">coconut</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coconut</rdfs:label>
     </owl:Class>
     
 
@@ -109,9 +111,9 @@
     <!-- http://purl.enanomapper.org/onto/ENM_9000007 -->
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000007">
-        <untitled-ontology-13:ENM_9000001>tree def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tree def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/tree</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">tree</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tree</rdfs:label>
     </owl:Class>
     
 
@@ -120,9 +122,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000008">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000007"/>
-        <untitled-ontology-13:ENM_9000001>apple tree def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple tree def</ontologies:definition>
         <rdfs:isDefinedBy>tree of apple</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">apple tree</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple tree</rdfs:label>
     </owl:Class>
     
 
@@ -131,9 +133,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000009">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000007"/>
-        <untitled-ontology-13:ENM_9000001>banana tree def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banana tree def</ontologies:definition>
         <rdfs:isDefinedBy>tree of banana</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">banana tree</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">banana tree</rdfs:label>
     </owl:Class>
     
 
@@ -142,9 +144,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000010">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000002"/>
-        <untitled-ontology-13:ENM_9000001 xml:lang="en">pink apple def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pink apple def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Cripps_Pink</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">pink lady</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pink lady</rdfs:label>
     </owl:Class>
     
 
@@ -153,9 +155,9 @@
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_9000011">
         <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_9000001"/>
-        <untitled-ontology-13:ENM_9000001>water melon def</untitled-ontology-13:ENM_9000001>
+        <ontologies:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water melon def</ontologies:definition>
         <rdfs:isDefinedBy>https://en.wikipedia.org/wiki/Watermelon</rdfs:isDefinedBy>
-        <rdfs:label xml:lang="en">water melon</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">water melon</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 

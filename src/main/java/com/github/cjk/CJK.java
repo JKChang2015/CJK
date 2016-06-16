@@ -54,9 +54,10 @@ public class CJK {
             Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
             for (OWLAnnotationAssertionAxiom ano : annotations) {
                 OWLAnnotationValue va = ano.getValue();
-                OWLLiteral st = va.accept(new OWLAnnotationValueVisitor);
+                System.out.println(va.toString());
                 
             }
+            System.out.println("==============================");
 
         }
 
