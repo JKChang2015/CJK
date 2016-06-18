@@ -1,4 +1,4 @@
-# Three Projects
+### Three Projects
 
 ####[Daily Practice] (https://github.com/JKChang2015/CJK/tree/master/Functions)
 
@@ -6,3 +6,4 @@
 
 ####[SLMST] (https://github.com/JKChang2015/CJK/tree/master/SLMST)
 
+---
