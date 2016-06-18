@@ -1,9 +1,9 @@
 ### Three Projects
 
-####[Daily Practice] (https://github.com/JKChang2015/CJK/tree/master/Functions)
+####:arrow_forward:[Daily Practice] (https://github.com/JKChang2015/CJK/tree/master/Functions)
 
-####[LeetCode](https://github.com/JKChang2015/CJK/tree/master/LeetCode)
+####:arrow_forward:[LeetCode](https://github.com/JKChang2015/CJK/tree/master/LeetCode)
 
-####[SLMST] (https://github.com/JKChang2015/CJK/tree/master/SLMST)
+####:arrow_forward:[SLMST] (https://github.com/JKChang2015/CJK/tree/master/SLMST)
 
 ---
