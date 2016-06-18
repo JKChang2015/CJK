@@ -1,0 +1,1657 @@
+aerosol
+air
+area
+aspect ratio
+centrifugation
+composition
+diameter
+dispersion
+dissolution
+dissolved
+drying
+dustiness
+electrophoresis
+fraction
+frequency
+height
+incubation
+instrument
+intensity
+length
+mass
+mean
+median
+microscope
+microscopy
+mixture
+mode
+process
+protocol
+quality
+rate
+ratio
+sample
+shaking
+shape
+size
+size distribution
+slope
+sonication
+surface coating
+technique
+thickness
+unit
+volume
+water
+wavelength
+(dissolution
+description
+dispersion)
+dispersion,
+parameters
+diameter,
+diameters
+protocol)
+protocols
+quality:
+supplier
+distribution
+median)
+sample)
+sampled
+sampler
+samples
+compositional
+mdian
+media
+shape)
+tissue
+weight
+centrifugal
+concentration (unit??)
+undissolved
+concentration
+concentrations
+hydrodynamic diameter (nm)
+area,
+curve
+functional
+ionic
+mean,
+micrograph
+model
+modes
+plate
+refraction
+size,
+sonicator
+state
+wavelenght
+with
+distrubution
+mean particle size (nm)
+automatic
+average
+integrity
+speciment
+viability
+preincubation
+and
+apoptosis
+code
+concentration [ng/l]
+date
+days
+emission
+fixation
+foil
+mask
+max
+mean particle size  (nm)
+name
+nanodrum
+netintensity
+pass
+pore
+program
+reaction
+rotation
+salt
+side
+temperature (?¡ãc)
+tilt
+type
+weight loss  (%)
+zeta potential  (mv)
+apical ly concentration
+filter material
+particle concentration (ng/ml)
+tip composition
+combustion
+micrographs
+necrosis
+position
+resolution
+solution
+coating
+delayed
+laser
+plate)
+plate,
+quantification
+resting
+specifications
+wavelength (?£¤)
+weight)
+acceleration
+hydrodynamic
+measurements
+temperature  (?¡ãc)
+acceleration voltage
+dimension
+dispersant
+efficiency
+extraction
+filtration
+he-quality
+multimodal
+percentage
+processing
+solidity
+suspension
+tecniques)
+nm / ctrl concentration
+calculation
+magnification
+particles
+particles,
+particles/ml
+preparation
+concentraiton
+information
+informations
+positive control
+temperature
+14
+24
+28
+(core)
+absorbance
+ag
+atr
+bet
+cell type
+confirmation
+cycles
+density
+distance
+during
+electron
+filter
+format
+geometry
+image
+instrument type
+ion
+ir
+kit
+linear
+medium
+method description
+model,
+module
+mother
+nanovalid
+non
+on
+operating
+pdi
+pore size
+raw
+record
+rsd
+scored
+stage
+strand
+technical
+that
+value
+vibration
+wavelength (nm)
+mean hydrodynamic diameter  (nm)
+accelaration voltage
+counting procedure
+accelaration
+accelerating
+crystalline
+crystallite
+measurement
+percentage of fbs
+cells/well
+identification
+magnifications
+organisation
+potential
+viscosity
+absorption
+adsorption
+apodization
+calibration
+coloration
+concentration  (mg/ml)
+condition
+crystalline phase (nm)
+digestion
+dilutions
+dispersant:
+multimodal)
+nm supplier
+possibility
+replication
+solution,
+refractive index of the sample
+localisation of nps
+measurements/insert
+polymer identified
+replication index
+functional groups
+applied
+assay
+atomic
+channels
+chemical
+coating,
+concentrated
+counting
+duration
+element
+elements
+factor
+gradient
+instrument model
+manufacturer
+microscopy model
+pinhole
+proteins
+sampling
+scanning
+scattering
+settings
+starting
+strength
+surface topology
+date of analysis
+dissolution method
+statistical error (%)
+(relative
+[particles/l]
+absolute
+analytes
+endpoint
+evaportation
+exposure
+exposure/well
+interference
+ionic concentration [ug/l]
+material
+micromeritics
+microporosity
+nebulization
+particle
+reference
+capillary diameter
+localisation
+concentration 1 (?¦Ìg/ml)
+concentration 2 (?¦Ìg/ml)
+concentration 3 (?¦Ìg/ml)
+concentration 4 (?¦Ìg/ml)
+concentration 5 (?¦Ìg/ml)
+crystalline phase  (nm)
+measurement information
+(1,12
+after
+amount
+angle
+atmosphere
+atr crystal material
+block
+brand
+cell
+cell model
+cell types
+collimator
+conditionning
+content
+correction
+count
+data
+days,
+delay
+deviation
+digestion,
+dwell
+estimated
+estimation
+feret
+fields
+focus
+frame
+free
+gas
+graph
+here
+identified
+item
+limit
+line
+loss
+lower
+maldi
+monomodal,
+most
+normalized
+number cell per well
+numer
+orbit
+per
+phase
+point
+power
+power (w)
+range
+refractive
+refractive index of the medium
+sbet
+scans
+separation
+shift
+sites
+sop
+sops
+spend
+still
+stock
+teer
+test
+three
+time
+total
+treatment
+types
+usage
+well
+were
+concentration [particles/l]
+viscosity of the suspension
+#NAME?
+accelrating
+measurment
+sample-detector
+size calibration
+control concentration (?¦Ìg/ml)
+analysis
+beamsplitter
+cas number
+cells/insert
+concentration  (mg ml-1)
+containing
+density,
+dls z-ave hydrodynamic diameter (nm)
+electrode
+introduction
+micronucleus
+model / brand instrument
+multimodal?)
+nm concentration (?¦Ìg/ml)
+pass number
+pretreatment
+spectra
+surface
+treated
+date of acquisition
+normalization
+statistical
+electrophoresis time (min)
+make and type of the electron microscope
+(either
+(inorganic)
+(linear
+20000)
+acidic
+alkaline
+already
+ampha
+analyte mass fraction
+apical
+aspect
+basolateral
+bimodal
+camera
+carrier
+chamber
+circularity
+colture
+crystal
+culture
+cyclone
+cyt b concentration (?¦Ìg/cm?2)
+cytokinesis
+derived
+determination
+diameter  (nm)
+filters
+highest
+initial
+initial concentration (??g/g)
+insert
+inside
+intake
+isotope
+mapping
+measured
+measured)
+medium,
+micronucleated
+nature
+nominal
+nucleus
+observation/analysis
+package
+passage
+polymer
+present
+proteinase
+purging
+q range
+quant)
+resolution (nm)
+seeding
+several
+solvent
+thermal
+tunning
+voltage
+control concentration (?¦Ìg/cm2)
+exposure concentration (?¦Ìg/ml)
+analytical  uncertainty
+intensity peak 1
+intensity peak 2
+intensity peak 3
+pixel size  [nm]
+source power
+vial number
+filtration/centrifugation
+microscope specifications
+adsorbent
+analyser
+analyte
+analytical
+atr model
+cell pass
+comet,
+contrast,
+corrected
+degassing
+deposited
+detected
+detection
+end point determination
+greyscale
+mass concentration  (mg/ml)
+mean/mode
+presence
+procedure
+provider
+replicate number
+reporting
+sample information
+sample preparation
+sampling)
+strirring
+topology
+touching
+unwinding
+without
+z-ave
+dissolution time (h)
+equilibrium
+cell culture medium composition
+exposure concentration  (?¦Ìg/ml)
+nm tested concentration (mg/ml)
+(normalized
+acquisition
+attenuation
+chemistry
+collision/
+conditions
+crystallite size  (nm)
+data range
+discard
+feret min
+final temperature (?¡ãc)
+flowrate
+grid/sample
+motion
+observation
+positive
+repeated
+separation)
+tilt angle
+initial temperature (?¡ãc)
+cells fixation procedure
+maldi positive mode
+reaction gas composition
+corresponding
+culture medium composition
+exposurre
+monochromator
+reference)
+references
+concentration   ?¡À measurement uncertainty
+available)
+pixel size [nm]
+sd control
+spectrum range
+tested concentration 1 (?¦Ìg/ml)
+(aerodynamic
+differentiation
+exposure time (h)
+fixation of cells
+replicates number
+sample holder
+test informations
+well volume (ml)
+sample holder (crucible) composition
+date of preparation
+furnace temperature
+incubation time (h)
+instrument settings
+sonication time (s)
+detection/observation
+nominal camera length
+positive control ic50
+resolution  [nm]
+speciment preparation
+calibration uncertainty
+detection limit [??g/ml]
+electron beam scan rate
+laser focus position
+particle size distribution - mean/mode  [nm]/ [nm]
+nebulization efficiency [%]
+cls particle refraction index
+cell colture medium composition
+tested concentration 1 (?¦Ìg/cm2)
+tested concentration 2 (?¦Ìg/cm2)
+tested concentration 3 (?¦Ìg/cm2)
+tested concentration 4 (?¦Ìg/cm2)
+tested concentration 5 (?¦Ìg/cm2)
+nps tested concentrations (?¦Ìg/ml)
+shape   ?¡À measurement uncertainty
+adsorbent gas and temperature  (?¡ãc)
+dissolution temperature (?¡ãc)
+dissolution temperature [?¡ãc]
+outgassing temperature (?¡ãc )
+sample holder  (crucible) composition
+0.01
+0.1
+50%
+1
+2
+3
+4
+10
+125
+556
+3007
+#1
+#2
+#3
+#4
+(as
+(atomic
+(cells
+(conventional
+(da)
+(ex.
+(ex:
+(indicate
+(insert)
+(iso
+(nanoreg
+(non
+(rpm
+(surface
+(unit??)
+[?anion/cation?]
+[electrolyte
+12,
+16-well
+2?? range
+2nd
+absorption index of the sample
+acid
+acquisistion
+adjuster
+adjustment
+air conditionning
+all
+amu
+analyse
+analysed
+anlysed elements
+any
+aperture
+as
+assay,
+assay/method
+at
+atcc
+average per insert
+based
+be
+beam
+before
+blank
+border
+breaks
+brightness,
+bsa
+buffer
+bulk
+by
+calculated
+calibration information
+can
+carbon
+cas
+celcius)
+cls
+cls,
+collision/ reaction cell
+conc.
+constant
+control
+control)
+ctr
+ctrl
+cut
+cyt
+cytokine
+data processing
+default
+delay between measurements (sec)
+density  (g/cm3)
+detector
+deviations
+dielectric
+dissolution time (min)
+dissolution time [min]
+dls
+dls,
+drum
+duration of the vibration  (s)
+each
+ecd
+eco
+eds
+element(s)
+element/
+elisa)
+elpi)
+em
+end
+epithelium
+equipement
+equivalent
+exposure duration  (h)
+external
+extract
+filter type
+filters,
+final
+flow
+fluid
+fluid,
+fluorescent
+for
+force,
+from
+ftir
+furnace
+greiss
+height  (cm)
+holder
+hours/minutes)
+humidity
+ic50
+id
+il-10)
+images
+include
+incoming
+incubation time with nps
+indicate
+indice
+injector
+intestinal
+investigated
+ir modes
+isotopes
+k,
+kv
+laser attenuation
+liquid
+list
+list,
+located)
+lower limit of detection
+ly
+lysis
+ma
+main
+make
+manual
+matrix
+max.
+maximum
+mean crystallite size (nm)
+method
+method name
+micronucleated cells
+min
+minimum
+ml
+mnm
+morphology
+mts
+nanogenotox,
+nebulization efficiency  (%)
+net
+nitrogen
+nm
+no
+nps tested concentrations  (?¦Ìg/ml)
+nps-like
+number
+number of replicates
+of
+often
+only
+operator
+or
+others
+outgassing
+passage number
+peak
+ph
+points
+positive control (mg/ml)
+possibility to record several elements
+powder
+prgramme
+producer
+product
+q
+ramp
+rcf
+rds
+reagent)
+ref
+remove
+replicates
+response
+result
+room
+roundness
+runs
+sample amount (mg)
+sample introduction system description
+sample volume intake
+scan
+scanning mode
+sd
+set-up
+shape of the volume  (l)
+size (nm)
+slides
+sodium
+software
+solvent medium
+source
+spectrum
+speed
+spot
+spot size
+st
+standard
+sw
+system
+t
+tail
+target
+tested
+thermal equilibrium time
+time-temperature program
+tip thickness (mm)
+treshold
+tube
+unknown sample
+use
+vacuum
+values
+vial
+vortex
+xcelligence)
+zeta
+concentration of reference material  (ng/l)
+electron beam accelerating voltage
+heating/cooling rate (?¡ãc/min)
+cytokinesis block replication index
+measurement temperature  (?¡ãc)
+cls particle non-sphericity
+measurment uncertainty (sd)
+nature of coating element
+sample drying duration  (h)
+sample grid/sample holder
+sample shape and size
+cls particle absorption
+compartment
+exposurre duration  (h)
+gas atmosphere (co2/o2)
+proteins labelling
+reporting organisation
+micrograph size  [?¦Ìm]
+number of channels
+number of runs
+structures
+calibration and assay temperature   (?¡ãc)
+carrier gas (inert)
+characteristics
+resting time at room temperature (min)
+samples/experiments
+values  (%/control)
+analytes detected
+background
+elemental
+elements/oxides
+in weight (w)
+ionic standard concentration (ppb)
+labelling
+responses
+sample/measurment
+analytical uncertainty / rsd (%)
+number of measurement replicates
+absorption index of the medium
+analysis points
+apparatus
+associated
+backfilling gas
+date/aquisition
+dissolution medium composition
+element calibration range
+heating/cooling
+mass-to-charge
+replicate
+technical replicate number
+three pinhole camera diameters
+calculated exposure concentration  (?¦Ìg/cm?2)
+coloration of tissue slides
+final aperture diameter (mm)
+tunning date/aquisition date
+number or mass size distribution (n or m)
+2?? scan speed
+buffer incubation (% tail)
+convexity
+different
+electrophoresis voltage gradient (v/cm)
+instrument #2 used for size distribution  (ex. elpi)
+medium/insert
+nps/technical
+number of cells scored
+post-exposure
+system.
+tube ma
+volume of medium/well (ml)
+mean reference particle diameter (nm)
+temperature of the incoming air  (?¡ãc)
+cls injected volume (?¦Ìl)
+cytokine #1 (e.g. il-6)
+cytokine #2 (e.g. tnf?¡À)
+derived count rate (cps)
+nm chemistry (core)
+number of cells/cm^2
+number of cells/cm2
+number of cells/insert
+number of cells/well
+number of measurements
+positive control apoptosis (ctrl 1)
+respirable sampler used  (ex. cyclone gk 2.69)
+(real-time
+(semi-quant
+(smoothing,
+backfilling
+chloride,
+element 1
+element 2
+feret max
+ftir  model
+hydrogen
+initial ph
+inserts
+isotherme
+mean (nm)
+medium/well
+preincubation time (h)
+preparation/drying
+prospect,
+real-time
+regions
+replicates)
+respirable
+sample characteristics
+tem or sem?
+uncertainty
+volume of the drum (l)
+vortex characteristics
+calculated exposure concentration (?¦Ìg/cm?2)
+duration of the real-time measurement  (s)
+image analysis and results
+seeding (cells number per well)
+duration of the respirable sampling  (s)
+normalized post-exposure necrosis 1  (%)
+normalized post-exposure necrosis 2  (%)
+normalized post-exposure necrosis 3  (%)
+normalized post-exposure necrosis 4  (%)
+normalized post-exposure necrosis 5  (%)
+incubation time with nps (h)
+incubation time with nps [h]
+manufacturer / product number
+micrographs used for analysis
+solvent medium for dispersion
+target element mass   (amu)
+size distribution - quality parameters
+(control,
+(crucible
+(internal
+24-well
+additives
+anlysed
+barrier
+between
+capillary
+cells
+cells/cm2
+concentration of the element detected (??g/ml)
+droplet
+drum characteristics
+edx model
+emitted
+error
+extracellular
+gels
+incubation time with ly (h)
+index
+initial time (min)
+injected
+inlet
+isotherme used
+mode (nm)
+notes
+observed
+other
+prior
+process time (min)
+references to sops
+residence
+sample weight  (g)
+sample weight (mg)
+seeding (cells number/well)
+size  ?¡À measurement uncertainty (nm)
+standards
+stirring/
+subjected
+tail)
+temperature of the incoming air (?¡ãc)
+threshold
+through
+values (%/control)
+viscosity of the suspension kg/(s?¡¤m)
+instrument #1 used for size distrubution  (ex. elpi)
+acquisition time for each measurement (sec)
+number or mass size distribution   (n or m)
+dielectric  constant of the medium
+seeding  (cells number per well)
+accelrating voltage  (kv)
+calibration range (%)
+calibration range (ng/ml)
+isotope dwell time   (ms)
+particle density  (g/cm3)
+rotation speed  (rpm)
+sample preparation/drying
+estimation of the measurement uncertainty
+as mean or mdian
+associated error
+dispersion concentraiton (mg/ml)
+duration of centrifugation (min)
+fields/technical
+incubation time with nm/ctrl (h)
+intracellular
+nanodrum characteristics
+powder characteristics
+replicates for each measurements
+resting time at room temperature
+set-up characteristics
+time-temperature
+treatments/notes
+uncertainy
+volume of incubation medium/well
+applied voltage (v)
+calculated nps exposure concentration (?¦Ìg/cm?2)
+data analysis model
+days of differentiation
+fpg incubation (% tail)
+method and instrument information /  icp-ms detection
+interference correction method
+maldi delayed extraction  (ns)
+reference material (if used)
+sample holder (crucible shape)
+sample holder (crucible) shape
+volume information medium/well
+positive control necrosis    (ctrl 2)
+volume of medium/insert apical medium
+final concentration of the element 1 [??g/ml]
+final concentration of the element 2 [??g/ml]
+calculation of atomic percentage of surface coating
+0.05%
+(brand,
+(ctrl
+(inert)
+(kv)
+(l/min)
+(mv)
+(natfa)
+(v)
+100,
+150)
+18-,
+2?? step
+added)
+amount of powder  (g)
+average per condition
+bulk density  (g/cm3)
+ccd camera
+days,a€|)
+exclude
+final ph
+further
+further treatments/notes
+groups
+hydrodynamic diameter   ?¡À measurement uncertainty
+il-12)
+lucyfer
+mean absorbance
+non-sphericity
+normalized post-exposure necrosis ctr  (%)
+number of inserts with cells
+number of scans
+number of sub-runs
+observed replicates
+others)
+outgassing time (min)
+pixel
+powder)
+pre-exposure time (h)
+reference element mass (amu)
+results
+sample drying temperature  (?¡ãc)
+seeding  (cells number/well)
+sem:
+sem?
+step
+unknown
+values)
+vitro
+vivo
+method and instrument information
+instrument brand and model
+total number of replicates
+vssa = sw* density, m?2/cm?3
+bet surface  (m2/g)
+combustion time (s)
+drum diameter  (cm)
+edx detector
+pore size (kda)
+protocol ref  = sop
+volume of medium in apical compartment
+mean ly papp through intestinal epithelium  (cm/s)
+concentration (%) already corrected for foil and matrix
+(liquid
+benzalkonium
+cell culture medium type
+cytokine #3 (e.g. il-10)
+cytokine #4 (e.g. il-12)
+dose/surface
+include 50%
+maximum runs
+mean value of no (??m)
+number/well)
+other instrument #3 used
+reflector
+response factor calibration solution
+size of the 2nd mode  (aerodynamic diameter, ?¦Ìm)
+stirring/ shaking method
+vortex tube height  (mm)
+mother solution for calibration [electrolyte type - concentration (m)]
+alkaline unwinding time (min)
+total surface st (m?2/g)
+volume incubation medium/well
+% micronucleus nm
+element calibration range  (??g/ml)
+flowrate  (l/min)
+method and instrument information /  filtration/centrifugation phase
+nucleus labelling
+number of teer measurements/insert
+reference material density (g/cm3)
+sample weight (g)
+sample weight [g]
+vortex tube   (l)
+delay between runs
+edx acquisition system
+image software package
+in vitro barrier model
+pre-exposure time  (h)
+associated uncertainty (sd)
+associated uncertainy  (sd)
+c,h,n analyser type / model
+elements/oxides detected
+injector flow (ml/min)
+number of intracellular nps
+sample inlet flow  (ml/min)
+volume of the sample  (cm3)
+em model, electron beam and em chamber operating conditions
+sample name (internal reference)
+solvent (meoh) for mixture  (?¦Ìl)
+volume of calibration material  (cm3)
+absolute quantification of surface coating
+if applicable: indicate stage of digestion step
+sodium salt (natfa) concentrated solution  (?¦Ìl)
+(%/control)
+(amu)
+(au)
+(co2/o2)
+(crucible)
+(in
+(kda)
+(mesh
+(min)
+(ml/min)
+(ns)
+(oecd
+(rpm)
+(text
+[min]
+[ml/min]
+[om]
+10,
+2.69)
+37.5,
+6-,
+75,
+96,
+associated error (sd)
+cells/cm^2
+cm-2)
+concentration of element 1 in the sample  (mg element/ ml sample)
+cpc
+dissolution medium volume (ml)
+dissolution medium volume [ml]
+dna
+enpra,
+etc)
+etc.
+fbs
+fpg incubation time (min)
+il-6)
+in
+m/z mass range  (da)
+ml-1)
+normalized post-exposure cell viability 1 (%)
+number of regions in program (**)
+number of technical replicates per conditions
+numer (n)*
+other)
+papp
+ph  of the sample to test
+phys-chem,
+rcf (relative centrifugal force, g)
+reference (+ve)
+reference (-ve)
+rotation speed or vibration frequency  (rpm or hz)
+sd analyte
+specify)
+spot size (nm)
+sw*
+tem
+the
+thermal equilibrium time (sec)
+tip
+tnf?¡À)
+to
+total number of observed cells
+tsi)
+tube kv
+used
+view
+volume of medium/well basolateral medium
+vssa
+wdxrf
+well)
+yellow
+z30)
+method and instrument information /  wdxrf
+nps tested concentrations (ex: 10, 1 ?¦Ìg/ml)
+volume of medium in basolateral compartment
+associated uncertainty  (sd)
+number of detected particles
+sample-detector distance
+total nm concentration in the sample to test (mg/l)
+(manually/automatically
+?cations/anions?
+final time (min)
+measured potential of the sample to test  (mv)
+normalized post-exposure cell viability 2  (%)
+normalized post-exposure cell viability 3  (%)
+normalized post-exposure cell viability 4  (%)
+normalized post-exposure cell viability 5  (%)
+scattering angle
+test item result (ic50)
+observation of intracellular nps (yes/no)
+reference electrode  [electrolyte type - concentration (m)]
+applicable:
+background equivalent diameter (bed)
+edx model and acquisition conditions
+orbit of the motion  (mm)
+resolution  (cm-1)
+total number of technical replicates
+uncertainty [nm]
+method and instrument information /  sample filtration process
+water content  (% weight)
+dustiness indice in respirable number (1/mg)
+nps tested concentrations  (ex: 10, 1 ?¦Ìg/ml)
+surface topology   ?¡À measurement uncertainty
+13322-1:2004)
+corresponding dose/surface
+in weight (w) or numer (n)
+minimum runs
+mw-assisted,
+size of the highest mode  (aerodynamic diameter, ?¦Ìm)
+volume of incubation medium/insert (ml)
+description of the image magnification calibration procedure
+dimension of the investigated area for each measurement (mm)
+elemental composition (atomic % ?¡À standard deviation values)
+number of repeated measurements for each sample
+sample weight after degassing  (g)
+adjustment of contrast, brightness, greyscale threshold
+calibration date (yyyy/mm/dd)
+list of elements and isotopes
+number of samples/experiments
+dustiness indice in respirable number  (1/mg)
+nps tested concentrations  (ex: 10 - 1 ?¦Ìg/ml)
+size distribution  (as measured with other tecniques)
+reference concentration used for normalization (e.g. control)
+% of dna in tail
+(?¡ãc/min)
+(ml)or
+(yes/no)
+cdso4,
+coating element(s) (inorganic)
+element emission wavelenght (nm)
+identification number of the view fields
+laser power  (%)
+mass of the sample  (mg)
+method/s
+microporosity surface s?¦Ì  (m?2/g)
+normalized post-exposure cell viability ctr  (%)
+optics
+peak 1  - main peak (nm)
+pre-exposure
+purging gas (inert) flow
+result (pg/ml)
+sem: nm particles present in the images ? yes/no
+sub-runs
+tox,
+vacuum in the em chamber
+volume of incubation medium during exposure/well
+yes/no
+minimum teer value (ohms/cm?2)  before starting nps exposure
+calibration and assay strirring condition ?
+volume of medium in apical compartment (ml)
+dispersion (nanoreg sop dispersion)
+endpoint (oecd list, and others)
+instrument (real-time and sampling)
+number cycles per sample/measurment
+total area sampled per sample [?¦Ìm?2]
+in weight (w) or numer (n)*
+kit provider (if available)
+total acquisistion time  (min)
+total average inserts per days
+without blank
+dls instrument specifications (brand, model, etc)
+number of replicates containing intracellular nps
+% micronucleus reference (+ve)
+% micronucleus reference (-ve)
+cell reference (e.g. atcc no.)
+exclude border particles [y/n]
+deposited droplet volume of mixture  (?¦Ìl)
+mean size of detected nps-like structures
+normalized post-exposure apoptosis 1  (%)
+normalized post-exposure apoptosis 2  (%)
+normalized post-exposure apoptosis 3  (%)
+normalized post-exposure apoptosis 4  (%)
+normalized post-exposure apoptosis 5  (%)
+(deg/min)
+(pixels)
+(sec)
+average size of detected nps-like structures
+bet and t-plot
+copper/gold/mica)
+em producer and  model
+extract of mnm  (?¦Ìl)
+humidity of the incoming air  (%)
+instrument model (e.g. ampha z30)
+net fpg sites (% tail)
+response at element amu (cps/ppb)
+instrument model  (e.g. xcelligence)
+method (e.g. greiss reagent)
+total area sampled per sample  [?¦Ìm?2]
+total hydrogen weight content  (wt%)
+mean % of basolateral ly through cell free inserts
+amount of element in the sample (ng/ml)
+indicate separation method/s used to remove particles
+reference item result (ic50)
+use of edx (yes/no)
+detection/observation of nps in basolateral medium (yes/no)
+mean hydrodynamic diameter (nm) in weight (w) or numer (n)*
+instrument specifications (brand, model, etc)
+peak 2 - main peak (nm)
+peak 3 - main peak (nm)
+reaction gas flow (ml/min)
+instrument used for counting  (ex. cpc 3007 tsi)
+volume of medium in basolateral compartment (ml)
+measurement viscosity (cp)  (either default or measured) kg/(s?¡¤m)
+number of replicates containing intracellular nps-like structures
+dissolution prgramme / max. t (?¡ãc)
+element 1 emission wavelenght (nm)
+element 2 emission wavelenght (nm)
+frame size camera (pixels)
+total carbon weight content  (wt%)
+analyte concentration (ng/ml) already corrected for dilutions and blank
+any deviations from standard protocol
+total number of detected fluorescent nps/technical replicate
+dustiness indice in respirable mass (mg/kg)
+normalized post-exposure apoptosis ctr  (%)
+total time to dissolution (dissolution +filter/centrifigation time
+2?? scan speed (deg/min)
+pen/strep/fungicide...)
+raw teer values  (ohms)
+external surface sw (m?2/g)
+maldi reflector mode  (kv)
+plate (e.g. 24 wells)
+date of preparation  of the sample to test (yyyy/mm/dd)
+assay name (conventional name of the assay, e.g. comet, a€|)
+dissolution method (e.g. acid digestion, mw-assisted, etc)
+format of gels - 2, 12, 96, etc.
+number of different analysed fields/technical replicate (insert)
+e.g. nitrogen adsorption apparatus most often micromeritics instrument
+estimated  [?anion/cation?] (?¦Ìg/ml)
+well plate size  (e.g.: 16-well plate)
+corresponding dose/surface unit (?¦Ìg cm-2)
+dissolved nm in the sample to test (mg/l)
+dustiness indice in respirable mass  (mg/kg)
+eds mapping and spectra for compositional analysis
+final volume or weight after dissolution  (ml)or ([g)
+number of cells containing intracellular nps-like structures   in the total number of technical replicates
+size distribution (ex: monomodal, bimodal or multimodal)
+maximum teer value (ohms/cm?2)  before starting nps exposure
+dispersant reference (indicate here the reference number of the vial used)
+5
+%annexinv+pi-
+%annexinv+pi+
+%annexinv-pi-
+%annexinv-pi+
+(+ve)
+(1/mg)
+(?¡ãc
+(?¦Ìg/ml)
+(?¦Ìl)
+(bed)
+(cm)
+(cm/s)
+(cm-1)
+(cm3)
+(e.g.
+(e.g.:
+(g)
+(??g/ml)
+(ic50)
+(if
+(l)
+(m2/g)
+(meoh)
+(mg
+(mg/l)
+(mg/ml)
+(ml)
+(n
+(n)
+(ng/l)
+(ng/ml)
+(nm)
+(ohms)
+(pg/ml)
+(-ve)
+(wt%)
+(x
+(y
+[g]
+[ml]
+[ug/l]
+[y/n]
+[zn2+]
+1)
+1,
+2)
+2,
+2??
+?¦Ìm)
+b
+c,h,n
+ccd
+cm2)
+-ctl-)
+degassing ramp  (y or n)
+e.g.
+edx
+element 1 mass-to-charge ratio [m/z]
+element 2 mass-to-charge ratio [m/z]
+fpg
+g)
+gas mode / flow [ml/min]
+gk
+hz)
+icp-ms
+if
+m)
+m/z
+m?2/cm?3
+method (e.g. elisa)
+method type (semi-quant or quant)
+mg/l1)
+minimum number of standards in graph
+minimum teer value   before starting nps exposure [ohms/cm?2]
+mv)
+net absorption intensity (au) at ? nm for ?cations/anions? test
+nm ic50
+nm/ctrl
+nm-300,
+nm-300k
+nm-302)
+no.)
+normalized post-exposure cell index 1  (%)
+normalized post-exposure cell index 2  (%)
+normalized post-exposure cell index 3  (%)
+normalized post-exposure cell index 4  (%)
+normalized post-exposure cell index 5  (%)
+nps
+number of extracellular nps (surface located)
+nxn,
+percentage of viability nps treated cells (normalized to non treated cells -ctl-)
+size distribution (ex: monomodal, bimodal or multimodal?)
+size distribution analyse technique  (ex: dls, cls, etca€|)
+total nitrogen weight content  (wt%)
+t-plot
+undissolved material still present in suspension before filtration/centrifugation
+used)
+wells)
+x
+x  insert surface (1,12 cm2)
+y
+temperature range (in celcius) that the particles were subjected to
+dispersion protocol (ex: nanogenotox, enpra, prospect, other)
+deviation from dispersion protocols (text can be added)
+total number of replicates per condition  (control, nps concentration 1, concentration 2, etca€|)
+corresponding dose/surface unit (?¦Ìg/cm2)
+corresponding dose/surface unit [?¦Ìg/cm2]
+ionic strength adjuster for the assay  [electrolyte type - concentration (m)]
+ratio of ionic strength adjuster to standard or samples to be  measured (v/v)
+dispersion protocol  (ex: nanogenotox, enpra, prospect, other)
+peak 2 weight (w) or number (n)
+peak 3 weight (w) or number (n)
+material state  (liquid or fluid, fluid dispersion, powder)
+net absorption intensity (au) at 556 nm for zn2+ test
+size distribution analyse method (ex: dls, cls, etca€|)
+estimated  [zn2+] (?¦Ìg/ml)
+peak 1  weight (w) or number (n)
+total number of analysed cells ctr  (ex: 20000)
+total number of analysed cells 2 (ex: 20000)
+corresponding dose/surface unit  (?¦Ìg/cm2)
+confirmation of presence of nps inside cells by edx (yes/no)
+(mesh size, coating, copper/gold/mica)
+kit provider (if available) (mg/ml)
+lysis only - strand breaks (% tail)
+observation of nps in basolateral medium of cell free insert  (yes/no)
+on mass  [om] / mass shift  [ms]
+other culture media additives (e.g. % of pen/strep/fungicide...)
+protocol ref  = sop (ex: nanovalid mts protocol)
+analysis of chemical composition of nps-like structures by edx - edx spectrum
+humidity of the sample prior to the test  (%)
+mean ly papp through cell free inserts (cm/s)
+total number of analysed cells 1  (ex: 20000)
+total number of analysed cells 3  (ex: 20000)
+total number of analysed cells 4  (ex: 20000)
+total number of analysed cells 5  (ex: 20000)
+positive control  (ex: cdso4, benzalkonium chloride, etc...)
+positive control (ex: cdso4, benzalkonium chloride, etc...)
+(v/v)
+sample grid/sample holder  (mesh size, coating, copper/gold/mica)
+days of differentiation (e.g. 14 days, 28 days,a€|)
+size distribution  (e.g. monomodal, bimodal or multimodal?)
+number of replicates containing  nps (x replicates containing nps/ y observed replicates)
+dispersion protocol  (e.g. nanogenotox, enpra, other - specify)
+integrity control quality: mean teer values (ohms/cm?2) before starting nps exposure
+(cps)
+calibration curve slope   (mv) (linear area, from 0.1 mg/l1)
+etc.)
+etca€|)
+number of modes on the emitted aerosol  (ex. 1, 2 etc.)
+number of modes on the emitted aerosol (ex. 1, 2 etc.)
+integrity control quality: mean teer values  before starting nps exposure [ohms/cm?2]
+confirmation of presence of nps in intestinal epithelium basolateral side  by edx  (yes/no)
+observation of nps-like structures in basolateral medium of intestinal epithelium  (yes/no)
+maximum and minimum teer values before starting nps exposure (ohms/cm?2)
+treatment of particles cut by the measurement frame  (iso 13322-1:2004)
+edx (yes/no)
+integrity control quality: mean teer values (ohms/cm?2) - before starting nps exposure
+sbet  (m?2/g)
+calibration curve points and responses   (mg/l - mv) (linear area, from 0.1 mg/l1)
+residence time = total amount of time (in hours/minutes) that the particles spend in the liquid system.
+ion conc. in the sample to test            (mg/l)
+pretreatment of basolateral medium before observation/analysis (ex: evaportation of medium, treatment with proteinase k, acidic digestion, etc)
+(%)
+(**)
+([g)
+(?£¤)
+(?¡ãc)
+(?¦Ìm)
+(cp)
+(g/cm3)
+(h)
+(??m)
+(ly)
+(m)]
+(mg)
+(mg/l
+(mm)
+(ms)
+(n)*
+(s)
+(sd)
+(w)
+[??g/ml]
+[ms]
+[ng/l]
+?¦Ìg/ml)
+etc...)
+jrcnm01001a,
+nps/
+well plate size (e.g.: 6-, 18-, 24-well plate, a€|)
+usage of image filters (smoothing, nxn, mean, median)
+dispersion medium (ex: water + 0.05% bsa stock solution, culture medium, etca€|)
+mean % of basolateral lucyfer yellow (ly) through intestinal epithelium
+touching particles (manually/automatically discard all touching particles, manual or automatic particle separation filters, morphology treshold based separation)
+dispersion medium  (ex: water + 0.05% bsa stock solution, culture medium, etca€|)
+dispersion medium (e.g. water + 0.05% bsa stock solution, culture medium, etca€|)
+calibration curve points and responses   (mg/l - mv) (non linear area, from 0.01 to 0.1 mg/l1)
+positive control tested concentrations  (?¦Ìm) (ex: 0, 37.5, 75, 100, 125 and 150)
+module (e.g. phys-chem, in vitro tox, in vivo tox, eco tox, a€|)
+(cps/ppb)
+(ppb)
+calibration curve slope   (mv) (non linear area, from 0.01 to 0.1 mg/l1)
+use of dispersant: yes/no  (e.g. for ag nps nm-300k or nm-302)
+(ohms/cm?2)
+[ohms/cm?2]
+nps ic50 (?¦Ìg/ml)
+-
+(?¦Ìg
+(?¦Ìg/cm2)
+(?¦Ìg/cm?2)
+/
+[?¡ãc]
+[?¦Ìg/cm2]
+[?¦Ìm]
+[nm]
+[nm]/
++
+0,
+kg/(s?¡¤m)
+n)
+nm id code (e.g. nm-300, jrcnm01001a, a€|)
+s?¦Ì
+zn2+
+(mg/kg)
+(v/cm)
+(??g/g)
+(m?2/g)
+(yyyy/mm/dd)
+[?¦Ìm?2]
+[h]
+[m/z]
+x\
+(%
+)
+a€|)
+[%]
+%
+?
+=
+?¡À

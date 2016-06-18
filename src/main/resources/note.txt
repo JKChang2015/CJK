@@ -1,5 +1,0 @@
-http://owlapi.sourceforge.net/javadoc/org/semanticweb/owlapi/vocab/OWLRDFVocabulary.html#RDFS_LABEL
-http://owlapi.sourceforge.net/javadoc/org/semanticweb/owlapi/model/OWLDataFactory.html
-http://stackoverflow.com/questions/12174698/how-to-read-rdfdescription-inside-annotation-using-owl-api
-
-http://zh.transwiki.org/cn/owlguide.htm
