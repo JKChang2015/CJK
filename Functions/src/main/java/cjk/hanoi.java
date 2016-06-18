@@ -1,4 +1,4 @@
-package com.github.cjk;
+package cjk;
 
 public class hanoi {
 

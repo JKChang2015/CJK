@@ -1,4 +1,4 @@
-package com.github.eNM;
+package eNM;
 
 import java.io.InputStream;
 import java.io.IOException;

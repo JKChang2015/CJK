@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.uclan.slmst;
+package slmst;
 
 /**
  *
  * @author JKChang
  */
-public class Collection {
+public class Keyword {
     
 }

@@ -1,4 +1,4 @@
-package com.github.eNM;
+package eNM;
 
 /**
  * @Definition get definition/ is defined for

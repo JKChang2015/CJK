@@ -1,4 +1,4 @@
-package com.github.cjk;
+package cjk;
 
 import java.io.BufferedReader;
 import java.io.File;

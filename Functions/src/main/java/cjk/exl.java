@@ -1,4 +1,4 @@
-package com.github.cjk;
+package cjk;
 
 import java.io.File;
 import jxl.Workbook;
@@ -8,9 +8,9 @@ import jxl.write.WritableSheet;
 import jxl.write.Label;
 
 
-import com.github.eNM.KeywordFile;
+import eNM.KeywordFile;
 import org.semanticweb.owlapi.*;
-import com.github.eNM.OntoLabel;
+import eNM.OntoLabel;
 
 import java.util.Set;
 import java.util.HashSet;

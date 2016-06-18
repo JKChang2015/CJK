@@ -1,7 +1,7 @@
-package com.github.cjk;
+package cjk;
 
-import com.github.eNM.OntoLabel;
-import com.github.eNM.KeywordFile;
+import eNM.OntoLabel;
+import eNM.KeywordFile;
 
 import java.util.Set;
 import java.util.HashSet;

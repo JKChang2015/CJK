@@ -1,4 +1,4 @@
-package com.github.eNM;
+package eNM;
 
 import java.io.File;
 import java.io.FileInputStream;

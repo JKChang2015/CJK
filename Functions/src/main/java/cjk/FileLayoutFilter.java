@@ -1,4 +1,4 @@
-package com.github.cjk;
+package cjk;
 
 import java.io.File;
 import java.io.FilenameFilter;
