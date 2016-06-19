@@ -1,6 +1,3 @@
-LeetCode
-========
-
 ###LeetCode Algorithm
 ----------------
 
