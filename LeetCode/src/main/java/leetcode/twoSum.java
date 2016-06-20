@@ -18,24 +18,21 @@ import java.util.Map;
 
 public class twoSum {
 
-    public int[] twoSum(int[] nums, int target) {
-        if (nums == null || nums.length < 2) {
+    public int[] twoSum(int[] numbers, int target) {
+        if (numbers == null || numbers.length < 2) {
             return null;
         }
 
-        int[] results = new int[2];
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-        for (int i = 0; i < nums.length; i++) { // i is index
+        for (int i = 0; i < numbers.length; i++) { // i is index
             //check the HashMap first, then add the new num    
-            if (map.containsKey(target - nums[i])) {
-                results[1] = i;
-                results[0] = map.get(target - nums[i]);
+            if (map.containsKey(target - numbers[i])) {
+                int[] results = {i, map.get(target - numbers[i])};
                 return results;
             }
 
-            int num = nums[i];
-            map.put(num, i); //<K,V>           
+            map.put(numbers[i], i); //<K,V>           
         }
         return null;
     }
@@ -46,7 +43,7 @@ public class twoSum {
         if (nums == null || nums.length < 2) {
             return null;
         }
-        
+
         int[] results = new int[2];
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
