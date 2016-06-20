@@ -21,9 +21,10 @@ public class wiggleSort {
             nums[i] = nums[i + 1];
             nums[i + 1] = temp;
         }
-    } 
-    
-    
-    
-    
+    }
+
+    public void wiggleSort2(int[] nums) {
+
+    }
+
 }
