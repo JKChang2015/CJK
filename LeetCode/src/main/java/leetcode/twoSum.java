@@ -65,5 +65,5 @@ public class twoSum {
 }
 
 // notes the index of nums start from 0!
-// The basic idea is using hashTable
+// The basic idea is using hashTable, code should be as simple as possiable
 
