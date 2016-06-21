@@ -14,9 +14,6 @@ import leetcode.moveZeros;
  */
 public class moveZerosTest {
     
-    public moveZerosTest() {
-    }
-
     @Test
     public void testSomeMethod() {
         int[] nums = { 0, 1, 0, 3, 0, 12, 4, 0};
