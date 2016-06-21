@@ -18,25 +18,25 @@ package leetcode;
 public class productExceptSelf {
 
     // Product of a element = Product of left elements * Product of right elements
-    public int[] productExceptSelf(int[] nums) {
+    public int[] productExceptSelf(int[] nums) { //时间 O(N) 空间 O(1)
         if (nums.length <= 1) {
             return nums;
         }
         int[] results = new int[nums.length];
         int leftProduct = 1;
         int rightProduct = 1;
-        
+
         // use product value from right to left to initial result array
-        for (int i = (nums.length - 1); i >= 0; i--) {  
+        for (int i = (nums.length - 1); i >= 0; i--) {
             results[i] = rightProduct;
             rightProduct = rightProduct * nums[i];
         }
+
+        // left [i] = left * left[i-1];
         for (int i = 0; i < nums.length; i++) {
-            int temp = leftProduct * results[i];
-            results[i] = temp;
+            results[i] *= leftProduct;
             leftProduct = nums[i] * leftProduct;
         }
-
         return results;
     }
 
