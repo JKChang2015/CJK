@@ -1,13 +1,24 @@
 package leetcode;
+import leetcode.productExceptSelf;
 
 public class impl {
 
     public static void main(String[] args) {
-        if (true && false) { // *
-            System.out.println("&&");
-        }
-        if (true || false) { // + 
-            System.out.println("||");
-        }
+        productExceptSelf ps = new productExceptSelf();
+        int[] test = { 1, 3, 4, 2, 5};
+        int[] result = new int[test.length];
+        result = ps.productExceptSelf(test);
+        
+        
+        
+        
+//        if (true && false) { // *
+//            System.out.println("&&");
+//        }
+//        if (true || false) { // + 
+//            System.out.println("||");
+//        }
+
+    
     }
 }
