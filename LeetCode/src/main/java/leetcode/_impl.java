@@ -1,7 +1,7 @@
 package leetcode;
 import leetcode.productExceptSelf;
 
-public class impl {
+public class _impl {
 
     public static void main(String[] args) {
         productExceptSelf ps = new productExceptSelf();
