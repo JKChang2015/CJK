@@ -5,9 +5,11 @@
  @date 24-Jun-2016
 */
 
-package CCI;
+package array;
 
 
-public class linkedList {
-
+public class array {
+    public static void main(String[] args) {
+        
+    }
 }
