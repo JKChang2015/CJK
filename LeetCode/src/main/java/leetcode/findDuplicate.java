@@ -1,5 +1,5 @@
 /* ----------------------------------------------------------------------------
-287. Find the Duplicate Number
+287. Find the Duplicate Number  HARD
 
 Given an array nums containing n + 1 integers where each integer is between 1 
 and n (inclusive), prove that at least one duplicate number must exist. Assume 
@@ -22,17 +22,46 @@ import java.util.Set;
 import java.util.HashSet;
 
 public class findDuplicate {
-    
-    public int findDuplicate(int[] nums){
-        // XOR
-        return 0;
+
+    public int findDuplicate(int[] nums) { // O(NlogN) O(1)
+        // binary search, Pigeonhole principle
+        int min = 0, max = nums.length - 1;
+
+        while (min <= max) {
+            int mid = min + (max - min) / 2;
+            int count = 0;
+
+            for (int i = 0; i < nums.length; i++) {
+                if (nums[i] <= mid) { // count of number that less than mid
+                    count++;
+                }
+            }
+
+            if (count > mid) {
+                max = mid - 1;
+            } else {
+                min = mid + 1;
+            }
+        }
+        return min;
     }
 
     public int findDuplicate2(int[] nums) {
-        // binary search, Pigeonhole principle
-        
-        
-        return 0;
+        // Find loop, treat the array as a linkedList
+        int slow = 0;
+        int fast = 0;
+        // slow & fast indexer
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
+        int find = 0;
+        // using a faster indexer till they are meet each other
+        while (find != slow) {
+            slow = nums[slow];
+            find = nums[find];
+        }
+        return find;
     }
 
     public int findDuplicate3(int[] nums) { // O(NlogN) O(1)
