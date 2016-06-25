@@ -28,7 +28,7 @@ of 1s?
 
 package neww;
 
-public class zzzcountBits {
+public class countBits {
 
     public int[] countBits(int num) {
         int[] res = new int[num + 1];
