@@ -13,7 +13,7 @@ not count as extra space for the purpose of space complexity analysis.)
 @author JKChang
 @data 2016-6-21
  */
-package leetcode;
+package neww;
 
 public class productExceptSelf {
 

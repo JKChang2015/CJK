@@ -26,7 +26,7 @@ of 1s?
  @date 22-Jun-2016
  */
 
-package leetcode;
+package neww;
 
 public class zzzcountBits {
 

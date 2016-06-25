@@ -7,7 +7,7 @@ package leetcode;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import leetcode.wiggleSort;
+import neww.wiggleSort;
 
 /**
  *

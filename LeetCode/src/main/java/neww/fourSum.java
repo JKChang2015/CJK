@@ -19,7 +19,7 @@ A solution set is:
  @author jkchang
  @date 24-Jun-2016
  */
-package leetcode;
+package neww;
 
 import java.util.List;
 

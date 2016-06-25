@@ -15,7 +15,7 @@ Follow up: Could you solve it in O(n2) runtime?
  @author jkchang
  @date 24-Jun-2016
  */
-package leetcode;
+package neww;
 
 public class threeSumSmaller {
 

@@ -12,7 +12,7 @@ You may assume that each input would have exactly one solution.
  @author jkchang
  @date 24-Jun-2016
  */
-package leetcode;
+package neww;
 
 public class threeSumClosest {
 

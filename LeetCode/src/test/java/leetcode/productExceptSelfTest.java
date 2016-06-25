@@ -1,7 +1,7 @@
 package leetcode;
 
 import org.junit.Test;
-import leetcode.productExceptSelf;
+import neww.productExceptSelf;
 
 /**
  *
