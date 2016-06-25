@@ -32,7 +32,7 @@ public class CJK {
     static Set<String> labels = new HashSet<String>();
 
     public static void main(String[] args) throws Exception {
-        String ontoPath = "src\\main\\resources\\fruit.owl";
+        String ontoPath = "src\\main\\resources\\enm.owl";
         File ontoFile = new File(ontoPath);
 
         OWLOntologyManager man = OWLManager.createOWLOntologyManager();
