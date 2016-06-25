@@ -21,4 +21,20 @@ public class majorityElement {
         Arrays.sort(nums);
         return nums[nums.length / 2];
     }
+
+    public int majorityElement2(int[] nums) {
+        int candidate = nums[0], cnt = 0;
+        for (int i = 1; i < nums.length; i++) {
+            if (candidate == nums[i]) {
+                cnt++;
+            } else if (cnt == 0) {
+                candidate = nums[i];
+            } else {
+                cnt--;
+            }
+
+            System.out.println("n[i] is " + nums[i] + "  Candidate is  " + candidate + "  count is " + cnt);
+        }
+        return candidate;
+    }
 }
