@@ -10,8 +10,6 @@ import leetcode.findDuplicate;
  */
 public class findDuplicateTest {
 
-    public findDuplicateTest() {
-    }
 
     @Test
     public void testSomeMethod() {
