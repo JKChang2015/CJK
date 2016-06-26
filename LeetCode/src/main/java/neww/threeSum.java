@@ -26,45 +26,7 @@ import java.util.Arrays;
 public class threeSum {
 
     public List<List<Integer>> threeSum(int[] nums) { // O(N^3)
-        Arrays.sort(nums);
-        ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
-        for (int i = 0; i < nums.length - 2; i++) {
-            //  skip duplicated
-            if (i > 0 && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            // Calculate 2 sum
-            ArrayList<List<Integer>> curr = twoSum(nums, i, 0 - nums[i]);
-            res.addAll(curr);
-        }
-        return res;
+      
     }
-
-    private ArrayList<List<Integer>> twoSum(int[] nums, int i, int target) {
-        int left = i + 1;
-        int right = nums.length - 1;
-        ArrayList<List<Integer>> res = new ArrayList<List<Integer>>();
-
-        while (left < right) {
-            if (nums[left] + nums[right] == target) {
-                ArrayList<Integer> curr = new ArrayList<Integer>();
-                curr.add(nums[i]);
-                curr.add(nums[left]);
-                curr.add(nums[right]);
-                res.add(curr);
-
-                do {
-                    left++;
-                } while (left < nums.length && nums[left] == nums[left + 1]);
-                do {
-                    right--;
-                } while (right >= 0 && nums[right] == nums[right + 1]);
-            } else if (nums[left] + nums[right] > target) {
-                right--;
-            } else {
-                left++;
-            }
-        }
-        return res;
-    }
+   
 }
