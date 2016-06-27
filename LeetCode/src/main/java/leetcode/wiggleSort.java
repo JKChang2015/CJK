@@ -8,7 +8,7 @@
  @author jkchang
  @date 20-Jun-2016
  */
-package neww;
+package leetcode;
 
 import java.util.Arrays;
 
