@@ -1,5 +1,4 @@
 package leetcode;
-import neww.productExceptSelf;
 
 public class _impl {
 
