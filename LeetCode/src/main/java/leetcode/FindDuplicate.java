@@ -21,7 +21,7 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.HashSet;
 
-public class findDuplicate {
+public class FindDuplicate {
 
     public int findDuplicate(int[] nums) { // O(NlogN) O(1)
         // binary search, Pigeonhole principle

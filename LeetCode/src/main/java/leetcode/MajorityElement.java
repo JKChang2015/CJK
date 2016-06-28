@@ -12,7 +12,7 @@ package leetcode;
 
 import java.util.Arrays;
 
-public class majorityElement {
+public class MajorityElement {
 
     public int majorityElement(int[] nums) {
         if (nums.length == 1) {

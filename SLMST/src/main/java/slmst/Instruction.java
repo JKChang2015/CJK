@@ -7,7 +7,7 @@
 
 package slmst;
 
-public class instruction {
+public class Instruction {
 
 }
 
