@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class threeSum {
+public class ThreeSum {
 
     public List<List<Integer>> threeSum(int[] nums) { // O(N^3)
         List<List<Integer>> resList = new ArrayList<List<Integer>>();

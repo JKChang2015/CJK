@@ -15,7 +15,7 @@ Here are few examples.
  */
 package leetcode;
 
-public class searchInsert {
+public class SearchInsert {
 
     public int searchInsert(int[] nums, int target) {
         //Binary Search
