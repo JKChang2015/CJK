@@ -7,17 +7,17 @@ package leetcode;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import leetcode.moveZeros;
+import leetcode.MoveZeros;
 /**
  *
  * @author jkchang
  */
-public class moveZerosTest {
+public class MoveZerosTest {
     
     @Test
     public void testSomeMethod() {
         int[] nums = { 0, 1, 0, 3, 0, 12, 4, 0};
-        moveZeros mz = new moveZeros();
+        MoveZeros mz = new MoveZeros();
         mz.moveZeroes(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.append(nums[i] + "  ");

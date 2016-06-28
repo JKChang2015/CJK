@@ -14,7 +14,7 @@ Minimize the total number of operations.
  */
 package leetcode;
 
-public class moveZeros {
+public class MoveZeros {
 
     public void moveZeroes(int[] nums) {
         // change the index, not change the value

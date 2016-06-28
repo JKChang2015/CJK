@@ -15,7 +15,7 @@ not count as extra space for the purpose of space complexity analysis.)
  */
 package leetcode;
 
-public class productExceptSelf {
+public class ProductExceptSelf {
 
     // Product of a element = Product of left elements * Product of right elements
     public int[] productExceptSelf(int[] nums) { //时间 O(N) 空间 O(1)

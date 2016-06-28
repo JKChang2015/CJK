@@ -15,7 +15,7 @@ using only constant extra space complexity?
  */
 package leetcode;
 
-public class missingNumber {
+public class MissingNumber {
 
     public int missingNumber(int[] nums) {
         // res = non-missing sum - missing sum
