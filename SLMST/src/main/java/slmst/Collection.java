@@ -5,10 +5,21 @@
  */
 package slmst;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author JKChang
  */
 public class Collection {
+    
+    
+    public ArrayList<String> expansion(ArrayList<String> keyword){
+        ArrayList<String> results = new ArrayList<String>();
+        
+        
+        return results;        
+    }
+    
     
 }
