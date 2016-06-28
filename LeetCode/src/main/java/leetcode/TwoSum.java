@@ -16,7 +16,7 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-public class twoSum {
+public class TwoSum {
 
     public int[] twoSum(int[] numbers, int target) {
         if (numbers == null || numbers.length < 2) {

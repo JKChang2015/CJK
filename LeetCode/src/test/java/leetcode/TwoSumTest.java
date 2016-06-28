@@ -2,15 +2,15 @@ package leetcode;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
-import leetcode.twoSum;
+import leetcode.TwoSum;
 
 /**
  *
  * @author jkchang
  */
-public class twoSumTest {
+public class TwoSumTest {
 
-    public twoSumTest() {
+    public TwoSumTest() {
     }
 
     @Test
@@ -18,7 +18,7 @@ public class twoSumTest {
         int nums[] = {1, 4, 5, 2, 8, 10};
         int target = 10;
         int[] result = new int[2];
-        twoSum ts = new twoSum();
+        TwoSum ts = new TwoSum();
         result = ts.twoSum(nums, target);
 
         if (result == null) {
@@ -35,7 +35,7 @@ public class twoSumTest {
         int nums[] = null;
         int target = 20;
         int[] result = new int[2];
-        twoSum ts = new twoSum();
+        TwoSum ts = new TwoSum();
         result = ts.twoSum(nums, target);
 
         if (result == null) {
@@ -52,7 +52,7 @@ public class twoSumTest {
         int nums[] = {1};
         int target = 20;
         int[] result = new int[2];
-        twoSum ts = new twoSum();
+        TwoSum ts = new TwoSum();
         result = ts.twoSum(nums, target);
 
         if (result == null) {
@@ -69,7 +69,7 @@ public class twoSumTest {
         int nums[] =  {1, 4, 5, 2, 8, 10};
         int target = 20;
         int[] result = new int[2];
-        twoSum ts = new twoSum();
+        TwoSum ts = new TwoSum();
         result = ts.twoSum2(nums, target);
 
         if (result == null) {
