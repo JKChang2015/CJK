@@ -20,7 +20,7 @@ public class wiggleSortTest {
     @Test
     public void WiggleSort() {
         int[] nums = {1, 3, 4, 2, 6, 5, 8};
-        wiggleSort ws = new wiggleSort();
+        WiggleSort ws = new WiggleSort();
         ws.wiggleSort(nums);
         printfr(nums);
     }
@@ -28,7 +28,7 @@ public class wiggleSortTest {
     @Test
     public void WiggleSort2() {
         int[] nums = {1, 3, 4, 2, 6, 5, 8, 10, 21, 4};
-        wiggleSort ws = new wiggleSort();
+        WiggleSort ws = new WiggleSort();
         ws.wiggleSort2(nums);
         printfr(nums);        
     }

@@ -18,7 +18,7 @@ public class twoSum2Test {
         int nums[] = {1,2,5,8,12,13};
         int target = 10;
         int[] result = new int[2];
-        twoSum2 ts = new twoSum2();
+        TwoSum2 ts = new TwoSum2();
         result = ts.twoSum(nums, target);
 
         if (result == null) {

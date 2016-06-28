@@ -17,7 +17,7 @@ Output: index1=1, index2=2
  */
 package leetcode;
 
-public class twoSum2 {
+public class TwoSum2 {
 
     public int[] twoSum(int[] numbers, int target) {
         int i = 0;
