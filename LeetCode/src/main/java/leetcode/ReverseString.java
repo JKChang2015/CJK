@@ -10,7 +10,7 @@ Given s = "hello", return "olleh".
  */
 package leetcode;
 
-public class reverseString {
+public class ReverseString {
     
     public String reverseString(String s) {
         char[] str = s.toCharArray();
