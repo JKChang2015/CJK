@@ -12,9 +12,9 @@ import static org.junit.Assert.*;
  *
  * @author jkchang
  */
-public class wiggleSortTest {
+public class WiggleSortTest {
     
-    public wiggleSortTest() {
+    public WiggleSortTest() {
     }
     
     @Test

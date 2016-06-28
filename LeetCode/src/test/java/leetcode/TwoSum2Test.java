@@ -7,9 +7,9 @@ import static org.junit.Assert.*;
  *
  * @author JKChang
  */
-public class twoSum2Test {
+public class TwoSum2Test {
     
-    public twoSum2Test() {
+    public TwoSum2Test() {
     }
 
     @Test
