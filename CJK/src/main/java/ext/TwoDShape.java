@@ -11,6 +11,10 @@ public class TwoDShape {
     private double width;
     private double height;
 
+    TwoDShape() {
+        width = height = 0.0;
+    }
+
     TwoDShape(double width, double height) {
         this.width = width;
         this.height = height;
