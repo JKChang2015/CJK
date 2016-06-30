@@ -10,12 +10,13 @@ public class Triangle extends TwoDShape {
 
     String style;
 
-    Triangle(int data) {
-        System.out.println("triangle have parameter");
+    Triangle(String style, double w, double h) {
+        super(w,h);
+        this.style = style;
     }
 
     double area() {
-        return width * height / 2;
+        return super.getWidth() * super.getHeight() / 2;
     }
 
     void showStyle() {
