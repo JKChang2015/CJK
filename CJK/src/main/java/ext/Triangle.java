@@ -9,6 +9,10 @@ package ext;
 public class Triangle extends TwoDShape {
     String style;
     
+    Triangle(int pa){
+        System.out.println("This is a Triangle" + pa);
+    }
+    
     double area(){
         return width * height/2;
     }
@@ -16,5 +20,7 @@ public class Triangle extends TwoDShape {
     void showStyle(){
         System.out.println("Triangle is " + style);
     }
+    
+    
     
 }

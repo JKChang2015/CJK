@@ -10,8 +10,8 @@ package ext;
 
 public class imp {
     public static void main(String[] args) {
-        Triangle t1 = new Triangle();
-        Triangle t2 = new Triangle();
+        Triangle t1 = new Triangle(3);
+        Triangle t2 = new Triangle(5);
         
         t1.width = 4d; //SUPER
         t1.height = 4d; //SUPER
