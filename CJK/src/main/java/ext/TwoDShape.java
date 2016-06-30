@@ -8,18 +8,21 @@ package ext;
 
 public class TwoDShape {
 
-    double width;
-    double height;
-    
-    TwoDShape(int d){
-        System.out.println("this is a Two dimension shape");
+    private double width;
+    private double height;
+
+    TwoDShape() {
+        System.out.println("dont have parameter");
+    }
+        TwoDShape(int d) {
+            System.out.println("have parameter");
     }
 
     void showDim() {
         System.out.println("Width and height are " + width + "and" + height);
     }
-    
-    double area(){
+
+    double area() {
         return width * height;
     }
 

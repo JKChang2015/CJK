@@ -7,20 +7,19 @@
 package ext;
 
 public class Triangle extends TwoDShape {
+
     String style;
-    
-    Triangle(int pa){
-        System.out.println("This is a Triangle" + pa);
+
+    Triangle(int data) {
+        System.out.println("triangle have parameter");
     }
-    
-    double area(){
-        return width * height/2;
+
+    double area() {
+        return width * height / 2;
     }
-    
-    void showStyle(){
+
+    void showStyle() {
         System.out.println("Triangle is " + style);
     }
-    
-    
-    
+
 }
