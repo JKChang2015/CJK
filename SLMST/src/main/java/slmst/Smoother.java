@@ -12,7 +12,18 @@ package slmst;
 abstract class Smoother {
 
     int docCount;
-    int CollCount;
+    int docLen;
+    int collCount;
+    int collLen;
+    
+    public double gotDocTF(){
+        return docCount/docLen;
+    }
+    
+    public double gotCollTF(){
+        return collCount/collLen;
+    }
+    
 
     abstract double smooth();
 
