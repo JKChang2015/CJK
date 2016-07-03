@@ -15,15 +15,14 @@ abstract class Smoother {
     int docLen;
     int collCount;
     int collLen;
-    
-    public double gotDocTF(){
-        return docCount/docLen;
+
+    public double gotDocTF() {
+        return docCount / docLen;
     }
-    
-    public double gotCollTF(){
-        return collCount/collLen;
+
+    public double gotCollTF() {
+        return collCount / collLen;
     }
-    
 
     abstract double smooth();
 
