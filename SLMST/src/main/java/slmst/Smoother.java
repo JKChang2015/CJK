@@ -24,6 +24,6 @@ abstract class Smoother {
         return collCount / collLen;
     }
 
-    abstract double smooth();
+    abstract double smooth(int douCount, int docLen, int collCount, int collLen);
 
 }
