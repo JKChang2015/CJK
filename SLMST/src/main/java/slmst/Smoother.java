@@ -9,6 +9,14 @@ package slmst;
  *
  * @author JKChang
  */
-public class Smoother {
+abstract public class Smoother {
+    
+    int docCount;
+    int CollCount;
+    
+    double smooth(){
+        
+        
+    }
     
 }
