@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
 
-public class pro {
+public class proWrite {
 
     public static void main(String[] args) {
 
@@ -38,5 +38,7 @@ public class pro {
             }
         }
     }
+    
+    
 
 }
