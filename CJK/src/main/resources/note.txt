@@ -4,6 +4,9 @@ http://stackoverflow.com/questions/12174698/how-to-read-rdfdescription-inside-an
 
 http://zh.transwiki.org/cn/owlguide.htm
 
+command line tutorial:
+https://www.lynda.com/Linux-tutorials/Learn-Linux-Command-Line-Basics/435539-2.html
+
 Git使用https方式进行连接时，默认每次推送时都要输入用户名和密码。
 可以使用命令
 git config credential.helper store
