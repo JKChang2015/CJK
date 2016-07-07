@@ -70,10 +70,22 @@ public class LSlimmer {
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
 
     }
-    
+
     public static void main(String[] args) {
         boolean allSucceeded = true;
+        String rootFolder = args[0];
+        System.out.println("Searching configuration files in folder " + rootFolder);
         
+        File dir = new File(rootFolder);
+        File[] files = dir.listFiles(new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+                return name.toLowerCase().endsWith(".props");
+            }
+        });
+
+        for (File file : files) {  // for property file
+
+        }
     }
 
 }
