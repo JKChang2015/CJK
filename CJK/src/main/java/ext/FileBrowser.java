@@ -20,10 +20,15 @@ public class FileBrowser {
                 return name.toLowerCase().endsWith(".props");
             }
         };
-        
+
         File[] files = folder.listFiles(proFilter);
-        for (File file: files) {
-            System.out.println(file.getName());
+        for (File file : files) {
+            try {
+                System.out.println(file.getName());
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
