@@ -15,26 +15,28 @@ public class FileBrowser {
     public ArrayList<String> nameList;
     public int fileCount;
 
-    public void browser(String proPath, String fileType) {
+    public void listFile(String proPath, String fileType) {
 
         File folder = new File(proPath);
         FilenameFilter proFilter = new FilenameFilter() {
             @Override
             public boolean accept(File folder, String name) {
-                return name.toLowerCase().endsWith("fileType");
+                return name.toLowerCase().endsWith(fileType);
             }
         };
 
         File[] files = folder.listFiles(proFilter);
         for (File file : files) {
             try {
-                System.out.println(file.getName());
+                nameList.add(file.getName());
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
-
     }
+    
+    
+    
 
 }
