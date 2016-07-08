@@ -92,18 +92,34 @@ public class LSlimmer {
                 //---------- source ------------------------------------ 
                 String owlURL = props.getProperty("owl");
                 String owlFilename = owlURL;
+                if (owlFilename.contains("/")) {
+                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+                }
 
-                String irisFilename = props.getProperty("iris");
-                
                 //---------- output -----------------------------------
                 String slimmedURL = props.getProperty("slimmed");
                 String slimmedFilename = slimmedURL;
+                if (slimmedFilename.contains("/")) {
+                    slimmedFilename = slimmedFilename.substring(slimmedFilename.lastIndexOf('/') + 1);
+                }
+
+                //----------- iris ------------------------------------
+                String irisFilename = props.getProperty("iris");
+
+                File owlFile = new File(owlFilename);
+                Slimmer slimmer = new Slimmer(owlFile, slimmedFilename);
+                OWLOntology onto = slimmer.getOntology();
+                
 
             } catch (Exception e) {
                 e.printStackTrace();
                 allSucceeded = false;
             }
         }
+    }
+
+    public OWLOntology getOntology() {
+        return this.onto;
     }
 
 }
