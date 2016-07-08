@@ -8,16 +8,20 @@ package ext;
 
 import java.io.File;
 import java.io.FilenameFilter;
+import java.util.ArrayList;
 
 public class FileBrowser {
 
-    public void browser(String proPath) {
+    public ArrayList<String> nameList;
+    public int fileCount;
+
+    public void browser(String proPath, String fileType) {
 
         File folder = new File(proPath);
         FilenameFilter proFilter = new FilenameFilter() {
             @Override
             public boolean accept(File folder, String name) {
-                return name.toLowerCase().endsWith(".props");
+                return name.toLowerCase().endsWith("fileType");
             }
         };
 

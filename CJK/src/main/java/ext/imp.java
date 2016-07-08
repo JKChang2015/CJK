@@ -11,8 +11,7 @@ public class imp {
     public static void main(String[] args) {
         FileBrowser fb = new FileBrowser();
         String path = "C:\\Github\\ontologies\\config";
-        fb.browser(path);
-            
+        fb.browser(path, ".props");           
         
     }
 }
