@@ -11,8 +11,21 @@ import java.io.FilenameFilter;
 
 public class FileBrowser {
 
-    String proPath = "C:\\Github\\ontologies\\config\\";
-    File folder = new File(proPath);
-    FilenameFilter filter = (File folder1, String name) -> name.toLowerCase().endsWith(".props");
+    public void browser(String proPath) {
+
+        File folder = new File(proPath);
+        FilenameFilter proFilter = new FilenameFilter() {
+            @Override
+            public boolean accept(File folder, String name) {
+                return name.toLowerCase().endsWith(".props");
+            }
+        };
+        
+        File[] files = folder.listFiles(proFilter);
+        for (File file: files) {
+            System.out.println(file.getName());
+        }
+
+    }
 
 }
