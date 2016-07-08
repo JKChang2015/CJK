@@ -12,8 +12,7 @@ import java.util.ArrayList;
 
 public class FileBrowser {
 
-    public ArrayList<String> nameList;
-    public int fileCount;
+    public ArrayList<String> nameList = new ArrayList<String>();
 
     public void listFile(String proPath, String fileType) {
 
@@ -29,14 +28,16 @@ public class FileBrowser {
         for (File file : files) {
             try {
                 nameList.add(file.getName());
+                System.out.println(file.getName());
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
         }
     }
-    
-    
-    
+
+    public int getFileCount() {
+        return nameList.size();
+    }
 
 }
