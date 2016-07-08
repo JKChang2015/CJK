@@ -75,7 +75,7 @@ public class LSlimmer {
         boolean allSucceeded = true;
         String rootFolder = args[0];
         System.out.println("Searching configuration files in folder " + rootFolder);
-        
+
         File dir = new File(rootFolder);
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
@@ -83,8 +83,26 @@ public class LSlimmer {
             }
         });
 
-        for (File file : files) {  // for property file
+        for (File file : files) {  // for each property file
+            try {
+                System.out.println("Slimming for  " + file.getName());
+                Properties props = new Properties();
+                props.load(new FileReader(file));
 
+                //---------- source ------------------------------------ 
+                String owlURL = props.getProperty("owl");
+                String owlFilename = owlURL;
+
+                String irisFilename = props.getProperty("iris");
+                
+                //---------- output -----------------------------------
+                String slimmedURL = props.getProperty("slimmed");
+                String slimmedFilename = slimmedURL;
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                allSucceeded = false;
+            }
         }
     }
 

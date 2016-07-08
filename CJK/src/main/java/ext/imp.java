@@ -12,7 +12,7 @@ public class imp {
         FileBrowser fb = new FileBrowser();
         String path = "C:\\Github\\ontologies\\config\\";
         fb.listFile(path, ".props");
-        System.out.println("there are " + fb.getFileCount() + "files");
+        System.out.println("there are " + fb.getFileCount() + " files");
 
     }
 }
