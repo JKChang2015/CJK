@@ -68,6 +68,8 @@ public class LSlimmer {
     }
 
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+        man = OWLManager.createConcurrentOWLOntologyManager();
+        
 
     }
 
