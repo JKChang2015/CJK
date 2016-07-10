@@ -55,40 +55,47 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 public class LSlimmer {
-
+    
     private OWLOntologyManager man;
     private OWLOntology onto;
-
+    
     public LSlimmer(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile), mergedOntologyIRI);
     }
-
+    
     public LSlimmer(InputStream owlFile) throws OWLOntologyCreationException {
         this(owlFile, null);
     }
-
+    
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
+        onto = man.loadOntologyFromOntologyDocument(owlFile);
         if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
             String root = System.getenv("WORKSPACE");
             System.out.println("Adding mappings with root: " + root);
             addMappings(man, root);
         }
-
+        
+        if (mergedOntologyIRI != null) {
+            
+            
+        }
+        
     }
-
+    
     public static void main(String[] args) {
         boolean allSucceeded = true;
         String rootFolder = args[0]; //    <<<< ===================
         System.out.println("Searching configuration files in folder " + rootFolder);
-
+        //Searching configuration files in .
+        
         File dir = new File(rootFolder);
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.toLowerCase().endsWith(".props");
             }
         });
-
+        
         for (File file : files) {  // for each property file
             try {
                 System.out.println("Slimming for  " + file.getName());
@@ -111,29 +118,29 @@ public class LSlimmer {
 
                 //----------- iris ------------------------------------
                 String irisFilename = props.getProperty("iris");
-
+                
                 File owlFile = new File(owlFilename);
                 Slimmer slimmer = new Slimmer(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
-
+                
             } catch (Exception e) {
                 e.printStackTrace();
                 allSucceeded = false;
             }
         }
     }
-
+    
     public OWLOntology getOntology() {
         return this.onto;
     }
-
+    
     @SuppressWarnings("serial")
     Map<String, String> mappings = new HashMap<String, String>() {  //<K,V>
         {
             put("http://purl.obolibrary.org/obo/oae/RO_dev_import", "RO_dev_import.owl");
         }
     };
-
+    
     private void addMappings(OWLOntologyManager m, String root) {
         if (!root.endsWith("/")) {
             root = root + "/";
@@ -142,7 +149,8 @@ public class LSlimmer {
             String localPart = mappings.get(ontoIRI);
             m.addIRIMapper(new SimpleIRIMapper(IRI.create(ontoIRI), IRI.create("file://" + root + localPart)));
             System.out.println("  added: " + IRI.create("file://" + root + localPart));
+            //added: file:///var/lib/jenkins.jenm/workspace/ENVO/RO_dev_import.owl
         }
     }
-
+    
 }
