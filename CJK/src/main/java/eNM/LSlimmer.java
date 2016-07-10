@@ -75,7 +75,7 @@ public class LSlimmer {
 
     public static void main(String[] args) {
         boolean allSucceeded = true;
-        String rootFolder = args[0];
+        String rootFolder = args[0]; //    <<<< ===================
         System.out.println("Searching configuration files in folder " + rootFolder);
 
         File dir = new File(rootFolder);
