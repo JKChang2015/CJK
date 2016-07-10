@@ -69,7 +69,11 @@ public class LSlimmer {
 
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
-        
+        if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
+            String root = System.getenv("WORKSPACE");
+            System.out.println("Adding mappings with root: " + root);
+            addMappings(man, root);
+        }
 
     }
 
@@ -111,7 +115,6 @@ public class LSlimmer {
                 File owlFile = new File(owlFilename);
                 Slimmer slimmer = new Slimmer(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
-                
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -122,6 +125,24 @@ public class LSlimmer {
 
     public OWLOntology getOntology() {
         return this.onto;
+    }
+
+    @SuppressWarnings("serial")
+    Map<String, String> mappings = new HashMap<String, String>() {  //<K,V>
+        {
+            put("http://purl.obolibrary.org/obo/oae/RO_dev_import", "RO_dev_import.owl");
+        }
+    };
+
+    private void addMappings(OWLOntologyManager m, String root) {
+        if (!root.endsWith("/")) {
+            root = root + "/";
+        }
+        for (String ontoIRI : mappings.keySet()) {
+            String localPart = mappings.get(ontoIRI);
+            m.addIRIMapper(new SimpleIRIMapper(IRI.create(ontoIRI), IRI.create("file://" + root + localPart)));
+            System.out.println("  added: " + IRI.create("file://" + root + localPart));
+        }
     }
 
 }
