@@ -77,16 +77,35 @@ public class LSlimmer {
         }
 
         if (mergedOntologyIRI != null) {
+            
+            // Load all of the ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
             for (OWLImportsDeclaration declaration : importDeclarations) {
                 try {
+                    man.loadOntology(declaration.getIRI());
+                    System.out.println("Loaded imported ontology: " + declaration.getIRI());
                     
                 } catch (Exception exception) {
-                    exception.getStackTrace();
+                    exception.printStackTrace();
+                    System.out.println("Failed to load imported ontology: " + declaration.getIRI());
                 }
             }
-
+            
+            // merge ontologies, specifying an IRI for the new ontology
+            OWLOntologyMerger merger = new OWLOntologyMerger(man);
+            onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
+            for (OWLOntology ontology: man.getOntologies()) {
+                System.out.println(" Copying annotations from " + ontology.getOntologyID());
+                
+                for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                    System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+                    AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
+                    man.applyChange(annotationAdd);
+                }
+            }
         }
+        
+        
 
     }
 
