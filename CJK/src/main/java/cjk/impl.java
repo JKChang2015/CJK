@@ -7,6 +7,9 @@
 package cjk;
 
 import java.io.File;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -14,20 +17,37 @@ import java.io.PrintWriter;
 public class impl {
 
     public static void main(String[] args) {
-       
-        String folerPath = "C:\\Github\\ontologies\\external\\";
-        File file = new File(folerPath);
-        if (file.exists()) {
-            File[] files = file.listFiles();
-            for (File f : files) {
-                if (f.toString().endsWith("owl")) {
-                    String name = f.getName();
-                    System.out.println(name);
-                }
 
+        AnimatedGIFEncoder ae = new AnimatedGIFEncoder();
+        String folderPath = "..//records//";
+        File folder = new File(folderPath);
+        File[] files = folder.listFiles();
+        ae.start("res.gif");
+        for (File file : files) {
+            try {
+                BufferedImage img = ImageIO.read(file);
+                ae.setDelay(500);
+                ae.addFrame(img);
+                // BufferedImage bimage = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_RGB);
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
         }
+        ae.finish();
+        System.out.println("");
 
+//        String folerPath = "C:\\Github\\ontologies\\external\\";
+//        File file = new File(folerPath);
+//        if (file.exists()) {
+//            File[] files = file.listFiles();
+//            for (File f : files) {
+//                if (f.toString().endsWith("owl")) {
+//                    String name = f.getName();
+//                    System.out.println(name);
+//                }
+//
+//            }
+//
+//        }
     }
 }
