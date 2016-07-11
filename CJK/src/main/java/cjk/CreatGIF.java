@@ -4,9 +4,9 @@
  @author jkchang
  @date 30-Jun-2016
  */
-package ext;
+package cjk;
 
-public class imp {
+public class CreatGIF {
 
     public static void main(String[] args) {
         String path = "C:\\Github\\ontologies\\config\\";
