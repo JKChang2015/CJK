@@ -70,6 +70,7 @@ public class LSlimmer {
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
+
         if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
             String root = System.getenv("WORKSPACE");
             System.out.println("Adding mappings with root: " + root);
@@ -77,26 +78,25 @@ public class LSlimmer {
         }
 
         if (mergedOntologyIRI != null) {
-            
             // Load all of the ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
             for (OWLImportsDeclaration declaration : importDeclarations) {
                 try {
                     man.loadOntology(declaration.getIRI());
                     System.out.println("Loaded imported ontology: " + declaration.getIRI());
-                    
+
                 } catch (Exception exception) {
                     exception.printStackTrace();
                     System.out.println("Failed to load imported ontology: " + declaration.getIRI());
                 }
             }
-            
+
             // merge ontologies, specifying an IRI for the new ontology
             OWLOntologyMerger merger = new OWLOntologyMerger(man);
             onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
-            for (OWLOntology ontology: man.getOntologies()) {
+            for (OWLOntology ontology : man.getOntologies()) {
                 System.out.println(" Copying annotations from " + ontology.getOntologyID());
-                
+
                 for (OWLAnnotation annotation : ontology.getAnnotations()) {
                     System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
                     AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
@@ -104,8 +104,6 @@ public class LSlimmer {
                 }
             }
         }
-        
-        
 
     }
 
