@@ -77,7 +77,7 @@ public class LSlimmer {
             addMappings(man, root); //add local owl file to the URL mapping
         }
 
-        if (mergedOntologyIRI != null) { 
+        if (mergedOntologyIRI != null) {
             // Load all of the ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
             for (OWLImportsDeclaration declaration : importDeclarations) {
@@ -156,6 +156,43 @@ public class LSlimmer {
 
     public OWLOntology getOntology() {
         return this.onto;
+    }
+
+    /**
+     * Helper method that returns a collection sup/sub classes of the given class.
+     *
+     * @param clazz
+     * @param onto
+     * @return
+     */
+    private Set<String> allSuperClasses(OWLClass clazz, OWLOntology onto) {
+        Set<String> allSuperClasses = new HashSet<String>();
+        Collection<OWLClassExpression> superClasses = Searcher.sup(onto.getSubClassAxiomsForSubClass(clazz));
+        for (OWLClassExpression superClass : superClasses) {
+            OWLClass superOwlClass = superClass.asOWLClass();
+            String superIri = superOwlClass.getIRI().toString();
+            allSuperClasses.add(superIri);
+            // recurse
+            allSuperClasses.addAll(allSuperClasses(superOwlClass, onto));
+        }
+        return allSuperClasses;
+    }
+
+    private Set<String> allSubClasses(OWLClass clazz, OWLOntology onto) {
+        Set<String> allSubClasses = new HashSet<String>();
+        System.out.println("clazz: " + clazz);
+        Collection<OWLClassExpression> subClasses = Searcher.sub(onto.getSubClassAxiomsForSuperClass(clazz));
+        System.out.println("subclass count: " + subClasses.size());
+        for (OWLClassExpression subClass : subClasses) {
+            // skip itself
+            OWLClass subOwlClass = subClass.asOWLClass();
+            System.out.println("subclass: " + subOwlClass);
+            String subIri = subOwlClass.getIRI().toString();
+            allSubClasses.add(subIri);
+            // recurse
+            allSubClasses.addAll(allSubClasses(subOwlClass, onto));
+        }
+        return allSubClasses;
     }
 
     @SuppressWarnings("serial")
