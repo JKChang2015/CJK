@@ -78,7 +78,7 @@ public class LSlimmer {
         }
 
         if (mergedOntologyIRI != null) {
-            // Load all of the ontologies
+            // Load all of the DIRECT IMPORTs ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
             for (OWLImportsDeclaration declaration : importDeclarations) {
                 try {
