@@ -15,6 +15,7 @@ import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.Set;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLAnnotation;
 import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
@@ -27,11 +28,21 @@ public class impl {
         File file = new File("..//ontologies//bao_complete.owl");
         OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
         Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
-        
-        System.out.println("");
-        for (OWLImportsDeclaration declaration : importDeclarations) {
 
+        for (OWLImportsDeclaration declaration : importDeclarations) {
+            man.loadOntology(declaration.getIRI());
+            System.out.println("Load imported ontology: " + declaration.getIRI());
         }
+        
+        for(OWLOntology ontology: man.getOntologies()){
+            System.out.println("==============================================");
+            System.out.println(ontology.getOntologyID().toString() );
+            for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                 System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+            }
+            System.out.println(" ");
+        }
+        
 
         System.out.println("");
 
