@@ -17,6 +17,9 @@ import java.io.PrintWriter;
 public class impl {
 
     public static void main(String[] args) {
+        
+        System.out.println(System.getenv("WORKSPACE"));
+        System.out.println("");
 
         String folerPath = "C:\\Github\\ontologies\\external\\";
         File file = new File(folerPath);

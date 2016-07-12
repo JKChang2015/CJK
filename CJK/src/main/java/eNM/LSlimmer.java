@@ -74,10 +74,10 @@ public class LSlimmer {
         if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
             String root = System.getenv("WORKSPACE");
             System.out.println("Adding mappings with root: " + root);
-            addMappings(man, root);
+            addMappings(man, root); //add local owl file to the URL mapping
         }
 
-        if (mergedOntologyIRI != null) {
+        if (mergedOntologyIRI != null) { 
             // Load all of the ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
             for (OWLImportsDeclaration declaration : importDeclarations) {
