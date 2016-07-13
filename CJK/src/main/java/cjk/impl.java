@@ -24,28 +24,41 @@ public class impl {
 
     public static void main(String[] args) throws Exception {
 
+        File folder = new File("..//ontologies//");
+        File[] files = folder.listFiles();
+
         OWLOntologyManager man = OWLManager.createOWLOntologyManager();
-        File file = new File("..//ontologies//bao_complete.owl");
-        OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
-        Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
-
-        for (OWLImportsDeclaration declaration : importDeclarations) {
-            man.loadOntology(declaration.getIRI());
-            System.out.println("Load imported ontology: " + declaration.getIRI());
+        for (File file : files) {
+            man.loadOntologyFromOntologyDocument(file);
         }
-        
-        for(OWLOntology ontology: man.getOntologies()){
-            System.out.println("==============================================");
-            System.out.println(ontology.getOntologyID().toString() );
-            for (OWLAnnotation annotation : ontology.getAnnotations()) {
-                 System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
-            }
-            System.out.println(" ");
-        }
-        
-
         System.out.println("");
+        
+        
+    }
+}
 
+//
+//        OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+//        File file = new File("..//ontologies//bao_complete.owl");
+//        OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
+//        Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
+//
+//        for (OWLImportsDeclaration declaration : importDeclarations) {
+//            man.loadOntology(declaration.getIRI());
+//            System.out.println("Load imported ontology: " + declaration.getIRI());
+//        }
+//        
+//        for(OWLOntology ontology: man.getOntologies()){
+//            System.out.println("==============================================");
+//            System.out.println(ontology.getOntologyID().toString() );
+//            for (OWLAnnotation annotation : ontology.getAnnotations()) {
+//                 System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+//            }
+//            System.out.println(" ");
+//        }
+//        
+//
+//        System.out.println("");
 //        System.out.println(System.getenv("WORKSPACE"));
 //        System.out.println("");
 //
@@ -62,5 +75,3 @@ public class impl {
 //            }
 //
 //        }
-    }
-}
