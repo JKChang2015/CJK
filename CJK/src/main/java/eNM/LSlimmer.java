@@ -159,7 +159,8 @@ public class LSlimmer {
     }
 
     /**
-     * Helper method that returns a collection sup/sub classes of the given class.
+     * Helper method that returns a collection sup/sub classes of the given
+     * class.
      *
      * @param clazz
      * @param onto
@@ -194,7 +195,7 @@ public class LSlimmer {
         }
         return allSubClasses;
     }
-    
+
     /**
      * Save the ontology as OWL/XML. It first includes new meta data about the
      * slimming process.
@@ -203,6 +204,52 @@ public class LSlimmer {
      * @param originalOWL
      * @throws OWLOntologyStorageException
      */
+    public void saveAs(File output, String orinalOWL) throws OWLOntologyStorageException, FileNotFoundException {
+        saveAs(new FileOutputStream(output), orinalOWL);
+    }
+
+    public void saveAs(OutputStream output, String originalOWL) throws OWLOntologyStorageException {
+        // add provenance
+        OWLDataFactory dataFac = man.getOWLDataFactory();
+
+        // version info
+        OWLLiteral lit = dataFac.getOWLLiteral(
+                "This SLIM file was generated automatically by the eNanoMapper Slimmer "
+                + "software library. For more information see "
+                + "http://github.com/enanomapper/slimmer.");
+        OWLAnnotationProperty owlAnnotationProperty
+                = dataFac.getOWLAnnotationProperty(OWLRDFVocabulary.OWL_VERSION_INFO.getIRI());
+        OWLAnnotation anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+        OWLAnnotationProperty pavImportedFrom = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://purl.org/pav/importedFrom")
+        );
+        anno = dataFac.getOWLAnnotation(pavImportedFrom, dataFac.getOWLLiteral(originalOWL));
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // generation tool
+        lit = dataFac.getOWLLiteral("Slimmer");
+        owlAnnotationProperty = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://www.geneontology.org/formats/oboInOwl#auto-generated-by")
+        );
+        anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // generation date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        lit = dataFac.getOWLLiteral(dateFormat.format(date));
+        owlAnnotationProperty = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://www.geneontology.org/formats/oboInOwl#date")
+        );
+        anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // save to file
+        RDFXMLDocumentFormat format = new RDFXMLDocumentFormat();
+        format.setPrefix("ncicp", "http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#");
+        man.saveOntology(onto, format, output);
+    }
 
     @SuppressWarnings("serial")
     Map<String, String> mappings = new HashMap<String, String>() {  //<K,V>
