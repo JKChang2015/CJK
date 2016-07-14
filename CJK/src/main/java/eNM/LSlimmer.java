@@ -194,6 +194,15 @@ public class LSlimmer {
         }
         return allSubClasses;
     }
+    
+    /**
+     * Save the ontology as OWL/XML. It first includes new meta data about the
+     * slimming process.
+     *
+     * @param output
+     * @param originalOWL
+     * @throws OWLOntologyStorageException
+     */
 
     @SuppressWarnings("serial")
     Map<String, String> mappings = new HashMap<String, String>() {  //<K,V>
