@@ -251,6 +251,16 @@ public class LSlimmer {
         man.saveOntology(onto, format, output);
     }
 
+    private Map<String, String> getNewSuperClasses(Set<Instruction> irisToSave) {
+        Map<String, String> newSuperClasses = new HashMap<String, String>();
+        for (Instruction instruction : irisToSave) {
+            if (instruction.getNewSuperClass() != null) {
+                newSuperClasses.put(instruction.getUriString(), instruction.getNewSuperClass());
+            }
+        }
+        return newSuperClasses;
+    }
+
     @SuppressWarnings("serial")
     Map<String, String> mappings = new HashMap<String, String>() {  //<K,V>
         {
