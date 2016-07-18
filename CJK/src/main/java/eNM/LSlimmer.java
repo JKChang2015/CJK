@@ -154,7 +154,20 @@ public class LSlimmer {
                 OWLOntology onto = slimmer.getOntology();
                 System.out.println("Loaded Ontology: " + slimmedFilename);
                 System.out.println("Loaded axioms: " + onto.getAxiomCount());
+
+                // 2. read the configuration of what to keep/remove
+                File configFile = new File(rootFolder, irisFilename);
+                Configuration config = new Configuration();
+                try {
+                    System.out.println("Reading config file: " + configFile);
+                    config.read(configFile);
+                } catch (Exception exception) {
+                    System.out.println("Error while reading the config file: " + exception.getMessage());
+                    exception.printStackTrace();
+                    System.exit(-1);
+                }
                 
+                // 3. remove everything except for what is defined by the instructions
                 
 
             } catch (Exception e) {
