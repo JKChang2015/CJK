@@ -57,7 +57,7 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 public class LSlimmer {
 
     private OWLOntologyManager man;
-    private OWLOntology onto;
+    private OWLOntology onto;   
 
     public LSlimmer(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile), mergedOntologyIRI);
@@ -67,6 +67,12 @@ public class LSlimmer {
         this(owlFile, null);
     }
 
+    /**
+     * 
+     * @param owlFile //input
+     * @param mergedOntologyIRI //output
+     * @throws OWLOntologyCreationException 
+     */
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
