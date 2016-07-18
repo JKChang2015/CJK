@@ -57,7 +57,7 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 public class LSlimmer {
 
     private OWLOntologyManager man;
-    private OWLOntology onto;   
+    private OWLOntology onto;
 
     public LSlimmer(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile), mergedOntologyIRI);
@@ -68,10 +68,10 @@ public class LSlimmer {
     }
 
     /**
-     * 
-     * @param owlFile //input
-     * @param mergedOntologyIRI //output
-     * @throws OWLOntologyCreationException 
+     *
+     * @param owlFile
+     * @param mergedOntologyIRI
+     * @throws OWLOntologyCreationException
      */
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
@@ -115,16 +115,16 @@ public class LSlimmer {
 
     public static void main(String[] args) {
         boolean allSucceeded = true;
-        String rootFolder = args[0]; //    <<<< ===================
-        System.out.println("Searching configuration files in folder " + rootFolder);
-        //Searching configuration files in .
-
+        String rootFolder = "..\\ontologies\\config";
+        System.out.println("Searching configuration files in folder " + rootFolder); //Searching configuration files in .
+        
         File dir = new File(rootFolder);
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.toLowerCase().endsWith(".props");
             }
         });
+        System.out.println("");
 
         for (File file : files) {  // for each property file
             try {
