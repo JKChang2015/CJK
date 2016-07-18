@@ -117,18 +117,19 @@ public class LSlimmer {
         boolean allSucceeded = true;
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder); //Searching configuration files in .
-        
+
         File dir = new File(rootFolder);
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.toLowerCase().endsWith(".props");
             }
         });
-        System.out.println("");
 
         for (File file : files) {  // for each property file
             try {
                 System.out.println("Slimming for  " + file.getName());
+
+                //read the information about the ontology to process
                 Properties props = new Properties();
                 props.load(new FileReader(file));
 
@@ -138,20 +139,23 @@ public class LSlimmer {
                 if (owlFilename.contains("/")) {
                     owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
                 }
-
                 //---------- output -----------------------------------
                 String slimmedURL = props.getProperty("slimmed");
                 String slimmedFilename = slimmedURL;
                 if (slimmedFilename.contains("/")) {
                     slimmedFilename = slimmedFilename.substring(slimmedFilename.lastIndexOf('/') + 1);
                 }
-
                 //----------- iris ------------------------------------
                 String irisFilename = props.getProperty("iris");
 
+                // 1. read the original ontology
                 File owlFile = new File(owlFilename);
                 Slimmer slimmer = new Slimmer(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
+                System.out.println("Loaded Ontology: " + slimmedFilename);
+                System.out.println("Loaded axioms: " + onto.getAxiomCount());
+                
+                
 
             } catch (Exception e) {
                 e.printStackTrace();
