@@ -71,9 +71,8 @@ public class LSlimmer {
     }
 
     /**
-     *
-     * @param owlFile
-     * @param mergedOntologyIRI
+     * @param owlFile (input file)
+     * @param mergedOntologyIRI (output IRI)
      * @throws OWLOntologyCreationException
      */
     public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
@@ -159,7 +158,7 @@ public class LSlimmer {
                 System.out.println("Loaded axioms: " + onto.getAxiomCount());
 
                 // 2. read the configuration of what to keep/remove
-                File configFile = new File(rootFolder, irisFilename);
+                File configFile = new File(rootFolder, irisFilename); // read iris file
                 Configuration config = new Configuration();
                 try {
                     System.out.println("Reading config file: " + configFile);

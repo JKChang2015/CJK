@@ -40,16 +40,16 @@ public class Configuration {
     private Set<Instruction> irisToSave = new HashSet<Instruction>();
     private Set<Instruction> irisToRemove = new HashSet<Instruction>();
 
+    public void removeTreePart(Instruction instruction) {
+        irisToRemove.add(instruction);  //  irisToSave.add(instruction);
+    }
+
     public void addTreePart(Instruction instruction) {
-        irisToSave.add(instruction);
+        irisToSave.add(instruction);  //  irisToRemove.add(instruction);
     }
 
     public Set<Instruction> getTreePartsToSave() {
         return irisToSave;
-    }
-
-    public void removeTreePart(Instruction instruction) {
-        irisToRemove.add(instruction);
     }
 
     public Set<Instruction> getTreePartsToRemove() {
