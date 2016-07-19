@@ -1,11 +1,3 @@
-/**
- * ----------------------------------------------------------------------------
- * Test ontology slimmer locally
- * ----------------------------------------------------------------------------
- *
- * @author jkchang
- * @date 07-Jul-2016
- */
 package eNM;
 
 import java.io.File;
@@ -55,6 +47,15 @@ import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.OWLOntologyMerger;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
+
+/**
+ * ----------------------------------------------------------------------------
+ * Test ontology slimmer locally
+ * ----------------------------------------------------------------------------
+ *
+ * @author jkchang
+ * @date 07-Jul-2016
+ */
 
 public class LSlimmer {
 
