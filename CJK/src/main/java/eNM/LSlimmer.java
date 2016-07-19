@@ -168,7 +168,8 @@ public class LSlimmer {
                 }
                 
                 // 3. remove everything except for what is defined by the instructions
-                
+                    Set<Instruction> irisToSave = config.getTreePartsToRemove();
+                    
 
             } catch (Exception e) {
                 e.printStackTrace();

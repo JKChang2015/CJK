@@ -44,12 +44,12 @@ public class Configuration {
         irisToSave.add(instruction);
     }
 
-    public void removeTreePart(Instruction instruction) {
-        irisToRemove.add(instruction);
-    }
-
     public Set<Instruction> getTreePartsToSave() {
         return irisToSave;
+    }
+
+    public void removeTreePart(Instruction instruction) {
+        irisToRemove.add(instruction);
     }
 
     public Set<Instruction> getTreePartsToRemove() {
@@ -101,7 +101,7 @@ public class Configuration {
                     startURI = 3;
                     int indexCloseSuper = instruction.indexOf(')');
                     if (instruction.charAt(2) == '(' && indexCloseSuper != -1) {
-                        newSuperClass = instruction.substring(startURI, indexCloseSuper); 
+                        newSuperClass = instruction.substring(startURI, indexCloseSuper);
                         startURI = indexCloseSuper + 2;
                     } else if (instruction.charAt(2) != ':') {
                         reader.close();
