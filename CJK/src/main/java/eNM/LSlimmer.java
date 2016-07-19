@@ -166,10 +166,16 @@ public class LSlimmer {
                     exception.printStackTrace();
                     System.exit(-1);
                 }
-                
+
                 // 3. remove everything except for what is defined by the instructions
-                    Set<Instruction> irisToSave = config.getTreePartsToRemove();
-                    
+                Set<Instruction> irisToSave = config.getTreePartsToSave();
+                slimmer.removeAllExcept(irisToSave);  // remove except
+                Set<Instruction> irisToRemove = config.getTreePartsToRemove();
+                slimmer.removeAll(irisToRemove);  // remove all
+                
+                //// 4. remove owl:imports
+                
+                
 
             } catch (Exception e) {
                 e.printStackTrace();
