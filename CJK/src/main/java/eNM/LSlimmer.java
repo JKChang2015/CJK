@@ -142,8 +142,8 @@ public class LSlimmer {
                     owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
                 }
                 //---------- output -----------------------------------
-                String slimmedURL = props.getProperty("slimmed");
-                String slimmedFilename = slimmedURL;
+                String slimmedURI = props.getProperty("slimmed");
+                String slimmedFilename = slimmedURI;
                 if (slimmedFilename.contains("/")) {
                     slimmedFilename = slimmedFilename.substring(slimmedFilename.lastIndexOf('/') + 1);
                 }
@@ -176,6 +176,49 @@ public class LSlimmer {
                 slimmer.removeAll(irisToRemove);  // remove all
 
                 // 4. remove owl:imports
+                Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
+                for (OWLImportsDeclaration declaration : importDeclarations) {
+                    System.out.println("Removing imports: " + declaration.getIRI());
+                    RemoveImport removeImport = new RemoveImport(onto, declaration);
+                    slimmer.man.applyChange(removeImport);
+                }
+
+                // 5. update descriptions and labels
+                Set<OWLClass> entities = onto.getClassesInSignature();
+                for (OWLClass clazz : entities) {
+                    for (OWLAnnotation annot : EntitySearcher.getAnnotations(clazz, onto)) {
+                        if (annot.getProperty().getIRI().toString().equals("http://purl.org/dc/elements/1.1/description")) {
+                            System.out.println("  description: " + annot.getValue());
+                            OWLDataFactory factory = slimmer.man.getOWLDataFactory();
+                            OWLAnnotationProperty newDescription = factory.getOWLAnnotationProperty(IRI.create("http://purl.obolibrary.org/obo/IAO_0000115"));
+                            OWLAnnotation commentAnno = factory.getOWLAnnotation(newDescription, annot.getValue());
+                            System.out.println("  new description: " + commentAnno);
+                            OWLAxiom ax = factory.getOWLAnnotationAssertionAxiom(clazz.getIRI(), commentAnno);
+                            slimmer.man.applyChange(new AddAxiom(onto, ax));
+                        }
+                    }
+                }
+
+                // 6. remove some nasty NPO properties (WORKAROUND: may be removed later)
+                entities = onto.getClassesInSignature();
+                for (OWLClass clazz : entities) {
+                    Set<OWLAnnotationAssertionAxiom> annots = onto.getAnnotationAssertionAxioms(clazz.getIRI());
+                    Set<OWLAnnotationAssertionAxiom> toRemove = new HashSet<OWLAnnotationAssertionAxiom>();
+                    for (OWLAnnotationAssertionAxiom axiom : annots) {
+                        if (axiom.getProperty().getIRI().toString().equals("http://purl.bioontology.org/ontology/npo#FULL_SYN")
+                                || axiom.getProperty().getIRI().toString().equals("http://purl.bioontology.org/ontology/npo#definition")) {
+                            toRemove.add(axiom);
+                        }
+                    }
+                    slimmer.man.removeAxioms(onto, toRemove);
+                }
+                // 7. save in OWL/XML format
+                SetOntologyID ontologyIDChange = new SetOntologyID(onto, IRI.create(slimmedURI));
+                slimmer.man.applyChange(ontologyIDChange);
+                File output = new File(slimmedFilename);
+                System.out.println("Saving to: " + output.getAbsolutePath());
+                slimmer.saveAs(output, owlURL);
+
             } catch (Exception e) {
                 e.printStackTrace();
                 allSucceeded = false;
