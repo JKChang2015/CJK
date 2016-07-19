@@ -1,4 +1,4 @@
-/* ----------------------------------------------------------------------------
+/**----------------------------------------------------------------------------
     Test ontology slimmer locally
    ---------------------------------------------------------------------------- 
  @author jkchang
@@ -150,7 +150,7 @@ public class LSlimmer {
 
                 // 1. read the original ontology
                 File owlFile = new File(owlFilename);
-                Slimmer slimmer = new Slimmer(owlFile, slimmedFilename);
+                LSlimmer slimmer = new LSlimmer(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
                 System.out.println("Loaded Ontology: " + slimmedFilename);
                 System.out.println("Loaded axioms: " + onto.getAxiomCount());
@@ -172,11 +172,10 @@ public class LSlimmer {
                 slimmer.removeAllExcept(irisToSave);  // remove except
                 Set<Instruction> irisToRemove = config.getTreePartsToRemove();
                 slimmer.removeAll(irisToRemove);  // remove all
-                
-                //// 4. remove owl:imports
-                
-                
 
+                // 4. remove owl:imports
+                
+                
             } catch (Exception e) {
                 e.printStackTrace();
                 allSucceeded = false;
@@ -187,6 +186,7 @@ public class LSlimmer {
     public OWLOntology getOntology() {
         return this.onto;
     }
+
 
     /**
      * Helper method that returns a collection sup/sub classes of the given
