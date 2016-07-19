@@ -1,8 +1,10 @@
-/**----------------------------------------------------------------------------
-    Test ontology slimmer locally
-   ---------------------------------------------------------------------------- 
- @author jkchang
- @date 07-Jul-2016
+/**
+ * ----------------------------------------------------------------------------
+ * Test ontology slimmer locally
+ * ----------------------------------------------------------------------------
+ *
+ * @author jkchang
+ * @date 07-Jul-2016
  */
 package eNM;
 
@@ -174,8 +176,6 @@ public class LSlimmer {
                 slimmer.removeAll(irisToRemove);  // remove all
 
                 // 4. remove owl:imports
-                
-                
             } catch (Exception e) {
                 e.printStackTrace();
                 allSucceeded = false;
@@ -187,6 +187,155 @@ public class LSlimmer {
         return this.onto;
     }
 
+    /**
+     * This methods removes all classes, data properties, and object properties,
+     * except those URIs specified by the parameter. If a class is kept, the
+     * intrductions also indicates what the new parent of the class is.
+     *
+     * @param irisToSave which IRIs are to be kept
+     */
+    public void removeAllExcept(Set<Instruction> irisToSave) {
+        Set<String> singleIRIs = explode(irisToSave);
+        Map<String, String> newSuperClasses = getNewSuperClasses(irisToSave);
+        System.out.println("" + singleIRIs);
+
+        // remove classes
+        OWLEntityRemover remover = new OWLEntityRemover(Collections.singleton(onto));
+        for (OWLClass ind : onto.getClassesInSignature()) {
+            String indIRI = ind.getIRI().toString();
+            System.out.println(indIRI);
+            if (!singleIRIs.contains(indIRI)) {
+                System.out.println("Remove: " + indIRI);
+                ind.accept(remover);
+            } else // OK, keep this one. But does it have a new super class?
+            {
+                if (newSuperClasses.containsKey(indIRI)) {
+                    String newSuperClass = newSuperClasses.get(indIRI);
+                    OWLDataFactory factory = man.getOWLDataFactory();
+                    System.out.println("Super class: " + newSuperClass);
+                    OWLClass superClass = factory.getOWLClass(IRI.create(newSuperClass));
+                    OWLAxiom axiom = factory.getOWLSubClassOfAxiom(ind, superClass);
+                    System.out.println("Adding super class axiom: " + axiom);
+                    AddAxiom addAxiom = new AddAxiom(onto, axiom);
+                    man.applyChange(addAxiom);
+                }
+            }
+        }
+
+        // remove properties
+        for (OWLObjectProperty axiom : onto.getObjectPropertiesInSignature()) {
+            String propIRI = axiom.getIRI().toString();
+            System.out.println(propIRI);
+            if (!singleIRIs.contains(propIRI)) {
+                System.out.println("Remove: " + propIRI);
+                axiom.accept(remover);
+            }
+        }
+        for (OWLDataProperty axiom : onto.getDataPropertiesInSignature()) {
+            String propIRI = axiom.getIRI().toString();
+            System.out.println(propIRI);
+            if (!singleIRIs.contains(propIRI)) {
+                System.out.println("Remove: " + propIRI);
+                axiom.accept(remover);
+            }
+        }
+
+        man.applyChanges(remover.getChanges());
+    }
+
+    /**
+     * This method removes all IRIs given by the parameter.
+     *
+     * @param irisToRemove
+     */
+    public void removeAll(Set<Instruction> irisToRemove) {
+        Set<String> singleIRIs = explode(irisToRemove);
+        System.out.println("" + singleIRIs);
+
+        OWLEntityRemover remover = new OWLEntityRemover(Collections.singleton(onto));
+        for (OWLClass ind : onto.getClassesInSignature()) {
+            String indIRI = ind.getIRI().toString();
+            System.out.println(indIRI);
+            if (singleIRIs.contains(indIRI)) {
+                System.out.println("Remove: " + indIRI);
+                ind.accept(remover);
+            }
+        }
+
+        // remove properties
+        for (OWLObjectProperty axiom : onto.getObjectPropertiesInSignature()) {
+            String propIRI = axiom.getIRI().toString();
+            System.out.println(propIRI);
+            if (singleIRIs.contains(propIRI)) {
+                System.out.println("Remove: " + propIRI);
+                axiom.accept(remover);
+            }
+        }
+        for (OWLDataProperty axiom : onto.getDataPropertiesInSignature()) {
+            String propIRI = axiom.getIRI().toString();
+            System.out.println(propIRI);
+            if (singleIRIs.contains(propIRI)) {
+                System.out.println("Remove: " + propIRI);
+                axiom.accept(remover);
+            }
+        }
+
+        man.applyChanges(remover.getChanges());
+    }
+
+    /**
+     * This functions applies the <code>D</code> and <code>U</code> statements
+     * from the configuration files by traversing the OWL hierarchy and either
+     * including all parents or all children.
+     *
+     * @param instructions
+     * @return
+     */
+    private Set<String> explode(Set<Instruction> instructions) {
+        Set<String> singleIRIs = new HashSet<String>();
+        for (Instruction instruction : instructions) {
+            String iri = instruction.getUriString();
+            if (instruction.getScope() == Instruction.Scope.UP) {
+                System.out.println("Extracting " + iri + "...");
+                Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
+                if (entities.size() > 0) {
+                    OWLEntity entity = entities.iterator().next();
+                    if (entity instanceof OWLClass) {
+                        OWLClass clazz = (OWLClass) entity;
+                        System.out.println("Class " + clazz);
+                        Set<String> superClasses = allSuperClasses(clazz, onto);
+                        for (String superClass : superClasses) {
+                            System.out.println("Extracting " + superClass + "...");
+                            singleIRIs.add(superClass);
+                        }
+                    }
+                }
+                singleIRIs.add(iri);
+            } else if (instruction.getScope() == Instruction.Scope.DOWN) {
+                System.out.println("Extracting " + iri + "...");
+                Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
+                if (entities.size() > 0) {
+                    OWLEntity entity = entities.iterator().next();
+                    if (entity instanceof OWLClass) {
+                        OWLClass clazz = (OWLClass) entity;
+                        System.out.println("Class " + clazz);
+                        Set<String> subClasses = allSubClasses(clazz, onto);
+                        for (String subClass : subClasses) {
+                            System.out.println("Extracting " + subClass + "...");
+                            singleIRIs.add(subClass);
+                        }
+                    }
+                }
+                singleIRIs.add(iri);
+            } else if (instruction.getScope() == Instruction.Scope.SINGLE) {
+                System.out.println("Extracting " + iri + "...");
+                singleIRIs.add(iri);
+            } else {
+                System.out.println("Cannot handle this instruction: " + instruction.getScope());
+            }
+        }
+        return singleIRIs;
+    }
 
     /**
      * Helper method that returns a collection sup/sub classes of the given
