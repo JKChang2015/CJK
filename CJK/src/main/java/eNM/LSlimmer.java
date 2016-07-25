@@ -212,6 +212,7 @@ public class LSlimmer {
                     }
                     slimmer.man.removeAxioms(onto, toRemove);
                 }
+                
                 // 7. save in OWL/XML format
                 SetOntologyID ontologyIDChange = new SetOntologyID(onto, IRI.create(slimmedURI));
                 slimmer.man.applyChange(ontologyIDChange);
@@ -339,7 +340,7 @@ public class LSlimmer {
         for (Instruction instruction : instructions) {
             String iri = instruction.getUriString();
             if (instruction.getScope() == Instruction.Scope.UP) {
-                System.out.println("Extracting " + iri + "...");
+                System.out.println("Extracting SuperClass of " + iri + "...");
                 Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
                 if (entities.size() > 0) {
                     OWLEntity entity = entities.iterator().next();
@@ -355,7 +356,7 @@ public class LSlimmer {
                 }
                 singleIRIs.add(iri);
             } else if (instruction.getScope() == Instruction.Scope.DOWN) {
-                System.out.println("Extracting " + iri + "...");
+                System.out.println("Extracting SubClass of " + iri + "...");
                 Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
                 if (entities.size() > 0) {
                     OWLEntity entity = entities.iterator().next();
