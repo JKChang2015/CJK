@@ -56,7 +56,6 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
  * @author jkchang
  * @date 07-Jul-2016
  */
-
 public class LSlimmer {
 
     private OWLOntologyManager man;
@@ -212,7 +211,7 @@ public class LSlimmer {
                     }
                     slimmer.man.removeAxioms(onto, toRemove);
                 }
-                
+
                 // 7. save in OWL/XML format
                 SetOntologyID ontologyIDChange = new SetOntologyID(onto, IRI.create(slimmedURI));
                 slimmer.man.applyChange(ontologyIDChange);
@@ -336,9 +335,12 @@ public class LSlimmer {
      * @return
      */
     private Set<String> explode(Set<Instruction> instructions) {
+
         Set<String> singleIRIs = new HashSet<String>();
+
         for (Instruction instruction : instructions) {
             String iri = instruction.getUriString();
+            // load SUPERclasses
             if (instruction.getScope() == Instruction.Scope.UP) {
                 System.out.println("Extracting SuperClass of " + iri + "...");
                 Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
@@ -355,7 +357,7 @@ public class LSlimmer {
                     }
                 }
                 singleIRIs.add(iri);
-            } else if (instruction.getScope() == Instruction.Scope.DOWN) {
+            } else if (instruction.getScope() == Instruction.Scope.DOWN) {  // load SUBclasses
                 System.out.println("Extracting SubClass of " + iri + "...");
                 Set<OWLEntity> entities = onto.getEntitiesInSignature(IRI.create(iri));
                 if (entities.size() > 0) {
@@ -371,10 +373,11 @@ public class LSlimmer {
                     }
                 }
                 singleIRIs.add(iri);
-            } else if (instruction.getScope() == Instruction.Scope.SINGLE) {
+            } else if (instruction.getScope() == Instruction.Scope.SINGLE) {// load single class
                 System.out.println("Extracting " + iri + "...");
                 singleIRIs.add(iri);
-            } else {
+            } // error
+            else {
                 System.out.println("Cannot handle this instruction: " + instruction.getScope());
             }
         }
@@ -391,6 +394,7 @@ public class LSlimmer {
      */
     private Set<String> allSuperClasses(OWLClass clazz, OWLOntology onto) {
         Set<String> allSuperClasses = new HashSet<String>();
+        //Gets all of the subclass axioms where the left hand side (the subclass) is equal to the specified class.
         Collection<OWLClassExpression> superClasses = Searcher.sup(onto.getSubClassAxiomsForSubClass(clazz));
         for (OWLClassExpression superClass : superClasses) {
             OWLClass superOwlClass = superClass.asOWLClass();
@@ -405,6 +409,7 @@ public class LSlimmer {
     private Set<String> allSubClasses(OWLClass clazz, OWLOntology onto) {
         Set<String> allSubClasses = new HashSet<String>();
         System.out.println("clazz: " + clazz);
+        //Gets all of the subclass axioms where the right hand side (the superclass) is equal to the specified class.
         Collection<OWLClassExpression> subClasses = Searcher.sub(onto.getSubClassAxiomsForSuperClass(clazz));
         System.out.println("subclass count: " + subClasses.size());
         for (OWLClassExpression subClass : subClasses) {
