@@ -25,7 +25,7 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
 /* 
  @author jkchang
  @date 04-Aug-2016
- Task: mapping query terms with the external ontologies
+ Task: mapping query terms with the external ontologies classe labels
 Steps: 1. load query terms
        2. laad ontologies
         2.1 merging ontologies
