@@ -15,22 +15,32 @@ import java.io.InputStream;
 import java.io.File;
 import java.io.FilenameFilter;
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.AddOntologyAnnotation;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.util.OWLOntologyMerger;
 
 public class Mapper {
 
     private Map<String, MapTerm> mapping;
     private OWLOntologyManager man;
     private OWLOntology onto;
+    private HashSet<String> kWords;
 
     public static void main(String[] args) {
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Loading configuration files in folder " + rootFolder);
-
-        File dir = new File(rootFolder);
+        
+        //keywords
+        
+        
+        //ontology documents
+        File dir = new File(rootFolder);  //filted the folder
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
                 return name.toLowerCase().endsWith(".props");
@@ -38,14 +48,45 @@ public class Mapper {
         });
 
         for (File file : files) {
+            
+            // 1. combine the ontology
 
         }
 
     }
+    
+    
 
-    void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+    public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
+        if (mergedOntologyIRI != null) {
+            // load all DIRECt imports ontologies
+            Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
+            for (OWLImportsDeclaration declaration : importDeclarations) {
+                try {
+                    man.loadOntology(declaration.getIRI());
+                    System.out.println("Loaded imported ontology: " + declaration.getIRI());
+
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                    System.out.println("Failed to load imported ontology: " + declaration.getIRI());
+                }
+            }
+            // merge ontologies, specifying an IRI for the new ontology
+            OWLOntologyMerger merger = new OWLOntologyMerger(man);
+            onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
+            for (OWLOntology ontology : man.getOntologies()) {
+                System.out.println(" Copying annotations from " + ontology.getOntologyID());
+
+                for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                    System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+                    AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
+                    man.applyChange(annotationAdd);
+                }
+            }
+
+        }
     }
 
 }
