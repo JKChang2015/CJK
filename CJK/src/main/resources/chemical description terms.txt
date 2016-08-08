@@ -1,0 +1,120 @@
+Anticaking agent
+Antioxidant
+Biocide
+Bleaching agent
+Dye
+Fuel
+Leaching agent
+Photochemical
+Pigment
+Solvent
+Catalyst
+Flame retardant
+Fragrance
+Humectant
+Swelling agent
+Tracer
+Ablative
+Abrasive
+Absorbent
+Adhesion promotor
+Adsorbent
+Aerating and dearating agents
+Antiadhesive
+Alloying element
+Anticondensation agent
+Antifreeze agent
+Antiredeposition agent
+Antiscaling agent
+Antistain agent
+Antistatic agent
+Antistreaking agent
+Barrier (Sealant)
+Binder
+Brightener
+Chain transfer agent
+Chelating agent
+Cleaning agent
+Cloud-point depressant
+Coalescing agent
+Compatibilizer
+Conductive agent
+Corrosion inhibitor
+Crystal growth modifiers (nucleating agents)
+Deflocculant
+Defoamer
+Demulsifier
+Density modifier
+Deodorizer
+Diluent
+Dispersing agent
+Drier
+Durability agent
+Dust suppressant
+Dusting agent
+Elasticizer
+Embalming agent
+Energy releasers (explosives, motive propellant)
+Etching agent
+Explosion inhibitor
+Fertilizers (soil amendments)
+Filler
+Film former
+Finishing agents
+Fire extinguishing agent
+Fixing agent (mordant)
+Flocculating agent
+Flotation agent
+Flow promoter
+Flux agent
+Foamant
+Food flavouring and nutrient
+Freeze-thaw additive
+Friction agent
+Fuel additive
+Gelling modifier
+Hardener
+Heat stabilizer
+Heat transferring agent
+Hydraulic (functional) fluids
+Impregnation agent
+Incandescent agent
+Insulators
+Intermediate (precursor)
+Ion exchange agent
+Lubricating agent
+Luminescent agent
+Magnetic element
+Monomers
+No technical function
+Opacifier
+Oxidizing agent
+pH regulating agent
+Plasticizer
+Plating agent
+Pressure transfer agent
+Process regulator
+Processing aid
+Propellants, non-motive (blowing agents)
+Reactive cleaning/removal agent
+Reducing agent
+Refrigerants
+Resins (prepolymers)
+Semiconductor and photovoltaic agent
+Sizing agent
+Softener
+Solids separation (precipitating) agent
+Solubility enhancer
+Stabilizing agent
+Surface modifier
+Surfactant
+Tackifier
+Tanning agent
+Terminator/Blocker
+Thickener/Thickening agent
+UV stabilizer
+Vapour pressure modifiers
+Vehicle (carrier)
+Viscosity modifier
+Waterproofing agent
+X-Ray Absorber

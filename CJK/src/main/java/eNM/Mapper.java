@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
@@ -39,32 +40,17 @@ public class Mapper {
     private OWLOntology onto;
     private HashSet<String> keySet;
 
-    public static void main(String[] args) {
-
+    public Mapper(File keyFile, String ontoIRI) throws OWLOntologyCreationException, FileNotFoundException {
         //keywords
-        String keywordPath = "";
-
-        //ontology documents
-        String rootFolder = "..\\ontologies\\config";
-        System.out.println("Loading configuration files in folder " + rootFolder);
-        File dir = new File(rootFolder);  //filted the folder
-        File[] files = dir.listFiles(new FilenameFilter() {
-            public boolean accept(File dir, String name) {
-                return name.toLowerCase().endsWith(".props");
-            }
-        });
-
-        for (File file : files) {
-            
-            // 1. combine the ontology
-        }
+        //String keywordPath = "src\\main\\resources\\keyword.txt";
+        loadKeyword(keyFile);
 
     }
 
-    public void loadKeyword(String path) {
-        File kFile = new File(path);
+    public void loadKeyword(File file) {
+        //keySet
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(kFile));
+            BufferedReader reader = new BufferedReader(new FileReader(file));
             String line = reader.readLine();
             while (line != null) {
                 keySet.add(line.trim());
@@ -73,6 +59,29 @@ public class Mapper {
         } catch (Exception e) {
             System.out.println("Fail to read the keyword file");
         }
+    }
+
+    public void loadOnto(String ontoIRI) {
+        // onto
+         //ontology documents
+        // String rootFolder = "..\\ontologies\\config";
+        System.out.println("Load ontology " + ontoIRI);
+        File dir = new File(ontoIRI);  //filted the folder
+        File[] files = dir.listFiles(new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+                return name.toLowerCase().endsWith(".props");
+            }
+        });
+
+        for (File file : files) {
+
+            // 1. combine the ontology
+        }
+
+    }
+    
+    public void mapping(){
+        // mapping
     }
 
     public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
