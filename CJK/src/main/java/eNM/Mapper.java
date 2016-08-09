@@ -46,26 +46,23 @@ public class Mapper {
     private Set<String> keywords;
 
     //construction ===========================================================
-    public Mapper(File keywordFile, File owlFile) throws OWLOntologyCreationException, IOException{
+    public Mapper(File keywordFile, File owlFile) throws OWLOntologyCreationException, IOException {
         this(keywordFile, new FileInputStream(owlFile));
     }
-    
-    public Mapper(File keywordFile, InputStream owlFile) throws OWLOntologyCreationException, IOException{
+
+    public Mapper(File keywordFile, InputStream owlFile) throws OWLOntologyCreationException, IOException {
         this(new KeywordFile(keywordFile).getkeywords(), owlFile);
     }
-    
-    public Mapper(Set<String> keywords, InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException{
+
+    public Mapper(Set<String> keywords, InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
         keywords = new HashSet<String>();
     }
-    
 
     //=======================================================================
-
     public static void main(String[] args) throws Exception {
-        
-        
+
         String kPath = "src\\main\\resources\\keyword.txt";
         String ontoPath = "src\\main\\resources\\enm.owl";
         Set<String> keywords = new HashSet<String>();
