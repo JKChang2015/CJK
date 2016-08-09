@@ -1,5 +1,8 @@
 package eNM;
 
+import eNM.OntoLabel;
+import eNM.KeywordFile;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.HashSet;
@@ -28,92 +31,48 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
  Task: mapping query terms with the external ontologies classe labels
 Steps: 1. load query terms
        2. laad ontologies
-        2.1 merging ontologies
+        2.1 merge ontologies
         2.2 normalization
        3. mapping terms with each ontologies
        
  */
 public class Mapper {
 
-    private Map<String, MapTerm> mapping;
     private OWLOntologyManager man;
     private OWLOntology onto;
-    private HashSet<String> keySet;
+    private Set<String> keywords;
 
-    public Mapper(File keyFile, String ontoIRI) throws OWLOntologyCreationException, FileNotFoundException {
-        //keywords
-        //String keywordPath = "src\\main\\resources\\keyword.txt";
-        loadKeyword(keyFile);
-
-    }
-
-    public void loadKeyword(File file) {
-        //keySet
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(file));
-            String line = reader.readLine();
-            while (line != null) {
-                keySet.add(line.trim());
-                line = reader.readLine();
-            }
-        } catch (Exception e) {
-            System.out.println("Fail to read the keyword file");
-        }
-    }
-
-    public void loadOnto(String ontoIRI) {
-        // onto
-         //ontology documents
-        // String rootFolder = "..\\ontologies\\config";
-        System.out.println("Load ontology " + ontoIRI);
-        File dir = new File(ontoIRI);  //filted the folder
-        File[] files = dir.listFiles(new FilenameFilter() {
-            public boolean accept(File dir, String name) {
-                return name.toLowerCase().endsWith(".props");
-            }
-        });
-
-        for (File file : files) {
-
-            // 1. combine the ontology
-        }
-
+    //construction ===========================================================
+    public Mapper(){
+        
     }
     
-    public void mapping(){
-        // mapping
+    public Mapper(Set<String> keywords, InputStream owlFile){
+        
     }
-
-    public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+    
+    public Mapper(File keyword, InputStream owlFile) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
-        if (mergedOntologyIRI != null) {
-            // load all DIRECt imports ontologies
-            Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
-            for (OWLImportsDeclaration declaration : importDeclarations) {
-                try {
-                    man.loadOntology(declaration.getIRI());
-                    System.out.println("Loaded imported ontology: " + declaration.getIRI());
+        keywords = new HashSet<String>();
 
-                } catch (Exception exception) {
-                    exception.printStackTrace();
-                    System.out.println("Failed to load imported ontology: " + declaration.getIRI());
-                }
-            }
-            // merge ontologies, specifying an IRI for the new ontology
-            OWLOntologyMerger merger = new OWLOntologyMerger(man);
-            onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
-            for (OWLOntology ontology : man.getOntologies()) {
-                System.out.println(" Copying annotations from " + ontology.getOntologyID());
+    }
+    //=======================================================================
 
-                for (OWLAnnotation annotation : ontology.getAnnotations()) {
-                    System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
-                    AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
-                    man.applyChange(annotationAdd);
-                }
-            }
+    public static void main(String[] args) throws Exception {
+        
+        
+        String kPath = "src\\main\\resources\\keyword.txt";
+        String ontoPath = "src\\main\\resources\\enm.owl";
+        Set<String> keywords = new HashSet<String>();
+        Set<String> ontoLabels = new HashSet<String>();
 
-        }
+        File ontoFile = new File(ontoPath);
+        File keywordFile = new File(kPath);
+
+        KeywordFile kf = new KeywordFile(keywordFile);
+        keywords = kf.getkeywords();
+
     }
 
 }
