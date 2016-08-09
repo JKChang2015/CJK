@@ -8,11 +8,14 @@ import java.util.Map;
 import java.util.HashSet;
 import java.util.Set;
 import eNM.MapTerm;
+import eNM.KeywordFile;
 import java.io.InputStream;
+import java.io.FileInputStream;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.FileReader;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
@@ -43,20 +46,21 @@ public class Mapper {
     private Set<String> keywords;
 
     //construction ===========================================================
-    public Mapper(){
-        
+    public Mapper(File keywordFile, File owlFile) throws OWLOntologyCreationException, IOException{
+        this(keywordFile, new FileInputStream(owlFile));
     }
     
-    public Mapper(Set<String> keywords, InputStream owlFile){
-        
+    public Mapper(File keywordFile, InputStream owlFile) throws OWLOntologyCreationException, IOException{
+        this(new KeywordFile(keywordFile).getkeywords(), owlFile);
     }
     
-    public Mapper(File keyword, InputStream owlFile) throws OWLOntologyCreationException {
+    public Mapper(Set<String> keywords, InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException{
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
         keywords = new HashSet<String>();
-
     }
+    
+
     //=======================================================================
 
     public static void main(String[] args) throws Exception {
