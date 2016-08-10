@@ -25,7 +25,6 @@ Steps: 1. load query terms
        3. mapping terms with each ontologies
        
  */
-
 public class Mapper {
 
     private OWLOntologyManager man;
@@ -33,17 +32,17 @@ public class Mapper {
     private Set<String> keywords;
 
     //construction ===========================================================
-    public Mapper(File keywordFile, File owlFile) throws 
+    public Mapper(File keywordFile, File owlFile) throws
             OWLOntologyCreationException, IOException {
         this(keywordFile, new FileInputStream(owlFile));
     }
 
-    public Mapper(File keywordFile, InputStream owlFile) throws 
+    public Mapper(File keywordFile, InputStream owlFile) throws
             OWLOntologyCreationException, IOException {
         this(new KeywordFile(keywordFile).getkeywords(), owlFile);
     }
 
-    public Mapper(Set<String> keywords, InputStream owlFile) throws 
+    public Mapper(Set<String> keywords, InputStream owlFile) throws
             OWLOntologyCreationException, FileNotFoundException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
@@ -54,17 +53,13 @@ public class Mapper {
     public static void main(String[] args) throws Exception {
 
         String kPath = "src\\main\\resources\\keyword.txt";
-        String ontoPath = "src\\main\\resources\\enm.owl";
-        Set<String> keywords = new HashSet<String>();
-        Set<String> ontoLabels = new HashSet<String>();
-
-        File ontoFile = new File(ontoPath);
         File keywordFile = new File(kPath);
-
-        KeywordFile kf = new KeywordFile(keywordFile);
-        keywords = kf.getkeywords();
-
+        
+        String ontoPath = " ";
+        File ontoFile = new File(ontoPath);
+        
+        Mapper map = new Mapper(keywordFile, ontoFile);
+        HashSet<String> set = (HashSet) map.keywords;
     }
 
 }
-
