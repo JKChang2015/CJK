@@ -47,7 +47,7 @@ public class Mapper {
     private OWLOntology onto;
     private Set<String> keywords;
 
-    //constructor ===========================================================
+    //===========================constructor================================
     public Mapper(File keywordFile, File owlFile) throws
             OWLOntologyCreationException, IOException {
         this(keywordFile, new FileInputStream(owlFile));
@@ -64,8 +64,8 @@ public class Mapper {
         onto = man.loadOntologyFromOntologyDocument(owlFile);
         keywords = new HashSet<String>();
     }
-
     //=======================================================================
+
     public static void main(String[] args) throws Exception {
 
         String kPath = "src\\main\\resources\\keyword.txt";
@@ -92,8 +92,6 @@ public class Mapper {
                 if (owlFilename.contains("/")) {
                     owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
                 }
-                
-                
 
             } catch (Exception e) {
 
