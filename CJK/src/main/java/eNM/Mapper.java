@@ -20,9 +20,14 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.AddOntologyAnnotation;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.util.OWLOntologyMerger;
 
 
 /* 
@@ -42,7 +47,7 @@ public class Mapper {
     private OWLOntology onto;
     private Set<String> keywords;
 
-    //construction ===========================================================
+    //constructor ===========================================================
     public Mapper(File keywordFile, File owlFile) throws
             OWLOntologyCreationException, IOException {
         this(keywordFile, new FileInputStream(owlFile));
@@ -78,6 +83,17 @@ public class Mapper {
 
         for (File file : files) {  // for each property file
             try {
+                System.out.println("Slimming for  " + file.getName());
+                Properties props = new Properties();
+                props.load(new FileReader(file));
+
+                String owlURL = props.getProperty("owl");
+                String owlFilename = owlURL;
+                if (owlFilename.contains("/")) {
+                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+                }
+                
+                
 
             } catch (Exception e) {
 
@@ -91,8 +107,38 @@ public class Mapper {
         HashSet<String> set = (HashSet) map.keywords;
     }
 
-    public void combine() {
+    public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+        if (mergedOntologyIRI != null) {
+            // Load all of the DIRECT IMPORTs ontologies
+            Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
+            for (OWLImportsDeclaration declaration : importDeclarations) {
+                try {
+                    man.loadOntology(declaration.getIRI());
+                    System.out.println("Loaded imported ontology: " + declaration.getIRI());
 
+                } catch (Exception exception) {
+                    exception.printStackTrace();
+                    System.out.println("Failed to load imported ontology: " + declaration.getIRI());
+                }
+            }
+
+            // merge ontologies, specifying an IRI for the new ontology
+            OWLOntologyMerger merger = new OWLOntologyMerger(man);
+            onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
+            for (OWLOntology ontology : man.getOntologies()) {
+                System.out.println(" Copying annotations from " + ontology.getOntologyID());
+
+                for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                    System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+                    AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
+                    man.applyChange(annotationAdd);
+                }
+            }
+        }
+    }
+
+    public OWLOntology getOntology() {
+        return this.onto;
     }
 
 }
