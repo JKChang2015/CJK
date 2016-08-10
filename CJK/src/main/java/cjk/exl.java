@@ -15,13 +15,16 @@ import eNM.OntoLabel;
 import java.util.Set;
 import java.util.HashSet;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import jxl.Workbook;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 public class exl {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception{
         
        String kPath = "src\\main\\resources\\keyword.txt";
         String ontoPath = "src\\main\\resources\\enm.owl";
