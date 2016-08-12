@@ -69,11 +69,12 @@ public class Mapper {
 
     public static void main(String[] args) throws Exception {
 
+        // Save keywords to 'keySet<String>'
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
         System.out.println("Loaded keywordFile from " + kPath);
-        
+
         try {
             KeywordFile keyword = new KeywordFile(kFile);
             keySet = keyword.getkeywords();
@@ -81,8 +82,8 @@ public class Mapper {
             e.printStackTrace();
             System.out.println("fail to load the keyword file ... ");
         }
-        
 
+        // initialize ontologies
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder);
         File dir = new File(rootFolder);
@@ -109,12 +110,7 @@ public class Mapper {
             }
         }
 
-        String ontoPath = " ";
-        File ontoFile = new File(ontoPath);
-
-       
-  
-
+    
     }
 
     public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {

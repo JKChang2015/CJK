@@ -12,13 +12,17 @@ import java.io.FileReader;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.Properties;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntology;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
 
 public class test {
 
     public static void main(String[] args) {
 
         //test combine ontologies
-        String ontoPath = " ..\\ontologies\\config\\bao.props";
+        String ontoPath = "..\\ontologies\\config\\bao.props";
         File file = new File(ontoPath);
 
         try {
@@ -31,6 +35,10 @@ public class test {
             if (owlFilename.contains("/")) {
                 owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
             }
+
+            OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+            OWLOntology onto = man.loadOntology(IRI.create(owlURL));
+            System.out.println("");
 
         } catch (Exception e) {
             e.printStackTrace();
