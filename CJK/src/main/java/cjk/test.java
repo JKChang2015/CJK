@@ -24,6 +24,7 @@ public class test {
         //test combine ontologies
         String ontoPath = "..\\ontologies\\config\\bao.props";
         File file = new File(ontoPath);
+        OWLOntology comOnto;
 
         try {
             System.out.println("loading owl config file from " + ontoPath);
