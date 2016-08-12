@@ -23,6 +23,7 @@ import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
 import org.semanticweb.owlapi.model.IRI;
 import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLImportsDeclaration;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
@@ -81,6 +82,9 @@ public class Mapper {
             }
         });
 
+
+        
+        
         for (File file : files) {  // for each property file
             try {
                 System.out.println("Slimming for  " + file.getName());
@@ -103,6 +107,7 @@ public class Mapper {
 
         Mapper map = new Mapper(keywordFile, ontoFile);
         HashSet<String> set = (HashSet) map.keywords;
+
     }
 
     public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
