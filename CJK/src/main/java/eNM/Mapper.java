@@ -69,9 +69,19 @@ public class Mapper {
 
     public static void main(String[] args) throws Exception {
 
-        String kPath = "src\\main\\resources\\keyword.txt";
-        File keywordFile = new File(kPath);
+        String kPath = "src\\main\\resources\\chemical description terms.txt";
+        File kFile = new File(kPath);
+        Set<String> keySet = new HashSet<String>();
         System.out.println("Loaded keywordFile from " + kPath);
+        
+        try {
+            KeywordFile keyword = new KeywordFile(kFile);
+            keySet = keyword.getkeywords();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("fail to load the keyword file ... ");
+        }
+        
 
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder);
@@ -82,9 +92,6 @@ public class Mapper {
             }
         });
 
-
-        
-        
         for (File file : files) {  // for each property file
             try {
                 System.out.println("Slimming for  " + file.getName());
@@ -105,8 +112,8 @@ public class Mapper {
         String ontoPath = " ";
         File ontoFile = new File(ontoPath);
 
-        Mapper map = new Mapper(keywordFile, ontoFile);
-        HashSet<String> set = (HashSet) map.keywords;
+       
+  
 
     }
 

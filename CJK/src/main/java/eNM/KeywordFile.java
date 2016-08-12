@@ -27,7 +27,7 @@ public class KeywordFile {
             System.out.println(count + ".  " + line);
             line = reader.readLine();
         }
-        System.out.println("finished the loading progress");
+        System.out.println("finished the keyword loading progress... ");
     }
 
     public Set<String> getkeywords() {
