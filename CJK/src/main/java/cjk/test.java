@@ -8,26 +8,47 @@ package cjk;
 
 import eNM.KeywordFile;
 import java.io.File;
+import java.io.FileReader;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Properties;
 
 public class test {
 
     public static void main(String[] args) {
 
-        String kPath = "src\\main\\resources\\chemical description terms.txt";
-        File file = new File(kPath);
-        Set<String> keySet = new HashSet<String>();
+        //test combine ontologies
+        String ontoPath = " ..\\ontologies\\config\\bao.props";
+        File file = new File(ontoPath);
+
         try {
-            KeywordFile keyword = new KeywordFile(file);
-            keySet = keyword.getkeywords();
-            
+            System.out.println("loading owl config file from " + ontoPath);
+            Properties props = new Properties();
+            props.load(new FileReader(file));
+
+            String owlURL = props.getProperty("owl");
+            String owlFilename = owlURL;
+            if (owlFilename.contains("/")) {
+                owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("fail to load the keyword file");
+            System.out.println("fail to load the property file");
         }
-        
 
+        //test loading terms from keyword file
+//        String kPath = "src\\main\\resources\\chemical description terms.txt";
+//        File file = new File(kPath);
+//        Set<String> keySet = new HashSet<String>();
+//        try {
+//            KeywordFile keyword = new KeywordFile(file);
+//            keySet = keyword.getkeywords();
+//            
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            System.out.println("fail to load the keyword file");
+//        }
     }
 
 }
