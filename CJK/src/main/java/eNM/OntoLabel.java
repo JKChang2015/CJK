@@ -25,13 +25,15 @@ public class OntoLabel {
     private Set<String> labels = new HashSet<String>();
 
     public OntoLabel(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
-//        PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
-        int count = 0;
 
-        man = OWLManager.createOWLOntologyManager(); // Creat ontology manager
-        OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
-        onto = man.loadOntologyFromOntologyDocument(file); // load ontology from file
+        this(OWLManager.createConcurrentOWLOntologyManager().loadOntologyFromOntologyDocument(file));
+    }
+
+    public OntoLabel(OWLOntology onto) {
+        //PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
+        int count = 0;
         Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
+        OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
 
         for (OWLClass clazz : classes) {
             count++;
@@ -41,20 +43,18 @@ public class OntoLabel {
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
                     labels.add(result.trim());
-                    System.out.println(count + ".  "+result);
+                    System.out.println(count + ".  " + result);
 //                    out.println(result);
                 }
             }
         }
-
-  //      out.close();
     }
 
     public Set<String> getlabel() {
         return labels;
     }
-    
-        /*
+
+    /*
     // creat manager
     final static OWLOntologyManager manager = OWLManager.createOWLOntologyManager(); 
     // manager.factory
@@ -95,6 +95,5 @@ public class OntoLabel {
             }
         }
     } 
-*/
-
+     */
 }

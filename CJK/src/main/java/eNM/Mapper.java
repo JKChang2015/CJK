@@ -68,10 +68,10 @@ public class Mapper {
     //=======================================================================
 
     public static void main(String[] args) throws Exception {
-        
-        Map<String,HashSet<MapTerm>> res;
 
-        // 1. load keywords to 'keySet<String>'
+        Map<String, HashSet<MapTerm>> res = null;
+
+        // 1. load keywords to 'keySet<String>' -----------------------------
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
@@ -87,7 +87,11 @@ public class Mapper {
 
         System.out.println("Finished loading keywords");
 
-        // 2. filter folder, load config file 
+        for (String keyword : keySet) {
+            res.put(keyword, null);
+        }
+
+        // 2. filter folder, load config file ------------------------------
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder);
         File dir = new File(rootFolder);
@@ -97,14 +101,14 @@ public class Mapper {
             }
         });
 
-        // 3. for each ontology file
+        // 3. for each ontology file ---------------------------------------
         for (File file : files) {
             try {
-                // load the config file
+                // 3.1 load the config file
                 Properties props = new Properties();
                 props.load(new FileReader(file));
 
-                // load the ontology
+                // 3.2 load the ontology
                 String owlURL = props.getProperty("owl");
                 String owlFilename = owlURL;
                 if (owlFilename.contains("/")) {
@@ -115,7 +119,7 @@ public class Mapper {
                 OWLOntology onto = man.loadOntologyFromOntologyDocument(IRI.create(owlURL)); //imput
                 System.out.println("Loaded ontology: " + owlFilename);
 
-                // merge the ontology
+                // 3.3 merge the ontology
                 OWLOntologyMerger merger = new OWLOntologyMerger(man);
                 onto = merger.createMergedOntology(man, IRI.create(owlURL + "_merg")); //output
 
@@ -130,47 +134,19 @@ public class Mapper {
                 }
 
                 System.out.println("Merged ontology: " + owlFilename);
-                
-                // Matching
-                
-                
 
+                // 3.4 get labels
+                OntoLabel lb = new OntoLabel(onto);
+                HashSet<String> labels = (HashSet) lb.getlabel();
+
+                // 3.5 matching
+                // 3.6 save the result
             } catch (Exception e) {
                 e.printStackTrace();
                 System.out.println("fail to load property files... ");
             }
         }
 
-    }
-
-    public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
-        if (mergedOntologyIRI != null) {
-            // Load all of the DIRECT IMPORTs ontologies
-            Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
-            for (OWLImportsDeclaration declaration : importDeclarations) {
-                try {
-                    man.loadOntology(declaration.getIRI());
-                    System.out.println("Loaded imported ontology: " + declaration.getIRI());
-
-                } catch (Exception exception) {
-                    exception.printStackTrace();
-                    System.out.println("Failed to load imported ontology: " + declaration.getIRI());
-                }
-            }
-
-            // merge ontologies, specifying an IRI for the new ontology
-            OWLOntologyMerger merger = new OWLOntologyMerger(man);
-            onto = merger.createMergedOntology(man, IRI.create(mergedOntologyIRI));
-            for (OWLOntology ontology : man.getOntologies()) {
-                System.out.println(" Copying annotations from " + ontology.getOntologyID());
-
-                for (OWLAnnotation annotation : ontology.getAnnotations()) {
-                    System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
-                    AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
-                    man.applyChange(annotationAdd);
-                }
-            }
-        }
     }
 
     public OWLOntology getOntology() {
