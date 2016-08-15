@@ -68,6 +68,8 @@ public class Mapper {
     //=======================================================================
 
     public static void main(String[] args) throws Exception {
+        
+        Map<String,HashSet<MapTerm>> res;
 
         // 1. load keywords to 'keySet<String>'
         String kPath = "src\\main\\resources\\chemical description terms.txt";
@@ -118,7 +120,7 @@ public class Mapper {
                 onto = merger.createMergedOntology(man, IRI.create(owlURL + "_merg")); //output
 
                 for (OWLOntology ontology : man.getOntologies()) {
-                    System.out.println(" Copying annotations from " + ontology.toString());
+                    System.out.println(owlFilename + " Copying annotations from " + ontology.getOntologyID().getOntologyIRI().get().toString());
 
                     for (OWLAnnotation annotation : ontology.getAnnotations()) {
                         //System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
@@ -128,6 +130,10 @@ public class Mapper {
                 }
 
                 System.out.println("Merged ontology: " + owlFilename);
+                
+                // Matching
+                
+                
 
             } catch (Exception e) {
                 e.printStackTrace();
