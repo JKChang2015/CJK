@@ -54,7 +54,7 @@ public class test {
         onto = merger.createMergedOntology(man, IRI.create(owlURL + "_merg")); //output
 
         for (OWLOntology ontology : man.getOntologies()) {
-            System.out.println(" Copying annotations from " + ontology.getOntologyID());
+            System.out.println(" Copying annotations from " + ontology.getOntologyID().getOntologyIRI().get().toString());
 
             for (OWLAnnotation annotation : ontology.getAnnotations()) {
                 //System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());

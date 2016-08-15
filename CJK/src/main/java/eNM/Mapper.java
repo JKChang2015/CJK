@@ -69,7 +69,7 @@ public class Mapper {
 
     public static void main(String[] args) throws Exception {
 
-        // Save keywords to 'keySet<String>'
+        // 1. load keywords to 'keySet<String>'
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
@@ -82,10 +82,10 @@ public class Mapper {
             e.printStackTrace();
             System.out.println("fail to load the keyword file ... ");
         }
-        
+
         System.out.println("Finished loading keywords");
 
-        // initialize ontologies
+        // 2. filter folder, load config file 
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder);
         File dir = new File(rootFolder);
@@ -95,24 +95,46 @@ public class Mapper {
             }
         });
 
-        for (File file : files) {  // for each property file
+        // 3. for each ontology file
+        for (File file : files) {
             try {
-                System.out.println("Slimming for  " + file.getName());
+                // load the config file
                 Properties props = new Properties();
                 props.load(new FileReader(file));
 
+                // load the ontology
                 String owlURL = props.getProperty("owl");
                 String owlFilename = owlURL;
                 if (owlFilename.contains("/")) {
                     owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
                 }
 
-            } catch (Exception e) {
+                OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+                OWLOntology onto = man.loadOntologyFromOntologyDocument(IRI.create(owlURL)); //imput
+                System.out.println("Loaded ontology: " + owlFilename);
 
+                // merge the ontology
+                OWLOntologyMerger merger = new OWLOntologyMerger(man);
+                onto = merger.createMergedOntology(man, IRI.create(owlURL + "_merg")); //output
+
+                for (OWLOntology ontology : man.getOntologies()) {
+                    System.out.println(" Copying annotations from " + ontology.toString());
+
+                    for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                        //System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+                        AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
+                        man.applyChange(annotationAdd);
+                    }
+                }
+
+                System.out.println("Merged ontology: " + owlFilename);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("fail to load property files... ");
             }
         }
 
-    
     }
 
     public void combine(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
