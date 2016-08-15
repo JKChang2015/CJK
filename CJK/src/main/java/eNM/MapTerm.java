@@ -1,5 +1,3 @@
-
-
 package eNM;
 
 /* ----------------------------------------------------------------------------
@@ -7,43 +5,38 @@ package eNM;
    ---------------------------------------------------------------------------- 
  @author jkchang
  @date 04-Aug-2016
-*/
-
+ */
 import java.util.Set;
 import java.util.HashSet;
 
-
 public class MapTerm {
-    public Set<String> termURLs = new HashSet<String>();
-    public Set<String> ontoList = new HashSet<String>();
-    public String termName;
 
-    public Set<String> getTermURLs() {
-        return termURLs;
+    private String label;
+    private String URI;
+    private String ontoName;
+
+    public String getLabel() {
+        return label;
     }
 
-    public void setTermURLs(Set<String> termURLs) {
-        this.termURLs = termURLs;
+    public void setLabel(String label) {
+        this.label = label;
     }
 
-    public Set<String> getOntoList() {
-        return ontoList;
+    public String getURI() {
+        return URI;
     }
 
-    public void setOntoList(Set<String> ontoList) {
-        this.ontoList = ontoList;
+    public void setURI(String URI) {
+        this.URI = URI;
     }
 
-    public String getTermName() {
-        return termName;
+    public String getOntoName() {
+        return ontoName;
     }
 
-    public void setTermName(String termName) {
-        this.termName = termName;
+    public void setOntoName(String ontoName) {
+        this.ontoName = ontoName;
     }
-    
-    
-    
-    
 
 }
