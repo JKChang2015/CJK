@@ -1,4 +1,4 @@
-package cjk;
+package ext;
 
 public class hanoi {
 

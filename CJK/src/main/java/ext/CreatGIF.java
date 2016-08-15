@@ -4,8 +4,9 @@
  @author jkchang
  @date 30-Jun-2016
  */
-package cjk;
+package ext;
 
+import cjk.AnimatedGIFEncoder;
 import java.io.File;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
