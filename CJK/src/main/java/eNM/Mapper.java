@@ -82,6 +82,8 @@ public class Mapper {
             e.printStackTrace();
             System.out.println("fail to load the keyword file ... ");
         }
+        
+        System.out.println("Finished loading keywords");
 
         // initialize ontologies
         String rootFolder = "..\\ontologies\\config";
