@@ -31,6 +31,8 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
 public class test {
 
     public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException {
+        String rootFolder = "..\\ontologies\\config\\";
+        
         Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 //        HashSet<String> set = new HashSet<String>();
 //        set.add("one");
