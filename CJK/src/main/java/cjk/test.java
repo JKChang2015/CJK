@@ -31,24 +31,30 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
 public class test {
 
     public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException {
-        Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>> ();
-        HashSet<String> set = new HashSet<String>();
-        set.add("one");
-        map.put("1", set);
-        set.add("one");
-        map.put("1", set);
-        set.add("one");
-        map.put("1", set);
+        Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+//        HashSet<String> set = new HashSet<String>();
+//        set.add("one");
+//        map.put("1", set);
+//        set.add("one");
+//        map.put("1", set);
+//        set.add("one");
+//        map.put("1", set);
 
         map.put("1", null);
         map.put("2", null);
         map.put("3", null);
 
+        if (map.get("1")== null) {
+            HashSet<String> set = new HashSet<String>();
+            map.put("1", set);
+        }
+
+        String add = "111111";
+        map.get("1").add(add);
+
         map.get("1").add("one");
         map.get("1").add("one_one");
         map.get("1").add("yi");
-
-    
 
         String path = "C:\\GitHub\\CJK\\ontologies\\fruit.owl";
         File file = new File(path);

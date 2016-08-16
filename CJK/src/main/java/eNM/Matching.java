@@ -39,8 +39,8 @@ public class Matching {
 
     public static void main(String[] args) {
 
-        Map<String, HashSet<MapTerm>> exactMatch = new HashMap<String, HashSet<MapTerm>> ();
-        Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>> ();;
+        Map<String, HashSet<MapTerm>> exactMatch = new HashMap<String, HashSet<MapTerm>>();
+        Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>>();;
 
         //====================Keyword set====================================
         String kPath = "src\\main\\resources\\chemical description terms.txt";
@@ -96,9 +96,9 @@ public class Matching {
                     for (String label : labels.keySet()) {
                         if (label.toLowerCase().equals(keyword.toLowerCase())) {
                             //add mapterm to exactMatch
-                            if (exactMatch.get(keyword).equals(null)) {
+                            if (exactMatch.get(keyword) == null) {
                                 HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
-                                exactMatch.replace(keyword, mapTerms);
+                                exactMatch.put(keyword, mapTerms);
                             }
 
                             MapTerm mapT = new MapTerm();
@@ -106,33 +106,24 @@ public class Matching {
                             mapT.setOntoName(owlFilename);
                             mapT.setURI(labels.get(label));
                             exactMatch.get(keyword).add(mapT);
-                            
+                        }
+
+                        if (label.toLowerCase().contains(keyword.toLowerCase())) {
+                            //add mapterm to exactMatch
+                            if (fuzzyMatch.get(keyword) == null) {
+                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
+                                fuzzyMatch.put(keyword, mapTerms);
+                            }
+
+                            MapTerm mapT = new MapTerm();
+                            mapT.setLabel(label);
+                            mapT.setOntoName(owlFilename);
+                            mapT.setURI(labels.get(label));
+                            fuzzyMatch.get(keyword).add(mapT);
                         }
 
                     }
 
-//                    for (String label : labels) {
-//                        if (label.toLowerCase().equals(keyword.toLowerCase())) {
-//
-//                            //add mapterm to exactMatch
-//                            if (exactMatch.get(keyword).equals(null)) {
-//                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
-//                                exactMatch.replace(keyword, mapTerms);
-//                            }
-//
-//                            MapTerm mapT = new MapTerm();
-//                            mapT.setLabel(label);
-//                            mapT.setOntoName(owlFilename);
-//                            
-//
-//                        }
-//
-//                        if (label.toLowerCase().contains(keyword.toLowerCase())) {
-//                            //add mapterm to fuzzyMatch
-//
-//                        }
-//
-//                    }
                 }
 
             } catch (OWLOntologyCreationException e) {
