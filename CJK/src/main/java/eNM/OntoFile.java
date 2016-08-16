@@ -8,6 +8,8 @@ import java.io.FileNotFoundException;
 import java.util.Properties;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.Map;
+import java.util.HashMap;
 import java.lang.StringBuilder;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
@@ -69,21 +71,24 @@ public class OntoFile {
         System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1));
     }
 
-    public Set<String> getLabelSet() {
+    public Map<String, String> getLabels() {
         //PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
         int count = 0;
         Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
         OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
-        Set<String> labels = new HashSet<String>();
+        Map<String, String> labels = new HashMap<String, String>();
 
         for (OWLClass clazz : classes) {
+
             count++;
             Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());  //get all the Annotation Assertion of 
             for (OWLAnnotationAssertionAxiom annotation : annotations) {
                 if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
+                    String uri = clazz.getIRI().toString();
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
-                    labels.add(result.trim());
+                    labels.put(result.trim(), uri);
+                    
                     System.out.println(count + ".  " + result);
                 }
             }

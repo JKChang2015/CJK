@@ -39,13 +39,14 @@ public class Matching {
 
     public static void main(String[] args) {
 
-        Map<String, HashSet<MapTerm>> res = null;
+        Map<String, HashSet<MapTerm>> exactMatch = new HashMap<String, HashSet<MapTerm>> ();
+        Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>> ();;
 
         //====================Keyword set====================================
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
-        Set<String> labels = new HashSet<String>();
+        Map<String, String> labels = new HashMap<String, String>();
 
         try {
             KeywordFile keyword = new KeywordFile(kFile);
@@ -57,7 +58,8 @@ public class Matching {
         }
 
         for (String keyword : keySet) {
-            res.put(keyword, null);
+            exactMatch.put(keyword, null);
+            fuzzyMatch.put(keyword, null);
         }
 
         //========================Ontology ==================================
@@ -76,13 +78,62 @@ public class Matching {
                 Properties props = new Properties();
                 props.load(new FileReader(file));
                 String owlURL = props.getProperty("owl");
+                String owlFilename = owlURL;
+                if (owlFilename.contains("/")) {
+                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+                }
 
                 // load Ontology & labels
                 OntoFile ontoF = new OntoFile(IRI.create(owlURL));
                 ontoF.merge();
-                labels = ontoF.getLabelSet();
-                
-                
+                labels = ontoF.getLabels();
+
+                //matching
+                int count = 0;
+                for (String keyword : keySet) {
+                    System.out.println(++count + ". matching " + keyword);
+
+                    for (String label : labels.keySet()) {
+                        if (label.toLowerCase().equals(keyword.toLowerCase())) {
+                            //add mapterm to exactMatch
+                            if (exactMatch.get(keyword).equals(null)) {
+                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
+                                exactMatch.replace(keyword, mapTerms);
+                            }
+
+                            MapTerm mapT = new MapTerm();
+                            mapT.setLabel(label);
+                            mapT.setOntoName(owlFilename);
+                            mapT.setURI(labels.get(label));
+                            exactMatch.get(keyword).add(mapT);
+                            
+                        }
+
+                    }
+
+//                    for (String label : labels) {
+//                        if (label.toLowerCase().equals(keyword.toLowerCase())) {
+//
+//                            //add mapterm to exactMatch
+//                            if (exactMatch.get(keyword).equals(null)) {
+//                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
+//                                exactMatch.replace(keyword, mapTerms);
+//                            }
+//
+//                            MapTerm mapT = new MapTerm();
+//                            mapT.setLabel(label);
+//                            mapT.setOntoName(owlFilename);
+//                            
+//
+//                        }
+//
+//                        if (label.toLowerCase().contains(keyword.toLowerCase())) {
+//                            //add mapterm to fuzzyMatch
+//
+//                        }
+//
+//                    }
+                }
 
             } catch (OWLOntologyCreationException e) {
                 e.printStackTrace();
