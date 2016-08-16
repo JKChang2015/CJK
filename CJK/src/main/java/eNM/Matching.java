@@ -45,7 +45,8 @@ public class Matching {
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
-        
+        Set<String> labels = new HashSet<String>();
+
         try {
             KeywordFile keyword = new KeywordFile(kFile);
             keySet = keyword.getkeywords();
@@ -53,13 +54,44 @@ public class Matching {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("fail to load the keyword file ... ");
-        }      
+        }
 
         for (String keyword : keySet) {
             res.put(keyword, null);
         }
-        
-        
+
+        //========================Ontology ==================================
+        String rootFolder = "..\\ontologies\\config";
+        System.out.println("Searching configuration files in folder " + rootFolder);
+        File dir = new File(rootFolder);
+        File[] files = dir.listFiles(new FilenameFilter() {
+            public boolean accept(File dir, String name) {
+                return name.toLowerCase().endsWith(".props");
+            }
+        });
+
+        for (File file : files) {
+            try {
+                // 3.1 load the config file
+                Properties props = new Properties();
+                props.load(new FileReader(file));
+                String owlURL = props.getProperty("owl");
+
+                // 3.2 load Ontology
+                OntoFile ontoF = new OntoFile(IRI.create(owlURL));
+                ontoF.merge();
+                labels = ontoF.getLabelSet();
+                
+                
+
+            } catch (OWLOntologyCreationException e) {
+                e.printStackTrace();
+                System.out.println("fail to creat ontology ... ");
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("fail to load the keyword file ... ");
+            }
+        }
 
     }
 
