@@ -126,6 +126,10 @@ public class Matching {
 
                 }
 
+                Matching match = new Matching();
+                match.saveResToExcel(exactMatch, owlFilename + "_exact");
+                match.saveResToExcel(fuzzyMatch, owlFilename + "_fuzzy");
+
             } catch (OWLOntologyCreationException e) {
                 e.printStackTrace();
                 System.out.println("fail to creat ontology ... ");
@@ -133,7 +137,14 @@ public class Matching {
                 e.printStackTrace();
                 System.out.println("fail to load the keyword file ... ");
             }
+
         }
+
+    }
+
+    public void saveResToExcel(Map<String, HashSet<MapTerm>> res, String name) {
+        
+        
 
     }
 
