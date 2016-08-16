@@ -88,6 +88,10 @@ public class Matching {
                 if (owlFilename.contains("/")) {
                     owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
                 }
+                
+                System.out.println("=================================");
+                System.out.println("\t\t\t\t " + owlFilename );
+                System.out.println("=================================");
 
                 // load Ontology & labels
                 OntoFile ontoF = new OntoFile(IRI.create(owlURL));
@@ -164,34 +168,29 @@ public class Matching {
             sheet.addCell(new jxl.write.Label(3, 0, "URI"));
 
             int row = 1;
-            int col = 0;
             int count = 0;
 
             for (String keyword : res.keySet()) {
                 System.out.println(++count + ".  " + keyword);
-                jxl.write.Label addKeyword = new jxl.write.Label(col, row, keyword);
-                jxl.write.Label addOntoName = new jxl.write.Label(col + 1, row, "");
-                jxl.write.Label addLab = new jxl.write.Label(col + 2, row, "");
-                jxl.write.Label addLabURI = new jxl.write.Label(col + 3, row, "");
+                sheet.addCell(new jxl.write.Label(0, row, keyword));
+
+                jxl.write.Label addOntoName = new jxl.write.Label(1, row, "");
+                jxl.write.Label addLab = new jxl.write.Label(2, row, "");
+                jxl.write.Label addLabURI = new jxl.write.Label(3, row, "");
 
                 if (res.get(keyword) != null) {
                     HashSet<MapTerm> mapterms = res.get(keyword);
                     for (MapTerm mapterm : mapterms) {
-                        
-                        addOntoName = new jxl.write.Label(col + 1, row, mapterm.getOntoName());
-                        addLab = new jxl.write.Label(col + 2, row, mapterm.getLabel());
-                        addLabURI = new jxl.write.Label(col + 3, row, mapterm.getURI());
-                        
+                        sheet.addCell(new jxl.write.Label(1, row, mapterm.getOntoName()));
+                        sheet.addCell(new jxl.write.Label(2, row, mapterm.getLabel()));
+                        sheet.addCell(new jxl.write.Label(3, row, mapterm.getURI()));
+                        row++;
                     }
 
                 }
-
-                sheet.addCell(addKeyword);
-                sheet.addCell(addOntoName);
-                sheet.addCell(addLab);
-                sheet.addCell(addLabURI);
-                row++;
-
+                else{
+                    row++;
+                }
             }
 
         } catch (IOException e) {
