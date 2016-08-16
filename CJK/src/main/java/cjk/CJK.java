@@ -1,6 +1,6 @@
 package cjk;
 
-import eNM.OntoLabel;
+import ext.OntoLabel;
 import eNM.KeywordFile;
 
 import java.util.Set;

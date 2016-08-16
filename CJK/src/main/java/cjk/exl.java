@@ -10,7 +10,7 @@ import jxl.write.Label;
 
 import eNM.KeywordFile;
 import org.semanticweb.owlapi.*;
-import eNM.OntoLabel;
+import ext.OntoLabel;
 
 import java.util.Set;
 import java.util.HashSet;
