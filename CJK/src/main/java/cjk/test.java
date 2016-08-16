@@ -46,13 +46,15 @@ public class test {
             System.out.println("fail to load the property file");
         }
 
-        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();; //onto manager
+        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager(); //onto manager
         OWLOntologyMerger merger = new OWLOntologyMerger(man);
         OWLOntology onto = man.loadOntologyFromOntologyDocument(IRI.create(owlURL)); //input
         System.out.println("size of the onto is " + onto.getClassesInSignature().size());
         System.out.println("Loaded ontology:" + owlFilename);
-        onto = merger.createMergedOntology(man, IRI.create(owlURL + "_merg")); //output
+        String mergURL = new StringBuilder(owlURL).insert(owlURL.lastIndexOf('.'), "_merged").toString();
+        onto = merger.createMergedOntology(man, IRI.create(mergURL)); //output
 
+ 
         for (OWLOntology ontology : man.getOntologies()) {
             System.out.println(" Copying annotations from " + ontology.getOntologyID().getOntologyIRI().get().toString());
 

@@ -17,7 +17,7 @@ public class KeywordFile {
 
     Set<String> keywords = new HashSet<String>();
 
-    public KeywordFile(File file) throws FileNotFoundException, IOException {
+    public KeywordFile(File file) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = reader.readLine().trim();
         int count = 0;

@@ -71,7 +71,7 @@ public class Mapper {
 
         Map<String, HashSet<MapTerm>> res = null;
 
-        // 1. load keywords to 'keySet<String>' -----------------------------
+        // 1. load keywords to 'keySet<String>'
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
         Set<String> keySet = new HashSet<String>();
@@ -91,7 +91,7 @@ public class Mapper {
             res.put(keyword, null);
         }
 
-        // 2. filter folder, load config file ------------------------------
+        // 2. filter folder, load config file 
         String rootFolder = "..\\ontologies\\config";
         System.out.println("Searching configuration files in folder " + rootFolder);
         File dir = new File(rootFolder);

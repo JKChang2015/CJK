@@ -1,0 +1,98 @@
+package eNM;
+
+import org.semanticweb.owlapi.model.OWLOntology;
+import java.io.InputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.Properties;
+import java.util.Set;
+import java.util.HashSet;
+import java.lang.StringBuilder;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.AddOntologyAnnotation;
+import org.semanticweb.owlapi.model.IRI;
+import org.semanticweb.owlapi.model.OWLAnnotation;
+import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
+import org.semanticweb.owlapi.model.OWLClass;
+import org.semanticweb.owlapi.model.OWLDataFactory;
+import org.semanticweb.owlapi.model.OWLLiteral;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.util.OWLOntologyMerger;
+
+/**
+ * load ontology from file, from url, from config file
+ *
+ * @author jkchang
+ */
+public class OntoFile {
+
+    private OWLOntology onto;
+    private OWLOntologyManager man;
+
+    // load the ontology from URL
+    public OntoFile(IRI iri) throws OWLOntologyCreationException {
+        man = OWLManager.createConcurrentOWLOntologyManager();
+        onto = man.loadOntology(iri);
+    }
+
+    public OntoFile(Properties props) throws OWLOntologyCreationException {
+        this(IRI.create(props.getProperty("owl")));  //--> *(String URL)
+    }
+
+    // load the from owlFile:
+    public OntoFile(File owlFile) throws OWLOntologyCreationException, FileNotFoundException {
+        this(new FileInputStream(owlFile));  // --> (InputStream owlFile)
+    }
+
+    public OntoFile(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
+        man = OWLManager.createConcurrentOWLOntologyManager();
+        onto = man.loadOntologyFromOntologyDocument(owlFile);
+    }
+
+    public void merge() throws OWLOntologyCreationException {
+        OWLOntologyMerger merger = new OWLOntologyMerger(man);
+        String URL = onto.getOntologyID().getOntologyIRI().get().toString();
+        String mergURL = new StringBuilder(URL).insert(URL.lastIndexOf('.'), "_merged").toString();
+        onto = merger.createMergedOntology(man, IRI.create(mergURL)); //output
+        // merge the annotations
+        for (OWLOntology ontology : man.getOntologies()) {
+            System.out.println(" Copying annotations from " + ontology.getOntologyID().getOntologyIRI().get().toString());
+
+            for (OWLAnnotation annotation : ontology.getAnnotations()) {
+                //System.out.println(" Copying annotation: " + annotation.getProperty() + " -> " + annotation.getValue());
+                AddOntologyAnnotation annotationAdd = new AddOntologyAnnotation(onto, annotation);
+                man.applyChange(annotationAdd);
+            }
+        }
+        System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1));
+    }
+
+    public Set<String> getLabelSet() {
+        //PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
+        int count = 0;
+        Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
+        OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
+        Set<String> labels = new HashSet<String>();
+
+        for (OWLClass clazz : classes) {
+            count++;
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());  //get all the Annotation Assertion of 
+            for (OWLAnnotationAssertionAxiom annotation : annotations) {
+                if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
+                    OWLLiteral lr = (OWLLiteral) annotation.getValue();
+                    String result = (String) lr.getLiteral();
+                    labels.add(result.trim());
+                    System.out.println(count + ".  " + result);
+                }
+            }
+        }
+
+        return labels;
+    }
+
+    public OWLOntology getOnto() {
+        return onto;
+    }
+}
