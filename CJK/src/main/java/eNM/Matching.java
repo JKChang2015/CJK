@@ -72,12 +72,12 @@ public class Matching {
 
         for (File file : files) {
             try {
-                // 3.1 load the config file
+                // load the config file
                 Properties props = new Properties();
                 props.load(new FileReader(file));
                 String owlURL = props.getProperty("owl");
 
-                // 3.2 load Ontology
+                // load Ontology & labels
                 OntoFile ontoF = new OntoFile(IRI.create(owlURL));
                 ontoF.merge();
                 labels = ontoF.getLabelSet();

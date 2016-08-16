@@ -32,13 +32,13 @@ public class OntoFile {
     private OWLOntologyManager man;
 
     // load the ontology from URL
+    public OntoFile(Properties props) throws OWLOntologyCreationException {
+        this(IRI.create(props.getProperty("owl")));  //--> *(String URL)
+    }
+
     public OntoFile(IRI iri) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
-    }
-
-    public OntoFile(Properties props) throws OWLOntologyCreationException {
-        this(IRI.create(props.getProperty("owl")));  //--> *(String URL)
     }
 
     // load the from owlFile:
