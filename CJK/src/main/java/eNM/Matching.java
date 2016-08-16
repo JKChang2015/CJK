@@ -9,6 +9,7 @@ import java.io.FilenameFilter;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
+import java.io.WriteAbortedException;
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Collections;
@@ -18,6 +19,11 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
+
+import jxl.Workbook;
+import jxl.write.WritableSheet;
+import jxl.write.WritableWorkbook;
+import jxl.write.WriteException;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
@@ -127,6 +133,7 @@ public class Matching {
                 }
 
                 Matching match = new Matching();
+
                 match.saveResToExcel(exactMatch, owlFilename + "_exact");
                 match.saveResToExcel(fuzzyMatch, owlFilename + "_fuzzy");
 
@@ -136,15 +143,64 @@ public class Matching {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("fail to load the keyword file ... ");
+            } catch (WriteException we) {
+                we.printStackTrace();
+                System.out.println("fail to write data to the excel");
             }
 
         }
 
     }
 
-    public void saveResToExcel(Map<String, HashSet<MapTerm>> res, String name) {
-        
-        
+    public void saveResToExcel(Map<String, HashSet<MapTerm>> res, String name) throws WriteException {
+        File file = new File("src\\main\\resources\\" + name + ".xls");
+        try {
+            WritableWorkbook myexcel = Workbook.createWorkbook(file);
+            WritableSheet sheet = myexcel.createSheet("new sheet", 0);
+
+            sheet.addCell(new jxl.write.Label(0, 0, "New term"));
+            sheet.addCell(new jxl.write.Label(1, 0, "onto Name"));
+            sheet.addCell(new jxl.write.Label(2, 0, "Label"));
+            sheet.addCell(new jxl.write.Label(3, 0, "URI"));
+
+            int row = 1;
+            int col = 0;
+            int count = 0;
+
+            for (String keyword : res.keySet()) {
+                System.out.println(++count + ".  " + keyword);
+                jxl.write.Label addKeyword = new jxl.write.Label(col, row, keyword);
+                jxl.write.Label addOntoName = new jxl.write.Label(col + 1, row, "");
+                jxl.write.Label addLab = new jxl.write.Label(col + 2, row, "");
+                jxl.write.Label addLabURI = new jxl.write.Label(col + 3, row, "");
+
+                if (res.get(keyword) != null) {
+                    HashSet<MapTerm> mapterms = res.get(keyword);
+                    for (MapTerm mapterm : mapterms) {
+                        
+                        addOntoName = new jxl.write.Label(col + 1, row, mapterm.getOntoName());
+                        addLab = new jxl.write.Label(col + 2, row, mapterm.getLabel());
+                        addLabURI = new jxl.write.Label(col + 3, row, mapterm.getURI());
+                        
+                    }
+
+                }
+
+                sheet.addCell(addKeyword);
+                sheet.addCell(addOntoName);
+                sheet.addCell(addLab);
+                sheet.addCell(addLabURI);
+                row++;
+
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Fail to write the excel file... ");
+        } catch (WriteException we) {
+            we.printStackTrace();
+            System.out.println("fail to write data to the excel");
+        }
 
     }
 
