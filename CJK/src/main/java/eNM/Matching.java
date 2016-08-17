@@ -124,6 +124,9 @@ public class Matching {
 
                 }
 
+                System.out.println(extCount + " exact matching....");
+                System.out.println(fuzzyCount + " fuzzy matching....");
+
             } catch (OWLOntologyCreationException e) {
                 e.printStackTrace();
                 System.out.println("fail to creat ontology ... ");
@@ -132,13 +135,32 @@ public class Matching {
                 System.out.println("fail to load the keyword file ... ");
             }
 
-        }
+        } // end for each ontology
+
         try {
             SaveToExcel se = new SaveToExcel();
             se.save(exactMatch, "exact");
             System.out.println("save " + exact + " exact match....");
             se.save(fuzzyMatch, "fuzzy");
             System.out.println("save " + fuzzy + " fuzzy match....");
+
+            int fcc = 0;
+            for (String key : fuzzyMatch.keySet()) {
+                if (fuzzyMatch.get(key) != null) {
+                    fcc++;
+                }
+            }
+
+            System.out.println("There are " + fcc + " new terms have been fuzzy matched");
+
+            int ecc = 0;
+            for (String key : exactMatch.keySet()) {
+                if (fuzzyMatch.get(key) != null) {
+                    ecc++;
+                }
+            }
+            System.out.println("There are " + fcc + " new terms have been exact matched");
+            
         } catch (WriteException we) {
             we.printStackTrace();
             System.out.println("fail to write data to the excel");
