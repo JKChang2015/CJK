@@ -41,6 +41,7 @@ public class OntoFile {
     public OntoFile(IRI iri) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
+        System.out.println("loading ontology file form " + iri.toString() + "....");
     }
 
     // load the from owlFile:
@@ -51,6 +52,7 @@ public class OntoFile {
     public OntoFile(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
+        System.out.println("loading ontology file form " + owlFile.toString() + "....");
     }
 
     public void merge() throws OWLOntologyCreationException {
@@ -88,7 +90,7 @@ public class OntoFile {
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
                     labels.put(result.trim(), uri);
-                    
+
                     //System.out.println(count + ".  " + result);
                 }
             }

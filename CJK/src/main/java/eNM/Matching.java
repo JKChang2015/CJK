@@ -46,31 +46,31 @@ public class Matching {
     public static void main(String[] args) {
 
         Map<String, HashSet<MapTerm>> exactMatch = new HashMap<String, HashSet<MapTerm>>();
-        Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>>();;
+        Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>>();
+        Set<String> keywords = new HashSet<String>();
+        Map<String, String> labels = new HashMap<String, String>();
 
         //====================Keyword set====================================
         String kPath = "src\\main\\resources\\chemical description terms.txt";
         File kFile = new File(kPath);
-        Set<String> keySet = new HashSet<String>();
-        Map<String, String> labels = new HashMap<String, String>();
 
         try {
             KeywordFile keyword = new KeywordFile(kFile);
-            keySet = keyword.getkeywords();
-            System.out.println("Finished loading keywords");
+            keywords = keyword.getkeywords();
+            System.out.println("Finished loading keywords.... ");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("fail to load the keyword file ... ");
+            System.out.println("fail to load the keyword file ... " + "\n\n");
         }
-
-        for (String keyword : keySet) {
+        
+        //initialize result map
+        for (String keyword : keywords) {
             exactMatch.put(keyword, null);
             fuzzyMatch.put(keyword, null);
         }
 
         //========================Ontology ==================================
         String rootFolder = "..\\ontologies\\config";
-        System.out.println("Searching configuration files in folder " + rootFolder);
         File dir = new File(rootFolder);
         File[] files = dir.listFiles(new FilenameFilter() {
             public boolean accept(File dir, String name) {
@@ -84,13 +84,13 @@ public class Matching {
                 Properties props = new Properties();
                 props.load(new FileReader(file));
                 String owlURL = props.getProperty("owl");
-                String owlFilename = owlURL;
-                if (owlFilename.contains("/")) {
-                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+                String owlFilename = props.getProperty("iris");
+                if (owlFilename.contains(".")) {
+                    owlFilename = owlFilename.substring(0, owlFilename.lastIndexOf('.')) + ".owl";
                 }
-                
+
                 System.out.println("=================================");
-                System.out.println("\t\t\t\t " + owlFilename );
+                System.out.println("\t " + owlFilename);
                 System.out.println("=================================");
 
                 // load Ontology & labels
@@ -100,7 +100,7 @@ public class Matching {
 
                 //matching
                 int count = 0;
-                for (String keyword : keySet) {
+                for (String keyword : keywords) {
                     System.out.println(++count + ". matching " + keyword);
 
                     for (String label : labels.keySet()) {
@@ -187,8 +187,7 @@ public class Matching {
                         row++;
                     }
 
-                }
-                else{
+                } else {
                     row++;
                 }
             }
