@@ -62,7 +62,7 @@ public class Matching {
             e.printStackTrace();
             System.out.println("fail to load the keyword file ... " + "\n\n");
         }
-        
+
         //initialize result map
         for (String keyword : keywords) {
             exactMatch.put(keyword, null);
@@ -99,9 +99,9 @@ public class Matching {
                 labels = ontoF.getLabels();
 
                 //matching
+                System.out.println("matching keywords with " + owlFilename + "....");
                 int count = 0;
                 for (String keyword : keywords) {
-                    System.out.println(++count + ". matching " + keyword);
 
                     for (String label : labels.keySet()) {
                         if (label.toLowerCase().equals(keyword.toLowerCase())) {
@@ -171,7 +171,7 @@ public class Matching {
             int count = 0;
 
             for (String keyword : res.keySet()) {
-                System.out.println(++count + ".  " + keyword);
+              //  System.out.println(++count + ".  " + keyword);
                 sheet.addCell(new jxl.write.Label(0, row, keyword));
 
                 jxl.write.Label addOntoName = new jxl.write.Label(1, row, "");
@@ -191,6 +191,8 @@ public class Matching {
                     row++;
                 }
             }
+            
+            System.out.println("saved matching result to " + name + ".xls");
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -39,9 +39,10 @@ public class OntoFile {
     }
 
     public OntoFile(IRI iri) throws OWLOntologyCreationException {
+        System.out.println("loading ontology file form " + iri.toString() + "....");
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
-        System.out.println("loading ontology file form " + iri.toString() + "....");
+
     }
 
     // load the from owlFile:
@@ -50,14 +51,15 @@ public class OntoFile {
     }
 
     public OntoFile(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
+        System.out.println("loading ontology file form " + owlFile.toString() + "....");
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
-        System.out.println("loading ontology file form " + owlFile.toString() + "....");
+
     }
 
     public void merge() throws OWLOntologyCreationException {
         OWLOntologyMerger merger = new OWLOntologyMerger(man);
-        String URL = onto.getOntologyID().getOntologyIRI().get().toString();
+        String URL = onto.getOntologyID().getOntologyIRI().toString();
         String mergURL = new StringBuilder(URL).insert(URL.lastIndexOf('.'), "_merged").toString();
         onto = merger.createMergedOntology(man, IRI.create(mergURL)); //output
         // merge the annotations
@@ -70,7 +72,7 @@ public class OntoFile {
                 man.applyChange(annotationAdd);
             }
         }
-        System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1));
+        System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1) + "....");
     }
 
     public Map<String, String> getLabels() {
