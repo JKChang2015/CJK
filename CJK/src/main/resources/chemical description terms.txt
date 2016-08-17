@@ -29,7 +29,7 @@ Antiscaling agent
 Antistain agent
 Antistatic agent
 Antistreaking agent
-Barrier (Sealant)
+Barrier
 Binder
 Brightener
 Chain transfer agent
@@ -40,7 +40,7 @@ Coalescing agent
 Compatibilizer
 Conductive agent
 Corrosion inhibitor
-Crystal growth modifiers (nucleating agents)
+Crystal growth modifiers
 Deflocculant
 Defoamer
 Demulsifier
@@ -54,15 +54,15 @@ Dust suppressant
 Dusting agent
 Elasticizer
 Embalming agent
-Energy releasers (explosives, motive propellant)
+Energy releasers
 Etching agent
 Explosion inhibitor
-Fertilizers (soil amendments)
+Fertilizers
 Filler
 Film former
 Finishing agents
 Fire extinguishing agent
-Fixing agent (mordant)
+Fixing agent
 Flocculating agent
 Flotation agent
 Flow promoter
@@ -76,11 +76,11 @@ Gelling modifier
 Hardener
 Heat stabilizer
 Heat transferring agent
-Hydraulic (functional) fluids
+Hydraulic fluids
 Impregnation agent
 Incandescent agent
 Insulators
-Intermediate (precursor)
+Intermediate
 Ion exchange agent
 Lubricating agent
 Luminescent agent
@@ -95,15 +95,15 @@ Plating agent
 Pressure transfer agent
 Process regulator
 Processing aid
-Propellants, non-motive (blowing agents)
+Propellants
 Reactive cleaning/removal agent
 Reducing agent
 Refrigerants
-Resins (prepolymers)
+Resins
 Semiconductor and photovoltaic agent
 Sizing agent
 Softener
-Solids separation (precipitating) agent
+Solids separation agent
 Solubility enhancer
 Stabilizing agent
 Surface modifier
@@ -114,7 +114,7 @@ Terminator/Blocker
 Thickener/Thickening agent
 UV stabilizer
 Vapour pressure modifiers
-Vehicle (carrier)
+Vehicle
 Viscosity modifier
 Waterproofing agent
 X-Ray Absorber

@@ -59,7 +59,7 @@ public class SaveToExcel {
         myexcel.write();
         myexcel.close();
 
-        System.out.println("finished save to Excel....");
+        System.out.println("finished save " + name +" to Excel....");
 
     }
 
