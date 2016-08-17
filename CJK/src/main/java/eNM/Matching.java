@@ -1,40 +1,19 @@
 package eNM;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FilenameFilter;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.IOException;
-import java.io.WriteAbortedException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
-import jxl.Workbook;
-import jxl.write.WritableSheet;
-import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
 
-import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.model.AddOntologyAnnotation;
 import org.semanticweb.owlapi.model.IRI;
-import org.semanticweb.owlapi.model.OWLAnnotation;
-import org.semanticweb.owlapi.model.OWLDataFactory;
-import org.semanticweb.owlapi.model.OWLImportsDeclaration;
-import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
-import org.semanticweb.owlapi.model.OWLOntologyManager;
-import org.semanticweb.owlapi.util.OWLOntologyMerger;
 
 /**
  * Matching new terms with all the ontology labels
@@ -49,6 +28,8 @@ public class Matching {
         Map<String, HashSet<MapTerm>> fuzzyMatch = new HashMap<String, HashSet<MapTerm>>();
         Set<String> keywords = new HashSet<String>();
         Map<String, String> labels = new HashMap<String, String>();
+        int exact = 0;
+        int fuzzy = 0;
 
         //====================Keyword set====================================
         String kPath = "src\\main\\resources\\chemical description terms.txt";
@@ -119,6 +100,7 @@ public class Matching {
                             mapT.setURI(labels.get(label));
                             exactMatch.get(keyword).add(mapT);
                             extCount++;
+                            exact++;
                             continue;
                         }
 
@@ -135,17 +117,12 @@ public class Matching {
                             mapT.setURI(labels.get(label));
                             fuzzyMatch.get(keyword).add(mapT);
                             fuzzyCount++;
+                            fuzzy++;
                         }
 
                     }
 
                 }
-
-                SaveToExcel se = new SaveToExcel();
-                se.save(exactMatch, owlFilename + "_exact");
-                System.out.println("save " + extCount + " exact match....");
-                se.save(fuzzyMatch, owlFilename + "_fuzzy");
-                System.out.println("save " + fuzzyCount + " fuzzy match....");
 
             } catch (OWLOntologyCreationException e) {
                 e.printStackTrace();
@@ -153,59 +130,21 @@ public class Matching {
             } catch (IOException e) {
                 e.printStackTrace();
                 System.out.println("fail to load the keyword file ... ");
-            } catch (WriteException we) {
-                we.printStackTrace();
-                System.out.println("fail to write data to the excel");
             }
 
         }
-
-    }
-
-    public void saveResToExcel(Map<String, HashSet<MapTerm>> res, String name) throws WriteException {
-        File file = new File("src\\main\\resources\\" + name + ".xls");
         try {
-            WritableWorkbook myexcel = Workbook.createWorkbook(file);
-            WritableSheet sheet = myexcel.createSheet("new sheet", 0);
-
-            sheet.addCell(new jxl.write.Label(0, 0, "New term"));
-            sheet.addCell(new jxl.write.Label(1, 0, "onto Name"));
-            sheet.addCell(new jxl.write.Label(2, 0, "Label"));
-            sheet.addCell(new jxl.write.Label(3, 0, "URI"));
-
-            int row = 1;
-            int count = 0;
-
-            for (String keyword : res.keySet()) {
-                //  System.out.println(++count + ".  " + keyword);
-                sheet.addCell(new jxl.write.Label(0, row, keyword));
-
-                jxl.write.Label addOntoName = new jxl.write.Label(1, row, "");
-                jxl.write.Label addLab = new jxl.write.Label(2, row, "");
-                jxl.write.Label addLabURI = new jxl.write.Label(3, row, "");
-
-                if (res.get(keyword) != null) {
-                    HashSet<MapTerm> mapterms = res.get(keyword);
-                    for (MapTerm mapterm : mapterms) {
-                        sheet.addCell(new jxl.write.Label(1, row, mapterm.getOntoName()));
-                        sheet.addCell(new jxl.write.Label(2, row, mapterm.getLabel()));
-                        sheet.addCell(new jxl.write.Label(3, row, mapterm.getURI()));
-                        row++;
-                    }
-
-                } else {
-                    row++;
-                }
-            }
-
-            System.out.println("saved matching result to " + name + ".xls");
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Fail to write the excel file... ");
+            SaveToExcel se = new SaveToExcel();
+            se.save(exactMatch, "exact");
+            System.out.println("save " + exact + " exact match....");
+            se.save(fuzzyMatch, "fuzzy");
+            System.out.println("save " + fuzzy + " fuzzy match....");
         } catch (WriteException we) {
             we.printStackTrace();
             System.out.println("fail to write data to the excel");
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("fail to load the keyword file ... ");
         }
 
     }

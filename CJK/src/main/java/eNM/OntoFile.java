@@ -72,7 +72,7 @@ public class OntoFile {
                 man.applyChange(annotationAdd);
             }
         }
-        System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1) + "....");
+        System.out.println("merged: " + URL.substring(URL.lastIndexOf('/') + 1) + "...");
     }
 
     public Map<String, String> getLabels() {
