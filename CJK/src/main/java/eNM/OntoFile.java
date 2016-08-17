@@ -39,7 +39,7 @@ public class OntoFile {
     }
 
     public OntoFile(IRI iri) throws OWLOntologyCreationException {
-        System.out.println("loading ontology file form " + iri.toString() + "....");
+        System.out.println("loading ontology file form " + iri.toString() );
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
 
@@ -51,7 +51,7 @@ public class OntoFile {
     }
 
     public OntoFile(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
-        System.out.println("loading ontology file form " + owlFile.toString() + "....");
+        System.out.println("loading ontology file form " + owlFile.toString());
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
 
