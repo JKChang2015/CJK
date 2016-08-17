@@ -7,7 +7,6 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WritableSheet;
 import jxl.write.Label;
 
-
 import eNM.KeywordFile;
 import org.semanticweb.owlapi.*;
 import ext.OntoLabel;
@@ -24,9 +23,9 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 public class exl {
 
-    public static void main(String[] args) throws Exception{
-        
-       String kPath = "src\\main\\resources\\keyword.txt";
+    public static void main(String[] args) throws Exception {
+
+        String kPath = "src\\main\\resources\\keyword.txt";
         String ontoPath = "src\\main\\resources\\enm.owl";
         Set<String> keywords = new HashSet<String>();
         Set<String> ontoLabels = new HashSet<String>();
@@ -42,40 +41,40 @@ public class exl {
         File file = new File("src\\main\\resources\\result.xls");
         WritableWorkbook myexcel = Workbook.createWorkbook(file);
         WritableSheet sheet = myexcel.createSheet("new sheet", 0);
-        jxl.write.Label title1 = new jxl.write.Label(0, 0, "New term");
-        jxl.write.Label title2 = new jxl.write.Label(1, 0, "Contain?");
-        jxl.write.Label title3 = new jxl.write.Label(2, 0, "Label");
-        
 
-        sheet.addCell(title1);
-        sheet.addCell(title2);
-        sheet.addCell(title3);
+        sheet.addCell(new jxl.write.Label(0, 0, "New term"));
+        sheet.addCell(new jxl.write.Label(1, 0, "Contain?"));
+        sheet.addCell(new jxl.write.Label(2, 0, "Label"));
 
         int row = 1;
         int count = 0;
 
         for (String keyword : keywords) {
             System.out.println(++count + ".  " + keyword);
-            jxl.write.Label addK = new jxl.write.Label(0, row, keyword);
-            jxl.write.Label addFlag = new jxl.write.Label(1, row, "");
-            jxl.write.Label addLab = new jxl.write.Label(2, row, "");
+            //jxl.write.Label addK = new jxl.write.Label(0, row, keyword);
+            //jxl.write.Label addFlag = new jxl.write.Label(1, row, "");
+            //jxl.write.Label addLab = new jxl.write.Label(2, row, "");
 
             for (String label : ontoLabels) {
                 if (label.toLowerCase().equals(keyword.toLowerCase())) {
-                    addFlag = new jxl.write.Label(1, row, "Yes");
-                    addLab = new jxl.write.Label(2, row, label);
+                    sheet.addCell(new jxl.write.Label(1, row, "Yes"));
+                    sheet.addCell(new jxl.write.Label(2, row, label));
+                    //addFlag = new jxl.write.Label(1, row, "Yes");
+                    //addLab = new jxl.write.Label(2, row, label);
                     continue;
                 }
                 if (label.toLowerCase().contains(keyword.toLowerCase())) {
-                    addFlag = new jxl.write.Label(1, row, "Similar");
-                    addLab = new jxl.write.Label(2, row, label);
+                    sheet.addCell(new jxl.write.Label(1, row, "Similar"));
+                    sheet.addCell(new jxl.write.Label(2, row, label));
+//                    addFlag = new jxl.write.Label(1, row, "Similar");
+//                    addLab = new jxl.write.Label(2, row, label);
                     continue;
                 }
-                
+
             }
-            sheet.addCell(addK);
-            sheet.addCell(addFlag);
-            sheet.addCell(addLab);
+            sheet.addCell(new jxl.write.Label(0, row, keyword));
+            //sheet.addCell(addFlag);
+            //sheet.addCell(addLab);
             row++;
         }
 
@@ -83,7 +82,6 @@ public class exl {
         myexcel.close();
 
         System.out.println("finished");
-        
 
     }
 
