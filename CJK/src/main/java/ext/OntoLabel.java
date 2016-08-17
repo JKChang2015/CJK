@@ -32,6 +32,7 @@ public class OntoLabel {
     public OntoLabel(OWLOntology onto) {
         //PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
         int count = 0;
+        man = OWLManager.createConcurrentOWLOntologyManager();
         Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
         OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
 

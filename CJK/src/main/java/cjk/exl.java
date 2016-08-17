@@ -36,7 +36,7 @@ public class exl {
 
         KeywordFile kf = new KeywordFile(keywordFile);
         keywords = kf.getkeywords();
-        OntoLabel lb = new OntoLabel(ontoFile);
+        OntoLabel lb = new OntoLabel(ontoFile); //===================
         ontoLabels = lb.getlabel();
 
         File file = new File("src\\main\\resources\\result.xls");
