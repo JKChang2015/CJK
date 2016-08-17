@@ -100,7 +100,9 @@ public class Matching {
 
                 //matching
                 System.out.println("matching keywords with " + owlFilename + "....");
-                int count = 0;
+                int extCount = 0;
+                int fuzzyCount = 0;
+
                 for (String keyword : keywords) {
 
                     for (String label : labels.keySet()) {
@@ -116,6 +118,8 @@ public class Matching {
                             mapT.setOntoName(owlFilename);
                             mapT.setURI(labels.get(label));
                             exactMatch.get(keyword).add(mapT);
+                            extCount++;
+                            continue;
                         }
 
                         if (label.toLowerCase().contains(keyword.toLowerCase())) {
@@ -130,16 +134,18 @@ public class Matching {
                             mapT.setOntoName(owlFilename);
                             mapT.setURI(labels.get(label));
                             fuzzyMatch.get(keyword).add(mapT);
+                            fuzzyCount++;
                         }
 
                     }
 
                 }
 
-                Matching match = new Matching();
-
-                match.saveResToExcel(exactMatch, owlFilename + "_exact");
-                match.saveResToExcel(fuzzyMatch, owlFilename + "_fuzzy");
+                SaveToExcel se = new SaveToExcel();
+                se.save(exactMatch, owlFilename + "_exact");
+                System.out.println("save " + extCount + " exact match....");
+                se.save(fuzzyMatch, owlFilename + "_fuzzy");
+                System.out.println("save " + fuzzyCount + " fuzzy match....");
 
             } catch (OWLOntologyCreationException e) {
                 e.printStackTrace();
@@ -171,7 +177,7 @@ public class Matching {
             int count = 0;
 
             for (String keyword : res.keySet()) {
-              //  System.out.println(++count + ".  " + keyword);
+                //  System.out.println(++count + ".  " + keyword);
                 sheet.addCell(new jxl.write.Label(0, row, keyword));
 
                 jxl.write.Label addOntoName = new jxl.write.Label(1, row, "");
@@ -191,7 +197,7 @@ public class Matching {
                     row++;
                 }
             }
-            
+
             System.out.println("saved matching result to " + name + ".xls");
 
         } catch (IOException e) {
