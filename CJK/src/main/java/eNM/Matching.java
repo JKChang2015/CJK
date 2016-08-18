@@ -87,22 +87,6 @@ public class Matching {
                 for (String keyword : keywords) {
 
                     for (String label : labels.keySet()) {
-                        if (label.toLowerCase().equals(keyword.toLowerCase())) {
-                            //add mapterm to exactMatch
-                            if (exactMatch.get(keyword) == null) {
-                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
-                                exactMatch.put(keyword, mapTerms);
-                            }
-
-                            MapTerm mapT = new MapTerm();
-                            mapT.setLabel(label);
-                            mapT.setOntoName(owlFilename);
-                            mapT.setURI(labels.get(label));
-                            exactMatch.get(keyword).add(mapT);
-                            extCount++;
-                            exact++;
-                            continue;
-                        }
 
                         if (label.toLowerCase().contains(keyword.toLowerCase())) {
                             //add mapterm to exactMatch
@@ -111,13 +95,24 @@ public class Matching {
                                 fuzzyMatch.put(keyword, mapTerms);
                             }
 
-                            MapTerm mapT = new MapTerm();
-                            mapT.setLabel(label);
-                            mapT.setOntoName(owlFilename);
-                            mapT.setURI(labels.get(label));
+                            MapTerm mapT = new MapTerm(owlFilename, label, labels.get(label));
                             fuzzyMatch.get(keyword).add(mapT);
                             fuzzyCount++;
                             fuzzy++;
+                        }
+
+                        if (label.toLowerCase().equals(keyword.toLowerCase())) {
+
+                            //add mapterm to exactMatch
+                            if (exactMatch.get(keyword) == null) {
+                                HashSet<MapTerm> mapTerms = new HashSet<MapTerm>();
+                                exactMatch.put(keyword, mapTerms);
+                            }
+
+                            MapTerm mapT = new MapTerm(owlFilename, label, labels.get(label));
+                            exactMatch.get(keyword).add(mapT);
+                            extCount++;
+                            exact++;
                         }
 
                     }
@@ -159,8 +154,8 @@ public class Matching {
                     ecc++;
                 }
             }
-            System.out.println("There are " + fcc + " new terms have been exact matched");
-            
+            System.out.println("There are " + ecc + " new terms have been exact matched");
+
         } catch (WriteException we) {
             we.printStackTrace();
             System.out.println("fail to write data to the excel");

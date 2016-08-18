@@ -14,6 +14,16 @@ public class MapTerm {
     private String label;
     private String URI;
     private String ontoName;
+    
+    public MapTerm(){
+        
+    }
+    
+    public MapTerm(String ontoName, String label, String URI){
+        this.ontoName = ontoName;
+        this.label = label;
+        this.URI = URI;
+    }
 
     public String getLabel() {
         return label;
