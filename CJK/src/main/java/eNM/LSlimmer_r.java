@@ -56,16 +56,16 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
  * @author jkchang
  * @date 07-Jul-2016
  */
-public class LSlimmer {
+public class LSlimmer_r {
 
     private OWLOntologyManager man;
     private OWLOntology onto;
 
-    public LSlimmer(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
+    public LSlimmer_r(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile), mergedOntologyIRI);
     }
 
-    public LSlimmer(InputStream owlFile) throws OWLOntologyCreationException {
+    public LSlimmer_r(InputStream owlFile) throws OWLOntologyCreationException {
         this(owlFile, null);
     }
 
@@ -74,7 +74,7 @@ public class LSlimmer {
      * @param mergedOntologyIRI (output IRI)
      * @throws OWLOntologyCreationException
      */
-    public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+    public LSlimmer_r(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
 
@@ -150,8 +150,8 @@ public class LSlimmer {
                 String irisFilename = props.getProperty("iris");
 
                 // 1. read the original ontology
-                File owlFile = new File(owlFilename);
-                LSlimmer slimmer = new LSlimmer(owlFile, slimmedFilename);
+                File owlFile = new File("\\ontologies\\config\\run\\" + owlFilename);
+                LSlimmer_r slimmer = new LSlimmer_r(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
                 System.out.println("Loaded Ontology: " + slimmedFilename);
                 System.out.println("Loaded axioms: " + onto.getAxiomCount());
