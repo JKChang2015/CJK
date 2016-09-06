@@ -78,11 +78,6 @@ public class LSlimmer_r {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
 
-        if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
-            String root = System.getenv("WORKSPACE");
-            System.out.println("Adding mappings with root: " + root);
-            addMappings(man, root); //add local owl file to the URL mapping
-        }
 
         if (mergedOntologyIRI != null) {
             // Load all of the DIRECT IMPORTs ontologies
@@ -150,7 +145,7 @@ public class LSlimmer_r {
                 String irisFilename = props.getProperty("iris");
 
                 // 1. read the original ontology
-                File owlFile = new File("\\ontologies\\config\\run\\" + owlFilename);
+                File owlFile = new File("..\\ontologies\\config\\run\\" + owlFilename);
                 LSlimmer_r slimmer = new LSlimmer_r(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
                 System.out.println("Loaded Ontology: " + slimmedFilename);
