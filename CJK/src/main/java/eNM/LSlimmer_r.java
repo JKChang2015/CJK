@@ -78,7 +78,6 @@ public class LSlimmer_r {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
 
-
         if (mergedOntologyIRI != null) {
             // Load all of the DIRECT IMPORTs ontologies
             Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
@@ -110,7 +109,9 @@ public class LSlimmer_r {
     }
 
     public static void main(String[] args) {
-        boolean allSucceeded = true;
+
+        // Load the ontology file from local disk, and slimmed it locally
+        // imput: File    
         String rootFolder = "..\\ontologies\\config\\run";
         System.out.println("Searching configuration files in folder " + rootFolder); //Searching configuration files in .
 
@@ -120,6 +121,37 @@ public class LSlimmer_r {
                 return name.toLowerCase().endsWith(".props");
             }
         });
+
+        for (File file : files) {
+
+            try {
+                System.out.println("Load local ontology " + file.getName());
+
+                // read the prop file
+                Properties pros = new Properties();
+                pros.load(new FileReader(file));
+
+                String owlURL = pros.getProperty("owl");
+                String owlFilename = owlURL;
+                if (owlFilename.contains("/")) {
+                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+                }
+                
+                System.out.println(rootFolder + "\\"+ owlFilename);
+
+                OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+                OWLDataFactory factory = man.getOWLDataFactory();
+                File ontoFile = new File(rootFolder + "\\"+ owlFilename);
+                OWLOntology onto = man.loadOntologyFromOntologyDocument(ontoFile);
+
+                System.out.println("Load file " + owlFilename + " from " + rootFolder);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.out.println("fail to load file");
+            }
+
+        }
 
         for (File file : files) {  // for each property file
             try {
@@ -216,7 +248,7 @@ public class LSlimmer_r {
 
             } catch (Exception e) {
                 e.printStackTrace();
-                allSucceeded = false;
+
             }
         }
     }
