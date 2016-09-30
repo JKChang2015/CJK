@@ -122,36 +122,36 @@ public class LSlimmer_r {
             }
         });
 
-        for (File file : files) {
-
-            try {
-                System.out.println("Load local ontology " + file.getName());
-
-                // read the prop file
-                Properties pros = new Properties();
-                pros.load(new FileReader(file));
-
-                String owlURL = pros.getProperty("owl");
-                String owlFilename = owlURL;
-                if (owlFilename.contains("/")) {
-                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
-                }
-                
-                System.out.println(rootFolder + "\\"+ owlFilename);
-
-                OWLOntologyManager man = OWLManager.createOWLOntologyManager();
-                OWLDataFactory factory = man.getOWLDataFactory();
-                File ontoFile = new File(rootFolder + "\\"+ owlFilename);
-                OWLOntology onto = man.loadOntologyFromOntologyDocument(ontoFile);
-
-                System.out.println("Load file " + owlFilename + " from " + rootFolder);
-
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.out.println("fail to load file");
-            }
-
-        }
+//        for (File file : files) {
+//
+//            try {
+//                System.out.println("Load local ontology " + file.getName());
+//
+//                // read the prop file
+//                Properties pros = new Properties();
+//                pros.load(new FileReader(file));
+//
+//                String owlURL = pros.getProperty("owl");
+//                String owlFilename = owlURL;
+//                if (owlFilename.contains("/")) {
+//                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
+//                }
+//                
+//                System.out.println(rootFolder + "\\"+ owlFilename);
+//
+//                OWLOntologyManager man = OWLManager.createOWLOntologyManager();
+//                OWLDataFactory factory = man.getOWLDataFactory();
+//                File ontoFile = new File(rootFolder + "\\"+ owlFilename);
+//                OWLOntology onto = man.loadOntologyFromOntologyDocument(ontoFile);
+//
+//                System.out.println("Load file " + owlFilename + " from " + rootFolder);
+//
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//                System.out.println("fail to load file");
+//            }
+//
+//        }
 
         for (File file : files) {  // for each property file
             try {
