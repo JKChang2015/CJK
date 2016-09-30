@@ -32,7 +32,8 @@ public class Matching {
         int fuzzy = 0;
 
         //====================Keyword set====================================
-        String kPath = "src\\main\\resources\\chemical description terms.txt";
+   //     String kPath = "src\\main\\resources\\chemical description terms.txt";
+        String kPath = "src\\main\\resources\\NM components types.txt";
         File kFile = new File(kPath);
 
         try {
