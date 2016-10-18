@@ -33,11 +33,11 @@ public class ReadExcel {
 
             for (int i = 1; i < sheet.getRows(); i++) {
                 OntoEntity newEntity = new OntoEntity();
-                newEntity.setName(sheet.getCell(0,i).getContents());
-                newEntity.setLabel(sheet.getCell(0,i).getContents());
-                newEntity.setSupClassName(sheet.getCell(1,i).getContents());
-                newEntity.setSupURI(sheet.getCell(2,i).getContents());
-                newEntity.setDef(sheet.getCell(3,i).getContents());
+                newEntity.setName(sheet.getCell(0,i).getContents().trim());
+                newEntity.setLabel(sheet.getCell(0,i).getContents().trim());
+                newEntity.setSupClassName(sheet.getCell(1,i).getContents().trim());
+                newEntity.setSupURI(sheet.getCell(2,i).getContents().trim());
+                newEntity.setDef(sheet.getCell(3,i).getContents().trim());
                 
                 ontoEntities.add(newEntity);
                 System.out.println("add " + newEntity.getName());
@@ -52,10 +52,12 @@ public class ReadExcel {
     }
 
 
-//    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException {
 //        ReadExcel test = new ReadExcel();
 //        test.setInputFile("src\\main\\resources\\new terms.xls");
 //        test.read();
-//    }
+
+
+    }
 
 }
