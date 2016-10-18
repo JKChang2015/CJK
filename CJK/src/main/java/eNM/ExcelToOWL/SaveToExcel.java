@@ -1,5 +1,6 @@
-package eNM;
+package eNM.ExcelToOWL;
 
+import eNM.Matching.MapTerm;
 import java.io.File;
 import jxl.Workbook;
 import java.lang.Exception;
@@ -7,9 +8,9 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WritableSheet;
 import jxl.write.Label;
 
-import eNM.KeywordFile;
+import eNM.Matching.KeywordFile;
 import org.semanticweb.owlapi.*;
-import ext.OntoLabel;
+import eNM.Matching.OntoLabel;
 
 import java.util.Set;
 import java.util.HashSet;

@@ -1,4 +1,4 @@
-package eNM;
+package eNM.ExcelToOWL;
 
 /**
  * Load term list from excel file and add to OWL file. Function: 1. load excel

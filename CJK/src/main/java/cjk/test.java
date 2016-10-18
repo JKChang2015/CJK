@@ -6,9 +6,9 @@
  */
 package cjk;
 
-import eNM.KeywordFile;
-import eNM.MapTerm;
-import eNM.OntoFile;
+import eNM.Matching.KeywordFile;
+import eNM.Matching.MapTerm;
+import eNM.Matching.OntoFile;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

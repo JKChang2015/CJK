@@ -1,4 +1,4 @@
-package eNM;
+package eNM.Matching;
 
 /* ----------------------------------------------------------------------------
     mapping the new terms to the 19 ontologies, one by one

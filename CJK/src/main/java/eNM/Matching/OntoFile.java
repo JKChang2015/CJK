@@ -1,4 +1,4 @@
-package eNM;
+package eNM.Matching;
 
 import org.semanticweb.owlapi.model.OWLOntology;
 import java.io.InputStream;

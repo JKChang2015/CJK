@@ -1,7 +1,7 @@
 package cjk;
 
-import ext.OntoLabel;
-import eNM.KeywordFile;
+import eNM.Matching.OntoLabel;
+import eNM.Matching.KeywordFile;
 
 import java.util.Set;
 import java.util.HashSet;
