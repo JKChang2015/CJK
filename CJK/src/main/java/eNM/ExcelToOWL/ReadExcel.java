@@ -52,12 +52,12 @@ public class ReadExcel {
     }
 
 
-    public static void main(String[] args) throws IOException {
+//    public static void main(String[] args) throws IOException {
 //        ReadExcel test = new ReadExcel();
 //        test.setInputFile("src\\main\\resources\\new terms.xls");
 //        test.read();
-
-
-    }
+//
+//
+//    }
 
 }

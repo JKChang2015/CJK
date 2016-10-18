@@ -79,7 +79,7 @@
 
 
 	<owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_0000006">
-		<rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_0000003 "/>
+		<rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_0000003"/>
 		<rdfs:isDefinedBy xml:lang="en">apple tree def</rdfs:isDefinedBy>
 		<rdfs:label xml:lang="en">apple tree</rdfs:label>
 	</owl:Class>
@@ -95,7 +95,7 @@
 
 
 	<owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_0000007">
-		<rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_0000003 "/>
+		<rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_0000003"/>
 		<rdfs:isDefinedBy xml:lang="en">banana tree def</rdfs:isDefinedBy>
 		<rdfs:label xml:lang="en">banana tree</rdfs:label>
 	</owl:Class>
