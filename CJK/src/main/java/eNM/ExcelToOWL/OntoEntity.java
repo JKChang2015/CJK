@@ -14,15 +14,15 @@ public class OntoEntity {
     private String def;
 
     public String printSpliter() {
-        return "<!-- " + uri + " -->" + "\n\n";
+        return "\t"+"<!-- " + uri + " -->" + "\n";
     }
 
     public String printStrt() {
-        return "<owl:Class " + "\n";
+        return "\t"+"<owl:Class ";
     }
 
     public String printEnd() {
-        return "</owl:Class>" + "\n\n\n\n";
+        return "\t"+"</owl:Class>" + "\n\n\n\n";
     }
 
     //------------------- Term Name -----------------------------------------//
@@ -54,7 +54,7 @@ public class OntoEntity {
 
     public String printLable() {
 
-        return "<rdfs:label xml:lang=\"en\">" + label + "</rdfs:label>";
+        return "\t\t"+"<rdfs:label xml:lang=\"en\">" + label + "</rdfs:label>";
     }
 
     //---------------------- URI -------------------------------------//
@@ -68,7 +68,7 @@ public class OntoEntity {
 
     public String printUri() {
 
-        return "rdf:about=\"" + uri + ">";
+        return "rdf:about=\"" + uri + "\">";
     }
 
     //--------------------Superclass URI----------------------------------//
@@ -82,7 +82,7 @@ public class OntoEntity {
 
     public String printSupURI() {
 
-        return "<rdfs:subClassOf rdf:resource=\"" + supURI + "\"/>";
+        return "\t\t"+"<rdfs:subClassOf rdf:resource=\"" + supURI + "\"/>";
     }
 
     //--------------------Definition--------------------------------------//
@@ -96,7 +96,7 @@ public class OntoEntity {
 
     public String printDef() {
 
-        return "<rdfs:isDefinedBy xml:lang=\"en\">" + def + "</rdfs:isDefinedBy>";
+        return "\t\t"+"<rdfs:isDefinedBy xml:lang=\"en\">" + def + "</rdfs:isDefinedBy>";
     }
 
 }

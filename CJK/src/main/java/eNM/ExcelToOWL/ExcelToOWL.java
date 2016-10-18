@@ -14,13 +14,39 @@ package eNM.ExcelToOWL;
  */
 public class ExcelToOWL {
 
-    double newTermStartID = 0;
-    String TermURI = "";
-    String owlFile = " ";
-    String termFile = " ";
-
     public static void main(String[] args) {
 
+        String owlFile = "src\\main\\resources\\add.owl";
+        String termExcelFile = "src\\main\\resources\\new terms.xls";
+
+        String termURI = "http://purl.enanomapper.org/onto/ENM_0";
+        int startID = 5;
+        String ID = String.format("%06d", startID);
+        String uri = termURI + ID;
+
+        String supUri = "http://purl.enanomapper.org/onto/ENM_0000002";
+        String def = "banana def";
+        String label = "banana";
+
+        OntoEntity oe = new OntoEntity();
+        oe.setLabel(label);
+        oe.setDef(def);
+        oe.setUri(uri);
+        oe.setSupURI(supUri);
+
+        System.out.println(oe.printSpliter());
+        System.out.println(oe.printStrt() + oe.printUri());
+        System.out.println(oe.printSupURI());
+        System.out.println(oe.printDef());
+        System.out.println(oe.printLable());
+        System.out.println(oe.printEnd());
+        System.out.println("");
+
+    }
+
+    String generateURI(String uri, int num) {
+
+        return "";
     }
 
 }
