@@ -1,5 +1,8 @@
 package eNM.ExcelToOWL;
 
+import java.io.IOException;
+import java.util.ArrayList;
+
 /**
  * Load term list from excel file and add to OWL file. Function: 1. load excel
  * (term name, superclass and definition) 2. load owlfile as txt file 3. convert
@@ -14,7 +17,7 @@ package eNM.ExcelToOWL;
  */
 public class ExcelToOWL {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String owlFile = "src\\main\\resources\\add.owl";
         String termExcelFile = "src\\main\\resources\\new terms.xls";
@@ -24,6 +27,10 @@ public class ExcelToOWL {
         String ID = String.format("%06d", startID);
         String uri = termURI + ID;
         
+//        ArrayList<OntoEntity> ontoEnti = new ArrayList<OntoEntity>();
+//        ReadExcel reader = new ReadExcel();
+//        reader.setInputFile(termExcelFile);
+//        ontoEnti = reader.read();
         
 
         String supUri = "http://purl.enanomapper.org/onto/ENM_0000002";
