@@ -40,14 +40,12 @@ public class ReadExcel {
                 newEntity.setDef(sheet.getCell(3,i).getContents().trim());
                 
                 ontoEntities.add(newEntity);
-                System.out.println("add " + newEntity.getName());
-                    
+                                   
             }
 
         } catch (BiffException e) {
             e.printStackTrace();
         }
-        System.out.println("lalala");
         return ontoEntities;
     }
 

@@ -91,6 +91,8 @@ public class ExcelToOWL {
                 pw.println("");
                 pw.println("");
                 pw.println("");
+                
+                System.out.println("Added --> " + oe.getName());
             }
 
             pw.printf("</rdf:RDF>");
