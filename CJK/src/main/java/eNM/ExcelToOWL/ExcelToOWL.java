@@ -107,23 +107,5 @@ public class ExcelToOWL {
             ioe.printStackTrace();
         }
 
-//        String supUri = "http://purl.enanomapper.org/onto/ENM_0000002";
-//        String def = "banana def";
-//        String label = "banana";
-//
-//        OntoEntity oe = new OntoEntity();
-//        oe.setLabel(label);
-//        oe.setDef(def);
-//        oe.setUri(uri);
-//        oe.setSupURI(supUri);
-//
-//        System.out.println(oe.printSpliter());
-//        System.out.println(oe.printStrt() + oe.printUri());
-//        System.out.println(oe.printSupURI());
-//        System.out.println(oe.printDef());
-//        System.out.println(oe.printLable());
-//        System.out.println(oe.printEnd());
-//        System.out.println("");
-
     }
 }
