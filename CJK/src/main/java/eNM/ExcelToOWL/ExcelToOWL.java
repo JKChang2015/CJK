@@ -23,6 +23,8 @@ public class ExcelToOWL {
         int startID = 5;
         String ID = String.format("%06d", startID);
         String uri = termURI + ID;
+        
+        
 
         String supUri = "http://purl.enanomapper.org/onto/ENM_0000002";
         String def = "banana def";

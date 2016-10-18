@@ -14,7 +14,7 @@ import jxl.read.biff.BiffException;
  *
  * @author jkchang
  */
-public class LoadExcel {
+public class ReadExcel {
 
     private String inputFile;
     private ArrayList<OntoEntity> ontoEntities = new ArrayList<OntoEntity>();
@@ -52,10 +52,10 @@ public class LoadExcel {
     }
 
 
-    public static void main(String[] args) throws IOException {
-        LoadExcel test = new LoadExcel();
-        test.setInputFile("src\\main\\resources\\new terms.xls");
-        test.read();
-    }
+//    public static void main(String[] args) throws IOException {
+//        ReadExcel test = new ReadExcel();
+//        test.setInputFile("src\\main\\resources\\new terms.xls");
+//        test.read();
+//    }
 
 }
