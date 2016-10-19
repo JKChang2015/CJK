@@ -1,4 +1,4 @@
-package eNM.ExcelToOWL;
+package eNM.Matching;
 
 import eNM.Matching.MapTerm;
 import java.io.File;
