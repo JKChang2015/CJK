@@ -15,6 +15,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import jxl.write.WriteException;
 
 /**
  * Load term list from excel file and add to OWL file. Function: 1. load excel
@@ -30,7 +31,7 @@ import java.io.InputStreamReader;
  */
 public class ExcelToOWL {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, WriteException {
 
         String owlFile = "src\\main\\resources\\add.owl";
         String outputOWLFile = "src\\main\\resources\\res.owl";
@@ -106,6 +107,9 @@ public class ExcelToOWL {
             System.out.println("Exception occurred:");
             ioe.printStackTrace();
         }
+        
+        SaveExcel saver = new SaveExcel();
+        saver.save(ontoEnti, "src\\main\\resources\\new terms.xls");
 
     }
 }
