@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1476821711456" name="http://www.enanomapper.net/ontologies/enanomapper.owl" uri="enanomapper.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1476821711456" name="http://www.semanticweb.org/enm" uri="enm.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1476821711456" name="http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13" uri="fruit.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1476821711456" name="duplicate:http://www.semanticweb.org/jkchang/ontologies/2016/9/untitled-ontology-31" uri="add.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1476821711456" name="duplicate:http://www.semanticweb.org/jkchang/ontologies/2016/9/untitled-ontology-31" uri="res.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1476865560782" name="http://www.enanomapper.net/ontologies/enanomapper.owl" uri="enanomapper.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1476865560782" name="http://www.semanticweb.org/enm" uri="enm.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1476865560782" name="http://www.semanticweb.org/jkchang/ontologies/2016/5/untitled-ontology-13" uri="fruit.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1476865560782" name="duplicate:http://www.semanticweb.org/jkchang/ontologies/2016/9/untitled-ontology-31" uri="add.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1476865560782" name="duplicate:http://www.semanticweb.org/jkchang/ontologies/2016/9/untitled-ontology-31" uri="res.owl"/>
     </group>
 </catalog>
