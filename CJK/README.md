@@ -18,13 +18,13 @@
   - [x] OntoFile: merge & initialize ontology file
   - [x] Matching
   - [x] Mapping
-  - [x] Save Matching results to Excel file
+  - [x] Save matching results to Excel file
   
 - [x] [eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/ExcelToOWL)
   - [x] ReadExcel: Read new term list
   - [x] OWLFile configuration
   - [x] Curate new terms to OWL file
-  - [x] Save curation results to Excel file  
+  - [x] Save curation results to Excel file and OWL file
   
   
 
