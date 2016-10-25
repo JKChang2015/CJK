@@ -17,17 +17,18 @@
   :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
   - [x] OntoLabel: extract entity rdf:lable from ontology
   - [x] OntoFile: merge & initialize ontology file
-  - [x] Matching:
+  - [x] Matching
   - [x] Mapping
   - [x] Save Matching results to Excel file
   
-  
+  :arrow_forward:[eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/ExcelToOWL)
+  - [x] ReadExcel: Read new term list
+  - [x] OWLFile configuration
+  - [x] Curate new terms to OWL file
+  - [x] Save curation results to Excel file  
   
   
 
 
-- [x] Check formulation of iris file
-- [x] Extract entity rdf:label from ontology
-- [x] Comparison between label and new terms
-- [ ] Check eNM ontology definitions e.g. isDefinedBy vs definision
+
 
