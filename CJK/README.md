@@ -13,8 +13,7 @@
 - [x] Iris file checker
 - [x] Server_Slimmer
 - [x] Local_Slimmer
- 
-- [ ] 
+- [x] Functions:
 
 
   :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
