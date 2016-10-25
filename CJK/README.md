@@ -12,9 +12,16 @@
 - [x] Instruction
 - [x] Server_Slimmer
 - [x] Local_Slimmer
-- [x] iris file Checker   
+- [x] Iris file checker: Check formulation of iris file
   
   :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
+  - [x]
+  - [x]
+  - [x]
+  - [x]
+  
+  
+
 
 - [x] Check formulation of iris file
 - [x] Extract entity rdf:label from ontology
