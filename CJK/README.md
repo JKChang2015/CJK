@@ -2,7 +2,6 @@
 
 --------
 #####:arrow_right:[cjk](https://github.com/JKChang2015/CJK/tree/master/src/main/java/com/github/cjk)
-- [x] Animate pictures to GIF format
 - [x] Traverse folder 
 - [x] File layout filter 
 - [x] Combine iris files
@@ -26,8 +25,10 @@
   - [x] Curate new terms to OWL file
   - [x] Save curation results to Excel file and OWL file
   
-  
-
-
-
+ 
+#####:arrow_right:[ext](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/ext)
+- [x] Animate pictures to GIF format
+- [x] File Browser
+- [x] Creat GIF file
+- [x] property loader
 
