@@ -10,9 +10,10 @@
 #####:arrow_right:[eNM](https://github.com/JKChang2015/CJK/tree/master/src/main/java/com/github/eNM)
 - [x] Configuration
 - [x] Instruction
+- [x] Iris file checker
 - [x] Server_Slimmer
 - [x] Local_Slimmer
-- [x] Iris Local_Slimmer
+
 
   :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
   - [x] OntoLabel: extract entity rdf:lable from ontology
