@@ -13,14 +13,14 @@
 - [x] Iris file checker
 - [x] Server_Slimmer
 - [x] Local_Slimmer
-- [x] :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
+- [x] [eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
   - [x] OntoLabel: extract entity rdf:lable from ontology
   - [x] OntoFile: merge & initialize ontology file
   - [x] Matching
   - [x] Mapping
   - [x] Save Matching results to Excel file
   
-- [x] :arrow_forward:[eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/ExcelToOWL)
+- [x] [eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/ExcelToOWL)
   - [x] ReadExcel: Read new term list
   - [x] OWLFile configuration
   - [x] Curate new terms to OWL file
