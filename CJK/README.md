@@ -19,7 +19,7 @@
   - [x] Mapping
   - [x] Save matching results to Excel file
   
-- [x] [eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/curator)
+- [x] [eNM_Curation](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Curator)
   - [x] ReadExcel: Read new term list
   - [x] OWLFile configuration
   - [x] Curate new terms to OWL file
