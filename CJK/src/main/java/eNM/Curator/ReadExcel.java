@@ -1,4 +1,4 @@
-package eNM.curator;
+package eNM.Curator;
 
 import java.io.File;
 import java.io.IOException;

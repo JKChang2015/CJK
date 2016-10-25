@@ -1,4 +1,4 @@
-package eNM.curator;
+package eNM.Curator;
 
 import eNM.Matching.MapTerm;
 import java.io.File;
