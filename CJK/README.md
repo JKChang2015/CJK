@@ -15,10 +15,13 @@
 - [x] Iris file checker: Check formulation of iris file
   
   :arrow_forward:[eNM_Matching](https://github.com/JKChang2015/CJK/tree/master/CJK/src/main/java/eNM/Matching)
-  - [x]
-  - [x]
-  - [x]
-  - [x]
+  - [x] OntoLabel: extract entity rdf:lable from ontology
+  - [x] OntoFile: merge & initialize ontology file
+  - [x] Matching:
+  - [x] Mapping
+  - [x] Save Matching results to Excel file
+  
+  
   
   
 
