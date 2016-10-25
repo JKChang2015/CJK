@@ -1,4 +1,4 @@
-package cjk;
+package ext;
 
 import java.io.*;
 import java.awt.*;

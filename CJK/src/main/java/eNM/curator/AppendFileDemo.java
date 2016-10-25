@@ -1,4 +1,4 @@
-package eNM.ExcelToOWL;
+package eNM.curator;
 
 import java.io.File;
 import java.io.FileWriter;

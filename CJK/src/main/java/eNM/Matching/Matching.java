@@ -17,7 +17,8 @@ import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
  * Matching new terms with all the ontology labels
- *
+ * Load the term list from excel file, then matching the terms with all the external ontologies 
+ * 
  * @author jkchang
  */
 public class Matching {
