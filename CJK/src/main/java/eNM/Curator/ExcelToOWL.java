@@ -33,12 +33,12 @@ public class ExcelToOWL {
 
     public static void main(String[] args) throws IOException, WriteException {
 
-        String owlFile = "src\\main\\resources\\add.owl";
+        String owlFile = "src\\main\\resources\\endpoints.owl";
         String outputOWLFile = "src\\main\\resources\\res.owl";
-        String termExcelFile = "src\\main\\resources\\new terms.xls";
+        String termExcelFile = "src\\main\\resources\\enpoints.xls";
 
         String termURI = "http://purl.enanomapper.org/onto/ENM_0";
-        int startID = 5;
+        int startID = 35;
 
         //save new terms to Array
         ArrayList<OntoEntity> ontoEnti = new ArrayList<OntoEntity>();
@@ -86,13 +86,16 @@ public class ExcelToOWL {
                 pw.println("");
                 pw.println(oe.printStrt() + oe.printUri());
                 pw.println(oe.printSupURI());
-                pw.println(oe.printDef());
+                if (oe.getDef() != "") {
+                    pw.println(oe.printDef());
+                }
+
                 pw.println(oe.printLable());
                 pw.println(oe.printEnd());
                 pw.println("");
                 pw.println("");
                 pw.println("");
-                
+
                 System.out.println("Added --> " + oe.getName());
             }
 
@@ -107,7 +110,7 @@ public class ExcelToOWL {
             System.out.println("Exception occurred:");
             ioe.printStackTrace();
         }
-        
+
         SaveExcel saver = new SaveExcel();
         saver.save(ontoEnti, "src\\main\\resources\\new terms.xls");
 
