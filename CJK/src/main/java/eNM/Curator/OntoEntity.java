@@ -22,7 +22,7 @@ public class OntoEntity {
     }
 
     public String printEnd() {
-        return "\t"+"</owl:Class>" + "\n\n\n\n";
+        return "\t"+"</owl:Class>" + "\n\n";
     }
 
     //------------------- Term Name -----------------------------------------//
