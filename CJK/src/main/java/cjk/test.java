@@ -30,10 +30,18 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
 
 public class test {
 
-    public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException {
-        String rootFolder = "..\\ontologies\\config\\";
+    public static void main(String[] args){
         
-        Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
+        
+        
+        
+        
+        
+    }
+}
+//        String rootFolder = "..\\ontologies\\config\\";
+//        
+//        Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 //        HashSet<String> set = new HashSet<String>();
 //        set.add("one");
 //        map.put("1", set);
@@ -42,39 +50,38 @@ public class test {
 //        set.add("one");
 //        map.put("1", set);
 
-        map.put("1", null);
-        map.put("2", null);
-        map.put("3", null);
-
-        if (map.get("1")== null) {
-            HashSet<String> set = new HashSet<String>();
-            map.put("1", set);
-        }
-
-        String add = "111111";
-        map.get("1").add(add);
-
-        map.get("1").add("one");
-        map.get("1").add("one_one");
-        map.get("1").add("yi");
-
-        String path = "C:\\GitHub\\CJK\\ontologies\\fruit.owl";
-        File file = new File(path);
-        OntoFile onto = new OntoFile(file);
-
-        Map<String, String> res = new HashMap<String, String>();
-        res = onto.getLabels();
-
-        int count = 0;
-
-        for (String key : res.keySet()) {
-            count++;
-            System.out.println(count + ". " + key + "  " + res.get(key));
-        }
-
-    }
-}
-
+//        map.put("1", null);
+//        map.put("2", null);
+//        map.put("3", null);
+//
+//        if (map.get("1")== null) {
+//            HashSet<String> set = new HashSet<String>();
+//            map.put("1", set);
+//        }
+//
+//        String add = "111111";
+//        map.get("1").add(add);
+//
+//        map.get("1").add("one");
+//        map.get("1").add("one_one");
+//        map.get("1").add("yi");
+//
+//        String path = "C:\\GitHub\\CJK\\ontologies\\fruit.owl";
+//        File file = new File(path);
+//        OntoFile onto = new OntoFile(file);
+//
+//        Map<String, String> res = new HashMap<String, String>();
+//        res = onto.getLabels();
+//
+//        int count = 0;
+//
+//        for (String key : res.keySet()) {
+//            count++;
+//            System.out.println(count + ". " + key + "  " + res.get(key));
+//        }
+//
+//    }
+//}
 //        //test combine ontologies
 //        String owlURL = "";
 //        String owlFilename = "";
