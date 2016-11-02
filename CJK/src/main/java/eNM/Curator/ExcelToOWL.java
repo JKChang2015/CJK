@@ -33,13 +33,13 @@ public class ExcelToOWL {
 
     public static void main(String[] args) throws IOException, WriteException {
 
-        String owlFile = "src\\main\\resources\\endpoints.owl";
+        String owlFile = "src\\main\\resources\\npo-ext.owl";
         String outputOWLFile = owlFile.substring(0, owlFile.lastIndexOf('.')) + "_res.owl";
-        String termExcelFile = "src\\main\\resources\\enpoints.xls";
+        String termExcelFile = "src\\main\\resources\\nanoparticle.xls";
         String outTermFile = termExcelFile.substring(0, termExcelFile.lastIndexOf('.')) + "_res.xls";
 
-        String termURI = "http://purl.enanomapper.org/onto/ENM_0";
-        int startID = 90;
+        String termURI = "http://purl.enanomapper.org/onto/ENM_9";
+        int startID = 101;
 
         //save new terms to Array
         ArrayList<OntoEntity> ontoEnti = new ArrayList<OntoEntity>();
