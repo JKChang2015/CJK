@@ -1,7 +1,7 @@
 ####Jiakang Chang
 #####:envelope: jkchang@ebi.ac.uk
 
-#####:link: [Linkedin](https://uk.linkedin.com/in/jiakang-chang-6459849a) 
+#####:link: [Linkedin](https://www.linkedin.com/in/jiakang-chang) 
 
 
 
