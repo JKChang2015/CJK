@@ -1,4 +1,2 @@
-if TRUE:
-    print "true"
-else:
-    print "false"
+
+print( "hello, Python");
