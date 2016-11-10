@@ -34,7 +34,7 @@ public class Matching {
 
         //====================Keyword set====================================
    //     String kPath = "src\\main\\resources\\chemical description terms.txt";
-        String kPath = "src\\main\\resources\\NM components types.txt";
+        String kPath = "src\\main\\resources\\endpoints.txt";
         File kFile = new File(kPath);
 
         try {
@@ -136,9 +136,9 @@ public class Matching {
 
         try {
             SaveToExcel se = new SaveToExcel();
-            se.save(exactMatch, "exact");
+            se.save(exactMatch, "exact_endpoints");
             System.out.println("save " + exact + " exact match....");
-            se.save(fuzzyMatch, "fuzzy");
+            se.save(fuzzyMatch, "fuzzy_endpoints");
             System.out.println("save " + fuzzy + " fuzzy match....");
 
             int fcc = 0;

@@ -1,0 +1,90 @@
+Aerosol Characterisation
+Alamar blue
+Apoptosis
+Aspect of deposit
+barrier integrity - LY
+batch dispersion
+biochem analysis inhalation
+biochemical analysis
+Biodistribution
+Blood counts
+cell counts
+Cellularity
+CFE
+chromosomal damage in vitro
+coating_MALDI-TOF
+coating_STEM-EDS
+colorimetry
+COMET
+COMET - sistemic genotox 
+composition_EDX
+composizion_ICP-OES
+CRM
+cytokine secretion
+Cytokine secretion MPh
+cytokines levels
+density
+DNA-damage lung
+Dustiness with large drum
+Dustiness with other set-up
+Dustiness with small drum
+Dustiness with Vortex Shaker
+effective density
+elemental composition_ICP-MS
+elemental compostion_CHN analys
+FACS analysis
+filtration_ICP-MS
+filtration_WDXRF
+functional groups_ATR-FTIR
+functional groups_TGA
+hCTA
+hemolysis
+histopathology
+hystopathology
+IBM
+Impedence_flow cytom
+isoElectric point
+LDH
+lung genotoxicity
+mass concentration
+Micronuclei - sistemic genotox
+Micronucleus
+mRNA expression in vivo
+MTS
+MW digestion + ICP-MS
+Neutral red
+NO production
+NP crossing ICP-OES
+NP crossing ToF-SIMS
+NP intracell pen(confocal micro
+NPs crossing TEM-SEM
+oral mucosa 3Dmodel penetration
+PBPK
+PIG-A sistemic genotox
+Polyclonal proliferation
+Potentiometry_H2O sosp
+Resazurin
+RT- Impedence_adherence cell
+Serum cytokine
+Serum total antibodies
+size distribution
+size PTA
+size SAXS
+size TEM
+size&PSD_sp-ICP-MS
+size_DLS
+size_WAXD
+size_XRD
+soil - C. Elegans
+TEER
+TEM observation
+TEM-SEM - intracell penetration
+ToF-SIMS
+Trypan blue
+VSSA
+water - algae - P.subcap
+water - fish - D Rerio
+water - microalgae - D. Magna
+WAXD
+XRD
+z-pot
