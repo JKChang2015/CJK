@@ -420,6 +420,15 @@
     
 
 
+    <!-- http://purl.enanomapper.org/onto/ENM_0000035 -->
+
+    <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_0000035">
+        <rdfs:subClassOf rdf:resource="http://www.bioassayontology.org/bao#BAO_0000179"/>
+        <rdfs:label xml:lang="en">physchem endpoint</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.enanomapper.org/onto/ENM_0000036 -->
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_0000036">
@@ -486,7 +495,7 @@
     <!-- http://purl.enanomapper.org/onto/ENM_0000043 -->
 
     <owl:Class rdf:about="http://purl.enanomapper.org/onto/ENM_0000043">
-        <rdfs:subClassOf rdf:resource="http://www.bioassayontology.org/bao#BAO_0000179"/>
+        <rdfs:subClassOf rdf:resource="http://purl.enanomapper.org/onto/ENM_0000035"/>
         <rdfs:label xml:lang="en">Biological property endpoint</rdfs:label>
     </owl:Class>
     
