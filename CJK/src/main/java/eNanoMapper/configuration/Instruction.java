@@ -1,4 +1,4 @@
-package eNM;
+package eNanoMapper.configuration;
 
 public class Instruction {
 

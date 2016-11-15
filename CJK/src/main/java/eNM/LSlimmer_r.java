@@ -1,5 +1,6 @@
 package eNM;
 
+import eNanoMapper.configuration.Instruction;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
