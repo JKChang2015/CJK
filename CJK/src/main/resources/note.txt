@@ -10,3 +10,7 @@ https://www.lynda.com/Linux-tutorials/Learn-Linux-Command-Line-Basics/435539-2.h
 Git使用https方式进行连接时，默认每次推送时都要输入用户名和密码。
 可以使用命令
 git config credential.helper store
+
+
+load excel to Java
+http://www.java67.com/2014/09/how-to-read-write-xlsx-file-in-java-apache-poi-example.html
