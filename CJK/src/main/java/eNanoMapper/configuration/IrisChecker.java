@@ -9,6 +9,6 @@ package eNanoMapper.configuration;
  *
  * @author jkchang
  */
-public class irisChecker {
+public class IrisChecker {
     
 }

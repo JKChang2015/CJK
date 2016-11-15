@@ -8,6 +8,6 @@ package eNanoMapper.configuration;
  *
  */
 
-public class configuration {
+public class Configuration {
 
 }
