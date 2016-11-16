@@ -1,4 +1,4 @@
-package eNM;
+package eNanoMapper;
 
 import eNanoMapper.configuration.Instruction;
 import java.io.File;
