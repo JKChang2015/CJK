@@ -7,7 +7,6 @@ package cjk;
  * @Description:
  *
  */
-
 public class Student {
 
     private long id;
@@ -15,6 +14,15 @@ public class Student {
     private String lastName;
     private String gender;
     private int age;
+
+    public Student(long id, String firstName, String lastName, String gender, int age) {
+        super();
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender = gender;
+        this.age = age;
+    }
 
     public long getId() {
         return id;
@@ -55,5 +63,14 @@ public class Student {
     public void setAge(int age) {
         this.age = age;
     }
-    
+
+    @Override
+
+    public String toString() {
+
+        return "Student [id=" + id + ", firstName=" + firstName
+                + ", lastName=" + lastName + ", gender=" + gender + ", age="
+                + age + "]";
+    }
+
 }
