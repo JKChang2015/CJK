@@ -8,16 +8,23 @@ import java.io.FileReader;
  *
  * @author JKChang
  * @date 15-Nov-2016
- * @Description: Checking if the iris file is acceptable.
+ * @Description: Check syntax of iris file
  *
  */
 
 public class IrisChecker {
+    
+    public void IrisChecker(StringBuffer sb) throws Exception{
+        
+        
+    }
 
     public void IrisChecker(File file) throws Exception {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = reader.readLine();
         int lineNum = 1;
+        
+        System.out.println("Check syntax of " + file.getName());
 
         while (line != null) {
             String instruction = line.trim();

@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 
 /**
- * filter the particular file
+ * Filter the particular file
  *
  * @author jkchang
  */
