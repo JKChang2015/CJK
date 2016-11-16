@@ -44,7 +44,7 @@ import org.apache.commons.csv.CSVPrinter;
 public class test {
 
     //Delimiter used in CSV file
-    private static final String NEW_LINE_SEPARATOR = "\n\n\n";
+    private static final String NEW_LINE_SEPARATOR = "\n";
 
     //CSV file header
     private static final Object[] FILE_HEADER = {"id", "firstName", "lastName", "gender", "age"};
