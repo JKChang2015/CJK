@@ -1,4 +1,4 @@
-package util;
+package eNanoMapper.Util;
 
 import java.io.File;
 import java.io.FilenameFilter;
