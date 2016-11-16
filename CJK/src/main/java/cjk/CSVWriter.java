@@ -41,7 +41,7 @@ import java.util.List;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
 
-public class test {
+public class CSVWriter {
 
     //Delimiter used in CSV file
     private static final String NEW_LINE_SEPARATOR = "\n";
@@ -49,7 +49,7 @@ public class test {
     //CSV file header
     private static final Object[] FILE_HEADER = {"id", "firstName", "lastName", "gender", "age"};
 
-    public static void test(String fileName) {
+    public static void write(String fileName) {
 
         //Create new students objects
         Student student1 = new Student(1, "Ahmed", "Mohamed", "M", 25);
@@ -114,8 +114,8 @@ public class test {
 
     public static void main(String[] args) {
         
-         test t = new  test();
-         t.test("abb.csv");
+         CSVWriter t = new  CSVWriter();
+         t.write("abb.csv");
 
     }
 }
