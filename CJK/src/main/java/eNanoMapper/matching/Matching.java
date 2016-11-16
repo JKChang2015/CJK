@@ -9,6 +9,6 @@ package eNanoMapper.matching;
  *
  * @author jkchang
  */
-public class matching {
+public class Matching {
     
 }
