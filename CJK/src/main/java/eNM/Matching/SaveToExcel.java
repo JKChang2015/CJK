@@ -1,28 +1,15 @@
 package eNM.Matching;
 
 import eNM.Matching.MapTerm;
-import java.io.File;
-import jxl.Workbook;
-import java.lang.Exception;
-import jxl.write.WritableWorkbook;
-import jxl.write.WritableSheet;
-import jxl.write.Label;
-
-import eNM.Matching.KeywordFile;
-import org.semanticweb.owlapi.*;
-import eNM.Matching.OntoLabel;
-
-import java.util.Set;
 import java.util.HashSet;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
 import jxl.Workbook;
 import jxl.write.WritableSheet;
 import jxl.write.WritableWorkbook;
 import jxl.write.WriteException;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
+
 
 /**
  *
