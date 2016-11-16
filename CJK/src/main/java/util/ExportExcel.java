@@ -1,10 +1,11 @@
-package Func;
+package util;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Map;
+import java.util.ArrayList;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 
@@ -19,7 +20,8 @@ public class ExportExcel {
     
     // save(Map<String, HashSet<MapTerm>> res, String name) throws WriteException, IOException {
 
-    public void save(Map map, String savePath, String saveName) {
+    public void save(Map map, ArrayList title, String savePath, String saveName) {
+        
         File file = new File(savePath);
         HSSFWorkbook workbook = new HSSFWorkbook();
 
