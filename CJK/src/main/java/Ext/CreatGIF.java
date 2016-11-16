@@ -4,7 +4,7 @@
  @author jkchang
  @date 30-Jun-2016
  */
-package ext;
+package Ext;
 
 import java.io.File;
 import java.awt.Image;

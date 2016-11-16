@@ -4,7 +4,7 @@ java.util.properties
  @author jkchang
  @date 06-Jul-2016
  */
-package ext;
+package Ext;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

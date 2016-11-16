@@ -5,7 +5,7 @@
  @date 30-Jun-2016
 */
 
-package ext;
+package Ext;
 
 
 public class ColorTriangle extends Triangle{

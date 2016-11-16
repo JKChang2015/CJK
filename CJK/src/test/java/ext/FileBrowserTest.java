@@ -1,5 +1,6 @@
 package ext;
 
+import Ext.FileBrowser;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

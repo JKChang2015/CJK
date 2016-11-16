@@ -4,7 +4,7 @@ return the list of file name
  @author jkchang
  @date 08-Jul-2016
  */
-package ext;
+package Ext;
 
 import java.io.File;
 import java.io.FilenameFilter;

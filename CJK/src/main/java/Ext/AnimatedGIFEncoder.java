@@ -1,4 +1,4 @@
-package ext;
+package Ext;
 
 import java.io.*;
 import java.awt.*;
