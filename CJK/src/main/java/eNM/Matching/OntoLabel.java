@@ -1,11 +1,8 @@
 package eNM.Matching;
 
-import java.io.InputStream;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.util.Set;
 import java.util.HashSet;
 
@@ -21,7 +18,6 @@ import org.semanticweb.owlapi.model.OWLLiteral;
 public class OntoLabel {
 
     private OWLOntologyManager man;
-    private OWLOntology onto;
     private Set<String> labels = new HashSet<String>();
 
     public OntoLabel(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
