@@ -1,4 +1,4 @@
-package cjk;
+package Ext;
 
 import eNanoMapper.Curation.OntoEntity;
 import eNanoMapper.Curation.Curator;

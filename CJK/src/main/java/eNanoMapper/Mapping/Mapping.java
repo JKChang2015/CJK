@@ -9,6 +9,6 @@ package eNanoMapper.Mapping;
  *
  * @author jkchang
  */
-public class mapping {
+public class Mapping {
     
 }
