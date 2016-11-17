@@ -1,4 +1,4 @@
-package eNanoMapper.matching;
+package eNanoMapper.Matching;
 
 /**
  *
@@ -8,6 +8,6 @@ package eNanoMapper.matching;
  *
  */
 
-public class ExternalMatching {
+public class enmMatching {
 
 }
