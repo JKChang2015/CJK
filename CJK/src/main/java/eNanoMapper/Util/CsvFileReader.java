@@ -71,7 +71,13 @@ public class CsvFileReader {
                         record.get(ENTITY_SUPNAME), record.get(ENTITY_SUPURI),
                         record.get(ENTITY_DEF));
                 ontoEntities.add(entity);
-
+            }
+            
+            for(OntoEntity enti : ontoEntities){
+                System.out.println(enti.getName());
+                System.out.println(enti.getUri());
+                System.out.println(enti.getSupURI());
+                System.out.println("============================== \n");
             }
 
         } catch (Exception e) {

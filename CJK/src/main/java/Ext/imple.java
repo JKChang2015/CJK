@@ -26,15 +26,20 @@ import eNanoMapper.OntoLabel;
  */
 public class imple {
 
-    public static void main(String[] args)  throws OWLOntologyCreationException, FileNotFoundException, IOException{
+    public static void main(String[] args) {
         
-        File file = new File ("src\\main\\resources\\iao-ext.owl");
-        OntoLabel labels = new OntoLabel(file);
         
-        Set<String> result = labels.getlabel();
-        for (String label : result) {
-            System.out.println(label);
-        }
+        
+       
+        
+// Test List all the entity lables:  throws OWLOntologyCreationException, FileNotFoundException, IOException
+//        File file = new File ("src\\main\\resources\\iao-ext.owl");
+//        OntoLabel labels = new OntoLabel(file);
+//        
+//        Set<String> result = labels.getlabel();
+//        for (String label : result) {
+//            System.out.println(label);
+//        }
         
         // Ontology Example:
 //        OntoEntity cl = new OntoEntity();
