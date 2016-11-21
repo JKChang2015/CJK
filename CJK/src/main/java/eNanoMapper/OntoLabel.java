@@ -29,7 +29,6 @@ public class OntoLabel {
     private Set<String> labels = new HashSet<String>();
 
     public OntoLabel(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
-
         this(OWLManager.createConcurrentOWLOntologyManager().loadOntologyFromOntologyDocument(file));
     }
 

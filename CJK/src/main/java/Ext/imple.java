@@ -15,6 +15,8 @@ import java.util.Set;
 import java.util.HashSet;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
+import eNanoMapper.OntoLabel;
+
 /**
  *
  * @author JKChang
