@@ -26,19 +26,19 @@ import eNanoMapper.OntoLabel;
  */
 public class imple {
 
-    public static void main(String[] args) throws IOException{
-        CsvFileReader reader = new CsvFileReader();
-        String[] header = {"name", "label", "URI", "supname", "supuri", "def"};
-        File csvFile = new File("fruit.csv");
-        reader.read(header, csvFile);
+    public static void main(String[] args) throws IOException {
+        
+        String [] test = {"apple", "banana", "piapple"};
         
         
-        
-        
-        
-        
-        
+//        //test csvFile Reader
+//        CsvFileReader reader = new CsvFileReader();
+//        String[] header = {"name", "label", "URI", "supname", "supuri", "def"};
+//        File csvFile = new File("fruit.csv");
+//        reader.read(header, csvFile);
 
+        
+        
 // Test List all the entity lables:  throws OWLOntologyCreationException, FileNotFoundException, IOException
 //        File file = new File ("src\\main\\resources\\iao-ext.owl");
 //        OntoLabel labels = new OntoLabel(file);

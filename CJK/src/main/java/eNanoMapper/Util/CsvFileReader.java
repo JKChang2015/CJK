@@ -1,22 +1,7 @@
 package eNanoMapper.Util;
 
-import java.io.IOException;
-import java.util.ArrayList;
 
 import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.io.BufferedWriter;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import jxl.write.WriteException;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -47,11 +32,6 @@ public class CsvFileReader {
     private final String ENTITY_SUPURI = "supuri";
     private final String ENTITY_DEF = "def";
 
-    public static void readCSVFile(String header, String owlFile, String CSVFile, String termURI, int StartID) {
-        String outputOWL = owlFile.substring(0, owlFile.lastIndexOf('.')) + "_res.owl";
-        String outputCSV = CSVFile.substring(0, CSVFile.lastIndexOf('.')) + "_res.xls";
-
-    }
 
     public ArrayList<OntoEntity> read(String[] header, File CSVFile) throws IOException {
 

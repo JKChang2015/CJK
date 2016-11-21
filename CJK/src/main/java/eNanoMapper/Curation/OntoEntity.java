@@ -1,5 +1,7 @@
 package eNanoMapper.Curation;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author JKChang
@@ -29,6 +31,14 @@ public class OntoEntity {
         this.supURI = supURI;
         this.def = def;
 
+    }
+    
+    public ArrayList<String> getList(){
+        ArrayList<String> res = new ArrayList<String>();
+        res.add(name);
+        res.add(def);
+        
+        return res;
     }
 
     public String getName() {

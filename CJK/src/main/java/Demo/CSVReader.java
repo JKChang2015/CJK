@@ -19,7 +19,7 @@ import org.apache.commons.csv.CSVRecord;
  */
 public class CSVReader {
 
-//CSV file header
+    //CSV file header
     private static final String[] FILE_HEADER_MAPPING = {"id", "firstName", "lastName", "gender", "age"};
 
     //Student attributes
