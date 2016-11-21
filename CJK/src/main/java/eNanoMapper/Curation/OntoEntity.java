@@ -7,15 +7,29 @@ package eNanoMapper.Curation;
  * @Description: ontology classes
  *
  */
-
 public class OntoEntity {
-    
+
     private String name;
     private String label;
     private String uri;
     private String supClassName;
     private String supURI;
     private String def;
+
+    public OntoEntity() {
+
+    }
+
+    public OntoEntity(String name, String label, String uri, String supClassName,
+            String supURI, String def) {
+        this.name = name;
+        this.label = label;
+        this.uri = uri;
+        this.supClassName = supClassName;
+        this.supURI = supURI;
+        this.def = def;
+
+    }
 
     public String getName() {
         return name;
@@ -64,6 +78,5 @@ public class OntoEntity {
     public void setDef(String def) {
         this.def = def;
     }
-    
-    
+
 }
