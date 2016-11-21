@@ -9,7 +9,6 @@ import jxl.write.WritableSheet;
 import jxl.write.Label;
 
 import org.semanticweb.owlapi.*;
-import eNM.Matching.OntoLabel;
 
 import java.util.ArrayList;
 import java.util.HashSet;

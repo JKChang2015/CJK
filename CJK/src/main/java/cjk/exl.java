@@ -8,8 +8,9 @@ import jxl.write.WritableSheet;
 import jxl.write.Label;
 
 import eNanoMapper.Mapping.KeywordLoader;
+import eNanoMapper.OntoLabel;
 import org.semanticweb.owlapi.*;
-import eNM.Matching.OntoLabel;
+
 
 import java.util.Set;
 import java.util.HashSet;

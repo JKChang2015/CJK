@@ -20,6 +20,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import eNanoMapper.Mapping.KeywordLoader;
+import eNanoMapper.OntoLabel;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
