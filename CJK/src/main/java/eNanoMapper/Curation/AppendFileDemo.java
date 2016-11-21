@@ -1,4 +1,4 @@
-package eNM.Curator;
+package eNanoMapper.Curation;
 
 import java.io.File;
 import java.io.FileWriter;
