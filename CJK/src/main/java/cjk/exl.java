@@ -7,7 +7,7 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WritableSheet;
 import jxl.write.Label;
 
-import eNM.Matching.KeywordFile;
+import eNanoMapper.Mapping.KeywordLoader;
 import org.semanticweb.owlapi.*;
 import eNM.Matching.OntoLabel;
 
@@ -33,7 +33,7 @@ public class exl {
         File ontoFile = new File(ontoPath);
         File keywordFile = new File(kPath);
 
-        KeywordFile kf = new KeywordFile(keywordFile);
+        KeywordLoader kf = new KeywordLoader(keywordFile);
         keywords = kf.getkeywords();
         OntoLabel lb = new OntoLabel(ontoFile); //===================
         ontoLabels = lb.getlabel();

@@ -8,7 +8,6 @@ import jxl.write.WritableWorkbook;
 import jxl.write.WritableSheet;
 import jxl.write.Label;
 
-import eNM.Matching.KeywordFile;
 import org.semanticweb.owlapi.*;
 import eNM.Matching.OntoLabel;
 

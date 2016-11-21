@@ -6,7 +6,6 @@
  */
 package cjk;
 
-import eNM.Matching.KeywordFile;
 import eNM.Matching.MapTerm;
 import eNM.Matching.OntoFile;
 import java.io.File;

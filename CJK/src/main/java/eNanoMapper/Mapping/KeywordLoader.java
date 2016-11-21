@@ -1,23 +1,24 @@
-package eNM.Matching;
+package eNanoMapper.Mapping;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 /**
  *
- * @author jkchang
+ * @author JKChang
+ * @date 21-Nov-2016
+ * @Description: Load keywords to Sets
+ *
  */
-public class KeywordFile {
+public class KeywordLoader {
 
     Set<String> keywords = new HashSet<String>();
 
-    public KeywordFile(File file) throws IOException {
+    public KeywordLoader(File file) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(file));
         String line = reader.readLine().trim();
         int count = 0;
@@ -32,5 +33,4 @@ public class KeywordFile {
     public Set<String> getkeywords() {
         return keywords;
     }
-
 }
