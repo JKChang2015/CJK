@@ -53,7 +53,7 @@ public class CsvFileReader {
 
     }
 
-    public ArrayList<OntoEntity> read(String header, File CSVFile) throws IOException {
+    public ArrayList<OntoEntity> read(String[] header, File CSVFile) throws IOException {
 
         FileReader fileReader = null;
         CSVParser csvFilePaser = null;
@@ -75,8 +75,11 @@ public class CsvFileReader {
             
             for(OntoEntity enti : ontoEntities){
                 System.out.println(enti.getName());
+                System.out.println(enti.getLabel());
                 System.out.println(enti.getUri());
+                System.out.println(enti.getSupClassName());
                 System.out.println(enti.getSupURI());
+                System.out.println(enti.getDef());
                 System.out.println("============================== \n");
             }
 

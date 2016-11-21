@@ -2,8 +2,8 @@ package Ext;
 
 import eNanoMapper.Curation.OntoEntity;
 import eNanoMapper.Curation.Curator;
+import eNanoMapper.Util.CsvFileReader;
 import eNM.Matching.*;
-
 
 import java.io.InputStream;
 import java.io.IOException;
@@ -26,12 +26,19 @@ import eNanoMapper.OntoLabel;
  */
 public class imple {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
+        CsvFileReader reader = new CsvFileReader();
+        String[] header = {"name", "label", "URI", "supname", "supuri", "def"};
+        File csvFile = new File("fruit.csv");
+        reader.read(header, csvFile);
         
         
         
-       
         
+        
+        
+        
+
 // Test List all the entity lables:  throws OWLOntologyCreationException, FileNotFoundException, IOException
 //        File file = new File ("src\\main\\resources\\iao-ext.owl");
 //        OntoLabel labels = new OntoLabel(file);
@@ -40,7 +47,6 @@ public class imple {
 //        for (String label : result) {
 //            System.out.println(label);
 //        }
-        
         // Ontology Example:
 //        OntoEntity cl = new OntoEntity();
 //        cl.setName("algorithm type");
@@ -52,7 +58,6 @@ public class imple {
 //        
 //        Curator curator = new Curator();
 //        System.out.println(curator.curate(cl));
-        
     }
 
 }
