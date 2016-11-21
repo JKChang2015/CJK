@@ -1,5 +1,7 @@
 package eNM.Matching;
 
+import eNanoMapper.Mapping.OntoLoader;
+import eNanoMapper.Mapping.KeywordLoader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FilenameFilter;
@@ -38,7 +40,7 @@ public class Matching {
         File kFile = new File(kPath);
 
         try {
-            KeywordFile keyword = new KeywordFile(kFile);
+            KeywordLoader keyword = new KeywordLoader(kFile);
             keywords = keyword.getkeywords();
             System.out.println("Finished loading keywords.... ");
         } catch (IOException e) {
@@ -77,7 +79,7 @@ public class Matching {
                 System.out.println("=================================");
 
                 // load Ontology & labels
-                OntoFile ontoF = new OntoFile(IRI.create(owlURL));
+                OntoLoader ontoF = new OntoLoader(IRI.create(owlURL));
                 ontoF.merge();
                 labels = ontoF.getLabels();
 

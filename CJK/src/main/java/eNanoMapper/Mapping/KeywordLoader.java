@@ -11,7 +11,7 @@ import java.util.Set;
  *
  * @author JKChang
  * @date 21-Nov-2016
- * @Description: Load keywords to Sets
+ * @Description: Load keywords txt file to Sets
  *
  */
 public class KeywordLoader {

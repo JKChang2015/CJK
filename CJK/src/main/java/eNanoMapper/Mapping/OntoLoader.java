@@ -1,4 +1,4 @@
-package eNM.Matching;
+package eNanoMapper.Mapping;
 
 import org.semanticweb.owlapi.model.OWLOntology;
 import java.io.InputStream;
@@ -28,17 +28,17 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
  *
  * @author jkchang
  */
-public class OntoFile {
+public class OntoLoader {
 
     private OWLOntology onto;
     private OWLOntologyManager man;
 
     // load the ontology from URL
-    public OntoFile(Properties props) throws OWLOntologyCreationException {
+    public OntoLoader(Properties props) throws OWLOntologyCreationException {
         this(IRI.create(props.getProperty("owl")));  //--> *(String URL)
     }
 
-    public OntoFile(IRI iri) throws OWLOntologyCreationException {
+    public OntoLoader(IRI iri) throws OWLOntologyCreationException {
         System.out.println("loading ontology file form " + iri.toString() );
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
@@ -46,11 +46,11 @@ public class OntoFile {
     }
 
     // load the from owlFile:
-    public OntoFile(File owlFile) throws OWLOntologyCreationException, FileNotFoundException {
+    public OntoLoader(File owlFile) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile));  // --> (InputStream owlFile)
     }
 
-    public OntoFile(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
+    public OntoLoader(InputStream owlFile) throws OWLOntologyCreationException, FileNotFoundException {
         System.out.println("loading ontology file form " + owlFile.toString());
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);

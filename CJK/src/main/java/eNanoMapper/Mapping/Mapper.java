@@ -1,11 +1,14 @@
 package eNanoMapper.Mapping;
 
+import eNM.Matching.MapTerm;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -40,12 +43,28 @@ public class Mapper {
             OWLOntologyCreationException, FileNotFoundException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
-        keywords = new HashSet<String>();
+        this.keywords = keywords;
     }
     //=======================================================================
 
-    public void mapping() {
+    public Map ExactMapping() {
 
+        Map<String, HashSet<MapTerm>> exactMap = new HashMap<String, HashSet<MapTerm>>();
+        for (String keyword : keywords) {
+            exactMap.put(keyword, null);
+        }
+
+        return exactMap;
+
+    }
+
+    public Map FuzzyMapping() {
+        Map<String, HashSet<MapTerm>> fuzzyMap = new HashMap<String, HashSet<MapTerm>>();
+        for (String keyword : keywords) {
+            fuzzyMap.put(keyword, null);
+        }
+
+        return fuzzyMap;
     }
 
 }

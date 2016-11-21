@@ -19,6 +19,8 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import eNanoMapper.Mapping.KeywordLoader;
+
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.AddOntologyAnnotation;
 import org.semanticweb.owlapi.model.IRI;
@@ -56,7 +58,7 @@ public class Mapper {
 
     public Mapper(File keywordFile, InputStream owlFile) throws
             OWLOntologyCreationException, IOException {
-        this(new KeywordFile(keywordFile).getkeywords(), owlFile);
+        this(new KeywordLoader(keywordFile).getkeywords(), owlFile);
     }
 
     public Mapper(Set<String> keywords, InputStream owlFile) throws
@@ -78,7 +80,7 @@ public class Mapper {
         System.out.println("Loaded keywordFile from " + kPath);
 
         try {
-            KeywordFile keyword = new KeywordFile(kFile);
+            KeywordLoader keyword = new KeywordLoader(kFile);
             keySet = keyword.getkeywords();
         } catch (Exception e) {
             e.printStackTrace();

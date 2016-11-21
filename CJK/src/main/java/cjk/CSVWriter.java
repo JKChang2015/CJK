@@ -7,7 +7,7 @@
 package cjk;
 
 import eNM.Matching.MapTerm;
-import eNM.Matching.OntoFile;
+import eNanoMapper.Mapping.OntoLoader;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -147,7 +147,7 @@ public class CSVWriter {
 //
 //        String path = "C:\\GitHub\\CJK\\ontologies\\fruit.owl";
 //        File file = new File(path);
-//        OntoFile onto = new OntoFile(file);
+//        OntoLoader onto = new OntoLoader(file);
 //
 //        Map<String, String> res = new HashMap<String, String>();
 //        res = onto.getLabels();
