@@ -38,17 +38,14 @@ import eNanoMapper.Curation.OntoEntity;
 public class CsvFileReader {
 
     private final ArrayList<OntoEntity> ontoEntities = new ArrayList<OntoEntity>();
-    
-    
+
     // ontology entity attribute
-    private final String ONTOENTITY_NAME = "name";
-    private final String ONTOENTITY_LABEL = "label";
-    private final String ONTOENTITY_URI = "URI";
-    private final String ONTOENTITY_SUPNAME = "supname";
-    private final String ONTOENTITY_SUPURI = "supuri";
-    private final String ONTOENTITY_DEF = "def";
-    
-    
+    private final String ENTITY_NAME = "name";
+    private final String ENTITY_LABEL = "label";
+    private final String ENTITY_URI = "URI";
+    private final String ENTITY_SUPNAME = "supname";
+    private final String ENTITY_SUPURI = "supuri";
+    private final String ENTITY_DEF = "def";
 
     public static void readCSVFile(String header, String owlFile, String CSVFile, String termURI, int StartID) {
         String outputOWL = owlFile.substring(0, owlFile.lastIndexOf('.')) + "_res.owl";
@@ -57,31 +54,39 @@ public class CsvFileReader {
     }
 
     public ArrayList<OntoEntity> read(String header, File CSVFile) throws IOException {
-       
-        
-        
+
         FileReader fileReader = null;
         CSVParser csvFilePaser = null;
         CSVFormat csvFileFormat = CSVFormat.DEFAULT.withHeader(header);
-        
+
         try {
             fileReader = new FileReader(CSVFile);
             csvFilePaser = new CSVParser(fileReader, csvFileFormat);
             List csvRecords = csvFilePaser.getRecords();
-            
+
             for (int i = 1; i < csvRecords.size(); i++) {
                 CSVRecord record = (CSVRecord) csvRecords.get(i);
-                OntoEntity ontoEnti = new OntoEntity();
-                
+                OntoEntity entity = new OntoEntity(record.get(ENTITY_NAME),
+                        record.get(ENTITY_LABEL), record.get(ENTITY_URI),
+                        record.get(ENTITY_SUPNAME), record.get(ENTITY_SUPURI),
+                        record.get(ENTITY_DEF));
+                ontoEntities.add(entity);
+
             }
-            
-            
+
         } catch (Exception e) {
-            
-            
+            System.out.println("Error in CsvFileReader");
+            e.printStackTrace();
+
+        } finally {
+            try {
+                fileReader.close();
+                csvFilePaser.close();
+            } catch (IOException e) {
+                System.out.println("Error while closing fileReader/csvFileParser !!!");
+                e.printStackTrace();
+            }
         }
-        
-        
 
         return ontoEntities;
     }
