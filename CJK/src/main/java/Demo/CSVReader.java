@@ -1,5 +1,6 @@
-package cjk;
+package Demo;
 
+import cjk.Student;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;

@@ -4,8 +4,9 @@
 @author JKChang
 @data Aug 10, 2016
  */
-package cjk;
+package Demo;
 
+import cjk.Student;
 import eNM.Matching.MapTerm;
 import eNanoMapper.Mapping.OntoLoader;
 import java.io.File;

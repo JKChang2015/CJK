@@ -1,6 +1,6 @@
 package eNanoMapper.Util;
 
-import eNM.Curator.OntoEntity;
+import eNanoMapper.Curation.OntoEntity;
 import eNM.Matching.MapTerm;
 import java.io.File;
 import jxl.Workbook;
