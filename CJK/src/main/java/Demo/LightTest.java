@@ -65,15 +65,17 @@ public class LightTest {
     }
 
     public static void main(String[] args) {
+
+
         System.out.println("test enum traversal");
         testTraversalEnum();
-        
+
         System.out.println("test enumMap");
         testEnumMap();
-        
+
         System.out.println("test enmuSet");
         testEnumSet();
-        
+
     }
 
 }
