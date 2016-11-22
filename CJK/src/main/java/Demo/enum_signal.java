@@ -9,11 +9,13 @@ package Demo;
  */
 public class enum_signal {
 
+    
+
     public enum Signal {
         GREEN, RED, YELLOW;
     }
-
-    Signal color = Signal.RED;
+    
+    Signal color;
 
     public void change() {
         switch (color) {
