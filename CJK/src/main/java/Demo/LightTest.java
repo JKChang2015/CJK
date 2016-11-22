@@ -31,8 +31,8 @@ public class LightTest {
         Light[] allLight = Light.values();
         for (Light aLight : allLight) {
             System.out.println("current light name: " + aLight.name());
-            System.out.println("current light ordinal" + aLight.ordinal());
-            System.out.println("current light" + aLight);
+            System.out.println("current light ordinal: " + aLight.ordinal());
+            System.out.println("current light " + aLight);
         }
     }
 
@@ -58,7 +58,7 @@ public class LightTest {
 
         for (Light aLightSetElement : currEnumSet) {
 
-            System.out.println("当前EnumSet中数据为：" + aLightSetElement);
+            System.out.println("Current set is " + aLightSetElement);
 
         }
 
@@ -66,7 +66,14 @@ public class LightTest {
 
     public static void main(String[] args) {
         System.out.println("test enum traversal");
-
+        testTraversalEnum();
+        
+        System.out.println("test enumMap");
+        testEnumMap();
+        
+        System.out.println("test enmuSet");
+        testEnumSet();
+        
     }
 
 }
