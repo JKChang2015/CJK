@@ -66,7 +66,6 @@ public class LightTest {
 
     public static void main(String[] args) {
 
-
         System.out.println("test enum traversal");
         testTraversalEnum();
 
