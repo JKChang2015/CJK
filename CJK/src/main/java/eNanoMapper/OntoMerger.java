@@ -42,7 +42,8 @@ public class OntoMerger {
             OWLOntologyCreationException, IOException {
         this.onto = ontology;
     }
-
+    //=======================================================================
+    
     public OWLOntology merge() {
         IRI iri = onto.getOntologyID().getOntologyIRI().get();
         System.out.println("Loaded ontology:" + iri);
