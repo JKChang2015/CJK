@@ -32,7 +32,7 @@ public class imple {
 
     public static void main(String[] args) throws OWLOntologyCreationException, IOException {
         File file = new File("src\\main\\resources\\iao-ext.owl");
-        OntoMerger merger = new OntoMerger(file);
+        OntoMerger merger = new OntoMerger("http://purl.enanomapper.org/onto/enanomapper.owl");
         OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
         OWLOntology onto = man.createOntology();
         onto = merger.merge();
