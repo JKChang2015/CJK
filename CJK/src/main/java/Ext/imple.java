@@ -3,6 +3,7 @@ package Ext;
 import eNanoMapper.Curation.OntoEntity;
 import eNanoMapper.Curation.Curator;
 import eNanoMapper.Util.CsvFileReader;
+import eNanoMapper.OntoMerger;
 import eNM.Matching.*;
 
 import java.io.InputStream;
@@ -26,12 +27,16 @@ import eNanoMapper.OntoLabel;
  */
 public class imple {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws OWLOntologyCreationException {
+        File file = new File ("src\\main\\resources\\iao-ext.owl");
+        OntoMerger merger = new OntoMerger();
+        merger.merge(file);
         
-        String [] test = {"apple", "banana", "piapple"};
         
         
-//        //test csvFile Reader
+        
+        
+//        //test csvFile Reader, throws IOException
 //        CsvFileReader reader = new CsvFileReader();
 //        String[] header = {"name", "label", "URI", "supname", "supuri", "def"};
 //        File csvFile = new File("fruit.csv");

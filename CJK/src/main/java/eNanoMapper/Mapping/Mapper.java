@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 import org.semanticweb.owlapi.apibinding.OWLManager;
@@ -27,6 +28,7 @@ public class Mapper {
     private OWLOntologyManager man;
     private OWLOntology onto;
     private Set<String> keywords;
+    private ArrayList<MapTerm> res;
 
     //===========================constructor================================
     public Mapper(File keywordFile, File owlFile) throws
@@ -52,6 +54,7 @@ public class Mapper {
         Map<String, HashSet<MapTerm>> exactMap = new HashMap<String, HashSet<MapTerm>>();
         for (String keyword : keywords) {
             exactMap.put(keyword, null);
+            
         }
 
         return exactMap;
