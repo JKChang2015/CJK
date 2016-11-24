@@ -17,6 +17,9 @@ import java.util.HashSet;
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 import eNanoMapper.OntoLabel;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntologyManager;
+import org.semanticweb.owlapi.model.OWLOntology;
 
 /**
  *
@@ -27,23 +30,20 @@ import eNanoMapper.OntoLabel;
  */
 public class imple {
 
-    public static void main(String[] args) throws OWLOntologyCreationException {
-        File file = new File ("src\\main\\resources\\iao-ext.owl");
-        OntoMerger merger = new OntoMerger();
-        merger.merge(file);
+    public static void main(String[] args) throws OWLOntologyCreationException, IOException {
+        File file = new File("src\\main\\resources\\iao-ext.owl");
+        OntoMerger merger = new OntoMerger(file);
+        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+        OWLOntology onto = man.createOntology();
+        onto = merger.merge();
+        System.out.println("");
         
-        
-        
-        
-        
+
 //        //test csvFile Reader, throws IOException
 //        CsvFileReader reader = new CsvFileReader();
 //        String[] header = {"name", "label", "URI", "supname", "supuri", "def"};
 //        File csvFile = new File("fruit.csv");
 //        reader.read(header, csvFile);
-
-        
-        
 // Test List all the entity lables:  throws OWLOntologyCreationException, FileNotFoundException, IOException
 //        File file = new File ("src\\main\\resources\\iao-ext.owl");
 //        OntoLabel labels = new OntoLabel(file);

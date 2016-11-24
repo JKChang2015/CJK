@@ -52,10 +52,15 @@ public class Mapper {
     public Map ExactMapping() {
 
         Map<String, HashSet<MapTerm>> exactMap = new HashMap<String, HashSet<MapTerm>>();
+        // keyword set initialization
         for (String keyword : keywords) {
             exactMap.put(keyword, null);
-            
         }
+        
+        // ontology labels initialization
+        
+        
+        
 
         return exactMap;
 
@@ -63,9 +68,12 @@ public class Mapper {
 
     public Map FuzzyMapping() {
         Map<String, HashSet<MapTerm>> fuzzyMap = new HashMap<String, HashSet<MapTerm>>();
+         // keyword set initialization
         for (String keyword : keywords) {
             fuzzyMap.put(keyword, null);
         }
+        
+        // ontology labels initialization
 
         return fuzzyMap;
     }
