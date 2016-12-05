@@ -31,13 +31,23 @@ import org.semanticweb.owlapi.model.OWLOntology;
 public class imple {
 
     public static void main(String[] args) throws OWLOntologyCreationException, IOException {
-        File file = new File("src\\main\\resources\\iao-ext.owl");
-        OntoMerger merger = new OntoMerger("http://purl.enanomapper.org/onto/enanomapper.owl");
-        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
-        OWLOntology onto = man.createOntology();
-        onto = merger.merge();
-        System.out.println("");
         
+         File file = new File("src\\main\\resources\\1.owl");
+         OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+         OWLOntology onto = man.loadOntologyFromOntologyDocument(file);
+         
+         OntoLabel labels = new OntoLabel(onto);
+         labels.getlabel();
+       
+        
+//        //merge the ontologies
+//        File file = new File("src\\main\\resources\\iao-ext.owl");
+//        OntoMerger merger = new OntoMerger("http://purl.enanomapper.org/onto/enanomapper.owl");
+//        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+//        OWLOntology onto = man.createOntology();
+//        onto = merger.merge();
+//        System.out.println("");
+//        
 
 //        //test csvFile Reader, throws IOException
 //        CsvFileReader reader = new CsvFileReader();
