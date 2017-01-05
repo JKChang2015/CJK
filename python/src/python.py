@@ -1,6 +1,4 @@
-# To change this license header, choose License Headers in Project Properties.
-# To change this template file, choose Tools | Templates
-# and open the template in the editor.
+print "hello world"
+l = [1,7,3,4,5,6,9]
 
-if __name__ == "__main__":
-    print "Hello World"
+                
