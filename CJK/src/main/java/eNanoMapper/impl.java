@@ -35,6 +35,7 @@ public class impl {
         OntoLabelChecker checker = new OntoLabelChecker();
         HashMap<String, ArrayList<String>> dupli = checker.checkDuplicated(owlFile);
         System.out.println("size of duplicated term set is " + dupli.size());
+        checker.listDuplicated();
         System.out.println("");
 
 //        ArrayList<String> unLabel = checker.getNonLabelIRI();
