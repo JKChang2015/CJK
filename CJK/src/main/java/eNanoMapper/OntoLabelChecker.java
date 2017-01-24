@@ -19,60 +19,58 @@ import org.semanticweb.owlapi.model.OWLLiteral;
 /**
  *
  * @author JKChang
- * @date 17-Nov-2016
- * @Description: load labels from Ontology
+ * @date 23-Jan-2017
+ * @Description: Checking the labels of the ontology, if there are some null
  *
  */
-public class OntoLabel {
+public class OntoLabelChecker {
 
     private OWLOntologyManager man;
     private Set<String> labels = new HashSet<String>();
     private ArrayList<String> allLabel = new ArrayList<String>();
-    private Set<String> URI = new HashSet<String>();
+    private ArrayList<String> URI = new ArrayList<String>();
 
-    public OntoLabel(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
+    public OntoLabelChecker(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
         this(OWLManager.createConcurrentOWLOntologyManager().loadOntologyFromOntologyDocument(file));
     }
 
-    public OntoLabel(OWLOntology onto) {
-        //PrintWriter out = new PrintWriter(new FileWriter("labels.txt", true), true);
-        int count = 0;
+    public OntoLabelChecker(OWLOntology onto) {
+
         man = OWLManager.createConcurrentOWLOntologyManager();
         Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
         OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
 
-        System.out.println(" size of classes is " + classes.size());
+        System.out.println("size of the ontology is " + classes.size());
 
+        int labelCount = 0;
         for (OWLClass clazz : classes) {
-            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());  //get all the Annotation Assertion of 
-            boolean added = false;
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
+
+            boolean hasLabel = false;
 
             for (OWLAnnotationAssertionAxiom annotation : annotations) {
+
                 if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
-                    // System.out.println(result);
-                    labels.add(result.trim());
-                    added = true;
-                    //                   System.out.println(count + ".  " + result);
-//                    out.println(result);
+                    allLabel.add(result.trim());
+                    hasLabel = true;
                 }
             }
-            if (!added) {
+            if (!hasLabel) {
                 String uri = clazz.getIRI().toString();
                 URI.add(uri);
             }
         }
-        System.out.println("size of labels sets is " + labels.size());
+        System.out.println("size of labels sets is " + allLabel.size());
         System.out.println("size of unlabel classes is " + URI.size());
     }
 
-    public Set<String> getlabel() {
-        return labels;
+    public ArrayList<String> getlabel() {
+        return allLabel;
     }
 
-    public Set<String> getNonLabel() {
+    public ArrayList<String> getNonLabel() {
         return URI;
     }
-
 }
