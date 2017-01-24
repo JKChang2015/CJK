@@ -6,6 +6,7 @@ import java.io.File;
 import java.util.Set;
 import java.util.HashSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
@@ -23,44 +24,39 @@ import org.semanticweb.owlapi.model.OWLLiteral;
  * @Description:
  *
  */
-
 public class impl {
-    public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException, IOException{
-        
+
+    public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException, IOException {
+
         String path = "C:\\Users\\jkchang\\Desktop\\mee.owl";
         File owlFile = new File(path);
         //OntoLabel ol = new OntoLabel(owlFile);
-        
-        OntoLabelChecker checker = new OntoLabelChecker(owlFile);
-        ArrayList<String> unLabel = checker.getNonLabel();
-        ArrayList<String> label = checker.getlabel();
-        
-        int count = 0;
-        
-        for (int i = 0; i < label.size(); i++) {
-            for (int j = i+1; j < label.size(); j++) {
-                if (i != j && label.get(i).equalsIgnoreCase(label.get(j))){
-                    count ++;
-                    System.out.println(count + ". "+label.get(i));
-                }
-            }
-        }
-        
-        
-        
-        
-       
-        
+
+        OntoLabelChecker checker = new OntoLabelChecker();
+        HashMap<String, ArrayList<String>> dupli = checker.checkDuplicated(owlFile);
+        System.out.println("size of duplicated term set is " + dupli.size());
+        System.out.println("");
+
+//        ArrayList<String> unLabel = checker.getNonLabelIRI();
+//        ArrayList<String> label = checker.getlabels();
+//        
+//        int count = 0;
+//        
+//        for (int i = 0; i < label.size(); i++) {
+//            for (int j = i+1; j < label.size(); j++) {
+//                if (i != j && label.get(i).equalsIgnoreCase(label.get(j))){
+//                    count ++;
+//                    System.out.println(count + ". "+label.get(i));
+//                }
+//            }
+//        }
+//        
 //        Set<String> res = ol.getNonLabel();
 //        int ct = 0;
 //        for (String s: res) {
 //            ct++;
 //            System.out.println(ct + ". "+s);
 //        }
-        
-        
-        
-        
     }
 
 }

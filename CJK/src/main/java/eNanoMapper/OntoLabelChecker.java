@@ -5,7 +5,10 @@ import java.io.FileNotFoundException;
 import java.io.File;
 import java.util.Set;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Iterator;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
@@ -20,36 +23,36 @@ import org.semanticweb.owlapi.model.OWLLiteral;
  *
  * @author JKChang
  * @date 23-Jan-2017
- * @Description: Checking the labels of the ontology, if there are some null
+ * @Description: Checking the labels of the ontology
  *
  */
 public class OntoLabelChecker {
-
-    private OWLOntologyManager man;
-    private Set<String> labels = new HashSet<String>();
+    
     private ArrayList<String> allLabel = new ArrayList<String>();
-    private ArrayList<String> URI = new ArrayList<String>();
-
+    private ArrayList<String> IRI = new ArrayList<String>();
+    private HashMap<String, ArrayList<String>> dupli = new HashMap<String, ArrayList<String>>();
+    
+    public OntoLabelChecker() {
+        
+    }
+    
     public OntoLabelChecker(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
         this(OWLManager.createConcurrentOWLOntologyManager().loadOntologyFromOntologyDocument(file));
     }
-
+    
     public OntoLabelChecker(OWLOntology onto) {
-
-        man = OWLManager.createConcurrentOWLOntologyManager();
+        
+        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
         Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
         OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
 
-        System.out.println("size of the ontology is " + classes.size());
-
-        int labelCount = 0;
+        System.out.println("The ontology inclued " + classes.size() + " classes");
+        
         for (OWLClass clazz : classes) {
-            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
-
             boolean hasLabel = false;
-
+            
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
             for (OWLAnnotationAssertionAxiom annotation : annotations) {
-
                 if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
                     OWLLiteral lr = (OWLLiteral) annotation.getValue();
                     String result = (String) lr.getLiteral();
@@ -57,20 +60,90 @@ public class OntoLabelChecker {
                     hasLabel = true;
                 }
             }
-            if (!hasLabel) {
+            
+            if (!hasLabel) {  //If don't have a Label
                 String uri = clazz.getIRI().toString();
-                URI.add(uri);
+                IRI.add(uri);
+            }
+            
+        }
+        
+        System.out.println("size of labels sets is " + allLabel.size());
+        System.out.println("size of unlabel classes is " + IRI.size());
+    }
+    
+    public HashMap<String, ArrayList<String>> checkDuplicated(File file) throws OWLOntologyCreationException, FileNotFoundException, IOException {
+        
+        return this.checkDuplicated(OWLManager.createConcurrentOWLOntologyManager().loadOntologyFromOntologyDocument(file));
+    }
+    
+    public HashMap<String, ArrayList<String>> checkDuplicated(OWLOntology onto) {
+        
+        OWLOntologyManager man = OWLManager.createConcurrentOWLOntologyManager();
+        Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
+        OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
+
+        System.out.println("The ontology inclued " + classes.size() + " classes");
+        
+        for (OWLClass clazz : classes) {
+            
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
+            for (OWLAnnotationAssertionAxiom annotation : annotations) {
+                if (annotation.getProperty().equals(factory.getRDFSLabel()) && annotation.getValue() instanceof OWLLiteral) {
+                    OWLLiteral lr = (OWLLiteral) annotation.getValue();
+                    String result = (String) lr.getLiteral().trim();
+                    
+                    if (dupli.containsKey(result)) {
+                        ArrayList list = dupli.get(result);
+                        list.add(clazz.getIRI().toString());
+                    } else {
+                        ArrayList<String> list = new ArrayList<String>();
+                        list.add(clazz.getIRI().toString());
+                        dupli.put(result, list);
+                    }
+                    
+                }
             }
         }
-        System.out.println("size of labels sets is " + allLabel.size());
-        System.out.println("size of unlabel classes is " + URI.size());
+        
+        Iterator it = dupli.keySet().iterator();
+        while (it.hasNext()) {
+            ArrayList list = dupli.get(it);
+            if (list.size() < 2) {
+                dupli.remove(it);
+            }
+        }
+        
+        return dupli;
     }
-
-    public ArrayList<String> getlabel() {
+    
+    public ArrayList<String> getlabels() {
         return allLabel;
     }
-
-    public ArrayList<String> getNonLabel() {
-        return URI;
+    
+    public ArrayList<String> getNonLabelIRI() { //return IRI of non-labeled classes
+        return IRI;
     }
+    
+    public void listLabels() { // list all the labels
+        this.showList(allLabel);
+    }
+    
+    public void listNonLableURI() {  //list all the non-labeled classes's IRI
+        this.showList(IRI);
+    }
+    
+    public void listDuplicated() {
+        
+    }
+    
+    private void showList(ArrayList<String> list) {
+        int count = 0;
+        
+        for (String s : list) {
+            count++;
+            System.out.println(count + ". " + s);
+        }
+    }
+    
 }
