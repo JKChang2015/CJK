@@ -56,7 +56,8 @@ public class CSVReader {
             for (int i = 1; i < csvRecords.size(); i++) {
                 CSVRecord record = (CSVRecord) csvRecords.get(i);
                 //Create a new student object and fill his data
-                Student student = new Student(Long.parseLong(record.get(STUDENT_ID)), record.get(STUDENT_FNAME), record.get(STUDENT_LNAME), record.get(STUDENT_GENDER), Integer.parseInt(record.get(STUDENT_AGE)));
+                Student student = new Student(Long.parseLong(record.get(STUDENT_ID)), record.get(STUDENT_FNAME),
+                        record.get(STUDENT_LNAME), record.get(STUDENT_GENDER), Integer.parseInt(record.get(STUDENT_AGE)));
                 students.add(student);
             }
 
@@ -80,7 +81,7 @@ public class CSVReader {
         }
 
     }
-    
+
     public static void main(String[] args) {
         CSVReader reader = new CSVReader();
         reader.readCsvFile("abb.csv");
