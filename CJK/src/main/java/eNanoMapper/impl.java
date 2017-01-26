@@ -7,6 +7,7 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Scanner;
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.OWLAnnotationAssertionAxiom;
@@ -28,16 +29,45 @@ public class impl {
 
     public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException, IOException {
 
-        String path = "C:\\Users\\jkchang\\Desktop\\mee.owl";
-        File owlFile = new File(path);
-        //OntoLabel ol = new OntoLabel(owlFile);
+        File file1 = new File("all class ID.txt");
 
-        OntoLabelChecker checker = new OntoLabelChecker();
-        HashMap<String, ArrayList<String>> dupli = checker.checkDuplicated(owlFile);
-        System.out.println("size of duplicated term set is " + dupli.size());
-        checker.listDuplicated();
+        try {
+            Scanner s1 = new Scanner(file1);
+            ArrayList<String> all = new ArrayList<String>();
+
+            while (s1.hasNext()) {
+                all.add(s1.next());
+            }
+
+            int count = 0;
+            
+            for (String a : all) {
+                String uri = "http://purl.enanomapper.org/onto/ENM_";
+                if(a.contains(uri)){
+                    count++;
+                }
+                 
+            }
+            System.out.println("number of the mannually curated terms is " + count);
+
+         
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("error");
+
+        }
+
         System.out.println("");
 
+//        String path = "C:\\Users\\jkchang\\Desktop\\mee.owl";
+//        File owlFile = new File(path);
+//        //OntoLabel ol = new OntoLabel(owlFile);
+//
+//        OntoLabelChecker checker = new OntoLabelChecker();
+//        HashMap<String, ArrayList<String>> dupli = checker.checkDuplicated(owlFile);
+//        System.out.println("size of duplicated term set is " + dupli.size());
+//        checker.listDuplicated();
+//        System.out.println("");
 //        ArrayList<String> unLabel = checker.getNonLabelIRI();
 //        ArrayList<String> label = checker.getlabels();
 //        
