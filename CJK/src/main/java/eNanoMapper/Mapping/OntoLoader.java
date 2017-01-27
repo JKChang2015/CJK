@@ -39,7 +39,7 @@ public class OntoLoader {
     }
 
     public OntoLoader(IRI iri) throws OWLOntologyCreationException {
-        System.out.println("loading ontology file form " + iri.toString() );
+        System.out.println("loading ontology file form " + iri.toString());
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntology(iri);
 
@@ -97,8 +97,32 @@ public class OntoLoader {
                 }
             }
         }
-
         return labels;
+    }
+
+    public Map<String, String> getDef() {
+        int count = 0;
+        Set<OWLClass> classes = onto.getClassesInSignature(); // load all the classes in Signature
+        OWLDataFactory factory = man.getOWLDataFactory(); // Creat ontology factory
+        Map<String, String> defs = new HashMap<String, String>();
+
+        for (OWLClass clazz : classes) { //for each classes
+            count++;
+            Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());  //get all the Annotation Assertion of 
+            System.out.println(count + ". " + clazz.getIRI().toString());
+            for (OWLAnnotationAssertionAxiom an : annotations) {
+                System.out.println("annoation property"+an.getProperty());
+            }
+            System.out.println(" ");
+
+            if (count == 10) {
+                System.out.println("finish");
+                System.out.println("");
+            }
+
+        }
+
+        return defs;
     }
 
     public OWLOntology getOnto() {

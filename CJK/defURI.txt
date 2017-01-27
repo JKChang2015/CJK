@@ -1,0 +1,10 @@
+http://www.geneontology.org/formats/oboInOwl#def
+http://purl.bioontology.org/ontology/npo#definition
+http://scai.fraunhofer.de/HuPSON#SCAIVPH_00000009
+http://www.ebi.ac.uk/efo/definition
+http://purl.obolibrary.org/obo/IAO_0000115
+http://purl.obolibrary.org/obo/UBPROP_0000001
+http://purl.org/dc/elements/1.1/description
+http://www.geneontology.org/formats/oboInOwl#hasDefinition
+http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+http://purl.obolibrary.org/obo/HP_0040005
