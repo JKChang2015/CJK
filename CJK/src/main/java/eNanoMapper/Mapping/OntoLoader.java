@@ -111,7 +111,7 @@ public class OntoLoader {
             Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());  //get all the Annotation Assertion of 
             System.out.println(count + ". " + clazz.getIRI().toString());
             for (OWLAnnotationAssertionAxiom an : annotations) {
-                System.out.println("annoation property"+an.getProperty());
+                System.out.println("annoation property"+an.getProperty().toStringID());
             }
             System.out.println(" ");
 
