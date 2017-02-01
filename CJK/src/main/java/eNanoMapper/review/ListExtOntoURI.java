@@ -14,9 +14,11 @@ import java.util.ArrayList;
 public class ListExtOntoURI {
 
     public static void main(String[] args) {
+        
+        System.out.println("Working Directory = " + System.getProperty("user.dir"));
 
-        File file1 = new File("/../eNM/all class ID.txt");
-        File file2 = new File("/../eNM/URI.txt"); ///Users/jkchang/Github/CJK/CJK/eNM
+        File file1 = new File("eNM/all class ID.txt");
+        File file2 = new File("eNM/URI of definitions.txt"); 
 
         try {
             Scanner s1 = new Scanner(file1);
