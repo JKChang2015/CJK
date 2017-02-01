@@ -1,4 +1,4 @@
-package eNanoMapper.Util;
+package eNanoMapper.review;
 
 /**
  *
@@ -32,7 +32,8 @@ public class DefChecker {
     //private OWLOntologyManager man;
     public static void main(String[] args) throws OWLOntologyCreationException, FileNotFoundException {
 
-        //load the list of the def URIs
+        ArrayList<String> result= new ArrayList<String>();
+         //load the list of the def URIs
         String defURIList = "defURI.txt";
         File defFile = new File(defURIList);
         Scanner s1 = new Scanner(defFile);
@@ -76,6 +77,7 @@ public class DefChecker {
             }
             if (!hasDef) {
                 unDef++;
+                result.add(clazz.getIRI().toString());
                 System.out.println(clazz.getIRI().toString());
             }
 
