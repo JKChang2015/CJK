@@ -21,6 +21,8 @@ import org.semanticweb.owlapi.model.OWLLiteral;
  * @author JKChang
  * @date 17-Nov-2016
  * @Description: load labels from Ontology
+ *  @inputs: File / OWLOntology
+ *  @outputs: 
  *
  */
 public class OntoLabel {

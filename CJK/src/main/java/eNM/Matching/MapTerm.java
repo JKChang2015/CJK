@@ -7,10 +7,6 @@ package eNM.Matching;
  @date 04-Aug-2016
  */
 
-
-import java.util.Set;
-import java.util.HashSet;
-
 public class MapTerm {
 
     private String label;
