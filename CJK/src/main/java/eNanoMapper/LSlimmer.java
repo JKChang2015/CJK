@@ -1,4 +1,4 @@
-package eNM;
+package eNanoMapper;
 
 import eNanoMapper.Configuration;
 import eNanoMapper.configuration.Instruction;
@@ -58,16 +58,16 @@ import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
  * @author jkchang
  * @date 07-Jul-2016
  */
-public class LSlimmer_r {
+public class LSlimmer {
 
     private OWLOntologyManager man;
     private OWLOntology onto;
 
-    public LSlimmer_r(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
+    public LSlimmer(File owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException, FileNotFoundException {
         this(new FileInputStream(owlFile), mergedOntologyIRI);
     }
 
-    public LSlimmer_r(InputStream owlFile) throws OWLOntologyCreationException {
+    public LSlimmer(InputStream owlFile) throws OWLOntologyCreationException {
         this(owlFile, null);
     }
 
@@ -76,9 +76,15 @@ public class LSlimmer_r {
      * @param mergedOntologyIRI (output IRI)
      * @throws OWLOntologyCreationException
      */
-    public LSlimmer_r(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
+    public LSlimmer(InputStream owlFile, String mergedOntologyIRI) throws OWLOntologyCreationException {
         man = OWLManager.createConcurrentOWLOntologyManager();
         onto = man.loadOntologyFromOntologyDocument(owlFile);
+
+        if (System.getenv("WORKSPACE") != null) {   // Gets the value of the specified environment variable
+            String root = System.getenv("WORKSPACE");
+            System.out.println("Adding mappings with root: " + root);
+            addMappings(man, root); //add local owl file to the URL mapping
+        }
 
         if (mergedOntologyIRI != null) {
             // Load all of the DIRECT IMPORTs ontologies
@@ -111,9 +117,7 @@ public class LSlimmer_r {
     }
 
     public static void main(String[] args) {
-
-        // Load the ontology file from local disk, and slimmed it locally
-        // imput: File    
+        boolean allSucceeded = true;
         String rootFolder = "..\\ontologies\\config\\run";
         System.out.println("Searching configuration files in folder " + rootFolder); //Searching configuration files in .
 
@@ -123,37 +127,6 @@ public class LSlimmer_r {
                 return name.toLowerCase().endsWith(".props");
             }
         });
-
-//        for (File file : files) {
-//
-//            try {
-//                System.out.println("Load local ontology " + file.getName());
-//
-//                // read the prop file
-//                Properties pros = new Properties();
-//                pros.load(new FileReader(file));
-//
-//                String owlURL = pros.getProperty("owl");
-//                String owlFilename = owlURL;
-//                if (owlFilename.contains("/")) {
-//                    owlFilename = owlFilename.substring(owlFilename.lastIndexOf('/') + 1);
-//                }
-//                
-//                System.out.println(rootFolder + "\\"+ owlFilename);
-//
-//                OWLOntologyManager man = OWLManager.createOWLOntologyManager();
-//                OWLDataFactory factory = man.getOWLDataFactory();
-//                File ontoFile = new File(rootFolder + "\\"+ owlFilename);
-//                OWLOntology onto = man.loadOntologyFromOntologyDocument(ontoFile);
-//
-//                System.out.println("Load file " + owlFilename + " from " + rootFolder);
-//
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//                System.out.println("fail to load file");
-//            }
-//
-//        }
 
         for (File file : files) {  // for each property file
             try {
@@ -179,8 +152,8 @@ public class LSlimmer_r {
                 String irisFilename = props.getProperty("iris");
 
                 // 1. read the original ontology
-                File owlFile = new File("..\\ontologies\\config\\run\\" + owlFilename);
-                LSlimmer_r slimmer = new LSlimmer_r(owlFile, slimmedFilename);
+                File owlFile = new File(owlFilename);
+                LSlimmer slimmer = new LSlimmer(owlFile, slimmedFilename);
                 OWLOntology onto = slimmer.getOntology();
                 System.out.println("Loaded Ontology: " + slimmedFilename);
                 System.out.println("Loaded axioms: " + onto.getAxiomCount());
@@ -250,7 +223,7 @@ public class LSlimmer_r {
 
             } catch (Exception e) {
                 e.printStackTrace();
-
+                allSucceeded = false;
             }
         }
     }

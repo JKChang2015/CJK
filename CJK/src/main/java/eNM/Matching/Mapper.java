@@ -39,10 +39,10 @@ import org.semanticweb.owlapi.util.OWLOntologyMerger;
  @date 04-Aug-2016
  Task: mapping query terms with the external ontologies classe labels
 Steps: 1. load query terms
-       2. laad ontologies
-        2.1 merge ontologies
-        2.2 normalization
-       3. mapping terms with each ontologies
+          2. laad ontologies
+              2.1 merge ontologies
+             2.2 normalization
+         3. mapping terms with each ontologies
        
  */
 public class Mapper {
