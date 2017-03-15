@@ -10,17 +10,32 @@ public class Triangle extends TwoDShape {
 
     String style;
 
-    Triangle(String style, double w, double h) {
-        super(w,h);
+    Triangle() {
+        super();
+        style = "none";
+    }
+
+    Triangle(double x) {
+        super(x, "Triangle");
+        style = "filled";
+    }
+
+    Triangle(String style, double width, double height) {
+        super(width, height, "Triangle");
         this.style = style;
     }
 
-    double area() {
-        return super.getWidth() * super.getHeight() / 2;
+    Triangle(Triangle ob) {
+        super(ob);
+        this.style = ob.style;
     }
 
-    void showStyle() {
+    public double area(){
+        return super.getHeight() * super.getWidth() /2.0;
+    }
+    
+    void showStyle(){
         System.out.println("Triangle is " + style);
     }
-
+    
 }

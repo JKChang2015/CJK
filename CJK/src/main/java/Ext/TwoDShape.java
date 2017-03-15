@@ -10,14 +10,31 @@ public class TwoDShape {
 
     private double width;
     private double height;
+    private String name;
 
+    //default
     TwoDShape() {
         width = height = 0.0;
+        name = "none";
     }
 
-    TwoDShape(double width, double height) {
+    // 2 arguments
+    TwoDShape(double x, String name) {
+        width = height = x;
+        this.name = name;
+    }
+
+    //3 arguments
+    TwoDShape(double width, double height, String name) {
         this.width = width;
         this.height = height;
+        this.name = name;
+    }
+
+    TwoDShape(TwoDShape ob) {
+        this.width = ob.width;
+        this.height = ob.height;
+        this.name = ob.name;
     }
 
     public double getWidth() {
@@ -26,6 +43,10 @@ public class TwoDShape {
 
     public double getHeight() {
         return height;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void setWidth(double width) {
@@ -37,7 +58,11 @@ public class TwoDShape {
     }
 
     void showDim() {
-        System.out.println("Width and height are " + width + " and " + height);
+        System.out.println(name + " Width and height are " + width + "+" + height);
     }
 
+    double area() {
+        System.out.println("area() must be overrided ");
+        return 0;
+    }
 }
