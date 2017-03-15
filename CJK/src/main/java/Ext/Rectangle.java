@@ -4,7 +4,7 @@ package Ext;
  *
  * @author jkchang
  * @date 15-Mar-2017
- * @Description:
+ * @Description: an inheritance example, superclass: TwoDShape
  *
  */
 public class Rectangle extends TwoDShape {
