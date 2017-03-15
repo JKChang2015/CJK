@@ -15,5 +15,17 @@ public class Student extends Person {
     public void setName() {
         name = "David";
     }
+    
+    public void print(){
+        System.out.println("This is also a Student");
+          super.print();
+          
+    }
+  
+    
+    public static void main(String[] args) {
+        Student st = new Student();
+        st.print();
+    }
 
 }
