@@ -9,15 +9,17 @@ package Ext;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import javax.swing.Action;
 
 public class FileBrowser {
 
-    public ArrayList<String> nameList = new ArrayList<String>();
+    public ArrayList<String> nameList = new ArrayList<>();
 
+    
     public void listFile(String proPath, String fileType) {
 
         File folder = new File(proPath);
-        FilenameFilter proFilter = new FilenameFilter() {
+        FilenameFilter proFilter = new FilenameFilter() { //override filenameFilter
             @Override
             public boolean accept(File folder, String name) {
                 return name.toLowerCase().endsWith(fileType);
@@ -35,9 +37,17 @@ public class FileBrowser {
 
         }
     }
-
+    
+    
     public int getFileCount() {
         return nameList.size();
+    }
+
+    public static void main(String[] args) {
+        FileBrowser br = new FileBrowser();
+        br.listFile("/Users/jkchang/Downloads", "txt");
+        System.out.println(br.getFileCount());
+
     }
 
 }
