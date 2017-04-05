@@ -1,8 +1,9 @@
-### Statistical Language Model Search Tool
- A Java-based search tool, applied machine readable knowledge represent structure (Ontology) and data mining techniques to Statistical Language Model in Information Retrieval.
-<br> </br>
-######:envelope: jkchang@ebi.ac.uk
-######:link: [Linkedin](https://uk.linkedin.com/in/jiakang-chang-6459849a) 
+## Statistical Language Model Search Tool
+ 
+A Java-based search tool, applied machine readable knowledge represent structure (Ontology) and data mining techniques to Statistical Language Model in Information Retrieval.
+
+##### :envelope: jkchang@ebi.ac.uk
+##### :link: [Linkedin](https://uk.linkedin.com/in/jiakang-chang-6459849a) 
 ---
 
 ######:fish:Keyword Set:
