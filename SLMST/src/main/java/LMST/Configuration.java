@@ -5,15 +5,9 @@
 @data 2016-6-28
  */
 
-package slmst;
+package LMST;
 
-public class Ontology {
+public class Configuration {
 
-    
-    public void loadOnto(){
-        
-    }
-    
-    
 }
 

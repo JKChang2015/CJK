@@ -2,17 +2,18 @@
 
 --------------------------------------------------------------------------------
 @author JKChang
-@data 2016-7-3
+@data 2016-6-28
  */
 
-package slmst;
+package LMST;
 
-public class DirichletSmoother extends Smoother{
+public class Ontology {
 
     
-    public double smooth(int docCount, int docLen, int collCount, int collLen){
+    public void loadOnto(){
         
-        return docCount/docLen;
     }
+    
+    
 }
 

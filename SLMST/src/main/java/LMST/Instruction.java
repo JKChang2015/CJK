@@ -5,9 +5,9 @@
 @data 2016-6-28
  */
 
-package slmst;
+package LMST;
 
-public class Configuration {
+public class Instruction {
 
 }
 
