@@ -18,9 +18,9 @@ A Java-based search tool, applied machine readable knowledge represent structure
 ##### :fish:Retrieve:
 - [ ]  Matching
 - [ ]  Smoothing
-      * Dirichlet Smoothing
-      * Cluster based Smoothing
-      * Document Classification based Smoothing
+ * Dirichlet Smoothing
+ * Cluster based Smoothing
+ * Document Classification based Smoothing
 - [ ]  Scoring
 - [ ]  Ranking
 - [ ]  Calculate Precision and Recall
