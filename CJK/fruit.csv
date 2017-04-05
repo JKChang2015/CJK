@@ -1,5 +1,0 @@
-name,label,URI,supname,supuri,def
-apple,apple label,http://purl.enanomapper.org/onto/ENM_0000001,fruit,http://purl.enanomapper.org/onto/ENM_0000000,apple definition
-banana,banana label,http://purl.enanomapper.org/onto/ENM_0000002,fruit,http://purl.enanomapper.org/onto/ENM_0000000,banana definition
-pear,pear label,http://purl.enanomapper.org/onto/ENM_0000003,fruit,http://purl.enanomapper.org/onto/ENM_0000001,pear definition
-apple,,,,,
