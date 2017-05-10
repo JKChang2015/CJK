@@ -1,4 +1,4 @@
-###LeetCode Algorithm
+LeetCode Algorithm
 ----------------
 |	#	|		Title					|		Solution					|		Test					|		Tag					|		Difficulty					|
 |	---	|		---					|		---					|		---					|		---					|		---					|
