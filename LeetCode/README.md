@@ -2,7 +2,7 @@ LeetCode Algorithm
 ----------------
 |	#	|		Title					|		Solution					|		Test					|		Tag					|		Difficulty					|
 |	---	|		---					|		---					|		---					|		---					|		---					|
-|	001	|	[	Two Sum	]	(	https://leetcode.com/problems/two-sum/	)	|	[	Java	]	(	./src/main/java/leetcode/twoSum.java	)	|	[	JavaTest	]	(	./src/test/java/leetcode/twoSumTest.java	)	|	[	Array	]	(	https://leetcode.com/tag/array/	)	|	[	Easy	]	(	http://jkchang1988.blogspot.co.uk/2016/06/001-two-sum.html	)	|
+|	001	|	[	Two Sum	]	(	https://leetcode.com/problems/two-sum/	)	|	[	Java	]	(	./src/main/java/leetcode/TwoSum.java	)	|	[	JavaTest	]	(	./src/test/java/leetcode/twoSumTest.java	)	|	[	Array	]	(	https://leetcode.com/tag/array/	)	|	[	Easy	]	(	http://jkchang1988.blogspot.co.uk/2016/06/001-two-sum.html	)	|
 |	015	|	[	Three Sum	]	(	https://leetcode.com/problems/3sum/	)	|	[	Java	]	(	./src/main/java/leetcode/threeSum.java	)	|	[	JavaTest	]	(	./src/test/java/leetcode/threeSumTest.java	)	|	[	Array	]	(	https://leetcode.com/tag/array/	)	|	[	Medium	]	(		)	|
 |	167	|	[	Two Sum II - Input array is sorted	]	(	https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/	)	|	[	Java	]	(	./src/main/java/leetcode/twoSum2.java	)	|	[	JavaTest	]	(	./src/test/java/leetcode/twoSum2Test.java	)	|	[	Array	]	(	https://leetcode.com/tag/array/	)	|	[	Medium	]	(	http://jkchang1988.blogspot.co.uk/2016/06/two-sum-ii-input-array-is-sorted.html	)	|
 |	169	|	[	Majority Element	]	(	https://leetcode.com/problems/majority-element/	)	|	[	Java	]	(	./src/main/java/leetcode/majorityElement.java	)	|	[	JavaTest	]	(	./src/test/java/leetcode/majorityElementTest.java	)	|	[	Array	]	(	https://leetcode.com/tag/array/	)	|	[	Easy	]	(	http://jkchang1988.blogspot.co.uk/2016/06/169-majority-element.html	)	|
