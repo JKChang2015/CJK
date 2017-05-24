@@ -6,20 +6,29 @@
 package LMST.CollPro;
 
 import java.util.ArrayList;
+import java.io.InputStream;
+import java.io.FileInputStream;
+import java.io.File;
+import java.io.IOException;
+import org.terrier.indexing.*;
 
 /**
  *
  * @author JKChang
  */
 public class Collection {
-    
-    
-    public ArrayList<String> expansion(ArrayList<String> keyword){
-        ArrayList<String> results = new ArrayList<String>();
+
+    public void index() throws IOException {
+        File f = new File("src/main/resources/sample.txt");
+
+        InputStream file = new FileInputStream(f);
+        TRECWebCollection coll = new TRECWebCollection(file);
         
-        
-        return results;        
+
     }
-    
-    
+
+    public static void main(String[] args) throws IOException {
+
+    }
+
 }
