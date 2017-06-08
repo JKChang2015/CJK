@@ -13,7 +13,7 @@ package leetcode;
 import java.util.Arrays;
 
 public class WiggleSort {
-    
+
     public void wiggleSort(int[] nums) {  //O(NlogN) O(1)
         //1. Sorted 2. exchange every two elements
         Arrays.sort(nums);
@@ -23,7 +23,7 @@ public class WiggleSort {
             nums[i + 1] = temp;
         }
     }
-    
+
     public void wiggleSort2(int[] nums) {  //O(N) O(1)
         // A1<A2>A3<A4>A5
         for (int i = 0; i < nums.length - 1; i++) {
@@ -35,5 +35,5 @@ public class WiggleSort {
             }
         }
     }
-    
+
 }

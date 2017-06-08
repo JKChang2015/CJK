@@ -19,9 +19,9 @@ A solution set is:
  */
 package leetcode;
 
-import java.util.List;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class ThreeSum {
 
@@ -41,7 +41,7 @@ public class ThreeSum {
             int start = i + 1, end = nums.length - 1;
             while (start < end) {
                 int sum = nums[i] + nums[start] + nums[end];
-                
+
                 if (sum < 0) {
                     start++;
                 } else if (sum > 0) {

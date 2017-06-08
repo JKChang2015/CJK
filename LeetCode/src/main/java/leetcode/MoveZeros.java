@@ -18,9 +18,9 @@ public class MoveZeros {
 
     public void moveZeroes(int[] nums) {
         // change the index, not change the value
-        int pos = 0; 
+        int pos = 0;
         for (int curt = 0; curt < nums.length; curt++) {
-            if (nums[curt] !=0) {
+            if (nums[curt] != 0) {
                 nums[pos] = nums[curt];
                 pos++;
             }

@@ -11,12 +11,12 @@ Given s = "hello", return "olleh".
 package leetcode;
 
 public class ReverseString {
-    
+
     public String reverseString(String s) {
         char[] str = s.toCharArray();
         int left = 0;
         int right = str.length - 1;
-        
+
         while (left < right) {
             char temp = str[left];
             str[left] = str[right];
@@ -24,7 +24,7 @@ public class ReverseString {
             left++;
             right--;
         }
-        
+
         return new String(str);
     }
 }
