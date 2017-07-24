@@ -1,17 +1,16 @@
-package cjk;
+package com.cjk.java100;
 
 /**
  *
  * @author jkchang
- * @date 19-Jul-2017
+ * @date 24-Jul-2017
  * @Description:
  *
  */
-public class n {
 
+public class j001 {
     public static void main(String[] args) {
         System.out.println("print something");
-        System.out.println("");
     }
 
 }

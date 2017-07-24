@@ -1,6 +1,5 @@
 package cjk;
 
-
 import java.util.Set;
 import java.util.HashSet;
 import java.io.File;
@@ -49,12 +48,12 @@ public class CJK {
 
         // list the label of the classes
         for (OWLClass clazz : classes) {
-            
+
             Set<OWLAnnotationAssertionAxiom> annotations = onto.getAnnotationAssertionAxioms(clazz.getIRI());
             for (OWLAnnotationAssertionAxiom ano : annotations) {
                 OWLAnnotationValue va = ano.getValue();
                 System.out.println(va.toString());
-                
+
             }
             System.out.println("==============================");
 

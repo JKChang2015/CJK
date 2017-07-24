@@ -13,6 +13,7 @@ public class t2_1 {
         int a = 1_2;
         int b = 2_3;
         System.out.println(a+b);
+        System.out.println("");
         
     }
 }
