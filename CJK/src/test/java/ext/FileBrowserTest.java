@@ -13,14 +13,14 @@ public class FileBrowserTest {
     public FileBrowserTest() {
     }
 
-    @Test
-    public void testListFile() {
-        String rootFolder = "..\\ontologies\\config\\";
-        String fileType = "iris";
-        
-        FileBrowser ft = new FileBrowser();
-        ft.listFile(rootFolder, fileType);
-        
-    }
+//    @Test
+//    public void testListFile() {
+//        String rootFolder = "..\\ontologies\\config\\";
+//        String fileType = "iris";
+//        
+//        FileBrowser ft = new FileBrowser();
+//        ft.listFile(rootFolder, fileType);
+//        
+//    }
 
 }
