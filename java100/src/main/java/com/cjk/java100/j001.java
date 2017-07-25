@@ -5,6 +5,7 @@ package com.cjk.java100;
  * @date 24-Jul-2017
  * @Description: print pyramid
  */
+
 public class j001 {
 
     public static void main(String[] args) {
