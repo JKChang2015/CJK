@@ -25,6 +25,7 @@ public class CSVWriter {
         Student student4 = new Student(4, "Sama", "Karim", "F", 20);
         Student student5 = new Student(5, "Khaled", "Mohamed", "M", 22);
         Student student6 = new Student(6, "Ghada", "Sarhan", "F", 21);
+        Student student7 = new Student(7, "Chan", "checked", "F", 23);
 
         //Create a new list of student objects
         List students = new ArrayList();
@@ -34,6 +35,7 @@ public class CSVWriter {
         students.add(student4);
         students.add(student5);
         students.add(student6);
+        students.add(student7);
 
         FileWriter fileWriter = null;
         CSVPrinter csvFilePrinter = null;
