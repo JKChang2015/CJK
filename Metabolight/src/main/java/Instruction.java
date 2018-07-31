@@ -7,18 +7,10 @@
 
 public class Instruction {
 
-    public enum Scope {
-        UP,
-        SINGLE,
-        DOWN
-    }
-
-
     private String uriString;
     private Scope scope;
     private String comment;
     private String newSuperClass;
-
     public Instruction(String uriString, Scope scope, String comment) {
         this.uriString = uriString;
         this.scope = scope;
@@ -50,6 +42,7 @@ public class Instruction {
 
         // scope
         if (scope == Scope.SINGLE) {
+            buffer.append("S");
         } else if (scope == Scope.UP) {
             buffer.append("U");
         } else if (scope == Scope.DOWN) {
@@ -78,6 +71,12 @@ public class Instruction {
     public boolean equals(Object obj) {
         if (!(obj instanceof Instruction)) return false;
         return this.hashCode() == obj.hashCode();
+    }
+
+    public enum Scope {
+        UP,
+        SINGLE,
+        DOWN
     }
 
 

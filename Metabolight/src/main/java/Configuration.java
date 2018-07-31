@@ -10,20 +10,21 @@ import java.util.Set;
  * This helper class reads Slimmer configuration files that specify which part of the
  * ontology is to be kept or removed. The configuration file uses a line-based
  * instruction format. Each line specifies part of the ontology to be kept or removed.
+ * <p>
  * An example is:
- * <p>
- * +D(http://purl.bioontology.org/ontology/npo#NPO_1436):http://www.bioassayontology.org/bao#BAO_0000697 detection instrument
- * +D(http://purl.obolibrary.org/obo/IAO_0000030):http://www.bioassayontology.org/bao#BAO_0000179 endpoint
- * +D(http://purl.obolibrary.org/obo/OBI_0000070):http://www.bioassayontology.org/bao#BAO_0000015 bioassay
- * <p>
+ * <pre>
+ * +S(<target class>):<super class> comments
+ * +U(<target class>):<super class> comments
+ * +D(<target class>):<super class> comments
+ * </pre>
  * <p>
  * This configuration file uses a custom syntax which is briefly explained here. By
  * default it removes all content. The first character on a line indicates if the something
  * needs to be included (+) or excluded from a previously defined inclusion (-). The second
- * character indicates whether a whole upper (U) or down (D) tree should be included or
- * excluded. After the colon the URI of the resource is given to be in- or excluded, followed
- * by a user-oriented comment. Finally, before the colon and in brackets an optional
- * superclass of this resource can be specified, possibly from other ontologies.
+ * character indicates whether a whole single(S) upper (U) or down (D) tree should be
+ * included or excluded. After the colon the URI of the resource is given to be include or
+ * excluded, followed  * by a user-oriented comment. Finally, before the colon and in brackets
+ * an optional superclass of this resource can be specified, possibly from other ontologies.
  *
  * @author jkchang
  */
@@ -65,6 +66,8 @@ public class Configuration {
 
         while (line != null) {
             String instruction = line.trim().replace("\t", " ");
+
+            // Skip a blank line
             if (instruction.length() == 0) {
                 System.out.println("Skipping an unexpected empty line at line " + lineNumber);
                 line = reader.readLine();
@@ -72,19 +75,42 @@ public class Configuration {
                 continue;
             }
 
+            // Check add/remove instructor
             char addRemoveInstruct = instruction.charAt(0);
             if (addRemoveInstruct != '+' && addRemoveInstruct != '-') {
                 reader.close();
-                throw new Exception("Invalid configuration input at line " + lineNumber + ": first line should be '+' or '-' ");
+                throw new Exception("Invalid configuration input at line " + lineNumber + ": first character should be '+' or '-' ");
             }
 
-            char upDownInstruct = instruction.charAt(1);
-            Instruction.Scope scope = Instruction.Scope.SINGLE;
-            String newSuperClass = null;
-            int startURI = 2;
+            // Check direction instructor
+            char directionInstruct = instruction.charAt(1);
+            if (directionInstruct != 'S' && directionInstruct != 'D' && directionInstruct != 'U') {
+                reader.close();
+                throw new Exception("Invalid configuration input a the line " + lineNumber + ": Direction instructor should be 'S', 'D' or 'U' ");
+            }
 
-            if (upDownInstruct != ':' && upDownInstruct != '(') {
-                if (upDownInstruct == 'U') {
+            // Check target IRI
+            if (false) {
+                reader.close();
+                throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Target class IRI");
+            }
+
+
+            // Check Superclass IRI
+            if (false) {
+                reader.close();
+                throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Superclass IRI");
+            }
+
+            // LOADING
+
+
+//            Instruction.Scope scope = Instruction.Scope.SINGLE;
+//            String newSuperClass = null;
+
+
+            if (directionInstruct != ':' && directionInstruct != '(') {
+                if (directionInstruct == 'U') {
                     scope = Instruction.Scope.UP;
                     if (instruction.charAt(2) != ':') {
                         reader.close();
@@ -92,7 +118,7 @@ public class Configuration {
                     }
                     startURI = 3;
 
-                } else if (upDownInstruct == 'D') {
+                } else if (directionInstruct == 'D') {
                     scope = Instruction.Scope.DOWN;
                     startURI = 3;
                     int indexCloseSuper = instruction.indexOf(')');
