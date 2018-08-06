@@ -4,6 +4,8 @@ import java.io.FileReader;
 import java.io.Reader;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 /**
@@ -13,9 +15,9 @@ import java.util.Set;
  * <p>
  * An example is:
  * <pre>
- * +S(<target class>):<super class> comments
- * +U(<target class>):<super class> comments
- * +D(<target class>):<super class> comments
+ * +S:(<target class>):(<super class>) comments
+ * +U:(<target class>):(<super class>) comments
+ * +D:(<target class>):(<super class>) comments
  * </pre>
  * <p>
  * This configuration file uses a custom syntax which is briefly explained here. By
@@ -75,102 +77,75 @@ public class Configuration {
                 continue;
             }
 
-            // Check add/remove instructor
-            char addRemoveInstruct = instruction.charAt(0);
-            if (addRemoveInstruct != '+' && addRemoveInstruct != '-') {
-                reader.close();
-                throw new Exception("Invalid configuration input at line " + lineNumber + ": first character should be '+' or '-' ");
-            }
+            // matching the pattern
+            String pattern = "([\\-\\+])(['U''S''D']):\\((\\S+)\\):\\((\\S+)\\)\\s*(\\D*)";
+            Pattern r = Pattern.compile(pattern);
+            Matcher m = r.matcher(line);
 
-            // Check direction instructor
-            char directionInstruct = instruction.charAt(1);
-            if (directionInstruct != 'S' && directionInstruct != 'D' && directionInstruct != 'U') {
-                reader.close();
-                throw new Exception("Invalid configuration input a the line " + lineNumber + ": Direction instructor should be 'S', 'D' or 'U' ");
-            }
-
-            // Check target IRI
-            if (false) {
-                reader.close();
-                throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Target class IRI");
-            }
+            if (m.find()) {
+                char addRemoveInstruct = m.group(1).charAt(0);
+                char directionInstruct = m.group(2).charAt(0);
+                String targetIRI = m.group(3);
+                String superIRI = m.group(4);
+                String comment = m.group(5);
 
 
-            // Check Superclass IRI
-            if (false) {
-                reader.close();
-                throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Superclass IRI");
-            }
-
-            // LOADING
-
-
-//            Instruction.Scope scope = Instruction.Scope.SINGLE;
-//            String newSuperClass = null;
-
-
-            if (directionInstruct != ':' && directionInstruct != '(') {
-                if (directionInstruct == 'U') {
-                    scope = Instruction.Scope.UP;
-                    if (instruction.charAt(2) != ':') {
-                        reader.close();
-                        throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
-                    }
-                    startURI = 3;
-
-                } else if (directionInstruct == 'D') {
-                    scope = Instruction.Scope.DOWN;
-                    startURI = 3;
-                    int indexCloseSuper = instruction.indexOf(')');
-                    if (instruction.charAt(2) == '(' && indexCloseSuper != -1) {
-                        newSuperClass = instruction.substring(3, indexCloseSuper);
-                        startURI = indexCloseSuper + 2;
-                    } else if (instruction.charAt(2) != ':') {
-                        reader.close();
-                        throw new Exception("Invalid configuration input at line " + lineNumber + ": expected ':' at position 3.");
-                    }
-
+                Instruction.Scope scope = Instruction.Scope.DOWN;
+                if (directionInstruct == 'S') {
+                    scope = Instruction.Scope.SINGLE;
                 } else {
-                    reader.close();
-                    throw new Exception("Invalid configuration input at line " + lineNumber + ": second instruction should be 'U', 'D', or empty.");
+                    scope = Instruction.Scope.UP;
                 }
 
-            } else { //SINGLE
-                int indexCloseSuper = instruction.indexOf(')');
-                if (instruction.charAt(1) == '(' && indexCloseSuper != -1) {
-                    newSuperClass = instruction.substring(2, indexCloseSuper);
-                    startURI = indexCloseSuper + 2;
-                }
-            }
+                Instruction ins = new Instruction(targetIRI, scope, comment);
 
-            String iri = instruction.substring(startURI);
-            int index = iri.indexOf(' ');
-            String comment = "";
-            if (index != -1) {
-                comment = iri.substring(index).trim();
-                iri = iri.substring(0, index);
-            }
-            Instruction ins = new Instruction(iri, scope, comment);
-            if (newSuperClass != null) {
-                ins.setNewSuperClass(newSuperClass);
-                Instruction superIns = new Instruction(newSuperClass, Instruction.Scope.SINGLE, "Used as Superclass");
-                irisToSave.add(superIns);
-            }
-            if (addRemoveInstruct == '+') {
-                irisToSave.add(ins);
+                if (superIRI != null) {
+                    ins.setNewSuperClass(superIRI);
+                    Instruction superIns = new Instruction(superIRI, Instruction.Scope.SINGLE, "Used as Superclass");
+                    irisToSave.add(superIns);
+                }
+
+                if (addRemoveInstruct == '+') {
+                    irisToSave.add(ins);
+                } else {
+                    irisToRemove.add(ins);
+                }
+
+                line = reader.readLine();
+                lineNumber++;
+                continue;
+
             } else {
-                irisToRemove.add(ins);
+                // Check add/remove instructor
+                char addRemoveInstruct = instruction.charAt(0);
+                if (addRemoveInstruct != '+' && addRemoveInstruct != '-') {
+                    reader.close();
+                    throw new Exception("Invalid configuration input at line " + lineNumber + ": first character should be '+' or '-' ");
+                }
+
+                // Check direction instructor
+                char directionInstruct = instruction.charAt(1);
+                if (directionInstruct != 'S' && directionInstruct != 'D' && directionInstruct != 'U') {
+                    reader.close();
+                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": Direction instructor should be 'S', 'D' or 'U' ");
+                }
+
+                // Check target IRI
+
+                if (false) {
+                    reader.close();
+                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Target class IRI");
+                }
+
+
+                // Check Superclass IRI
+                if (false) {
+                    reader.close();
+                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Superclass IRI");
+                }
             }
-
-            line = reader.readLine();
-            lineNumber++;
-
-
         }
 
         reader.close();
-
     }
-
-
 }
