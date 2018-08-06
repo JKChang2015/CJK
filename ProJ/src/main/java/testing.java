@@ -12,8 +12,8 @@ public class testing {
 
     public static void main(String[] args) {
 
-        String iri = "+D:(www.target.com):(www.superclass.com) lalalala";
-        String pattern = "([\\-\\+])(['U''S''D']):\\((\\S+)\\):\\((\\S+)\\)\\s*(\\D*)";
+        String iri = "+D::(www.superclass.com) lalalala";
+        String pattern = "([\\-,\\+]*)(['U','S','D']*)(\\:*)(\\(\\S+\\))*(\\:)(\\(\\S+\\))*\\s*\\S*";
 
         Pattern r = Pattern.compile(pattern);
 
@@ -26,6 +26,7 @@ public class testing {
             System.out.println("target iri:     " + m.group(3));
             System.out.println("superclass iri:     " + m.group(4));
             System.out.println("comments:       " + m.group(5));
+            System.out.println("comments:       " + m.group(6));
         } else {
             System.out.println("NO MATCH");
         }

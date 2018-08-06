@@ -48,11 +48,11 @@ public class Configuration {
     }
 
     // getter
-    public Set<Instruction> getTreePartToSave() {
+    public Set<Instruction> getTreePartsToSave() {
         return irisToSave;
     }
 
-    public Set<Instruction> getTreePartRemove() {
+    public Set<Instruction> getTreePartsToRemove() {
         return irisToRemove;
     }
 
@@ -78,7 +78,8 @@ public class Configuration {
             }
 
             // matching the pattern
-            String pattern = "([\\-\\+])(['U''S''D']):\\((\\S+)\\):\\((\\S+)\\)\\s*(\\D*)";
+            //([\-\+])(['U','S','D']):\((\S+)\):\((\S+)\)\s*(\S*)
+            String pattern = "([\\-,\\+])(['U','S','D']):\\((\\S+)\\):\\((\\S+)\\)\\s*(\\S*)";
             Pattern r = Pattern.compile(pattern);
             Matcher m = r.matcher(line);
 
@@ -93,7 +94,7 @@ public class Configuration {
                 Instruction.Scope scope = Instruction.Scope.DOWN;
                 if (directionInstruct == 'S') {
                     scope = Instruction.Scope.SINGLE;
-                } else {
+                } else if (directionInstruct == 'U') {
                     scope = Instruction.Scope.UP;
                 }
 
@@ -116,33 +117,35 @@ public class Configuration {
                 continue;
 
             } else {
-                // Check add/remove instructor
-                char addRemoveInstruct = instruction.charAt(0);
-                if (addRemoveInstruct != '+' && addRemoveInstruct != '-') {
-                    reader.close();
-                    throw new Exception("Invalid configuration input at line " + lineNumber + ": first character should be '+' or '-' ");
+                // matching the pattern
+                String error_pattern = "([\\-,\\+]*)(['U','S','D']*)(\\:*)(\\(\\S+\\))*(\\:)(\\(\\S+\\))*\\s*\\S*";
+                //([\-,\+]*)(['U','S','D']*)(\:*)(\(\S+\))*(\:)(\(\S+\))*\s*\S*
+                Pattern error_r = Pattern.compile(error_pattern);
+                Matcher error_matcher = error_r.matcher(line);
+
+                if (error_matcher.find()) {
+                    if (error_matcher.group(1) == null) {
+                        reader.close();
+                        throw new Exception("Invalid configuration input at line " + lineNumber + ": first character should be '+' or '-' ");
+                    } else if (error_matcher.group(2) == null) {
+                        reader.close();
+                        throw new Exception("Invalid configuration input a the line " + lineNumber + ": direction instructor should be 'S', 'D' or 'U' ");
+                    } else if (error_matcher.group(3) == null) {
+                        reader.close();
+                        throw new Exception("Invalid configuration input a the line " + lineNumber + ": should have a ':' after direction instructor ");
+                    } else if (error_matcher.group(4) == null) {
+                        reader.close();
+                        throw new Exception("Invalid target class input a the line " + lineNumber);
+                    } else if (error_matcher.group(5) == null) {
+                        reader.close();
+                        throw new Exception("Invalid configuration input a the line " + lineNumber + ": should have a ':' between target class and super class");
+                    } else if (error_matcher.group(6) == null) {
+                        reader.close();
+                        throw new Exception("Invalid super class input a the line " + lineNumber);
+                    }
+
                 }
 
-                // Check direction instructor
-                char directionInstruct = instruction.charAt(1);
-                if (directionInstruct != 'S' && directionInstruct != 'D' && directionInstruct != 'U') {
-                    reader.close();
-                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": Direction instructor should be 'S', 'D' or 'U' ");
-                }
-
-                // Check target IRI
-
-                if (false) {
-                    reader.close();
-                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Target class IRI");
-                }
-
-
-                // Check Superclass IRI
-                if (false) {
-                    reader.close();
-                    throw new Exception("Invalid configuration input a the line " + lineNumber + ": expected Superclass IRI");
-                }
             }
         }
 
