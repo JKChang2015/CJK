@@ -6,19 +6,17 @@
  */
 
 import org.semanticweb.owlapi.apibinding.OWLManager;
-import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.formats.RDFXMLDocumentFormat;
 import org.semanticweb.owlapi.model.*;
 import org.semanticweb.owlapi.search.EntitySearcher;
 import org.semanticweb.owlapi.search.Searcher;
 import org.semanticweb.owlapi.util.OWLEntityRemover;
 import org.semanticweb.owlapi.util.OWLOntologyMerger;
-import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import org.semanticweb.owlapi.vocab.OWLRDFVocabulary;
 
 import java.io.*;
-import java.util.*;
 import java.text.SimpleDateFormat;
+import java.util.*;
 
 
 public class Slimmer {
@@ -93,7 +91,7 @@ public class Slimmer {
      */
 
     public static void main(String[] args) {
-        boolean allSusseeded = true;
+        boolean allSucceeded = true;
         String rootFolder = args[0];
         System.out.println("Searching configuration file in " + rootFolder);
         File dir = new File(rootFolder);
@@ -151,19 +149,114 @@ public class Slimmer {
                 Set<Instruction> irisToRemove = config.getTreePartsToRemove();
                 slimmer.removeAll(irisToRemove);
 
+                // 4. remove owl:imports
+                Set<OWLImportsDeclaration> importDeclarations = onto.getImportsDeclarations();
+                for (OWLImportsDeclaration declaration : importDeclarations) {
+                    System.out.println("Removing imports: " + declaration.getIRI());
+                    RemoveImport removeImport = new RemoveImport(onto, declaration);
+                    slimmer.man.applyChange(removeImport);
+                }
+
+                // 5. update descriptions and labels
+                Set<OWLClass> entities = onto.getClassesInSignature();
+                for (OWLClass clazz : entities) {
+                    for (OWLAnnotation annot : EntitySearcher.getAnnotations(clazz, onto)) {
+                        if (annot.getProperty().getIRI().toString().equals("http://purl.org/dc/elements/1.1/description") ||
+                                annot.getProperty().getIRI().toString().equals("http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#P97")) {
+                            System.out.println("  description: " + annot.getValue());
+                            OWLDataFactory factory = slimmer.man.getOWLDataFactory();
+                            OWLAnnotationProperty newDescription =
+                                    factory.getOWLAnnotationProperty(IRI.create("http://purl.obolibrary.org/obo/IAO_0000115"));
+                            OWLAnnotation commentAnno = factory.getOWLAnnotation(
+                                    newDescription,
+                                    annot.getValue()
+                            );
+                            System.out.println("  new description: " + commentAnno);
+                            OWLAxiom ax = factory.getOWLAnnotationAssertionAxiom(
+                                    clazz.getIRI(), commentAnno
+                            );
+                            slimmer.man.applyChange(new AddAxiom(onto, ax));
+                        }
+                    }
+                }
+
+                // 7. save in OWL/XML format
+                SetOntologyID ontologyIDChange = new SetOntologyID(onto, IRI.create(slimmedURI));
+                slimmer.man.applyChange(ontologyIDChange);
+                File output = new File(slimmedFileName);
+                System.out.println("Saving to: " + output.getAbsolutePath());
+                slimmer.saveAs(output, owlURL);
+
 
             } catch (Exception e) {
                 e.printStackTrace();
+                allSucceeded = false;
             }
 
 
         }
+        if (!allSucceeded) System.exit(-1);
 
     }
 
     public OWLOntology getOntology() {
         return this.onto;
     }
+
+    public void saveAs(File output, String orinalOWL) throws OWLOntologyStorageException, FileNotFoundException {
+        saveAs(new FileOutputStream(output), orinalOWL);
+    }
+
+    /**
+     * Save the ontology as OWL/XML. It first includes new meta data about the slimming process.
+     *
+     * @param output
+     * @param originalOWL
+     * @throws OWLOntologyStorageException
+     */
+    public void saveAs(OutputStream output, String originalOWL) throws OWLOntologyStorageException {
+        // add provenance
+        OWLDataFactory dataFac = man.getOWLDataFactory();
+
+        // version info
+        OWLLiteral lit = dataFac.getOWLLiteral(
+                "This SLIM file was generated automatically by the eNanoMapper Slimmer "
+                        + "software library. For more information see "
+                        + "http://github.com/enanomapper/slimmer.");
+        OWLAnnotationProperty owlAnnotationProperty =
+                dataFac.getOWLAnnotationProperty(OWLRDFVocabulary.OWL_VERSION_INFO.getIRI());
+        OWLAnnotation anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+        OWLAnnotationProperty pavImportedFrom = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://purl.org/pav/importedFrom")
+        );
+        anno = dataFac.getOWLAnnotation(pavImportedFrom, dataFac.getOWLLiteral(originalOWL));
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // generation tool
+        lit = dataFac.getOWLLiteral("Slimmer");
+        owlAnnotationProperty = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://www.geneontology.org/formats/oboInOwl#auto-generated-by")
+        );
+        anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // generation date
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date date = new Date();
+        lit = dataFac.getOWLLiteral(dateFormat.format(date));
+        owlAnnotationProperty = dataFac.getOWLAnnotationProperty(
+                IRI.create("http://www.geneontology.org/formats/oboInOwl#date")
+        );
+        anno = dataFac.getOWLAnnotation(owlAnnotationProperty, lit);
+        man.applyChange(new AddOntologyAnnotation(onto, anno));
+
+        // save to file
+        RDFXMLDocumentFormat format = new RDFXMLDocumentFormat();
+        format.setPrefix("ncicp", "http://ncicb.nci.nih.gov/xml/owl/EVS/ComplexProperties.xsd#");
+        man.saveOntology(onto, format, output);
+    }
+
 
     /**
      * This methods removes all classes, data properties, and object properties, except those

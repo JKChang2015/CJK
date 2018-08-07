@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c69d1e66-f11a-4ec3-9425-60153d567810" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Configuration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Slimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Slimmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/temp/Slimmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/temp/Slimmer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ProJ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ProJ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProJ/src/main/java/testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ProJ/src/main/java/testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ProJ/target/classes/testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ProJ/target/classes/testing.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,24 +23,25 @@
     <session id="1166005488">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="8" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="2276" />
+          <entry key="java" value="2300" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2276" />
+          <entry key="JAVA" value="2300" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -57,6 +56,9 @@
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Metabolight" />
+  </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.51945704">
       <split-first>
@@ -64,8 +66,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="658">
-                  <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+                <state relative-caret-position="660">
+                  <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -85,19 +87,11 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/java/Slimmer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="656">
-                  <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+                <state relative-caret-position="-2734">
+                  <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                     <element signature="imports" expanded="true" />
-                    <element signature="e#4082#4249#0" expanded="true" />
-                    <element signature="e#4248#4249#0" expanded="true" />
-                    <element signature="e#4573#4574#0" expanded="true" />
-                    <element signature="e#4605#4606#0" expanded="true" />
-                    <element signature="e#9287#9303#0" expanded="true" />
-                    <element signature="e#9948#9956#0" expanded="true" />
-                    <element signature="e#12043#12051#0" expanded="true" />
-                    <element signature="e#12857#12865#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -110,8 +104,8 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/temp/Configuration.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="73" column="63" lean-forward="true" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
+                <state relative-caret-position="900">
+                  <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -131,8 +125,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/temp/Slimmer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="5303">
-                  <caret line="426" column="5" lean-forward="true" selection-start-line="388" selection-start-column="4" selection-end-line="426" selection-end-column="5" />
+                <state relative-caret-position="1042">
+                  <caret line="267" column="5" lean-forward="true" selection-start-line="219" selection-start-column="3" selection-end-line="267" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -171,6 +165,7 @@
         <option value="$PROJECT_DIR$/src/test/java/tTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Instruction.java" />
         <option value="$PROJECT_DIR$/src/main/java/Configuration.java" />
+        <option value="$PROJECT_DIR$/src/main/temp/Slimmer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Slimmer.java" />
       </list>
     </option>
@@ -182,10 +177,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1280" />
+    <option name="x" value="-52" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="1374" />
+    <option name="width" value="2560" />
+    <option name="height" value="1373" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -195,6 +190,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -243,14 +240,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533571051042" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533630338373" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -387,23 +382,33 @@
       <workItem from="1533046514326" duration="2715000" />
       <workItem from="1533288882885" duration="3086000" />
       <workItem from="1533543114901" duration="6431000" />
-      <workItem from="1533562690257" duration="5241000" />
+      <workItem from="1533562690257" duration="6240000" />
+      <workItem from="1533629696531" duration="639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46323000" />
+    <option name="totallyTimeSpent" value="47961000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1373" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10841938" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49920508" visible="true" weight="0.1096108" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5007949" side_tool="true" visible="true" weight="0.1096108" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info id="Favorites" order="5" sideWeight="0.5007949" side_tool="true" weight="0.1096108" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -411,10 +416,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3298887" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" weight="0.32962668" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960285" weight="0.32962668" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49960285" weight="0.3290938" />
+      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49960285" weight="0.3290938" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4952343" visible="true" weight="0.32883242" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5047657" side_tool="true" weight="0.32883242" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -438,27 +443,20 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/java/t.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/t.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/tTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/temp/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/temp/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="73" column="63" lean-forward="true" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/src.zip!/java/io/FilenameFilter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -469,20 +467,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Configuration.java">
+    <entry file="file://$PROJECT_DIR$/src/main/temp/Configuration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="59" column="50" lean-forward="true" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+        <state relative-caret-position="900">
+          <caret line="73" column="63" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/temp/Instruction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/temp/Slimmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5303">
-          <caret line="426" column="5" lean-forward="true" selection-start-line="388" selection-start-column="4" selection-end-line="426" selection-end-column="5" />
+        <state relative-caret-position="1042">
+          <caret line="267" column="5" lean-forward="true" selection-start-line="219" selection-start-column="3" selection-end-line="267" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -491,19 +496,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Slimmer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+        <state relative-caret-position="-2734">
+          <caret line="200" lean-forward="true" selection-start-line="200" selection-end-line="200" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#4082#4249#0" expanded="true" />
-            <element signature="e#4248#4249#0" expanded="true" />
-            <element signature="e#4573#4574#0" expanded="true" />
-            <element signature="e#4605#4606#0" expanded="true" />
-            <element signature="e#9287#9303#0" expanded="true" />
-            <element signature="e#9948#9956#0" expanded="true" />
-            <element signature="e#12043#12051#0" expanded="true" />
-            <element signature="e#12857#12865#0" expanded="true" />
           </folding>
         </state>
       </provider>
