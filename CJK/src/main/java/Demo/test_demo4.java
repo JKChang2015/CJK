@@ -9,14 +9,14 @@ package Demo;
  */
 interface A4 { //接口
 
-    String MSG = "Hello";  //全局常量
+    public static final String MSG = "Hello";  //全局常量
 
-    void print(); //抽象方法
+    public abstract void print(); //抽象方法
 }
 
 interface B4 {
 
-    void get(); //抽象方法
+    public abstract void get(); //抽象方法
 }
 
 abstract class C4 {
