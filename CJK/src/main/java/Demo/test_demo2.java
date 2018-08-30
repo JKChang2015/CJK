@@ -3,16 +3,6 @@ package Demo;
 /**
  * Created by jkchang 30/08/2018 Tag: Description:
  */
-public class test_demo2 {
-
-    public static void main(String[] args) {
-        A2 a = new B2();
-        a.print();
-        a.fun();
-    }
-
-}
-
 abstract class A2 {
 
     // general method
@@ -27,8 +17,18 @@ abstract class A2 {
 
 class B2 extends A2 {
 
+    // rewrite the superclass method
     public void print() {
         System.out.println("This is B2");
     }
 
+}
+
+public class test_demo2 {
+
+    public static void main(String[] args) {
+        A2 a = new B2();
+        a.print();
+        a.fun();
+    }
 }
