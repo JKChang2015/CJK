@@ -37,8 +37,8 @@ class ProxySubject implements Subject {
         this.subject.make();
         this.finish();
     }
-    
-    public void finish(){
+
+    public void finish() {
         System.out.println("Done...");
     }
 }
@@ -48,6 +48,7 @@ public class test_demo7 {
     public static void main(String[] args) {
         Subject sub = new ProxySubject(new RealSubject());
         // 用户请求操作， 代理服务 帮助用户完成其余操作
+        // 一个主题subject，但是是两个操作
         sub.make();  //调用代理主题操作， 完成比真实更多的操作
 
     }
